@@ -414,3 +414,153 @@ header {
 .socials-header a:hover svg {
   fill: #0daab5;
 }
+/* FOOTER */
+.footer {
+  background-color: #252525; /* графит */
+  padding: 40px 0 20px;
+  color: #ffffff;
+  margin-top: 50px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 0 20px;
+}
+
+/* LOGO */
+/* цвета логотипа */
+:root {
+  --turquoise: #0daab5;
+  --white: #ffffff;
+}
+
+/* общий блок логотипа */
+.header-logo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+}
+
+/* сам SVG */
+.logo-svg {
+  width: 110px;
+  height: auto;
+}
+
+/* точка */
+.logo-dot {
+  fill: var(--turquoise);
+}
+
+/* бровь */
+.logo-brow {
+  stroke: var(--turquoise);
+  stroke-width: 6;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* текстовая часть */
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.logo-title {
+  font-family: "Allura", cursive;
+  font-size: 34px;
+  color: var(--white);
+  letter-spacing: 1px;
+}
+
+.logo-sub {
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  color: var(--turquoise);
+  margin-top: 2px;
+}
+
+.header-logo {
+  opacity: 0;
+  transform: translateY(8px);
+  animation: fadeInLogo 1s ease forwards;
+}
+
+@keyframes fadeInLogo {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* лёгкий пульс бирюзовой точки */
+.logo-dot {
+  animation: pulseDot 2.5s ease-in-out infinite;
+}
+
+@keyframes pulseDot {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.18);
+    opacity: 0.8;
+  }
+}
+
+/* LINKS */
+.footer-links h4,
+.footer-socials h4 {
+  color: #1fc9c3;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.footer-links a,
+.footer-socials a {
+  display: block;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  margin: 6px 0;
+  transition: 0.3s;
+}
+
+.footer-links a:hover,
+.footer-socials a:hover {
+  color: #1fc9c3;
+  padding-left: 5px;
+}
+
+/* BOTTOM */
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #3b3b3b;
+  margin-top: 30px;
+  padding-top: 15px;
+  font-size: 14px;
+  opacity: 0.6;
+}
+
+/* Адаптация */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-links a,
+  .footer-socials a {
+    text-align: center;
+  }
+}
