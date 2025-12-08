@@ -621,3 +621,162 @@ header {
     margin-top: 10px;
   }
 }
+/* Скрываем гамбургер на десктопе */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 22px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: #ffffff; /* или твой цвет */
+  border-radius: 2px;
+}
+
+/* Мобильная версия */
+@media screen and (max-width: 900px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  /* Опционально: выравнивание кнопки, языков, соцсетей */
+  .nav-row .btn,
+  .lang-switch,
+  .socials-header {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+  }
+}
+/* ===========================
+   ГАМБУРГЕР
+=========================== */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 22px;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 2px;
+  transition: 0.4s ease;
+}
+
+/* ===========================
+   МЕНЮ (ДЕСКТОП)
+=========================== */
+.nav-menu {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.nav-menu li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 400;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+/* hover — только для ПК */
+@media (min-width: 901px) {
+  .nav-menu li a:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+}
+
+/* ===========================
+   МОБИЛЬНАЯ ВЕРСИЯ
+=========================== */
+@media screen and (max-width: 900px) {
+  .hamburger {
+    display: flex;
+  }
+
+  /* скрытое меню */
+  .nav-menu {
+    position: absolute;
+    top: 75px;
+    right: 10px;
+    width: 70%;
+    max-width: 300px;
+    background: rgba(24, 24, 24, 0.95);
+    border-radius: 12px;
+    padding: 20px;
+    flex-direction: column;
+    gap: 12px;
+    display: none;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.25);
+  }
+
+  /* показываем меню */
+  .nav-menu.active {
+    display: flex;
+  }
+
+  /* убираем рамки, делаем кнопки ровными */
+  .nav-menu li a {
+    width: 100%;
+    padding: 14px;
+    background: rgba(255, 255, 255, 0.05);
+    border: none;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 16px;
+  }
+
+  .nav-menu li a:hover {
+    background: rgba(255, 255, 255, 0.15);
+  }
+
+  /* кнопка "Programează-te" — делает как все */
+  .btn {
+    padding: 14px;
+    margin-left: 0;
+    width: 100%;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 16px;
+  }
+
+  /* соцсети под меню, иконки одинаковые */
+  .socials-header {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    margin-top: 15px;
+  }
+
+  /* язык */
+  .lang-switch {
+    margin-top: 10px;
+    text-align: center;
+  }
+}
