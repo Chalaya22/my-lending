@@ -1,0 +1,416 @@
+/* ---------------- COLORS ---------------- */
+:root {
+  --light: #f7f8fa;
+  --dark: #1f2124; /* grafit */
+  --text: #4a4f55;
+  --turquoise: #0daab5; /* deep turquoise */
+  --white: #ffffff;
+}
+
+/* ---------------- RESET ---------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--light);
+  color: var(--text);
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ---------------- HEADER ---------------- */
+header {
+  width: 100%;
+  padding: 40px 0;
+  background: var(--dark);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  /* border-bottom: 1px solid rgba(0, 255, 221, 0.25); */
+}
+header {
+  border-bottom: 1px solid rgba(0, 255, 221, 0.25);
+}
+header {
+  background: rgba(30, 30, 34, 0.85);
+  backdrop-filter: blur(10px);
+}
+/* header {
+  background: linear-gradient(135deg, #1c1c1f, #2b2b30);
+} */
+
+header h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 46px;
+  font-weight: 500;
+  text-align: center;
+  color: var(--turquoise);
+  letter-spacing: 1px;
+  animation: glow 3s ease-in-out infinite;
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 0px var(--turquoise);
+  }
+  50% {
+    text-shadow: 0 0 12px var(--turquoise);
+  }
+  100% {
+    text-shadow: 0 0 0px var(--turquoise);
+  }
+}
+
+header p {
+  font-family: "Allura", cursive;
+  font-size: 30px;
+  text-align: center;
+  color: var(--white);
+  opacity: 0.95;
+  margin-top: 8px;
+}
+
+/* ---------------- HERO ---------------- */
+.hero {
+  padding: 80px 0;
+  text-align: center;
+}
+
+.hero p {
+  font-size: 19px;
+  max-width: 700px;
+  margin: 15px auto;
+  opacity: 0.9;
+}
+
+/* ---------------- BUTTON ---------------- */
+
+.nav-row .btn {
+  background: #0daab5;
+  color: #ffffff;
+  border: 1px solid #0daab5;
+  font-weight: 500;
+}
+
+.nav-row .btn:hover {
+  background: transparent;
+  color: #0daab5;
+  border-color: #0daab5;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(13, 170, 181, 0.3);
+}
+/* ---------------- SECTIONS ---------------- */
+section {
+  padding: 60px 0;
+}
+
+section h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 32px;
+  font-weight: 500;
+  color: var(--dark);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* ---------------- SERVICES ---------------- */
+.services {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.service-card {
+  background: var(--white);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  width: 300px;
+  padding: 25px;
+  border-radius: 10px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* ---------------- BLOG ---------------- */
+.blog {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+}
+
+.blog-card {
+  width: 330px;
+  background: var(--white);
+  border-radius: 10px;
+  padding: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  transition: 0.3s;
+}
+
+.blog-card:hover {
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+  transform: translateY(-4px);
+}
+
+/* ---------------- FOOTER ---------------- */
+footer {
+  text-align: center;
+  padding: 25px 0;
+  color: var(--text);
+  opacity: 0.7;
+}
+/*----------------- LOGO block --------------*/
+
+.logo-dot {
+  text-align: center;
+  padding-top: 20px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: logoFade 1.6s ease forwards;
+}
+.logo-dot {
+  position: relative;
+}
+
+.logo-dot::after {
+  content: "";
+  position: absolute;
+  width: 180px;
+  height: 80px;
+  background: radial-gradient(circle, rgba(0, 255, 221, 0.25), transparent 70%);
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  filter: blur(20px);
+  z-index: 0;
+}
+
+/* Бирюзовая точка */
+.dot {
+  width: 12px;
+  height: 12px;
+  background: var(--turquoise);
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 12px auto;
+  opacity: 0;
+  animation: dotAppear 1.2s ease forwards;
+}
+
+/* Линия-бровь */
+.brow-line {
+  width: 150px;
+  height: 40px;
+  border-top: 6px solid var(--turquoise);
+  border-radius: 120% 120% 0 0;
+  margin: 0 auto 10px auto;
+  opacity: 0;
+  animation: browAppear 1.5s ease forwards;
+}
+
+/* Название бренда (каллиграфия) */
+.logo-text {
+  font-family: "Allura", cursive;
+  font-size: 46px;
+  color: var(--white);
+  margin-top: 5px;
+  margin-bottom: 5px;
+  opacity: 0;
+  animation: textAppear 1.8s ease forwards;
+}
+
+/* Заголовок блога */
+.blog-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
+  font-weight: 500;
+  color: var(--turquoise);
+  margin: 0;
+  opacity: 0;
+  animation: textAppear 2s ease forwards;
+}
+
+/* __________ ANIMATIONS __________ */
+
+@keyframes logoFade {
+  0% {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes dotAppear {
+  from {
+    opacity: 0;
+    transform: scale(0.4);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes browAppear {
+  0% {
+    opacity: 0;
+    transform: scaleX(0.3) translateY(8px);
+  }
+  100% {
+    opacity: 1;
+    transform: scaleX(1) translateY(0);
+  }
+}
+
+@keyframes textAppear {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- Header --- */
+header {
+  background: #1f2124;
+  padding: 20px 0 30px 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+/* Логотип с анимацией */
+.logo-dot {
+  text-align: center;
+  padding-top: 10px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: logoFade 1.6s ease forwards;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background: #0daab5;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 10px auto;
+  opacity: 0;
+  animation: dotAppear 1.2s ease forwards;
+}
+
+.brow-line {
+  width: 150px;
+  height: 40px;
+  border-top: 6px solid #0daab5;
+  border-radius: 120% 120% 0 0;
+  margin: 0 auto 10px auto;
+  opacity: 0;
+  animation: browAppear 1.5s ease forwards;
+}
+
+.logo-text {
+  font-family: "Allura", cursive;
+  font-size: 46px;
+  color: #ffffff;
+  margin-bottom: 5px;
+  opacity: 0;
+  animation: textAppear 1.8s ease forwards;
+}
+
+.blog-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
+  font-weight: 500;
+  color: #0daab5;
+  margin: 0 0 15px 0;
+  opacity: 0;
+  animation: textAppear 2s ease forwards;
+}
+
+/* Контейнер строки навигации */
+.nav-row {
+  display: flex;
+  justify-content: space-between; /* равномерное распределение */
+  align-items: center; /* вертикальное выравнивание */
+  flex-wrap: wrap; /* для мобильных, элементы будут переноситься */
+  max-width: 1100px;
+  margin: 0 auto;
+  gap: 20px;
+}
+
+/* Меню */
+.nav-menu {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-menu li a,
+.nav-row .btn {
+  display: inline-block;
+  padding: 10px 20px; /* одинаковые размеры */
+  border-radius: 6px;
+  font-weight: 500;
+  text-align: center;
+  white-space: nowrap;
+  transition: 0.3s;
+}
+
+/* Меню */
+.nav-menu li a {
+  color: #ffffff;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.nav-menu li a:hover {
+  background: rgba(13, 170, 181, 0.2);
+  color: #0daab5;
+  border-color: #0daab5;
+}
+
+/* Соцсети */
+.socials-header {
+  display: flex;
+  gap: 15px;
+}
+
+.socials-header a {
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.socials-header a svg {
+  width: 24px;
+  height: 24px;
+  fill: #ffffff;
+}
+
+.socials-header a:hover svg {
+  fill: #0daab5;
+}
