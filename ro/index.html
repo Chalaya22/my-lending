@@ -10,58 +10,47 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Poppins:wght@300;400;500&family=Allura&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="/style.css" />
+    <!-- <script src="script.js" defer></script> -->
   </head>
 
   <body>
-    <!-- HEADER -->
-
     <header>
       <div class="container">
         <!-- Логотип -->
-        <a href="ru/index.html" class="header-logo">
-          <svg
-            class="logo-svg"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 260 90"
-            aria-hidden="true"
-          >
-            <!-- бирюзовая точка -->
-            <circle cx="130" cy="18" r="6" class="logo-dot" />
-            <!-- плавная линия-бровь -->
-            <path d="M20 65 C75 10, 185 10, 240 65" class="logo-brow" />
-          </svg>
-          <div class="logo-text">
-            <div class="logo-title">Estetica Lui</div>
-            <div class="logo-sub">Brow &amp; Beauty Master</div>
-          </div>
-        </a>
+        <div class="logo-dot">
+          <span class="dot"></span>
+          <div class="brow-line"></div>
+          <div class="logo-text">Estetica Lui</div>
+          <h1 class="blog-title">Brow & Beauty Master Blog</h1>
+        </div>
 
-        <!-- Меню + кнопка + соцсети + языки -->
         <div class="nav-row">
-          <!-- Гамбургер для мобильных -->
+          <!-- Hamburger -->
           <div class="hamburger" id="hamburger">
             <span></span>
             <span></span>
             <span></span>
           </div>
 
+          <!-- Navigation -->
           <ul class="nav-menu" id="nav-menu">
-            <li><a href="/ru/index.html">Главная</a></li>
-            <li><a href="/ru/servicii.html">Услуги</a></li>
-            <li><a href="/ru/recenzii.html">Обзоры косметики</a></li>
-            <li><a href="/ru/probleme.html">Проблемы кожи</a></li>
-            <li><a href="/ru/ingrediente.html">Ингредиенты и составы</a></li>
-            <li><a href="/ru/contact.html">Контакты</a></li>
+            <li><a href="/ro/index.html">Acasă</a></li>
+            <li><a href="/ro/servicii.html">Servicii</a></li>
+            <li><a href="/ro/recenzii.html">Recenzii produse</a></li>
+            <li><a href="/ro/probleme.html">Probleme ale pielii</a></li>
+            <li><a href="/ro/ingrediente.html">Ingrediente & Formule</a></li>
+            <li><a href="/ro/contact.html">Contact</a></li>
           </ul>
 
-          <a class="btn" href="/ru/contact.html">Записаться</a>
+          <!-- Appointment button -->
+          <a class="btn" href="/ro/contact.html">Programează-te</a>
 
+          <!-- Language switch -->
           <div class="lang-switch">
             <a href="/ro/index.html">RO</a> |
             <a href="/ru/index.html">RU</a>
           </div>
-
           <!-- Соцсети -->
           <div class="socials-header">
             <a
@@ -119,6 +108,93 @@
       </div>
     </header>
 
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container">
+        <h2>Bun venit</h2>
+        <p>
+          Aici te poți programa la proceduri, poți vedea serviciile disponibile
+          și poți citi articole despre îngrijire și cosmetică.
+        </p>
+        <a class="btn" href="#">Programează-te</a>
+      </div>
+    </section>
+
+    <!-- DESPRE MASTER -->
+    <section>
+      <div class="container">
+        <h2>Despre mine</h2>
+        <p style="max-width: 700px; margin: 0 auto; text-align: center">
+          Sunt un specialist în beauty cu experiență, atenție la detalii și un
+          stil modern de lucru. Folosesc materiale profesionale și abordez
+          fiecare client în mod individual.
+        </p>
+      </div>
+    </section>
+
+    <!-- SERVICII -->
+    <section>
+      <div class="container">
+        <h2>Servicii</h2>
+
+        <div class="services">
+          <div class="service-card">
+            <h3>Corecția sprâncenelor</h3>
+            <p>Formă precisă și stil personalizat.</p>
+          </div>
+
+          <div class="service-card">
+            <h3>Vopsirea sprâncenelor</h3>
+            <p>Nuante naturale și rezistente.</p>
+          </div>
+
+          <div class="service-card">
+            <h3>Proceduri cosmetice</h3>
+            <p>Îngrijirea pielii și menținerea prospețimii.</p>
+          </div>
+
+          <div class="service-card">
+            <h3>Machiaj de zi</h3>
+            <p>Ușor, natural și elegant.</p>
+          </div>
+
+          <div class="service-card">
+            <h3>Machiaj de seară</h3>
+            <p>Accentuat, expresiv și sofisticat.</p>
+          </div>
+
+          <div class="service-card">
+            <h3>Machiaj pentru evenimente</h3>
+            <p>Look profesional pentru ocazii speciale.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOG -->
+    <section>
+      <div class="container">
+        <h2>Blog</h2>
+
+        <div class="blog">
+          <div class="blog-card">
+            <h3>Cum alegi forma perfectă a sprâncenelor</h3>
+            <p>Sfaturi pentru fiecare tip de față.</p>
+          </div>
+
+          <div class="blog-card">
+            <h3>Îngrijirea pielii</h3>
+            <p>Ce trebuie să știe fiecare persoană.</p>
+          </div>
+
+          <div class="blog-card">
+            <h3>Cosmetice profesionale</h3>
+            <p>Cum alegem produse de calitate.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- FOOTER -->
     <footer class="footer">
       <div class="footer-container">
@@ -141,14 +217,15 @@
             <div class="logo-sub">Brow &amp; Beauty Master</div>
           </div>
         </a>
+
         <div class="footer-links">
-          <h4>Навигация</h4>
-          <a href="/ru/index.html">Главная</a>
-          <a href="/ru/servicii.html">Услуги</a>
-          <a href="/ru/recenzii.html">Обзоры косметики</a>
-          <a href="/ru/probleme.html">Проблемы кожи</a>
-          <a href="/ru/ingrediente.html">Ингредиенты и составы</a>
-          <a href="/ru/contact.html">Контакты</a>
+          <h4>Navigare</h4>
+          <a href="/ro/index.html">Acasă</a>
+          <a href="/ro/servicii.html">Servicii</a>
+          <a href="/ro/recenzii.html">Recenzii produse</a>
+          <a href="/ro/probleme.html">Probleme ale pielii</a>
+          <a href="/ro/ingrediente.html">Ingrediente & Formule</a>
+          <a href="/ro/contact.html">Contact</a>
         </div>
 
         <div class="footer-socials">
@@ -163,6 +240,6 @@
         <p>© 2025 Estetica Lui — Toate drepturile rezervate.</p>
       </div>
     </footer>
-    <script src="../script.js"></script>
+    <script src="/script.js"></script>
   </body>
 </html>
