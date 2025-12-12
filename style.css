@@ -255,7 +255,11 @@ footer {
   margin: 0 auto;
   gap: 20px;
 }
-
+/* Фикс соцсетей чтобы не обрезались */
+.socials-header {
+  flex-shrink: 0;
+  min-width: fit-content;
+}
 /* Меню */
 .nav-menu {
   display: flex;
@@ -294,6 +298,12 @@ footer {
   display: flex;
   gap: 15px;
 }
+.socials-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0; /* запрещаем сжимать соцсети */
+}
 
 .socials-header a {
   display: inline-block;
@@ -308,6 +318,11 @@ footer {
 
 .socials-header a:hover svg {
   fill: #0daab5;
+}
+@media (max-width: 992px) {
+  .socials-header {
+    display: none;
+  }
 }
 /* FOOTER */
 .footer {
