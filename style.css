@@ -36,50 +36,119 @@ header {
   position: sticky;
   top: 0;
   z-index: 10;
-  /* border-bottom: 1px solid rgba(0, 255, 221, 0.25); */
 }
-header {
-  border-bottom: 1px solid rgba(0, 255, 221, 0.25);
-}
-header {
-  background: rgba(30, 30, 34, 0.85);
-  backdrop-filter: blur(10px);
-}
-/* header {
-  background: linear-gradient(135deg, #1c1c1f, #2b2b30);
-} */
-
-header h1 {
-  font-family: "Montserrat", sans-serif;
+/* Название бренда (каллиграфия) */
+.logo-text {
+  font-family: "Allura", cursive;
   font-size: 46px;
+  color: var(--white);
+  margin-top: 5px;
+  margin-bottom: 5px;
+  opacity: 0;
+  animation: textAppear 1.8s ease forwards;
+}
+.blog-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
   font-weight: 500;
+  color: #0daab5;
+  margin: 0 0 15px 0;
+  opacity: 0;
+  animation: textAppear 2s ease forwards;
+}
+/*----------------- LOGO block --------------*/
+
+.logo-dot {
   text-align: center;
-  color: var(--turquoise);
-  letter-spacing: 1px;
-  animation: glow 3s ease-in-out infinite;
+  padding-top: 20px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: logoFade 1.6s ease forwards;
+}
+.logo-dot {
+  position: relative;
 }
 
-@keyframes glow {
+.logo-dot::after {
+  content: "";
+  position: absolute;
+  width: 180px;
+  height: 80px;
+  background: radial-gradient(circle, rgba(0, 255, 221, 0.25), transparent 70%);
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  filter: blur(20px);
+  z-index: 0;
+}
+
+/* Бирюзовая точка */
+.dot {
+  width: 12px;
+  height: 12px;
+  background: var(--turquoise);
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 12px auto;
+  opacity: 0;
+  animation: dotAppear 1.2s ease forwards;
+}
+
+/* Линия-бровь */
+.brow-line {
+  width: 150px;
+  height: 40px;
+  border-top: 6px solid var(--turquoise);
+  border-radius: 120% 120% 0 0;
+  margin: 0 auto 10px auto;
+  opacity: 0;
+  animation: browAppear 1.5s ease forwards;
+}
+/* __________ ANIMATIONS __________ */
+
+@keyframes logoFade {
   0% {
-    text-shadow: 0 0 0px var(--turquoise);
-  }
-  50% {
-    text-shadow: 0 0 12px var(--turquoise);
+    opacity: 0;
+    transform: translateY(25px);
   }
   100% {
-    text-shadow: 0 0 0px var(--turquoise);
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-header p {
-  font-family: "Allura", cursive;
-  font-size: 30px;
-  text-align: center;
-  color: var(--white);
-  opacity: 0.95;
-  margin-top: 8px;
+@keyframes dotAppear {
+  from {
+    opacity: 0;
+    transform: scale(0.4);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
+@keyframes browAppear {
+  0% {
+    opacity: 0;
+    transform: scaleX(0.3) translateY(8px);
+  }
+  100% {
+    opacity: 1;
+    transform: scaleX(1) translateY(0);
+  }
+}
+
+@keyframes textAppear {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 /* ---------------- HERO ---------------- */
 .hero {
   padding: 80px 0;
@@ -174,180 +243,6 @@ footer {
   padding: 25px 0;
   color: var(--text);
   opacity: 0.7;
-}
-/*----------------- LOGO block --------------*/
-
-.logo-dot {
-  text-align: center;
-  padding-top: 20px;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: logoFade 1.6s ease forwards;
-}
-.logo-dot {
-  position: relative;
-}
-
-.logo-dot::after {
-  content: "";
-  position: absolute;
-  width: 180px;
-  height: 80px;
-  background: radial-gradient(circle, rgba(0, 255, 221, 0.25), transparent 70%);
-  top: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  filter: blur(20px);
-  z-index: 0;
-}
-
-/* Бирюзовая точка */
-.dot {
-  width: 12px;
-  height: 12px;
-  background: var(--turquoise);
-  border-radius: 50%;
-  display: block;
-  margin: 0 auto 12px auto;
-  opacity: 0;
-  animation: dotAppear 1.2s ease forwards;
-}
-
-/* Линия-бровь */
-.brow-line {
-  width: 150px;
-  height: 40px;
-  border-top: 6px solid var(--turquoise);
-  border-radius: 120% 120% 0 0;
-  margin: 0 auto 10px auto;
-  opacity: 0;
-  animation: browAppear 1.5s ease forwards;
-}
-
-/* Название бренда (каллиграфия) */
-.logo-text {
-  font-family: "Allura", cursive;
-  font-size: 46px;
-  color: var(--white);
-  margin-top: 5px;
-  margin-bottom: 5px;
-  opacity: 0;
-  animation: textAppear 1.8s ease forwards;
-}
-
-/* Заголовок блога */
-.blog-title {
-  font-family: "Montserrat", sans-serif;
-  font-size: 30px;
-  font-weight: 500;
-  color: var(--turquoise);
-  margin: 0;
-  opacity: 0;
-  animation: textAppear 2s ease forwards;
-}
-
-/* __________ ANIMATIONS __________ */
-
-@keyframes logoFade {
-  0% {
-    opacity: 0;
-    transform: translateY(25px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes dotAppear {
-  from {
-    opacity: 0;
-    transform: scale(0.4);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-@keyframes browAppear {
-  0% {
-    opacity: 0;
-    transform: scaleX(0.3) translateY(8px);
-  }
-  100% {
-    opacity: 1;
-    transform: scaleX(1) translateY(0);
-  }
-}
-
-@keyframes textAppear {
-  0% {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* --- Header --- */
-header {
-  background: #1f2124;
-  padding: 20px 0 30px 0;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-}
-
-/* Логотип с анимацией */
-.logo-dot {
-  text-align: center;
-  padding-top: 10px;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: logoFade 1.6s ease forwards;
-}
-
-.dot {
-  width: 12px;
-  height: 12px;
-  background: #0daab5;
-  border-radius: 50%;
-  display: block;
-  margin: 0 auto 10px auto;
-  opacity: 0;
-  animation: dotAppear 1.2s ease forwards;
-}
-
-.brow-line {
-  width: 150px;
-  height: 40px;
-  border-top: 6px solid #0daab5;
-  border-radius: 120% 120% 0 0;
-  margin: 0 auto 10px auto;
-  opacity: 0;
-  animation: browAppear 1.5s ease forwards;
-}
-
-.logo-text {
-  font-family: "Allura", cursive;
-  font-size: 46px;
-  color: #ffffff;
-  margin-bottom: 5px;
-  opacity: 0;
-  animation: textAppear 1.8s ease forwards;
-}
-
-.blog-title {
-  font-family: "Montserrat", sans-serif;
-  font-size: 30px;
-  font-weight: 500;
-  color: #0daab5;
-  margin: 0 0 15px 0;
-  opacity: 0;
-  animation: textAppear 2s ease forwards;
 }
 
 /* Контейнер строки навигации */
@@ -474,24 +369,11 @@ header {
   line-height: 1;
 }
 
-.logo-title {
-  font-family: "Allura", cursive;
-  font-size: 34px;
-  color: var(--white);
-  letter-spacing: 1px;
-}
-
 .logo-sub {
   font-family: "Montserrat", sans-serif;
   font-size: 13px;
   color: var(--turquoise);
   margin-top: 2px;
-}
-
-.header-logo {
-  opacity: 0;
-  transform: translateY(8px);
-  animation: fadeInLogo 1s ease forwards;
 }
 
 @keyframes fadeInLogo {
@@ -778,5 +660,156 @@ header {
   .lang-switch {
     margin-top: 10px;
     text-align: center;
+  }
+}
+/* -----------------------ИНРИДИЕНТЫ -----------------------------*/
+.ingredients-page h2 {
+  font-family: "Allura", cursive;
+  font-size: 42px;
+  color: var(--turquoise, #0daab5);
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.ingredients-desc {
+  text-align: center;
+  margin: 0 auto 30px;
+  max-width: 600px;
+  color: #555;
+}
+
+.ingredients-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.ingredient-card {
+  display: block;
+  padding: 18px;
+  background: #ffffff;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #222;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  transition: 0.2s ease;
+}
+
+.ingredient-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  color: var(--turquoise, #0daab5);
+}
+
+.ingredient-card h3 {
+  margin: 0 0 6px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.ingredient-card p {
+  margin: 0;
+  color: #555;
+  font-size: 15px;
+}
+/* -----------------------ИНРИДИЕНТЫ  VITAMINA-----------------------------*/
+.ingredient-article {
+  max-width: 980px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+.breadcrumbs {
+  font-size: 14px;
+  margin-bottom: 12px;
+  color: #9b9b9b;
+}
+.ingredient-hero {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  margin-bottom: 28px;
+}
+.ingredient-hero .thumb {
+  width: 300px;
+  height: 140px;
+  border-radius: 10px;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: #eee;
+}
+.ingredient-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.ingredient-title {
+  font-family: "Allura", cursive;
+  font-size: 34px;
+  color: var(--turquoise, #0daab5);
+  margin: 0 0 6px;
+}
+.ingredient-sub {
+  font-family: "Montserrat", sans-serif;
+  color: #666;
+  margin: 0 0 6px;
+}
+.ingredient-meta {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 18px;
+}
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 28px;
+  align-items: start;
+}
+.card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 18px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+}
+.section-title {
+  font-size: 20px;
+  color: #222;
+  margin: 0 0 12px;
+}
+dl.definition {
+  background: #fafafa;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+dl.definition dt {
+  font-weight: 600;
+  margin-top: 8px;
+}
+.related-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.cta-book {
+  margin-top: 18px;
+  display: inline-block;
+  background: var(--turquoise, #0daab5);
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+@media (max-width: 900px) {
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+  .ingredient-hero {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .ingredient-hero .thumb {
+    width: 100%;
+    height: 200px;
   }
 }
