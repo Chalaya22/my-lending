@@ -731,7 +731,7 @@ footer {
   color: #555;
   font-size: 15px;
 }
-/* -----------------------ИНРИДИЕНТЫ  VITAMINA-----------------------------*/
+/* ------ИНРИДИЕНТЫ  VITAMINA,HIALURONIC-----------------------------*/
 .ingredient-article {
   max-width: 980px;
   margin: 40px auto;
@@ -746,7 +746,7 @@ footer {
 }
 .ingredient-hero .thumb {
   width: 300px;
-  height: 214px;
+  height: 450px;
   border-radius: 10px;
   overflow: hidden;
   flex-shrink: 0;
