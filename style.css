@@ -1,10 +1,14 @@
 /* ---------------- COLORS ---------------- */
 :root {
-  --bg-header: #f3f1ec; /* светлый беж */
+  --bg-header: #f4f2ee; /* светлый беж */
   --text-main: #3b3b3b;
   --accent: #0daab5;
-  --violet: #6c4578;
+  --pink-soft: #f2a1b3; /* розовый нюд */
   --white: #ffffff;
+  --brand: #0daab5; /* твой бирюзовый */
+
+  --brand-dark: #3b3b3b;
+  --brand-bg: #f4f2ee; /* светлый беж / теплый серый */
 }
 
 /* ---------------- RESET ---------------- */
@@ -45,8 +49,6 @@ header {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: var(--bg-header);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 header .container {
@@ -56,65 +58,72 @@ header .container {
   gap: 20px;
   padding: 14px 20px;
 }
-
-/*----------------- LOGO block --------------*/
-.header-logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  text-decoration: none;
+header {
+  background: linear-gradient(
+    180deg,
+    #050505 0%,
+    #121212 35%,
+    #1a1a1a 55%,
+    #0b0b0b 100%
+  );
 }
 
-.logo-svg {
-  width: 70px;
+header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.18) 0%,
+    rgba(255, 255, 255, 0.06) 18%,
+    rgba(255, 255, 255, 0.02) 30%,
+    rgba(255, 255, 255, 0) 60%
+  );
+  pointer-events: none;
+}
+
+header::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at top,
+    rgba(255, 255, 255, 0.08),
+    transparent 65%
+  );
+  pointer-events: none;
+}
+
+/*----------------- LOGO block --------------*/
+
+.header-logo {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 240px; /* КЛЮЧЕВО */
+  flex-shrink: 0;
 }
 
 .logo-title {
-  font-family: "Allura", cursive;
-  font-size: 22px;
-  color: var(--violet);
+  font-family: "Lora", serif;
+  font-size: 24px;
+  letter-spacing: 0.18em;
+  color: var(--pink-soft);
+
+  line-height: 0.8;
+}
+
+.logo-dot {
+  color: var(--brand);
 }
 
 .logo-sub {
+  font-family: "Montserrat", sans-serif;
   font-size: 11px;
-  color: var(--accent);
-}
-/* точка */
-.logo-dot {
-  fill: #0daab5;
-}
-
-/* бровь */
-.logo-brow {
-  stroke: #0daab5;
-  stroke-width: 6;
-  fill: none;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-@keyframes fadeInLogo {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* лёгкий пульс бирюзовой точки */
-.logo-dot {
-  animation: pulseDot 2.5s ease-in-out infinite;
-}
-
-@keyframes pulseDot {
-  0%,
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  50% {
-    transform: scale(1.18);
-    opacity: 0.8;
-  }
+  letter-spacing: 0.12em;
+  color: var(--brand);
+  margin-top: 4px;
 }
 
 /* ---------------- NAV ROW---------------- */
@@ -137,7 +146,7 @@ header .container {
 
 .nav-menu li a {
   font-size: 14px;
-  color: var(--text-main);
+  color: #eaeaea;
   text-decoration: none;
   padding: 6px 10px;
   border-radius: 6px;
@@ -168,83 +177,93 @@ header .container {
 
 /* ---------------- BTN---------------- */
 
-.nav-row .btn:hover {
-  background: transparent;
-  color: #0daab5;
-  border-color: #0daab5;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(13, 170, 181, 0.3);
-}
 .btn {
-  background: var(--accent);
-  color: white;
+  background: transparent;
+  color: var(--pink-soft);
+  border: 1px solid rgba(184, 92, 143, 0.4);
+  padding: 8px 16px;
   font-size: 13px;
-  padding: 7px 14px;
-  border-radius: 6px;
-  text-decoration: none;
+  border-radius: 18px;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background: rgba(184, 92, 143, 0.1);
+  border-color: var(--pink-soft);
 }
 
 /* ---------------- SOCIAL NERWORKS ---------------- */
-.socials-header {
-  display: flex;
-  justify-content: center;
-  gap: 8px;
-}
-.socials-header a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.socials-header svg {
-  width: 18px;
-  height: 18px;
-  fill: var(--text-main);
-}
-
-.socials-header a:hover svg {
-  fill: var(--accent);
-}
-@media (max-width: 992px) {
-  .socials-header {
-    display: none;
-  }
+.mobile-socials {
+  display: none;
 }
 
 /* ---------------- SWITCH- RO/RU--------------- */
 
+.desktop-lang {
+  display: flex;
+}
+
 .mobile-lang {
   display: none;
 }
-.lang-switch {
-  display: flex;
+.lang-toggle {
+  display: inline-flex;
   align-items: center;
   gap: 6px;
   font-size: 11px;
-  color: #6b6b6b;
+  cursor: pointer;
+  /* user-select: none; */
 }
 
-.lang-switch a {
-  font-size: 11px;
+.lang-toggle .label {
   padding: 3px 6px;
   border-radius: 12px;
-  text-decoration: none;
   color: #6b6b6b;
   transition: 0.2s;
 }
 
-.lang-switch a.active {
+.lang-toggle .switch {
+  width: 32px;
+  height: 16px;
+  background: #dcdcdc;
+  border-radius: 20px;
+  position: relative;
+  transition: 0.25s;
+}
+
+.lang-toggle .knob {
+  width: 14px;
+  height: 14px;
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  transition: 0.25s;
+}
+
+/* активное состояние RU */
+.lang-toggle[data-lang="ru"] .switch {
   background: #0daab5;
-  color: #fff;
 }
 
-.lang-switch a:hover {
-  background: rgba(13, 170, 181, 0.15);
+.lang-toggle[data-lang="ru"] .knob {
+  transform: translateX(16px);
+}
+.lang-toggle[data-lang="ro"] .switch {
+  background: #0daab5;
 }
 
-.lang-icon {
-  font-size: 14px;
+.lang-toggle[data-lang="ru"] .ru {
+  color: #0daab5;
+  font-weight: 500;
 }
+
+.lang-toggle[data-lang="ro"] .ro {
+  color: #0daab5;
+  font-weight: 500;
+}
+
 /* ---------------- SECTIONS ---------------- */
 section {
   padding: 60px 0;
@@ -417,23 +436,17 @@ footer {
   display: block;
   height: 2px;
   width: 100%;
-  background: #3b3b3b;
+  background: var(--pink-soft);
   border-radius: 2px;
   transition: 0.4s ease;
 }
 
 /* ---------------- HEDER НА МОБИЛЬНОМ---------------- */
-@media (max-width: 900px) {
-  header .container {
-    padding: 10px 16px;
-  }
 
-  .header-logo .logo-svg {
-    width: 50px;
-  }
-
+@media (max-width: 768px) {
   .logo-title {
-    font-size: 18px;
+    font-size: 20px;
+    letter-spacing: 1.5px;
   }
 
   .logo-sub {
@@ -481,7 +494,13 @@ footer {
     top: 64px;
     right: 12px;
     width: 260px;
-    background: #f6f5f3;
+    background: linear-gradient(
+      180deg,
+      #050505 0%,
+      #121212 35%,
+      #1a1a1a 55%,
+      #0b0b0b 100%
+    );
     border-radius: 14px;
     padding: 14px;
     display: none;
@@ -497,7 +516,7 @@ footer {
 
   .nav-menu.active .menu-close {
     display: block !important;
-    color: black;
+    color: #f2a1b3;
     font-size: 22px;
     text-align: right;
     cursor: pointer;
@@ -518,52 +537,96 @@ footer {
 }
 
 /* ---------------- SOCIAL-------------- */
-@media (max-width: 900px) {
-  .menu-socials {
-    margin-top: auto;
-    padding-top: 10px;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-  }
-
-  .menu-socials .socials-header {
+@media (max-width: 768px) {
+  .mobile-socials {
     display: flex;
     justify-content: center;
-    gap: 16px;
+    gap: 18px;
+    margin-top: 14px;
+  }
+
+  .mobile-socials a {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(13, 170, 181, 0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.25s;
+  }
+
+  .mobile-socials a:hover {
+    background: #0daab5;
+  }
+
+  .mobile-socials svg {
+    width: 18px;
+    height: 18px;
+    fill: #0daab5;
+  }
+
+  .mobile-socials a:hover svg {
+    fill: #fff;
   }
 }
 /* ---------------- SWITCH MOBILE-------------- */
+
 @media (max-width: 900px) {
-  /* контейнер */
-  .nav-menu .mobile-lang {
+  .desktop-lang {
+    display: none;
+  }
+
+  .mobile-lang {
+    margin-top: 12px;
     display: flex;
-    justify-content: cente;
-    gap: 6px;
-    margin-top: 8px;
-  }
-
-  /* ПЕРЕБИВАЕМ nav-menu li a */
-  .nav-menu .mobile-lang a {
-    display: inline-flex;
-    align-items: center;
     justify-content: center;
-    width: 30px;
-    height: 30px;
-    padding: 0 !important;
-    font-size: 11px !important;
-    font-weight: 500;
-    border-radius: 50%;
-    border: 1px solid rgba(59, 59, 59, 0.3);
-    background: transparent;
-    color: #3b3b3b;
-    line-height: 1;
   }
 
-  .nav-menu .mobile-lang a.active {
+  .mobile-lang-toggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    user-select: none;
+    cursor: pointer;
+  }
+
+  .mobile-lang-toggle .lang {
+    opacity: 0.5;
+    transition: 0.25s;
+  }
+
+  .mobile-lang-toggle .lang.active {
+    opacity: 1;
+    font-weight: 600;
+    color: #0daab5;
+  }
+
+  .mobile-lang-toggle .track {
+    width: 34px;
+    height: 18px;
+    background: rgba(13, 170, 181, 0.25);
+    border-radius: 20px;
+    position: relative;
+  }
+
+  .mobile-lang-toggle .dot {
+    width: 14px;
+    height: 14px;
     background: #0daab5;
-    color: #ffffff;
-    border-color: #0daab5;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transition: 0.3s ease;
+  }
+  /* активное состояние RU */
+  .mobile-lang-toggle[data-lang="ru"] .dot {
+    transform: translateX(16px);
   }
 }
+
 /* -----------------------ИНРИДИЕНТЫ -----------------------------*/
 .ingredients-page h2 {
   font-family: "Allura", cursive;
