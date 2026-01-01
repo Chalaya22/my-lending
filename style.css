@@ -11,7 +11,8 @@
 
   /* Акценты */
   --accent: #c48b9f; /* пыльно-розовый (главный) */
-  --accent-two: #06716e;
+  --accent-two: #5f8f8c;
+  --accent-logo-heder: #d43a75;
   --accent-hover: #b07b8f; /* hover */
   --accent-soft: #8e6f77; /* бронзово-серый */
 
@@ -61,7 +62,19 @@ header {
   top: 0;
   z-index: 100;
   background: var(--bg-soft);
+  background: linear-gradient(90deg, #f1eaea 0%, #fbf7f6 60%, #ffffff 100%);
   border-bottom: 1px solid var(--line);
+}
+header::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.35),
+    rgba(255, 255, 255, 0)
+  );
+  pointer-events: none;
 }
 
 header .container {
@@ -81,8 +94,20 @@ header .container {
   align-items: flex-start;
   max-width: 240px; /* КЛЮЧЕВО */
   flex-shrink: 0;
+  color: var(--accent-logo-heder);
+  line-height: 1.1;
+}
+.logo-footer {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 240px; /* КЛЮЧЕВО */
+  flex-shrink: 0;
   color: var(--accent);
   line-height: 1.1;
+  font-weight: 500;
+  letter-spacing: 0.22em;
 }
 
 .logo-title {
@@ -90,14 +115,17 @@ header .container {
   font-weight: 600;
   font-size: 22px;
   letter-spacing: 2px;
+  font-weight: 500;
+  letter-spacing: 0.22em;
 }
 
 .logo-sub {
   font-family: "Poppins", sans-serif;
   font-size: 13px;
-  letter-spacing: 0.08em;
   opacity: 0.75;
   color: var(--accent-two);
+  font-weight: 500;
+  letter-spacing: 0.15em;
 }
 
 /* ---------------- NAV ROW---------------- */
@@ -335,7 +363,7 @@ footer {
 
 .footer-links a:hover {
   opacity: 1;
-  color: #1fc9c3;
+  color: var(--text-main);
 }
 
 /* SOCIALS */
@@ -353,7 +381,7 @@ footer {
 }
 
 .footer-col-socials a:hover svg {
-  fill: #1fc9c3;
+  fill: var(--text-main);
 }
 /* нижняя строка */
 .footer-bottom {
@@ -423,7 +451,9 @@ footer {
   }
 
   .logo-sub {
-    font-size: 10px;
+    font-size: 11px;
+    line-height: 1.2;
+    opacity: 0.7;
   }
 }
 
@@ -483,6 +513,10 @@ footer {
   .nav-menu li a {
     color: var(--bg-header);
   }
+  .nav-menu li a:hover {
+    color: var(--text-main);
+    border-color: var(--text-main);
+  }
 
   .nav-menu.active {
     transform: translateX(0);
@@ -530,7 +564,7 @@ footer {
   }
 
   .mobile-socials a:hover {
-    background: var(--accent-hover);
+    background: var(--text-main);
   }
 
   .mobile-socials svg {
