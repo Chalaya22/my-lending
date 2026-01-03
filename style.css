@@ -770,26 +770,6 @@ footer {
   padding: 0 0px;
 }
 
-/* .ingredient-hero {
-  display: flex;
-  gap: 24px;
-  align-items: center;
-  margin-bottom: 28px;
-} */
-/* .ingredient-hero .thumb {
-  width: 300px;
-  height: 450px;
-  border-radius: 10px;
-  overflow: hidden;
-  flex-shrink: 0;
-  background: #eee;
-} */
-/* .ingredient-hero img {
-  width: 100%;
-  height: auto;
-  display: block;
-  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12);
-} */
 .ingredient-hero {
   position: relative;
   width: 100%;
