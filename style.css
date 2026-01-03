@@ -11,7 +11,7 @@
 
   /* Акценты */
   --accent: #c48b9f; /* пыльно-розовый (главный) */
-  --accent-two: #0d5d57;
+  --accent-two: rgb(55, 14, 14);
   --accent-logo-heder: #d43a75;
   --accent-hover: #b07b8f; /* hover */
   --accent-soft: #8e6f77; /* бронзово-серый */
@@ -29,17 +29,17 @@
   padding: 0;
   box-sizing: border-box;
 }
-/* Латиница (RO) */
-.ingredient-title,
-.ingredients-page h2 {
-  font-family: "Allura", cursive;
-  font-weight: 400;
+/* RO */
+html[lang="ro"] .ingredient-hero-title,
+html[lang="ro"] .section-title {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 600;
 }
 
-/* Кириллица (RU) */
-html[lang="ru"] .ingredient-title,
-html[lang="ru"] .ingredients-page h2 {
-  font-family: "Caveat", cursive;
+/* RU */
+html[lang="ru"] .ingredient-hero-title,
+html[lang="ru"] .section-title {
+  font-family: "Poppins", sans-serif;
   font-weight: 400;
 }
 
@@ -773,7 +773,7 @@ footer {
 .ingredient-hero {
   position: relative;
   width: 100%;
-  height: 65vh; /* можно 60–80vh */
+  height: 80vh; /* можно 60–80vh */
   min-height: 360px;
   overflow: hidden;
 }
@@ -784,18 +784,7 @@ footer {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 45%;
-}
-
-.ingredient-hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.25),
-    rgba(0, 0, 0, 0.45)
-  );
+  object-position: center 90%;
 }
 
 .ingredient-hero-content {
@@ -810,7 +799,6 @@ footer {
 }
 
 .ingredient-hero-title {
-  font-family: "Cormorant Garamond", serif;
   font-size: clamp(34px, 6vw, 64px);
   font-weight: 600;
   letter-spacing: 0.05em;
@@ -849,7 +837,7 @@ footer {
 .section-title {
   position: relative;
   padding-bottom: 6px;
-  font-family: "Poppins", sans-serif;
+
   font-size: 14px;
   letter-spacing: 0.18em;
   font-weight: 500;
