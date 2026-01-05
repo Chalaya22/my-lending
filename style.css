@@ -714,19 +714,32 @@ footer {
 }
 
 /* -----------------------ИНРИДИЕНТЫ -----------------------------*/
-.ingredients-page h2 {
-  font-family: "Allura", cursive;
-  font-size: 42px;
-  color: var(--turquoise, #0daab5);
-  text-align: center;
-  margin-bottom: 10px;
-}
 
+.ingredient-hero-img {
+  position: relative;
+  width: 100%;
+  height: 80vh; /* можно 60–80vh */
+  min-height: 360px;
+  overflow: hidden;
+}
+.ingredient-hero-bg-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 33%;
+}
 .ingredients-desc {
   text-align: center;
   margin: 0 auto 30px;
   max-width: 600px;
-  color: #555;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent-two);
 }
 
 .ingredients-grid {
@@ -737,32 +750,82 @@ footer {
 
 .ingredient-card {
   display: block;
-  padding: 18px;
-  background: #ffffff;
-  border-radius: 12px;
+  padding: 28px;
+  background: var(--bg-soft);
+  border-radius: 10px;
+  border-bottom: 2px solid var(--accent);
   text-decoration: none;
   color: #222;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  box-shadow: none;
   transition: 0.2s ease;
 }
 
 .ingredient-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
-  color: var(--turquoise, #0daab5);
+  background: #fff;
 }
-
 .ingredient-card h3 {
-  margin: 0 0 6px;
-  font-size: 20px;
+  font-family: "Quicksand", sans-serif;
   font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: var(--accent-two);
+  margin-bottom: 10px;
+}
+.ingredient-card h3:hover {
+  color: var(--accent-hover);
 }
 
 .ingredient-card p {
   margin: 0;
-  color: #555;
+  color: var(--text-main);
   font-size: 15px;
 }
+.faq {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.faq h2 {
+  font-family: "Quicksand", sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent-two);
+  margin-bottom: 28px;
+}
+
+.faq-item {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 22px 26px;
+  margin-bottom: 18px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  border-left: 4px solid var(--accent);
+  transition: 0.35s ease;
+}
+
+.faq-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.08);
+}
+
+.faq-item h3 {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-main);
+  margin-bottom: 8px;
+}
+
+.faq-item p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
 /* ------ИНРИДИЕНТЫ  VITAMINA,HIALURONIC-----------------------------*/
 .ingredient-article {
   max-width: 1200px;
@@ -819,7 +882,6 @@ footer {
 
 .ingredient-meta {
   font-size: 14px;
-  /* color: #777; */
   margin-bottom: 18px;
 }
 .grid-2 {
@@ -920,6 +982,7 @@ dl.definition dt {
 
   transform: translateY(-1px);
 }
+/* ------ИНРИДИЕНТЫ  VITAMINA,HIALURONIC МОБ-----------------------------*/
 @media (max-width: 900px) {
   .grid-2 {
     grid-template-columns: 1fr;
@@ -932,5 +995,28 @@ dl.definition dt {
   .ingredient-hero .thumb {
     width: 100%;
     height: 200px;
+  }
+}
+/* ------ИНРИДИЕНТЫ  МОБ-----------------------------*/
+@media (max-width: 768px) {
+  .faq {
+    margin: 40px auto;
+  }
+
+  .faq h2 {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .faq-item {
+    padding: 18px 20px;
+  }
+
+  .faq-item h3 {
+    font-size: 15px;
+  }
+
+  .faq-item p {
+    font-size: 13.5px;
   }
 }

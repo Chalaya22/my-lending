@@ -3,23 +3,40 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Beauty Master</title>
+
+    <title>Ингредиенты в косметике — разбор составов | Estetica Lens</title>
+
+    <meta
+      name="description"
+      content="Понятный разбор косметических ингредиентов: витамин C, ниацинамид, кислоты, ретиноиды и другие активы. Как работают, кому подходят и как использовать."
+    />
+
+    <!-- Canonical -->
+    <link
+      rel="canonical"
+      href="https://chalaya22.github.io/my-lending/ingredients.html"
+    />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="ru_RU" />
+    <meta
+      property="og:title"
+      content="Ингредиенты в косметике — разбор составов"
+    />
+    <meta
+      property="og:description"
+      content="Простые и честные объяснения активных ингредиентов в уходе за кожей."
+    />
+    <meta
+      property="og:image"
+      content="https://chalaya22.github.io/my-lending/images/og/ingredients-og.webp"
+    />
+    <meta property="og:site_name" content="Estetica Lens" />
 
     <!-- Fonts -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Poppins:wght@300;400;500&family=Allura&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Allura&family=Marck+Script&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Allura&family=Caveat:wght@400&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Poppins:wght@300;400;500&family=Quicksand:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
 
@@ -174,9 +191,27 @@
       </div>
     </header>
     <!-- BLOCK -->
+    <section class="ingredient-hero-img">
+      <div class="hero-overlay"></div>
+      <!-- Картинка -->
+      <img
+        src="/images/ingrediente/ingrediente-title 1200.webp"
+        srcset="
+         /images/ingrediente/ingrediente-title 2000.webp 2000w,
+         /images/ingrediente/ingrediente-title 1200.webp 1200w,
+          /images/ingrediente/ingrediente-title 600.webp  600w
+        "
+        sizes="100vw"
+        alt="Ingrediente & Formule"
+        class="ingredient-hero-bg-img"
+        loading="eager"
+      />
+      <div class="ingredient-hero-content">
+        <h1 class="ingredient-hero-title">Ингридиенты & составы</h1>
+      </div>
+    </section>
     <section class="ingredients-page">
       <div class="container">
-        <h2 class="ingredient-title">Ингридиенты и составы</h2>
         <p class="ingredients-desc">
           Здесь вы найдёте простые и понятные объяснения самых популярных
           ингредиентов в уходе за кожей: что они делают, как их правильно
@@ -244,6 +279,42 @@
             <p>Как работает и как подобрать.</p>
           </a>
         </div>
+        <section class="faq">
+          <h2>Часто задаваемые вопросы об ингредиентах в косметике</h2>
+
+          <div class="faq-item">
+            <h3>Можно ли сочетать витамин C с ниацинамидом?</h3>
+            <p>
+              Да. В современных формулах витамин C и ниацинамид могут
+              использоваться вместе без риска для кожи, особенно при
+              сбалансированном pH.
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <h3>Подходят ли кислоты AHA и BHA для чувствительной кожи?</h3>
+            <p>
+              Да, но важно выбирать низкие концентрации и вводить их в уход
+              постепенно, наблюдая за реакцией кожи.
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <h3>Обязательно ли знать процент активного ингредиента?</h3>
+            <p>
+              Не всегда. Важнее общая формула средства, сочетание компонентов и
+              то, как продукт работает именно на вашей коже.
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <h3>Можно ли использовать несколько активов одновременно?</h3>
+            <p>
+              Можно, но важно понимать совместимость ингредиентов и не
+              перегружать кожу, особенно если она чувствительная или реактивная.
+            </p>
+          </div>
+        </section>
       </div>
     </section>
 
@@ -371,5 +442,45 @@
       </div>
     </footer>
     <script src="../script.js"></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Можно ли сочетать витамин C с ниацинамидом?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Да. В современных формулах витамин C и ниацинамид могут использоваться вместе без риска для кожи, особенно при сбалансированном pH."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Подходят ли кислоты AHA и BHA для чувствительной кожи?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Да, но важно выбирать низкие концентрации и вводить их в уход постепенно, наблюдая за реакцией кожи."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Обязательно ли знать процент активного ингредиента?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Не всегда. Важнее общая формула средства, сочетание компонентов и то, как продукт работает именно на вашей коже."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Можно ли использовать несколько активов одновременно?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Можно, но важно понимать совместимость ингредиентов и не перегружать кожу, особенно если она чувствительная или реактивная."
+            }
+          }
+        ]
+      }
+    </script>
   </body>
 </html>

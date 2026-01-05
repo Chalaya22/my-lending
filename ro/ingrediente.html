@@ -3,15 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Beauty Master</title>
+    <title>Ingrediente cosmetice – ghid complet | Estetica Lens</title>
+    <meta
+      name="description"
+      content="Ghid complet despre ingrediente cosmetice: vitamina C, niacinamidă, acizi AHA/BHA, retinoizi și altele. Află ce fac, cui se potrivesc și cum se folosesc corect."
+    />
+    <link
+      rel="canonical"
+      href="https://chalaya22.github.io/my-lending/ro/ingrediente.html"
+    />
+    <meta property="og:title" content="Ingrediente cosmetice – ghid complet" />
+    <meta
+      property="og:description"
+      content="Ce fac ingredientele din skincare și cum le folosești corect."
+    />
+    <meta
+      property="og:image"
+      content="https://chalaya22.github.io/my-lending/images/og/ingredients-og.webp"
+    />
+    <meta property="og:type" content="website" />
 
     <!-- Fonts -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Poppins:wght@300;400;500&family=Allura&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Poppins:wght@300;400;500&family=Quicksand:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
 
@@ -163,15 +177,33 @@
       </div>
     </header>
     <!-- BLOCK -->
+    <section class="ingredient-hero-img">
+      <div class="hero-overlay"></div>
+      <!-- Картинка -->
+      <img
+        src="/images/ingrediente/ingrediente-title 1200.webp"
+        srcset="
+         /images/ingrediente/ingrediente-title 2000.webp 2000w,
+         /images/ingrediente/ingrediente-title 1200.webp 1200w,
+          /images/ingrediente/ingrediente-title 600.webp  600w
+        "
+        sizes="100vw"
+        alt="Ingrediente & Formule"
+        class="ingredient-hero-bg-img"
+        loading="eager"
+      />
+      <div class="ingredient-hero-content">
+        <h1 class="ingredient-hero-title">Ingrediente & Formule</h1>
+      </div>
+    </section>
+
     <section class="ingredients-page">
       <div class="container">
-        <h2>Ingrediente & Formule</h2>
         <p class="ingredients-desc">
           Aici găsești explicații simple și clare despre cele mai folosite
           ingrediente din skincare. Ce fac, cum se folosesc corect și cui se
           potrivesc.
         </p>
-
         <div class="ingredients-grid">
           <a class="ingredient-card" href="ingrediente/vitamina-c.html">
             <h3>Vitamina C</h3>
@@ -233,6 +265,24 @@
             <p>Cum funcționează și cum îl alegi.</p>
           </a>
         </div>
+        <section class="faq">
+          <h2>Întrebări frecvente despre ingrediente cosmetice</h2>
+
+          <div class="faq-item">
+            <h3>Pot combina vitamina C cu niacinamidă?</h3>
+            <p>
+              Da, în formule moderne aceste ingrediente pot fi folosite împreună
+              fără probleme.
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <h3>Sunt acizii AHA/BHA potriviți pentru pielea sensibilă?</h3>
+            <p>
+              Da, dar trebuie aleși în concentrații mici și introduși treptat.
+            </p>
+          </div>
+        </section>
       </div>
     </section>
 
@@ -361,5 +411,29 @@
     </footer>
     <!-- Correct JS path -->
     <script src="../script.js"></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Pot combina vitamina C cu niacinamidă?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Da, în formule moderne aceste ingrediente pot fi folosite împreună fără probleme."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Sunt acizii AHA/BHA potriviți pentru pielea sensibilă?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Da, dar trebuie aleși în concentrații mici și introduși treptat."
+            }
+          }
+        ]
+      }
+    </script>
   </body>
 </html>
