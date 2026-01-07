@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Poppins:wght@300;400;500&family=Quicksand:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../style.css" />
+  </head>
+  <body>
+    <!-- header вставляй свой общий header сюда (копировать в каждую страницу) -->
+    <header>
+      <div class="container">
+        <!-- Логотип -->
+        <a href="../index.html" class="logo">
+          <span class="logo-title">ESTETICA LENS</span>
+          <span class="logo-sub">Beauty Blog & Expert Care</span>
+          <span class="logo-sub"> Brow & Makeup</span>
+        </a>
+
+        <div class="nav-row">
+          <!-- Hamburger -->
+          <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <!-- Menu -->
+          <ul class="nav-menu" id="nav-menu">
+            <li class="menu-close" id="menu-close">✕</li>
+            <li><a href="../index.html">Главная</a></li>
+            <li><a href="../servicii.html">Услуги</a></li>
+            <li><a href="../recenzii.html">Обзоры косметики</a></li>
+            <li><a href="../probleme.html">Проблемы кожи</a></li>
+            <li><a href="../ingrediente.html">Ингредиенты и составы</a></li>
+            <li><a href="../contact.html">Контакты</a></li>
+            <li class="menu-btn">
+              <a class="btn" href="contact.html">Записаться</a>
+            </li>
+            <li class="mobile-lang">
+              <div class="mobile-lang-toggle" data-lang="ru">
+                <span class="lang ro active">RO</span>
+                <span class="track">
+                  <span class="dot"></span>
+                </span>
+                <span class="lang ru">RU</span>
+              </div>
+            </li>
+            <li class="mobile-socials">
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                aria-label="Instagram"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="#ffffff"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.8.3 2.2.5.5.2.9.5 1.3.9s.7.8.9 1.3c.2.4.4 1 .5 2.2.1 1.2.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.3 1.8-.5 2.2-.2.5-.5.9-.9 1.3s-.8.7-1.3.9c-.4.2-1 .4-2.2.5-1.2.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.8-.3-2.2-.5-.5-.2-.9-.5-1.3-.9s-.7-.8-.9-1.3c-.2-.4-.4-1-.5-2.2-.1-1.2-.1-1.6-.1-4.8s0-3.6.1-4.8c.1-1.2.3-1.8.5-2.2.2-.5.5-.9.9-1.3s.8-.7 1.3-.9c.4-.2 1-.4 2.2-.5C8.4 2.2 8.8 2.2 12 2.2zm0-2.2C8.7 0 8.3 0 7.1.1 5.8.2 4.9.4 4.1.7c-.9.3-1.7.7-2.5 1.5-.8.8-1.2 1.6-1.5 2.5-.3.8-.5 1.7-.6 3C0 8.3 0 8.7 0 12s0 3.7.1 4.9c.1 1.3.3 2.2.6 3 .3.9.7 1.7 1.5 2.5.8.8 1.6 1.2 2.5 1.5.8.3 1.7.5 3 .6 1.2.1 1.6.1 4.9.1s3.7 0 4.9-.1c1.3-.1 2.2-.3 3-.6.9-.3 1.7-.7 2.5-1.5.8-.8 1.2-1.6 1.5-2.5.3-.8.5-1.7.6-3 .1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c-.1-1.3-.3-2.2-.6-3-.3-.9-.7-1.7-1.5-2.5-.8-.8-1.6-1.2-2.5-1.5-.8-.3-1.7-.5-3-.6C15.7 0 15.3 0 12 0z"
+                  />
+                  <path
+                    d="M12 5.8c-3.4 0-6.2 2.8-6.2 6.2S8.6 18.2 12 18.2 18.2 15.4 18.2 12 15.4 5.8 12 5.8zm0 10.2c-2.2 0-4-1.8-4-4s1.8-4 4-4 4 1.8 4 4-1.8 4-4 4z"
+                  />
+                  <circle cx="18.4" cy="5.6" r="1.4" />
+                </svg>
+              </a>
+              <a href="https://tiktok.com" aria-label="TikTok">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M21 7.5c-1.1 0-2.2-.3-3.2-.9v7.2a6.3 6.3 0 1 1-5.6-6.2v3.3a3 3 0 1 0 2.6 3V2h3.1c.2 1.7 1.3 3.3 3.1 3.9v1.6z"
+                  />
+                </svg>
+              </a>
+              <a href="https://facebook.com" aria-label="Facebook">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="#ffffff"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M22.7 0H1.3C.6 0 0 .6 0 1.3v21.3C0 23.4.6 24 1.3 24H12v-9.3H9v-3.6h3V8c0-3 1.8-4.7 4.5-4.7 1.3 0 2.4.1 2.7.1v3h-1.8c-1.4 0-1.7.7-1.7 1.7v2.3h3.4l-.4 3.6h-3V24h5.9c.7 0 1.3-.6 1.3-1.3V1.3c0-.7-.6-1.3-1.3-1.3z"
+                  />
+                </svg>
+              </a>
+              <a href="tel:+37369685152" aria-label="Phone">
+                <!-- phone -->
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M6.6 10.8c1.6 3.2 3.4 5 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.3 1.2.4 2.5.6 3.8.6.6 0 1 .4 1 1V21c0 .6-.4 1-1 1C10.3 22 2 13.7 2 3c0-.6.4-1 1-1h4.4c.6 0 1 .4 1 1 0 1.3.2 2.6.6 3.8.1.4 0 .8-.3 1.1l-2.1 1.9z"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://wa.me/380670050050"
+                target="_blank"
+                aria-label="WhatsApp"
+              >
+                <!-- whatsapp -->
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 2a10 10 0 0 0-8.6 15l-1.1 4.1 4.2-1.1A10 10 0 1 0 12 2zm5.2 14.4c-.2.5-1.2 1-1.7 1.1-.5.1-1.2.1-1.9-.1-2.9-1-5-3.6-5.8-4.6-.8-1-.9-2.2-.3-3 .3-.4.7-.9 1-.9.3 0 .5 0 .7.5l.9 2.2c.1.3.1.6-.1.8l-.4.5c-.1.2-.3.4-.1.7.2.4.9 1.4 2 2.2 1.4 1 1.7.8 2 .6.3-.2.9-1 .9-1 .2-.3.5-.3.8-.2l2 .9c.4.2.7.4.6.8z"
+                  />
+                </svg>
+              </a>
+
+              <a href="viber://chat?number=%2B380670050050" aria-label="Viber">
+                <!-- viber -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="18"
+                  height="18"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M12 2C6.5 2 2 5.8 2 10.5c0 2.4 1.2 4.6 3.2 6.1L5 22l5.7-3.1c.4.1.9.1 1.3.1 5.5 0 10-3.8 10-8.5S17.5 2 12 2zm4.2 10.7c-.2.6-.9 1.1-1.5 1.2-.4.1-.9.2-3-.6-2.7-1.1-4.4-3.8-4.5-4-.1-.2-1.1-1.4-1.1-2.7 0-1.3.7-1.9.9-2.2.3-.3.6-.3.8-.3h.6c.2 0 .5-.1.7.5.2.6.8 2 .9 2.1.1.2.1.4 0 .6-.1.2-.2.4-.4.6-.2.2-.4.4-.6.6-.2.2-.4.4-.2.8.1.4.6 1.1 1.3 1.7.9.8 1.6 1.1 2 .8.4-.2.7-.8.9-1.1.2-.3.4-.3.7-.2.3.1 1.9.9 2.2 1.1.3.2.5.3.6.4.1.1.1.6-.1 1.2z"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://t.me/cleanmakeup"
+                target="_blank"
+                aria-label="Telegram"
+              >
+                <!-- telegram -->
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M9.9 15.2l-.4 4.2c.6 0 .9-.3 1.3-.7l3.1-3 6.4 4.7c1.2.7 2 .3 2.3-1.1L24 2.9c.4-1.7-.6-2.4-1.7-2L1.4 9.6c-1.6.6-1.6 1.5-.3 1.9l5.6 1.7L19.6 5.3c.7-.4 1.3-.2.8.2"
+                  />
+                </svg>
+              </a>
+            </li>
+          </ul>
+
+          <!-- Lang switch -->
+          <div class="lang-toggle desktop-lang" data-lang="ru">
+            <span class="label ro">RO</span>
+            <span class="switch">
+              <span class="knob"></span>
+            </span>
+            <span class="label ru">RU</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main></main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- 1. LOGO -->
+        <a href="../index.html" class="logo-footer">
+          <span class="logo-title">ESTETICA LENS</span>
+          <span class="logo-sub-footer">Beauty Blog & Expert Care</span>
+          <span class="logo-sub-footer"> Brow & Makeup</span>
+        </a>
+
+        <!-- 2. LINKS COL 1 -->
+        <div class="footer-links footer-col-1">
+          <a href="../index.html">Главная</a>
+          <a href="../servicii.html">Услуги</a>
+          <a href="../recenzii.html">Обзор косметики</a>
+        </div>
+
+        <!-- 3. LINKS COL 2 -->
+        <div class="footer-links footer-col-2">
+          <a href="../probleme.html">Проблемы кожи</a>
+          <a href="../ingrediente.html">Ингредиенты и составы</a>
+          <a href="../contact.html">Контакт</a>
+        </div>
+
+        <!-- 4. SOCIALS -->
+        <div class="footer-socials footer-col-socials">
+          <a
+            href="https://instagram.com"
+            target="_blank"
+            aria-label="Instagram"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="#ffffff"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.8.3 2.2.5.5.2.9.5 1.3.9s.7.8.9 1.3c.2.4.4 1 .5 2.2.1 1.2.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.3 1.8-.5 2.2-.2.5-.5.9-.9 1.3s-.8.7-1.3.9c-.4.2-1 .4-2.2.5-1.2.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.8-.3-2.2-.5-.5-.2-.9-.5-1.3-.9s-.7-.8-.9-1.3c-.2-.4-.4-1-.5-2.2-.1-1.2-.1-1.6-.1-4.8s0-3.6.1-4.8c.1-1.2.3-1.8.5-2.2.2-.5.5-.9.9-1.3s.8-.7 1.3-.9c.4-.2 1-.4 2.2-.5C8.4 2.2 8.8 2.2 12 2.2zm0-2.2C8.7 0 8.3 0 7.1.1 5.8.2 4.9.4 4.1.7c-.9.3-1.7.7-2.5 1.5-.8.8-1.2 1.6-1.5 2.5-.3.8-.5 1.7-.6 3C0 8.3 0 8.7 0 12s0 3.7.1 4.9c.1 1.3.3 2.2.6 3 .3.9.7 1.7 1.5 2.5.8.8 1.6 1.2 2.5 1.5.8.3 1.7.5 3 .6 1.2.1 1.6.1 4.9.1s3.7 0 4.9-.1c1.3-.1 2.2-.3 3-.6.9-.3 1.7-.7 2.5-1.5.8-.8 1.2-1.6 1.5-2.5.3-.8.5-1.7.6-3 .1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c-.1-1.3-.3-2.2-.6-3-.3-.9-.7-1.7-1.5-2.5-.8-.8-1.6-1.2-2.5-1.5-.8-.3-1.7-.5-3-.6C15.7 0 15.3 0 12 0z"
+              />
+              <path
+                d="M12 5.8c-3.4 0-6.2 2.8-6.2 6.2S8.6 18.2 12 18.2 18.2 15.4 18.2 12 15.4 5.8 12 5.8zm0 10.2c-2.2 0-4-1.8-4-4s1.8-4 4-4 4 1.8 4 4-1.8 4-4 4z"
+              />
+              <circle cx="18.4" cy="5.6" r="1.4" />
+            </svg>
+          </a>
+          <a href="https://tiktok.com" aria-label="TikTok">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M21 7.5c-1.1 0-2.2-.3-3.2-.9v7.2a6.3 6.3 0 1 1-5.6-6.2v3.3a3 3 0 1 0 2.6 3V2h3.1c.2 1.7 1.3 3.3 3.1 3.9v1.6z"
+              />
+            </svg>
+          </a>
+          <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="#ffffff"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M22.7 0H1.3C.6 0 0 .6 0 1.3v21.3C0 23.4.6 24 1.3 24H12v-9.3H9v-3.6h3V8c0-3 1.8-4.7 4.5-4.7 1.3 0 2.4.1 2.7.1v3h-1.8c-1.4 0-1.7.7-1.7 1.7v2.3h3.4l-.4 3.6h-3V24h5.9c.7 0 1.3-.6 1.3-1.3V1.3c0-.7-.6-1.3-1.3-1.3z"
+              />
+            </svg>
+          </a>
+          <a href="tel:+40757172515" aria-label="Phone">
+            <!-- phone -->
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M6.6 10.8c1.6 3.2 3.4 5 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.3 1.2.4 2.5.6 3.8.6.6 0 1 .4 1 1V21c0 .6-.4 1-1 1C10.3 22 2 13.7 2 3c0-.6.4-1 1-1h4.4c.6 0 1 .4 1 1 0 1.3.2 2.6.6 3.8.1.4 0 .8-.3 1.1l-2.1 1.9z"
+              />
+            </svg>
+          </a>
+
+          <a
+            href="https://wa.me/380670050050"
+            target="_blank"
+            aria-label="WhatsApp"
+          >
+            <!-- whatsapp -->
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M12 2a10 10 0 0 0-8.6 15l-1.1 4.1 4.2-1.1A10 10 0 1 0 12 2zm5.2 14.4c-.2.5-1.2 1-1.7 1.1-.5.1-1.2.1-1.9-.1-2.9-1-5-3.6-5.8-4.6-.8-1-.9-2.2-.3-3 .3-.4.7-.9 1-.9.3 0 .5 0 .7.5l.9 2.2c.1.3.1.6-.1.8l-.4.5c-.1.2-.3.4-.1.7.2.4.9 1.4 2 2.2 1.4 1 1.7.8 2 .6.3-.2.9-1 .9-1 .2-.3.5-.3.8-.2l2 .9c.4.2.7.4.6.8z"
+              />
+            </svg>
+          </a>
+
+          <a href="viber://chat?number=%2B380670050050" aria-label="Viber">
+            <!-- viber -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="18"
+              height="18"
+              fill="currentColor"
+            >
+              <path
+                d="M12 2C6.5 2 2 5.8 2 10.5c0 2.4 1.2 4.6 3.2 6.1L5 22l5.7-3.1c.4.1.9.1 1.3.1 5.5 0 10-3.8 10-8.5S17.5 2 12 2zm4.2 10.7c-.2.6-.9 1.1-1.5 1.2-.4.1-.9.2-3-.6-2.7-1.1-4.4-3.8-4.5-4-.1-.2-1.1-1.4-1.1-2.7 0-1.3.7-1.9.9-2.2.3-.3.6-.3.8-.3h.6c.2 0 .5-.1.7.5.2.6.8 2 .9 2.1.1.2.1.4 0 .6-.1.2-.2.4-.4.6-.2.2-.4.4-.6.6-.2.2-.4.4-.2.8.1.4.6 1.1 1.3 1.7.9.8 1.6 1.1 2 .8.4-.2.7-.8.9-1.1.2-.3.4-.3.7-.2.3.1 1.9.9 2.2 1.1.3.2.5.3.6.4.1.1.1.6-.1 1.2z"
+              />
+            </svg>
+          </a>
+
+          <a
+            href="https://t.me/cleanmakeup"
+            target="_blank"
+            aria-label="Telegram"
+          >
+            <!-- telegram -->
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M9.9 15.2l-.4 4.2c.6 0 .9-.3 1.3-.7l3.1-3 6.4 4.7c1.2.7 2 .3 2.3-1.1L24 2.9c.4-1.7-.6-2.4-1.7-2L1.4 9.6c-1.6.6-1.6 1.5-.3 1.9l5.6 1.7L19.6 5.3c.7-.4 1.3-.2.8.2"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2025 Estetica Lui — Все права защищены..</p>
+      </div>
+    </footer>
+    <script src="../../script.js" defer></script>
+
+    <!-- Structured data (schema.org)   Article   schema-->
+
+    <!-- FAQ   schema -->
+  </body>
+</html>

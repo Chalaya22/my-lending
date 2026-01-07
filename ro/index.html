@@ -11,19 +11,21 @@
       content="Blog de frumusețe Estetica Lens: îngrijirea pielii, ingrediente cosmetice, sfaturi de la expert și recenzii oneste."
     />
 
-    <meta http-equiv="content-language" content="ro-MD" />
+    <meta http-equiv="content-language" content="ro-RO" />
 
     <!-- Hreflang -->
+    <link
+      rel="alternate"
+      hreflang="ro"
+      href="https://chalaya22.github.io/my-lending/ro/index.html"
+    />
+
     <link
       rel="alternate"
       hreflang="ru-md"
       href="https://chalaya22.github.io/my-lending/ru/index.html"
     />
-    <link
-      rel="alternate"
-      hreflang="ro-md"
-      href="https://chalaya22.github.io/my-lending/ro/index.html"
-    />
+
     <link
       rel="alternate"
       hreflang="x-default"
@@ -215,9 +217,23 @@
     <section class="hero">
       <div class="hero-overlay"></div>
 
+      <img
+        src="../images/hero/hero-home-1200.webp"
+        srcset="
+          ../images/hero/hero-home-2000.webp 2000w,
+          ../images/hero/hero-home-1200.webp 1200w,
+          ../images/hero/hero-home-600.webp   600w
+        "
+        sizes="100vw"
+        alt="Beauty, skincare and makeup"
+        class="hero-bg-img"
+        loading="eager"
+        fetchpriority="high"
+      />
+
       <div class="hero-content">
         <h1 class="hero-title">Your personal lens on beauty</h1>
-        <p class="hero-subtitle">Brow &amp; Makeup • Expert Care</p>
+        <p class="hero-subtitle">Brow & Makeup • Expert Care</p>
       </div>
     </section>
 
