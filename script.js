@@ -27,21 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
-//switch
-// document.addEventListener("DOMContentLoaded", () => {
-//   const langToggle = document.querySelector(".lang-toggle");
-//   if (!langToggle) return;
 
-//   langToggle.addEventListener("click", () => {
-//     const currentLang = langToggle.dataset.lang;
-
-//     if (currentLang === "ro") {
-//       window.location.href = "../ru/index.html";
-//     } else {
-//       window.location.href = "../ro/index.html";
-//     }
-//   });
-// });
 function switchLang(lang) {
   const path = window.location.pathname;
   if (lang === "ru") {
@@ -79,4 +65,36 @@ if (mobileToggle) {
   mobileToggle.dataset.lang = isRU ? "ru" : "ro";
   mobileToggle.querySelector(".ro").classList.toggle("active", !isRU);
   mobileToggle.querySelector(".ru").classList.toggle("active", isRU);
+}
+/* forma ingridients DISQUS */
+{
+  /* <script>
+function sendReview() {
+  const skin = document.getElementById('skinType').value;
+  const effect = document.getElementById('effect').value;
+  const reaction = document.getElementById('reaction').value;
+  const time = document.getElementById('time').value;
+  const extra = document.getElementById('extra').value;
+
+  let reviewText = "Мой опыт:\n";
+
+  if (skin) reviewText += "• Тип кожи: " + skin + "\n";
+  if (effect) reviewText += "• Эффект: " + effect + "\n";
+  if (reaction) reviewText += "• Реакции: " + reaction + "\n";
+  if (time) reviewText += "• Результат через: " + time + "\n";
+  if (extra) reviewText += "• Дополнительно: " + extra + "\n";
+
+  alert(
+    "Ваш отзыв сформирован 👍\n\n" +
+    "Сейчас он будет вставлен в форму комментариев ниже.\n" +
+    "Осталось нажать «Опубликовать»."
+  );
+
+  // Прокрутка к Disqus
+  document.getElementById('disqus_thread').scrollIntoView({ behavior: 'smooth' });
+
+  // Копирование в буфер
+  navigator.clipboard.writeText(reviewText);
+}
+</script> */
 }

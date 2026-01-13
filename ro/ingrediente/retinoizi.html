@@ -324,7 +324,7 @@
           </div>
 
           <!-- SIDEBAR -->
-          <aside class="ingredient-sidebar card">
+          <aside>
             <div class="card">
               <h3 class="section-title">
                 <span class="icon">💡</span> Știai că?
@@ -335,7 +335,7 @@
               </p>
             </div>
 
-            <div class="card">
+            <div class="card" style="margin-top: 18px">
               <h3 class="section-title">
                 <span class="icon">⚠️</span> Atenție
               </h3>
@@ -347,7 +347,7 @@
               </ul>
             </div>
 
-            <div class="card">
+            <div class="card" style="margin-top: 18px">
               <h3 class="section-title">
                 <span class="icon">🧴</span> Cum începi
               </h3>
@@ -359,7 +359,7 @@
               </ol>
             </div>
 
-            <div class="card">
+            <div class="card" style="margin-top: 18px">
               <h3 class="section-title">
                 <span class="icon">🔗</span> Se combină bine cu
               </h3>
@@ -385,12 +385,12 @@
           </div>
 
           <div class="faq-item">
-            <h3>Este sigur vara?</h3>
+            <h3>Este sigur să folosesc retinol vara?</h3>
             <p>Da, cu condiția utilizării zilnice a unui produs cu SPF.</p>
           </div>
 
           <div class="faq-item">
-            <h3>Este potrivit pentru pielea sensibilă?</h3>
+            <h3>Este retinolul potrivit pentru pielea sensibilă?</h3>
             <p>
               Cu prudență. Se recomandă concentrații mici și metoda „sandwich”.
             </p>
@@ -398,7 +398,10 @@
 
           <div class="faq-item">
             <h3>Se poate combina cu acizi?</h3>
-            <p>Nu în aceeași rutină. Este mai sigur să alternezi zilele.</p>
+            <p>
+              Nu este recomandat în aceeași rutină. Mai sigur este să alternezi
+              zilele.
+            </p>
           </div>
         </section>
       </article>
@@ -524,6 +527,9 @@
           </a>
         </div>
       </div>
+      <div class="site-footer">
+        <a href="../../ro/privacy.html">Politica de confidențialitate</a>
+      </div>
 
       <div class="footer-bottom">
         <p>© 2025 Estetica Lui — Toate drepturile rezervate.</p>
@@ -532,8 +538,47 @@
 
     <script src="../../script.js" defer></script>
 
-    <!-- Structured data (schema.org) -->
-
     <!-- FAQ   schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Pot folosi retinol zilnic?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": " Nu. Retinolul se introduce treptat. După adaptare, se poate folosi
+                    o dată la două zile."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Este sigur să folosesc retinol vara?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Da, cu condiția utilizării zilnice a unui produs cu SPF."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Este retinolul potrivit pentru pielea sensibilă?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Cu prudență. Se recomandă concentrații mici și metoda „sandwich”."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Se poate combina cu acizi??",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Nu este recomandat în aceeași rutină. Mai sigur este să alternezi zilele."
+            }
+          }
+        ]
+      }
+    </script>
   </body>
 </html>
