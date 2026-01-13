@@ -67,9 +67,10 @@ if (mobileToggle) {
   mobileToggle.querySelector(".ru").classList.toggle("active", isRU);
 }
 /* forma ingridients DISQUS */
-{
-  /* <script>
+
+/* 
 function sendReview() {
+const rating = document.querySelector(".stars")?.getAttribute("data-rating");
   const skin = document.getElementById('skinType').value;
   const effect = document.getElementById('effect').value;
   const reaction = document.getElementById('reaction').value;
@@ -78,6 +79,9 @@ function sendReview() {
 
   let reviewText = "Мой опыт:\n";
 
+  if (rating && rating !== "0") {
+  reviewText += "Оценка: " + rating + " / 5 ⭐\n";
+}
   if (skin) reviewText += "• Тип кожи: " + skin + "\n";
   if (effect) reviewText += "• Эффект: " + effect + "\n";
   if (reaction) reviewText += "• Реакции: " + reaction + "\n";
@@ -96,5 +100,33 @@ function sendReview() {
   // Копирование в буфер
   navigator.clipboard.writeText(reviewText);
 }
-</script> */
+ */
+
+// document.querySelectorAll(".stars span").forEach((star) => {
+//   star.addEventListener("click", function () {
+//     const value = this.getAttribute("data-value");
+//     const stars = this.parentElement;
+//     stars.setAttribute("data-rating", value);
+
+//     stars.querySelectorAll("span").forEach((s) => {
+//       s.classList.toggle("active", s.getAttribute("data-value") <= value);
+//     });
+//   });
+// });
+function sendReview() {
+  alert(
+    "Спасибо за отзыв 💙\n\n" +
+      "Функция отправки будет доступна после запуска сайта."
+  );
 }
+document.querySelectorAll(".stars span").forEach((star) => {
+  star.addEventListener("click", function () {
+    const value = this.getAttribute("data-value");
+    const stars = this.parentElement;
+    stars.setAttribute("data-rating", value);
+
+    stars.querySelectorAll("span").forEach((s) => {
+      s.classList.toggle("active", s.getAttribute("data-value") <= value);
+    });
+  });
+});

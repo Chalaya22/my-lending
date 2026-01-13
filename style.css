@@ -366,6 +366,7 @@ section h2 {
   font-weight: 400;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+  text-align: center;
   color: var(--accent);
   margin-bottom: 28px;
 }
@@ -1137,17 +1138,19 @@ dl.definition dt {
   border-top: 1px solid #eee;
   font-family: "Poppins", sans-serif;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 20px;
   color: var(--accent);
 }
 
-.review-section h2 {
+.review-title {
   margin-bottom: 10px;
+  /* text-align: center; */
 }
 
 .review-intro {
   color: var(--accent-two);
   margin-bottom: 24px;
+  font-size: 10px;
 }
 
 #reviewForm label {
@@ -1205,6 +1208,36 @@ dl.definition dt {
 .gdpr a:hover {
   color: #000;
 }
+.review-hint {
+  font-size: 11px;
+  color: var(--accent-two);
+  margin-bottom: 12px;
+}
+.rating {
+  margin: 20px 0;
+}
+
+.rating-label {
+  display: block;
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+.stars {
+  font-size: 24px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.stars span {
+  color: #ccc;
+  transition: color 0.2s;
+}
+
+.stars span.active {
+  color: gold;
+}
+
 /* ------privancy.html-----------------------------*/
 .privacy-page {
   max-width: 800px;
@@ -1325,5 +1358,51 @@ dl.definition dt {
 
   .site-footer {
     padding: 16px;
+  }
+}
+/* ------------forma mob---------------- */
+@media (max-width: 600px) {
+  .review-section {
+    margin: 40px auto;
+    padding: 16px;
+    font-size: 16px;
+  }
+
+  .review-title {
+    font-size: 18px;
+  }
+
+  .review-intro {
+    font-size: 12px;
+  }
+  .review-hint {
+    font-size: 12px;
+  }
+
+  #reviewForm label {
+    font-size: 13px;
+  }
+
+  #reviewForm select,
+  #reviewForm textarea {
+    font-size: 14px;
+  }
+
+  #reviewForm button {
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .review-note,
+  .gdpr {
+    font-size: 10px;
+  }
+  .stars {
+    font-size: 32px;
+  }
+
+  .stars span {
+    padding: 4px;
   }
 }
