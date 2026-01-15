@@ -102,17 +102,6 @@ const rating = document.querySelector(".stars")?.getAttribute("data-rating");
 }
  */
 
-// document.querySelectorAll(".stars span").forEach((star) => {
-//   star.addEventListener("click", function () {
-//     const value = this.getAttribute("data-value");
-//     const stars = this.parentElement;
-//     stars.setAttribute("data-rating", value);
-
-//     stars.querySelectorAll("span").forEach((s) => {
-//       s.classList.toggle("active", s.getAttribute("data-value") <= value);
-//     });
-//   });
-// });
 function sendReview() {
   alert(
     "Спасибо за отзыв 💙\n\n" +
