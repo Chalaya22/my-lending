@@ -57,14 +57,35 @@ body {
 }
 
 /* ---------------- HEADER ---------------- */
-header {
+/* header {
   position: sticky;
   top: 0;
   width: 100%;
   z-index: 100;
   background: transparent;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+} */
+header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+
+  background: linear-gradient(
+    90deg,
+    rgba(190, 180, 170, 0.97) 0%,
+    rgba(210, 200, 190, 0.9) 40%,
+    rgba(235, 230, 225, 0.75) 75%,
+    rgba(250, 247, 245, 0.6) 100%
+  );
+
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+
+  border-bottom: 1px solid rgba(180, 150, 90, 0.15);
+  /* opacity: 0.95; */
 }
+
 header::before {
   content: "";
   position: absolute;
@@ -81,29 +102,45 @@ header::before {
 header .container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+
   gap: 20px;
   padding: 14px 20px;
 }
 
 /*----------------- LOGO block --------------*/
-
 .logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-decoration: none;
+}
+
+.logo-wrap {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  max-width: 240px; /* КЛЮЧЕВО */
-  flex-shrink: 0;
-  color: var(--accent-logo-heder);
-  line-height: 1.1;
+  max-width: 150px;
 }
+
+.logo svg {
+  display: block; /* 🔑 КЛЮЧ */
+  filter: drop-shadow(0 1px 1px rgba(90, 60, 20, 0.25));
+}
+
+.logo-tagline {
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-main);
+  line-height: 1.4;
+}
+
 .logo-footer {
   text-decoration: none;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  max-width: 240px; /* КЛЮЧЕВО */
+  max-width: 240px;
   flex-shrink: 0;
   color: var(--accent);
   line-height: 1.1;
@@ -111,51 +148,38 @@ header .container {
   letter-spacing: 0.22em;
 }
 
-.logo-title {
-  font-family: "Quicksand", sans-serif;
-  font-weight: 500;
-  font-size: 22px;
-  letter-spacing: 2px;
-  letter-spacing: 0.22em;
-}
-
-.logo-sub {
-  font-family: "Poppins", sans-serif;
-  font-size: 13px;
-  opacity: 0.75;
-  color: var(--accent-two);
-  font-weight: 500;
-  letter-spacing: 0.15em;
-}
-
-header:hover {
-  background: rgba(251, 247, 246, 0.9);
-  transition: 0.3s ease;
-}
-
 /* ---------------- NAV ROW---------------- */
+.header-right {
+  display: flex;
+  justify-content: flex-end;
+  flex: 1;
+}
 .nav-row {
   display: flex;
-  justify-content: space-between; /* равномерное распределение */
-  align-items: center; /* вертикальное выравнивание */
-  flex-wrap: wrap; /* для мобильных, элементы будут переноситься */
-  max-width: 1100px;
-  margin: 0 auto;
-  gap: 16px;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: nowrap; /* 🔑 КЛЮЧ */
+  justify-content: flex-end;
+  white-space: nowrap;
 }
 
 /* ---------------- NAV MENU---------------- */
 .nav-menu {
   display: flex;
-  gap: 24px;
+  align-items: center;
   list-style: none;
+  white-space: nowrap;
+  gap: 6px;
+  flex-shrink: 1; /* 🔑 */
+  min-width: 0;
 }
 
 .nav-menu li a {
-  font-size: 14px;
+  font-size: 13px;
   color: var(--text-main);
   text-decoration: none;
   padding: 2px 4px;
+  letter-spacing: 1px;
 }
 
 .nav-menu li a:hover {
@@ -165,6 +189,65 @@ header:hover {
 }
 .menu-close {
   display: none;
+}
+
+.nav-menu > li > a {
+  display: inline-block;
+  padding: 2pxx 4px; /* 🔑 ширина клика */
+  font-size: 14px;
+  letter-spacing: 1.5px;
+  font-weight: 500;
+
+  color: #3a2f2a;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-menu > li > a:hover {
+  color: #b08a3c; /* золото */
+}
+
+.nav-menu > li > a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 4px;
+  width: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #d6b46a,
+    #b08a3c,
+    #d6b46a,
+    transparent
+  );
+  transition: 0.4s ease;
+  transform: translateX(-50%);
+}
+
+.nav-menu > li > a:hover::after {
+  width: 80%;
+}
+
+.nav-menu > li > a.active {
+  color: #9a7530;
+  font-weight: 600;
+}
+
+.nav-menu .btn {
+  padding: 5px 10px;
+  border-radius: 22px;
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  background: linear-gradient(135deg, #d6b46a, #b08a3c);
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.nav-menu .btn:hover {
+  background: linear-gradient(135deg, #e6c97f, #c89a3c);
+  box-shadow: 0 6px 16px rgba(176, 138, 60, 0.35);
 }
 
 /* ---------------- HERO ---------------- */
@@ -218,7 +301,9 @@ header:hover {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.25), 0 0 18px rgba(255, 255, 255, 0.25);
+  text-shadow:
+    0 2px 6px rgba(0, 0, 0, 0.25),
+    0 0 18px rgba(255, 255, 255, 0.25);
 
   margin-bottom: 14px;
 }
@@ -268,7 +353,7 @@ header:hover {
 
 /* ---------------- BTN---------------- */
 
-.btn {
+/* .btn {
   background: transparent;
   color: var(--pink-soft);
   border: 1px solid rgba(184, 92, 143, 0.4);
@@ -281,7 +366,7 @@ header:hover {
 .btn:hover {
   background: rgba(184, 92, 143, 0.1);
   border-color: var(--pink-soft);
-}
+} */
 
 /* ---------------- SOCIAL NERWORKS ---------------- */
 .mobile-socials {
@@ -292,10 +377,14 @@ header:hover {
 
 .desktop-lang {
   display: flex;
+  /* flex-shrink: 0;
+  min-width: 70px; */
 }
 
 .mobile-lang {
   display: none;
+  /* flex-shrink: 0;
+  min-width: 70px; */
 }
 .lang-toggle {
   display: inline-flex;
@@ -303,7 +392,7 @@ header:hover {
   gap: 6px;
   font-size: 11px;
   cursor: pointer;
-  /* user-select: none; */
+  flex-shrink: 0;
 }
 
 .lang-toggle .label {
@@ -594,7 +683,8 @@ footer {
     position: fixed;
     inset: 0;
     z-index: 9999;
-    background: linear-gradient(
+    background:
+      linear-gradient(
         135deg,
         rgba(255, 255, 255, 0.06) 0%,
         rgba(255, 255, 255, 0.02) 30%,
@@ -914,7 +1004,9 @@ footer {
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: rgba(255, 238, 244, 0.97);
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.35), 0 0 18px rgba(255, 255, 255, 0.22);
+  text-shadow:
+    0 2px 6px rgba(0, 0, 0, 0.35),
+    0 0 18px rgba(255, 255, 255, 0.22);
   margin-bottom: 14px;
 }
 
@@ -1004,7 +1096,9 @@ dl.definition dt {
   background-size: 0% 1px;
   background-repeat: no-repeat;
   background-position: 0 100%;
-  transition: background-size 0.3s ease, color 0.25s ease;
+  transition:
+    background-size 0.3s ease,
+    color 0.25s ease;
 }
 
 .related-list a:hover {
@@ -1024,7 +1118,8 @@ dl.definition dt {
 
 .cta-book:hover {
   background: linear-gradient(135deg, #8a7e7a, #6f6460);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18),
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.18),
     inset 0 1px 0 rgba(255, 255, 255, 0.25);
 
   transform: translateY(-1px);
