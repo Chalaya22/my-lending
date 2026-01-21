@@ -73,9 +73,9 @@ header {
 
   background: linear-gradient(
     90deg,
-    rgba(190, 180, 170, 0.97) 0%,
-    rgba(210, 200, 190, 0.9) 40%,
-    rgba(235, 230, 225, 0.75) 75%,
+    rgba(131, 124, 116, 0.97) 0%,
+    rgba(153, 146, 139, 0.9) 40%,
+    rgba(173, 166, 159, 0.75) 75%,
     rgba(250, 247, 245, 0.6) 100%
   );
 
@@ -83,7 +83,7 @@ header {
   -webkit-backdrop-filter: blur(6px);
 
   border-bottom: 1px solid rgba(180, 150, 90, 0.15);
-  /* opacity: 0.95; */
+  opacity: 0.95;
 }
 
 header::before {
