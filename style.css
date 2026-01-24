@@ -22,7 +22,28 @@
   /* Тени */
   --shadow-soft: 0 6px 18px rgba(0, 0, 0, 0.06);
 }
-
+/* --- SOCIAL COLORS (GLOBAL) --- */
+.mobile-socials .insta {
+  color: #e1306c;
+}
+.mobile-socials .tiktok {
+  color: #000;
+}
+.mobile-socials .fb {
+  color: #1877f2;
+}
+.mobile-socials .phone {
+  color: #7a6f6b;
+}
+.mobile-socials .viber {
+  color: #7360f2;
+}
+.mobile-socials .wa {
+  color: #25d366;
+}
+.mobile-socials .tg {
+  color: #229ed9;
+}
 /* ---------------- RESET ---------------- */
 * {
   margin: 0;
@@ -221,9 +242,10 @@ header .container {
   padding: 5px 10px;
   border-radius: 22px;
   border: 1px solid rgba(176, 138, 60, 0.45);
+  background: rgba(255, 255, 255, 0.25);
   font-size: 13px;
   letter-spacing: 1.5px;
-  color: #b08a3c;
+  color: var(--text-main);
   transition: all 0.3s ease;
 }
 
@@ -702,7 +724,7 @@ body.menu-open .hamburger {
 
   .menu-close {
     display: block;
-    font-size: 26px;
+    font-size: 18px;
     cursor: pointer;
     color: var(--bg-header);
   }
@@ -712,19 +734,58 @@ body.menu-open .hamburger {
   .mobile-socials {
     display: flex;
     justify-content: center;
-    gap: 25px;
-    margin-top: 18px;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .mobile-socials .soc {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(4px);
+    transition: 0.25s ease;
   }
 
   .mobile-socials svg {
     width: 22px;
     height: 22px;
-    fill: var(--bg-header);
-    transition: 0.3s ease;
+    display: block;
+    fill: currentColor;
   }
 
-  .mobile-socials a:hover svg {
-    fill: var(--text-main);
+  /* БРЕНД-ЦВЕТА */
+  .insta {
+    color: #e1306c;
+  }
+  .tiktok {
+    color: #000000;
+  }
+  .fb {
+    color: #1877f2;
+  }
+  .phone {
+    color: #7a6f6b;
+  }
+  .viber {
+    color: #7360f2;
+  }
+  .wa {
+    color: #25d366;
+  }
+  .tg {
+    color: #229ed9;
+  }
+
+  /* Hover */
+  .mobile-socials .soc:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
   }
 }
 /* ---------------- SWITCH MOBILE-------------- */
@@ -768,6 +829,7 @@ body.menu-open .hamburger {
 
     border-radius: 20px;
     border: 1px solid rgba(176, 138, 60, 0.45);
+    background: rgba(255, 255, 255, 0.25);
     position: relative;
     backdrop-filter: blur(4px);
   }
