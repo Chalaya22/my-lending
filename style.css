@@ -132,7 +132,7 @@ header .container {
 }
 
 .logo svg {
-  display: block; /* 🔑 КЛЮЧ */
+  display: block;
   filter: drop-shadow(0 1px 1px rgba(90, 60, 20, 0.25));
 }
 
@@ -1010,6 +1010,70 @@ body.menu-open .hamburger {
   font-size: 14px;
   line-height: 1.6;
   color: var(--text-muted);
+}
+/* ------SERVICII ---------------------------*/
+.servicii-hero-img {
+  position: relative;
+  width: 100%;
+  height: 80vh; /* можно 60–80vh */
+  min-height: 360px;
+  overflow: hidden;
+}
+.servicii-hero-bg-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 40%;
+}
+/* ------RECENZII PRODUCE---------------------------*/
+.recenzii-hero-img {
+  position: relative;
+  width: 100%;
+  height: 80vh; /* можно 60–80vh */
+  min-height: 360px;
+  overflow: hidden;
+}
+.recenzii-hero-bg-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 90%;
+}
+/* ------PROBLEME ALE PIELEI---------------------------*/
+.probleme-hero-img {
+  position: relative;
+  width: 100%;
+  height: 80vh; /* можно 60–80vh */
+  min-height: 360px;
+  overflow: hidden;
+}
+.probleme-hero-bg-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 60%;
+}
+/* ------CONTACT---------------------------*/
+.contact-hero-img {
+  position: relative;
+  width: 100%;
+  height: 80vh; /* можно 60–80vh */
+  min-height: 360px;
+  overflow: hidden;
+}
+.contact-hero-bg-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 40%;
 }
 
 /* ------ИНРИДИЕНТЫ  VITAMINA,HIALURONIC-----------------------------*/
