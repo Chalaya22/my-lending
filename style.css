@@ -22,28 +22,7 @@
   /* Тени */
   --shadow-soft: 0 6px 18px rgba(0, 0, 0, 0.06);
 }
-/* --- SOCIAL COLORS (GLOBAL) --- */
-.mobile-socials .insta {
-  color: #e1306c;
-}
-.mobile-socials .tiktok {
-  color: #000;
-}
-.mobile-socials .fb {
-  color: #1877f2;
-}
-.mobile-socials .phone {
-  color: #7a6f6b;
-}
-.mobile-socials .viber {
-  color: #7360f2;
-}
-.mobile-socials .wa {
-  color: #25d366;
-}
-.mobile-socials .tg {
-  color: #229ed9;
-}
+
 /* ---------------- RESET ---------------- */
 * {
   margin: 0;
@@ -118,10 +97,11 @@ header .container {
 }
 
 /*----------------- LOGO block --------------*/
+
 .logo {
+  text-decoration: none;
   display: flex;
   flex-direction: column;
-  text-decoration: none;
 }
 
 .logo-wrap {
@@ -131,8 +111,10 @@ header .container {
   max-width: 210px;
 }
 
-.logo svg {
+.logo-svg {
   display: block;
+  width: 240px;
+  height: auto;
   filter: drop-shadow(0 1px 1px rgba(90, 60, 20, 0.25));
 }
 
@@ -146,24 +128,12 @@ header .container {
 
 .logo::after {
   content: "";
-  display: block;
-  width: 40px;
+  width: 110px;
   height: 1px;
-  background: linear-gradient(90deg, #f9e7b4, #cfa24a, #fff1c1);
   margin-top: 6px;
-}
-.logo-footer::after {
-  content: "";
-  display: block;
-  width: 40px;
-  height: 1px;
   background: linear-gradient(90deg, #f9e7b4, #cfa24a, #fff1c1);
-  margin-top: 6px;
 }
 
-.logo-footer {
-  text-decoration: none;
-}
 .logo-mobile-line {
   display: none;
 }
@@ -172,19 +142,25 @@ header .container {
 
 .nav-row {
   display: flex;
+  flex-wrap: wrap; /* разрешаем перенос */
   align-items: center;
-  gap: 12px;
-  flex-wrap: nowrap; /* 🔑 КЛЮЧ */
-  justify-content: flex-end;
-  white-space: nowrap;
+  gap: 10px;
+  padding: 5px 10px;
 }
 
 /* ---------------- NAV MENU---------------- */
 .nav-menu {
   display: flex;
-  align-items: flex-start;
+  flex-wrap: wrap; /* перенос ссылок */
+  gap: 10px;
   list-style: none;
-  gap: 6px;
+}
+
+.nav-actions {
+  display: flex;
+  flex-wrap: wrap; /* кнопки могут переноситься */
+  gap: 10px;
+  align-items: center;
 }
 
 .nav-menu li a {
@@ -203,7 +179,6 @@ header .container {
   font-size: 14px;
   letter-spacing: 1.5px;
   font-weight: 500;
-
   color: #3a2f2a;
   position: relative;
   transition: color 0.3s ease;
@@ -255,6 +230,12 @@ header .container {
 .nav-menu .btn:hover {
   background: linear-gradient(135deg, #e6c97f, #c89a3c);
   box-shadow: 0 6px 16px rgba(176, 138, 60, 0.35);
+}
+.menu-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: nowrap; /* 🔑 кнопки + свич всегда вместе */
 }
 
 /* ---------------- HERO ---------------- */
@@ -508,29 +489,62 @@ section h2 {
   transform: translateY(-4px);
 }
 
-/* ---------------- FOOTER ---------------- */
-footer {
+/* ================= FOOTER ================= */
+
+.footer {
   background: var(--text-muted);
-  padding: 40px 0 25px;
+  padding: 40px 0 24px;
 }
 
 .footer-container {
   max-width: 1200px;
   margin: 0 auto;
-
   display: grid;
-  grid-template-columns: 1.2fr 1fr 1fr 1fr;
+  grid-template-columns: 1.3fr 1fr 1fr 1fr;
   gap: 40px;
   align-items: start;
 }
 
-/* LOGO */
-.logo-sub-footer {
-  color: var(--bg-soft);
-  font-size: 11px;
+/* ---------- LOGO ---------- */
+
+.footer-logo {
+  display: flex;
+  align-items: flex-start;
 }
 
-/* LINKS */
+.logo-footer {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+}
+
+.footer-logo-svg {
+  display: block;
+  height: 70px;
+}
+
+.footer-logo-mobile {
+  display: none;
+}
+
+.footer-tagline {
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--line);
+  margin-top: 6px;
+}
+
+.logo-footer::after {
+  content: "";
+  width: 80px;
+  height: 1px;
+  margin-top: 6px;
+  background: linear-gradient(90deg, #f9e7b4, #cfa24a, #fff1c1);
+}
+
+/* ---------- LINKS ---------- */
+
 .footer-links {
   display: flex;
   flex-direction: column;
@@ -539,10 +553,9 @@ footer {
 
 .footer-links a {
   font-size: 14px;
-  color: #ffffff;
-  text-decoration: none;
+  color: #fff;
   opacity: 0.85;
-  transition: 0.3s;
+  text-decoration: none;
 }
 
 .footer-links a:hover {
@@ -550,38 +563,40 @@ footer {
   color: var(--text-main);
 }
 
-/* SOCIALS */
-.footer-col-socials {
+/* ---------- SOCIALS ---------- */
+
+.footer-socials {
   display: flex;
   gap: 16px;
   align-items: center;
 }
 
-.footer-col-socials a svg {
+.footer-socials svg {
   width: 20px;
   height: 20px;
-  fill: #ffffff;
-  transition: 0.3s;
+  fill: #fff;
 }
 
-.footer-col-socials a:hover svg {
+.footer-socials a:hover svg {
   fill: var(--text-main);
 }
-/* нижняя строка */
-.footer-bottom {
-  text-align: center;
 
-  font-size: 13px;
+/* ---------- BOTTOM ---------- */
+
+.footer-bottom {
+  margin-top: 24px;
+  text-align: center;
+  font-size: 12px;
+  color: #fff;
   opacity: 0.6;
-  color: #ffffff;
 }
-/* -----------FUTER----------------------- */
+
+/* ================= MOBILE ================= */
 
 @media (max-width: 768px) {
   .footer-container {
     grid-template-columns: 1fr;
-    gap: 16px;
-    justify-items: center;
+    gap: 20px;
     text-align: center;
   }
 
@@ -589,21 +604,35 @@ footer {
     display: none;
   }
 
-  .footer-col-socials {
+  .footer-logo {
     justify-content: center;
   }
 
-  .footer {
-    padding: 18px 0 10px;
+  .logo-footer {
+    align-items: center;
   }
 
-  .footer-bottom {
-    font-size: 11px;
-    margin-top: 8px;
+  .footer-logo-svg {
+    height: 50px;
   }
-  .footer-bottom {
-    font-size: 10px;
-    margin-top: 6px;
+
+  /* скрываем desktop */
+  .footer-logo-svg text:not(.footer-logo-mobile) {
+    display: none;
+  }
+
+  /* показываем mobile */
+  .footer-logo-mobile {
+    display: block;
+  }
+
+  .logo-footer::after {
+    margin: 6px auto 0;
+  }
+
+  .footer-socials {
+    justify-content: center;
+    flex-wrap: wrap;
   }
 }
 /* -----------ГАМБУРГЕР----------------------- */
@@ -631,50 +660,32 @@ body.menu-open .hamburger {
 /* ---------------- HEDER НА МОБИЛЬНОМ---------------- */
 
 @media (max-width: 768px) {
-  /* контейнер лого */
-
-  /* скрываем десктоп-строки */
-  .logo svg text:not(.logo-mobile-line) {
+  /* скрываем десктоп */
+  .logo-desktop {
     display: none;
   }
 
-  /* показываем мобильную строку */
+  /* показываем мобильное */
   .logo-mobile-line {
     display: block;
   }
 
-  /* второй сабтайтл скрываем */
+  /* масштабируем SVG вместо увеличения font-size */
+  .logo-svg {
+    width: 180px; /* 🔑 вот тут регулируешь размер */
+    margin-bottom: -4px;
+  }
+
+  /* оставляем один сабтайтл */
   .logo-tagline + .logo-tagline {
     display: none;
   }
-  .logo {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* 🔑 одинаковая точка */
-    gap: 2px;
-    margin: 0;
-    padding: 0;
-  }
-
-  .logo-wrap {
-    align-items: flex-start;
-    margin: 0;
-    padding: 0;
-  }
-
-  .logo svg {
-    width: auto;
-    max-width: 100%;
-    height: 32px; /* 🔑 фиксируем высоту */
-  }
 
   .logo-tagline {
-    margin: 0;
-    padding: 0;
     font-size: 10px;
-    line-height: 1.2;
     letter-spacing: 1.6px;
-    text-align: left;
+    margin-top: 0;
+    line-height: 1.1;
   }
 }
 
