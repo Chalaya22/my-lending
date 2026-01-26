@@ -74,10 +74,10 @@
         <a href="../index.html" class="logo">
           <div class="logo-wrap">
             <svg
-              width="260"
-              height="90"
-              viewBox="0 0 260 90"
+              class="logo-svg"
+              viewBox="0 0 320 90"
               xmlns="http://www.w3.org/2000/svg"
+              aria-label="Estetica Lens"
             >
               <defs>
                 <linearGradient
@@ -88,40 +88,57 @@
                   y2="0%"
                 >
                   <stop offset="0%" stop-color="#f9e7b4" />
-                  <stop offset="25%" stop-color="#f1c36d" />
-                  <stop offset="50%" stop-color="#d4a041" />
+                  <stop offset="30%" stop-color="#f1c36d" />
+                  <stop offset="55%" stop-color="#d4a041" />
                   <stop offset="75%" stop-color="#f1c36d" />
                   <stop offset="100%" stop-color="#fff1c1" />
                 </linearGradient>
               </defs>
-              <!-- ESTETICA -->
+
+              <!-- DESKTOP -->
+              <g class="logo-desktop">
+                <text
+                  x="0"
+                  y="40"
+                  font-family="Quicksand, serif"
+                  font-size="30"
+                  letter-spacing="10"
+                  fill="url(#goldGradient)"
+                >
+                  ESTETICA
+                </text>
+
+                <text
+                  x="0"
+                  y="72"
+                  font-family="Quicksand, serif"
+                  font-size="34"
+                  letter-spacing="5"
+                  fill="#1a1a1a"
+                >
+                  LENS
+                </text>
+              </g>
+
+              <!-- MOBILE ONE LINE -->
               <text
+                class="logo-mobile-line"
                 x="0"
-                y="42"
+                y="52"
                 font-family="Quicksand, serif"
-                font-size="28"
-                letter-spacing="8"
+                font-size="34"
+                letter-spacing="3"
                 fill="url(#goldGradient)"
+                textLength="300"
+                lengthAdjust="spacingAndGlyphs"
               >
                 ESTETICA
-              </text>
-
-              <!-- LENS -->
-              <text
-                x="0"
-                y="72"
-                font-family="Quicksand, serif"
-                font-size="33"
-                letter-spacing="1"
-                fill="#1a1a1a"
-              >
-                LENS
+                <tspan fill="#1a1a1a">LENS</tspan>
               </text>
             </svg>
 
-            <!-- Подзаголовок -->
-            <span class="logo-tagline"> Beauty blog & Expert care </span>
-            <span class="logo-tagline"> Brow & Makeup</span>
+            <span class="logo-tagline">Beauty blog & Expert care</span>
+            <span class="logo-tagline">Brow & Makeup</span>
           </div>
         </a>
 
@@ -142,8 +159,15 @@
             <li><a href="probleme.html">Проблемы кожи</a></li>
             <li><a href="ingrediente.html">Ингредиенты и составы</a></li>
             <li><a href="contact.html">Контакты</a></li>
-            <li class="menu-btn">
-              <a class="btn" href="contact.html">Записаться</a>
+            <li class="menu-actions">
+              <a class="btn" href="servicii.html">Записаться/Консультация</a>
+              <a
+                href="#subscribe"
+                class="btn subscribe-btn"
+                data-open-subscribe
+              >
+                Подписка
+              </a>
             </li>
             <li class="mobile-lang">
               <div class="mobile-lang-toggle" data-lang="ru">
@@ -260,145 +284,148 @@
         </div>
       </div>
     </header>
-    <!-- BLOCK -->
-    <section class="ingredient-hero-img">
-      <div class="hero-overlay"></div>
-      <!-- Картинка -->
-      <img
-        src="../images/ingrediente/ingrediente-title 1200.webp"
-        srcset="
+    <main>
+      <!-- BLOCK -->
+      <section class="ingredient-hero-img">
+        <div class="hero-overlay"></div>
+        <!-- Картинка -->
+        <img
+          src="../images/ingrediente/ingrediente-title 1200.webp"
+          srcset="
          ../images/ingrediente/ingrediente-title 2000.webp 2000w,
          ../images/ingrediente/ingrediente-title 1200.webp 1200w,
           ../images/ingrediente/ingrediente-title 600.webp  600w
         "
-        sizes="100vw"
-        alt="Ingrediente & Formule"
-        class="ingredient-hero-bg-img"
-        loading="eager"
-      />
-      <div class="ingredient-hero-content">
-        <h1 class="ingredient-hero-title">Ингридиенты & составы</h1>
-      </div>
-    </section>
-    <section class="ingredients-page">
-      <div class="container">
-        <p class="ingredients-desc">
-          Здесь вы найдёте простые и понятные объяснения самых популярных
-          ингредиентов в уходе за кожей: что они делают, как их правильно
-          использовать и кому подходят.
-        </p>
-
-        <div class="ingredients-grid">
-          <a class="ingredient-card" href="ingrediente/vitamina-c.html">
-            <h3>Витамин C</h3>
-            <p>Сияние, антиоксидант, уменьшение пигментации.</p>
-          </a>
-
-          <a class="ingredient-card" href="ingrediente/acid-hialuronic.html">
-            <h3>Гиалуроновая кислота</h3>
-            <p>Глубокое увлажнение, упругость.</p>
-          </a>
-
-          <a class="ingredient-card" href="ingrediente/niacinamide.html">
-            <h3>Ниацинамид</h3>
-            <p>Поры, текстура кожи, ровный тон.</p>
-          </a>
-
-          <a class="ingredient-card" href="ingrediente/retinoizi.html">
-            <h3>Ретинол</h3>
-            <p>Анти-эйдж, обновление кожи, разглаживание морщин.</p>
-          </a>
-
-          <a class="ingredient-card" href="ingrediente/acizi.html">
-            <h3>Кислоты AHA/BHA</h3>
-            <p>Химический пилинг, сияние.</p>
-          </a>
-
-          <a class="ingredient-card" href="ingrediente/glicerina.html">
-            <h3>Глицерин</h3>
-            <p>Базовое увлажнение.</p>
-          </a>
-
-          <a class="ingredient-card" href="ingrediente/argila.html">
-            <h3>Глина</h3>
-            <p>Глубокое очищение, контроль себума.</p>
-          </a>
-
-          <a class="ingredient-card" href="ingrediente/squalan.html">
-            <h3>Сквалан & Сквален</h3>
-            <p>Питание, восстановление защитного барьера.</p>
-          </a>
-
-          <a class="ingredient-card" href="ingrediente/alcool.html">
-            <h3>Алкоголь</h3>
-            <p>Почему он не всегда вреден.</p>
-          </a>
-          <a class="ingredient-card" href="ingrediente/ceramide.html">
-            <h3>Церамиды</h3>
-            <p></p>
-          </a>
-          <a class="ingredient-card" href="ingrediente/pantenol.html">
-            <h3>Пантенол</h3>
-            <p></p>
-          </a>
-          <a class="ingredient-card" href="ingrediente/zinc.html">
-            <h3>Цинк</h3>
-            <p></p>
-          </a>
-
-          <a class="ingredient-card" href="ingrediente/mucina.html">
-            <h3>Муцин улитки</h3>
-            <p>Регенерация и увлажнение.</p>
-          </a>
-
-          <a class="ingredient-card" href="ingrediente/enzime.html">
-            <h3>Ферменты (энзимы)</h3>
-            <p>Деликатное отшелушивание.</p>
-          </a>
-
-          <a class="ingredient-card" href="ingrediente/autobronzant.html">
-            <h3>Автобронзант</h3>
-            <p>Как работает и как подобрать.</p>
-          </a>
+          sizes="100vw"
+          alt="Ingrediente & Formule"
+          class="ingredient-hero-bg-img"
+          loading="eager"
+        />
+        <div class="ingredient-hero-content">
+          <h1 class="ingredient-hero-title">Ингридиенты & составы</h1>
         </div>
-        <section class="faq">
-          <h2>Часто задаваемые вопросы об ингредиентах в косметике</h2>
+      </section>
+      <section class="ingredients-page">
+        <div class="container">
+          <p class="ingredients-desc">
+            Здесь вы найдёте простые и понятные объяснения самых популярных
+            ингредиентов в уходе за кожей: что они делают, как их правильно
+            использовать и кому подходят.
+          </p>
 
-          <div class="faq-item">
-            <h3>Можно ли сочетать витамин C с ниацинамидом?</h3>
-            <p>
-              Да. В современных формулах витамин C и ниацинамид могут
-              использоваться вместе без риска для кожи, особенно при
-              сбалансированном pH.
-            </p>
-          </div>
+          <div class="ingredients-grid">
+            <a class="ingredient-card" href="ingrediente/vitamina-c.html">
+              <h3>Витамин C</h3>
+              <p>Сияние, антиоксидант, уменьшение пигментации.</p>
+            </a>
 
-          <div class="faq-item">
-            <h3>Подходят ли кислоты AHA и BHA для чувствительной кожи?</h3>
-            <p>
-              Да, но важно выбирать низкие концентрации и вводить их в уход
-              постепенно, наблюдая за реакцией кожи.
-            </p>
-          </div>
+            <a class="ingredient-card" href="ingrediente/acid-hialuronic.html">
+              <h3>Гиалуроновая кислота</h3>
+              <p>Глубокое увлажнение, упругость.</p>
+            </a>
 
-          <div class="faq-item">
-            <h3>Обязательно ли знать процент активного ингредиента?</h3>
-            <p>
-              Не всегда. Важнее общая формула средства, сочетание компонентов и
-              то, как продукт работает именно на вашей коже.
-            </p>
-          </div>
+            <a class="ingredient-card" href="ingrediente/niacinamide.html">
+              <h3>Ниацинамид</h3>
+              <p>Поры, текстура кожи, ровный тон.</p>
+            </a>
 
-          <div class="faq-item">
-            <h3>Можно ли использовать несколько активов одновременно?</h3>
-            <p>
-              Можно, но важно понимать совместимость ингредиентов и не
-              перегружать кожу, особенно если она чувствительная или реактивная.
-            </p>
+            <a class="ingredient-card" href="ingrediente/retinoizi.html">
+              <h3>Ретинол</h3>
+              <p>Анти-эйдж, обновление кожи, разглаживание морщин.</p>
+            </a>
+
+            <a class="ingredient-card" href="ingrediente/acizi.html">
+              <h3>Кислоты AHA/BHA</h3>
+              <p>Химический пилинг, сияние.</p>
+            </a>
+
+            <a class="ingredient-card" href="ingrediente/glicerina.html">
+              <h3>Глицерин</h3>
+              <p>Базовое увлажнение.</p>
+            </a>
+
+            <a class="ingredient-card" href="ingrediente/argila.html">
+              <h3>Глина</h3>
+              <p>Глубокое очищение, контроль себума.</p>
+            </a>
+
+            <a class="ingredient-card" href="ingrediente/squalan.html">
+              <h3>Сквалан & Сквален</h3>
+              <p>Питание, восстановление защитного барьера.</p>
+            </a>
+
+            <a class="ingredient-card" href="ingrediente/alcool.html">
+              <h3>Алкоголь</h3>
+              <p>Почему он не всегда вреден.</p>
+            </a>
+            <a class="ingredient-card" href="ingrediente/ceramide.html">
+              <h3>Церамиды</h3>
+              <p></p>
+            </a>
+            <a class="ingredient-card" href="ingrediente/pantenol.html">
+              <h3>Пантенол</h3>
+              <p></p>
+            </a>
+            <a class="ingredient-card" href="ingrediente/zinc.html">
+              <h3>Цинк</h3>
+              <p></p>
+            </a>
+
+            <a class="ingredient-card" href="ingrediente/mucina.html">
+              <h3>Муцин улитки</h3>
+              <p>Регенерация и увлажнение.</p>
+            </a>
+
+            <a class="ingredient-card" href="ingrediente/enzime.html">
+              <h3>Ферменты (энзимы)</h3>
+              <p>Деликатное отшелушивание.</p>
+            </a>
+
+            <a class="ingredient-card" href="ingrediente/autobronzant.html">
+              <h3>Автобронзант</h3>
+              <p>Как работает и как подобрать.</p>
+            </a>
           </div>
-        </section>
-      </div>
-    </section>
+          <section class="faq">
+            <h2>Часто задаваемые вопросы об ингредиентах в косметике</h2>
+
+            <div class="faq-item">
+              <h3>Можно ли сочетать витамин C с ниацинамидом?</h3>
+              <p>
+                Да. В современных формулах витамин C и ниацинамид могут
+                использоваться вместе без риска для кожи, особенно при
+                сбалансированном pH.
+              </p>
+            </div>
+
+            <div class="faq-item">
+              <h3>Подходят ли кислоты AHA и BHA для чувствительной кожи?</h3>
+              <p>
+                Да, но важно выбирать низкие концентрации и вводить их в уход
+                постепенно, наблюдая за реакцией кожи.
+              </p>
+            </div>
+
+            <div class="faq-item">
+              <h3>Обязательно ли знать процент активного ингредиента?</h3>
+              <p>
+                Не всегда. Важнее общая формула средства, сочетание компонентов
+                и то, как продукт работает именно на вашей коже.
+              </p>
+            </div>
+
+            <div class="faq-item">
+              <h3>Можно ли использовать несколько активов одновременно?</h3>
+              <p>
+                Можно, но важно понимать совместимость ингредиентов и не
+                перегружать кожу, особенно если она чувствительная или
+                реактивная.
+              </p>
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
 
     <!-- FOOTER -->
     <footer class="footer">

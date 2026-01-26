@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
   <head>
     <meta charset="utf-8" />
@@ -70,13 +70,13 @@
     <header>
       <div class="container">
         <!-- Логотип -->
-         <a href="../index.html" class="logo">
+        <a href="../index.html" class="logo">
           <div class="logo-wrap">
             <svg
-              width="260"
-              height="90"
-              viewBox="0 0 260 90"
+              class="logo-svg"
+              viewBox="0 0 320 90"
               xmlns="http://www.w3.org/2000/svg"
+              aria-label="Estetica Lens"
             >
               <defs>
                 <linearGradient
@@ -87,40 +87,57 @@
                   y2="0%"
                 >
                   <stop offset="0%" stop-color="#f9e7b4" />
-                  <stop offset="25%" stop-color="#f1c36d" />
-                  <stop offset="50%" stop-color="#d4a041" />
+                  <stop offset="30%" stop-color="#f1c36d" />
+                  <stop offset="55%" stop-color="#d4a041" />
                   <stop offset="75%" stop-color="#f1c36d" />
                   <stop offset="100%" stop-color="#fff1c1" />
                 </linearGradient>
               </defs>
-              <!-- ESTETICA -->
+
+              <!-- DESKTOP -->
+              <g class="logo-desktop">
+                <text
+                  x="0"
+                  y="40"
+                  font-family="Quicksand, serif"
+                  font-size="30"
+                  letter-spacing="10"
+                  fill="url(#goldGradient)"
+                >
+                  ESTETICA
+                </text>
+
+                <text
+                  x="0"
+                  y="72"
+                  font-family="Quicksand, serif"
+                  font-size="34"
+                  letter-spacing="5"
+                  fill="#1a1a1a"
+                >
+                  LENS
+                </text>
+              </g>
+
+              <!-- MOBILE ONE LINE -->
               <text
+                class="logo-mobile-line"
                 x="0"
-                y="42"
+                y="52"
                 font-family="Quicksand, serif"
-                font-size="28"
-                letter-spacing="8"
+                font-size="34"
+                letter-spacing="3"
                 fill="url(#goldGradient)"
+                textLength="300"
+                lengthAdjust="spacingAndGlyphs"
               >
                 ESTETICA
-              </text>
-
-              <!-- LENS -->
-              <text
-                x="0"
-                y="72"
-                font-family="Quicksand, serif"
-                font-size="33"
-                letter-spacing="1"
-                fill="#1a1a1a"
-              >
-                LENS
+                <tspan fill="#1a1a1a">LENS</tspan>
               </text>
             </svg>
 
-            <!-- Подзаголовок -->
-            <span class="logo-tagline"> Beauty blog & Expert care </span>
-            <span class="logo-tagline"> Brow & Makeup</span>
+            <span class="logo-tagline">Beauty blog & Expert care</span>
+            <span class="logo-tagline">Brow & Makeup</span>
           </div>
         </a>
 
@@ -141,11 +158,18 @@
             <li><a href="../probleme.html">Проблемы кожи</a></li>
             <li><a href="../ingrediente.html">Ингредиенты и составы</a></li>
             <li><a href="../contact.html">Контакты</a></li>
-            <li class="menu-btn">
-              <a class="btn" href="contact.html">Записаться</a>
+            <li class="menu-actions">
+              <a class="btn" href="../servicii.html">Записаться/Консультация</a>
+              <a
+                href="#subscribe"
+                class="btn subscribe-btn"
+                data-open-subscribe
+              >
+                Подписка
+              </a>
             </li>
             <li class="mobile-lang">
-              <div class="mobile-lang-toggle" data-lang="ru">
+              <div class="mobile-lang-toggle" data-lang="ro">
                 <span class="lang ro active">RO</span>
                 <span class="track">
                   <span class="dot"></span>
@@ -153,6 +177,7 @@
                 <span class="lang ru">RU</span>
               </div>
             </li>
+
             <li class="mobile-socials">
               <a
                 href="https://instagram.com"
