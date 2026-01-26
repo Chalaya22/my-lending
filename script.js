@@ -105,7 +105,7 @@ const rating = document.querySelector(".stars")?.getAttribute("data-rating");
 function sendReview() {
   alert(
     "Спасибо за отзыв 💙\n\n" +
-      "Функция отправки будет доступна после запуска сайта."
+      "Функция отправки будет доступна после запуска сайта.",
   );
 }
 document.querySelectorAll(".stars span").forEach((star) => {
@@ -119,3 +119,46 @@ document.querySelectorAll(".stars span").forEach((star) => {
     });
   });
 });
+// /---- модальное окно-----/
+const modal = document.getElementById("subscribe-modal");
+
+if (modal) {
+  const openBtns = document.querySelectorAll("[data-open-subscribe]");
+  const closeBtns = modal.querySelectorAll("[data-close-subscribe]");
+  const form = modal.querySelector(".subscribe-form");
+
+  openBtns.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      modal.classList.add("active");
+      document.body.style.overflow = "hidden";
+    });
+  });
+
+  closeBtns.forEach((btn) => {
+    btn.addEventListener("click", closeModal);
+  });
+
+  function closeModal() {
+    modal.classList.remove("active");
+    document.body.style.overflow = "";
+    resetForm();
+  }
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    form.innerHTML = `
+      <div class="subscribe-success">
+        <h3>Mulțumesc 💛</h3>
+        <p>Te-ai abonat cu succes.</p>
+      </div>
+    `;
+
+    setTimeout(closeModal, 2500);
+  });
+
+  function resetForm() {
+    location.reload();
+  }
+}

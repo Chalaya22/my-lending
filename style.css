@@ -355,6 +355,112 @@ header .container {
   background: rgba(184, 92, 143, 0.1);
   border-color: var(--pink-soft);
 } */
+/*----------------- MODAL WINDOWS SUBScRIBE block --------------*/
+.subscribe-modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  z-index: 9999;
+}
+
+.subscribe-modal.active {
+  display: block;
+}
+
+.subscribe-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(4px);
+}
+
+.subscribe-box {
+  position: relative;
+  max-width: 420px;
+  margin: 10vh auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  animation: fadeUp 0.4s ease;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.subscribe-close {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  border: none;
+  background: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.subscribe-box h2 {
+  text-align: center;
+  margin-bottom: 6px;
+}
+
+.subscribe-subtitle {
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 20px;
+  opacity: 0.8;
+}
+
+.subscribe-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.subscribe-form label {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.subscribe-form input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+}
+
+.subscribe-form button {
+  margin-top: 10px;
+  padding: 12px;
+  border-radius: 20px;
+  border: none;
+  background: linear-gradient(135deg, #e6c97f, #c89a3c);
+  color: #000;
+  font-weight: 600;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: 0.3s;
+}
+
+.subscribe-form button.enabled {
+  cursor: pointer;
+  opacity: 1;
+}
+
+.checkbox {
+  display: flex;
+  gap: 8px;
+  font-size: 11px;
+  align-items: flex-start;
+}
 
 /* ---------------- SOCIAL NERWORKS ---------------- */
 .mobile-socials {

@@ -160,15 +160,15 @@
             <li><a href="probleme.html">Probleme ale pielii</a></li>
             <li><a href="ingrediente.html">Ingrediente & Formule</a></li>
             <li><a href="contact.html">Contact</a></li>
-            <!-- <li class="menu-btn">
-              <a class="btn" href="servicii.html">Programeaza-te</a>
-            </li>
-            <li class="menu-btn">
-              <a class="btn subscribe-btn" href="#subscribe"> Abonează-te </a>
-            </li> -->
             <li class="menu-actions">
               <a class="btn" href="servicii.html">Programeaza-te</a>
-              <a class="btn subscribe-btn" href="#subscribe">Abonează-te</a>
+              <a
+                href="#subscribe"
+                class="btn subscribe-btn"
+                data-open-subscribe
+              >
+                Abonează-te
+              </a>
 
               <div class="lang-toggle desktop-lang" data-lang="ro">
                 <span class="label ro">RO</span>
@@ -574,7 +574,38 @@
       </div>
     </footer>
 
-    <!-- Correct JS path -->
+    <!-- ---------------------Moodalka Subscribe------------------------>
+    <div class="subscribe-modal" id="subscribe-modal" aria-hidden="true">
+      <div class="subscribe-overlay" data-close-subscribe></div>
+
+      <div class="subscribe-box" role="dialog" aria-modal="true">
+        <button class="subscribe-close" data-close-subscribe>✕</button>
+
+        <h2>Abonează-te</h2>
+        <p class="subscribe-subtitle">
+          Primește sfaturi reale de beauty, fără spam 💛
+        </p>
+
+        <form class="subscribe-form">
+          <label>
+            Nume
+            <input type="text" required placeholder="Numele tău" />
+          </label>
+
+          <label>
+            Email
+            <input type="email" required placeholder="email@email.com" />
+          </label>
+
+          <label class="checkbox">
+            <input type="checkbox" required />
+            <span> Sunt de acord cu prelucrarea datelor personale </span>
+          </label>
+
+          <button type="submit">Abonează-mă ✨</button>
+        </form>
+      </div>
+    </div>
     <script src="../script.js"></script>
   </body>
 </html>
