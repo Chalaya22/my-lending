@@ -145,7 +145,6 @@ header .container {
   flex-wrap: wrap; /* разрешаем перенос */
   align-items: center;
   gap: 10px;
-  padding: 5px 10px;
 }
 
 /* ---------------- NAV MENU---------------- */
@@ -166,22 +165,14 @@ header .container {
 .nav-menu li a {
   color: var(--text-main);
   text-decoration: none;
-  padding: 2px 4px;
+  padding: 1px 8px;
+  font-size: 14px;
+  color: var(--text-main);
+  position: relative;
 }
 
 .menu-close {
   display: none;
-}
-
-.nav-menu > li > a {
-  display: inline-block;
-  padding: 2pxx 4px;
-  font-size: 14px;
-  letter-spacing: 1.5px;
-  font-weight: 500;
-  color: #3a2f2a;
-  position: relative;
-  transition: color 0.3s ease;
 }
 
 .nav-menu > li > a:hover {
@@ -217,6 +208,8 @@ header .container {
 }
 
 .nav-menu .btn {
+  position: relative;
+  overflow: hidden; /* ← ВАЖНО */
   padding: 5px 10px;
   border-radius: 22px;
   border: 1px solid rgba(176, 138, 60, 0.45);
@@ -231,6 +224,35 @@ header .container {
   background: linear-gradient(135deg, #e6c97f, #c89a3c);
   box-shadow: 0 6px 16px rgba(176, 138, 60, 0.35);
 }
+.nav-menu .btn:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  animation: shine 5s infinite;
+  animation-duration: 5s;
+}
+
+@keyframes shine {
+  0% {
+    left: -150%;
+  }
+  60% {
+    left: 150%;
+  }
+  100% {
+    left: 150%;
+  }
+}
+
 .menu-actions {
   display: flex;
   align-items: center;
@@ -339,22 +361,6 @@ header .container {
   }
 }
 
-/* ---------------- BTN---------------- */
-
-/* .btn {
-  background: transparent;
-  color: var(--pink-soft);
-  border: 1px solid rgba(184, 92, 143, 0.4);
-  padding: 8px 16px;
-  font-size: 13px;
-  border-radius: 18px;
-  transition: 0.3s ease;
-}
-
-.btn:hover {
-  background: rgba(184, 92, 143, 0.1);
-  border-color: var(--pink-soft);
-} */
 /*----------------- MODAL WINDOWS SUBScRIBE block --------------*/
 .subscribe-modal {
   position: fixed;
@@ -635,11 +641,12 @@ section h2 {
   display: flex;
   flex-direction: column;
   text-decoration: none;
+  line-height: 1;
 }
 
 .footer-logo-svg {
   display: block;
-  height: 70px;
+  height: 76px;
 }
 
 .footer-logo-mobile {
@@ -647,11 +654,11 @@ section h2 {
 }
 
 .footer-tagline {
-  font-size: 11px;
+  font-size: 10px;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: var(--line);
-  margin-top: 6px;
+  margin-top: 4px;
 }
 
 .logo-footer::after {
@@ -688,6 +695,7 @@ section h2 {
   display: flex;
   gap: 16px;
   align-items: center;
+  align-self: center;
 }
 
 .footer-socials svg {
@@ -700,10 +708,70 @@ section h2 {
   fill: var(--text-main);
 }
 
+/* ---------- btn subscribe footer ---------- */
+
+.footer-subscribe {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-subscribe-title {
+  font-size: 14px;
+  opacity: 0.85;
+  color: var(--bg-main);
+}
+
+.footer-subscribe-btn {
+  position: relative;
+  overflow: hidden; /* ← ВАЖНО */
+  align-self: flex-start;
+  padding: 5px 10px;
+  border-radius: 22px;
+  border: 1px solid rgba(176, 138, 60, 0.45);
+  background: rgba(255, 255, 255, 0.25);
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  color: var(--text-main);
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+.footer-subscribe-btn:hover {
+  background: linear-gradient(135deg, #e6c97f, #c89a3c);
+  box-shadow: 0 6px 16px rgba(176, 138, 60, 0.35);
+}
+.footer-subscribe-btn:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  animation: shine 5s infinite;
+  animation-duration: 5s;
+}
+
+@keyframes shine {
+  0% {
+    left: -150%;
+  }
+  60% {
+    left: 150%;
+  }
+  100% {
+    left: 150%;
+  }
+}
+
 /* ---------- BOTTOM ---------- */
 
 .footer-bottom {
-  margin-top: 24px;
   text-align: center;
   font-size: 12px;
   color: #fff;
@@ -713,12 +781,38 @@ section h2 {
 /* ================= MOBILE ================= */
 /* -----------MODAL WINDOWS SIBSCRIBE----------------------- */
 @media (max-width: 768px) {
-  .subscribe-box {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .footer-logo {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .logo-footer {
+    align-items: center;
+  }
+
+  .footer-links {
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-socials {
+    justify-content: center;
+  }
+
+  .footer-subscribe {
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-subscribe-btn {
+    align-self: center;
     width: 100%;
-    max-width: none;
-    height: auto;
-    border-radius: 16px 16px 0 0;
-    padding: 20px;
+    max-width: 260px;
   }
 }
 
@@ -762,6 +856,10 @@ section h2 {
   .footer-socials {
     justify-content: center;
     flex-wrap: wrap;
+  }
+  .footer-subscribe {
+    align-items: center;
+    text-align: center;
   }
 }
 /* -----------ГАМБУРГЕР----------------------- */
@@ -820,7 +918,6 @@ body.menu-open .hamburger {
 
 @media (max-width: 900px) {
   .nav-menu,
-  .btn,
   .lang-switch,
   .socials-header {
     display: none;
@@ -920,14 +1017,15 @@ body.menu-open .hamburger {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     background: rgba(255, 255, 255, 0.25);
     backdrop-filter: blur(4px);
     transition: 0.25s ease;
+    position: relative;
+    overflow: hidden;
+    isolation: isolate; /* ВАЖНО */
   }
 
   .mobile-socials svg {
@@ -937,33 +1035,44 @@ body.menu-open .hamburger {
     fill: currentColor;
   }
 
-  /* БРЕНД-ЦВЕТА */
-  .insta {
-    color: #e1306c;
-  }
-  .tiktok {
-    color: #000000;
-  }
-  .fb {
-    color: #1877f2;
-  }
-  .phone {
-    color: #7a6f6b;
-  }
-  .viber {
-    color: #7360f2;
-  }
-  .wa {
-    color: #25d366;
-  }
-  .tg {
-    color: #229ed9;
-  }
-
   /* Hover */
   .mobile-socials .soc:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  }
+  .mobile-socials .soc::before {
+    content: "";
+    position: absolute;
+    inset: -40%;
+    background: linear-gradient(
+      120deg,
+      transparent 30%,
+      rgba(249, 231, 180, 0.95),
+      rgba(241, 195, 109, 0.95),
+      rgba(212, 160, 65, 0.95),
+      transparent 70%
+    );
+
+    transform: translateX(-120%) rotate(25deg);
+    animation: socShine 8s ease-in-out infinite;
+    mix-blend-mode: screen;
+    pointer-events: none;
+  }
+  @keyframes socShine {
+    0% {
+      transform: translateX(-120%) rotate(25deg);
+      opacity: 0;
+    }
+    15% {
+      opacity: 1;
+    }
+    35% {
+      transform: translateX(120%) rotate(25deg);
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
   }
 }
 /* ---------------- SWITCH MOBILE-------------- */
@@ -1617,14 +1726,17 @@ dl.definition dt {
   border-radius: 20px;
   font-size: 13px;
   text-decoration: none;
-  color: #555;
+  background: var(--text-muted);
+  color: var(--bg-main);
   transition: all 0.2s ease;
+  text-decoration: none;
 }
 
 .privacy-page + .site-footer a:hover,
 .site-footer a.back-home:hover {
   background: #f5f5f5;
   color: #000;
+  text-decoration: none;
 }
 .site-footer {
   text-align: center;

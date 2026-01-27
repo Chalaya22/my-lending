@@ -336,79 +336,98 @@
     <!-- FOOTER -->
     <footer class="footer">
       <div class="footer-container">
-        <!-- 1. LOGO -->
-        <a href="../index.html" class="logo-footer">
-          <div class="logo-wrap">
+        <!-- LOGO -->
+        <div class="footer-logo">
+          <a href="../index.html" class="logo-footer">
             <svg
-              width="260"
-              height="90"
-              viewBox="0 0 260 90"
+              class="footer-logo-svg"
+              viewBox="0 0 260 80"
               xmlns="http://www.w3.org/2000/svg"
             >
               <defs>
                 <linearGradient
-                  id="goldGradient"
+                  id="goldGradientFooter"
                   x1="0%"
                   y1="0%"
                   x2="100%"
                   y2="0%"
                 >
                   <stop offset="0%" stop-color="#f9e7b4" />
-                  <stop offset="25%" stop-color="#f1c36d" />
-                  <stop offset="50%" stop-color="#d4a041" />
+                  <stop offset="30%" stop-color="#f1c36d" />
+                  <stop offset="55%" stop-color="#d4a041" />
                   <stop offset="75%" stop-color="#f1c36d" />
                   <stop offset="100%" stop-color="#fff1c1" />
                 </linearGradient>
               </defs>
-              <!-- ESTETICA -->
+
+              <!-- DESKTOP -->
               <text
                 x="0"
-                y="52"
-                font-family="Quicksand, serif"
-                font-size="18"
-                letter-spacing="8"
-                fill="url(#goldGradient)"
+                y="19"
+                font-size="20"
+                letter-spacing="10"
+                fill="url(#goldGradientFooter)"
               >
                 ESTETICA
               </text>
-
-              <!-- LENS -->
               <text
                 x="0"
-                y="72"
-                font-family="Quicksand, serif"
-                font-size="23"
-                letter-spacing="1"
+                y="42"
+                font-size="24"
+                letter-spacing="5"
                 fill="#1a1a1a"
               >
                 LENS
               </text>
+
+              <!-- MOBILE -->
+              <text
+                class="footer-logo-mobile"
+                x="0"
+                y="76"
+                font-size="30"
+                letter-spacing="4"
+                fill="url(#goldGradientFooter)"
+              >
+                ESTETICA
+                <tspan fill="#1a1a1a">LENS</tspan>
+              </text>
             </svg>
 
-            <!-- Подзаголовок -->
-            <span class="logo-tagline"> Beauty blog & Expert care </span>
-            <span class="logo-tagline"> Brow & Makeup</span>
-          </div>
-        </a>
+            <span class="footer-tagline">Beauty blog & Expert care</span>
+            <span class="footer-tagline">Brow & Makeup</span>
+          </a>
+        </div>
 
-        <!-- 2. LINKS COL 1 -->
-        <div class="footer-links footer-col-1">
+        <!-- LINKS 1 -->
+        <div class="footer-links">
           <a href="../index.html">Acasă</a>
           <a href="../servicii.html">Servicii</a>
           <a href="../recenzii.html">Recenzii produse</a>
         </div>
 
-        <!-- 3. LINKS COL 2 -->
-        <div class="footer-links footer-col-2">
+        <!-- LINKS 2 -->
+        <div class="footer-links">
           <a href="../probleme.html">Probleme ale pielii</a>
-          <a href="../ingrediente.html">Ingrediente & Formule</a>
-          <a href="../contact.html">Contact</a>
+          <a href=".//ingrediente.html">Ingrediente & Formule</a>
+          <a href=".//contact.html">Contact</a>
         </div>
 
-        <!-- 4. SOCIALS -->
-        <div class="footer-socials footer-col-socials">
-          <!-- тут будут ИКОНКИ -->
+        <!-- SUBSCRIBE -->
+        <div class="footer-subscribe">
+          <p class="footer-subscribe-title">Abonează-te la noutăți ✨</p>
 
+          <a
+            href="#subscribe"
+            class="btn footer-subscribe-btn"
+            data-open-subscribe
+          >
+            Abonează-te
+          </a>
+        </div>
+
+        <!-- SOCIALS -->
+        <div class="footer-socials">
           <a
             href="https://instagram.com"
             target="_blank"
@@ -501,12 +520,12 @@
           </a>
         </div>
       </div>
-      <footer class="site-footer">
-        <a href="../../ro/privacy.html">Politica de confidențialitate</a>
-      </footer>
+      <div class="site-footer">
+        <a href="../ro/privacy.html">Politica de confidențialitate</a>
+      </div>
 
       <div class="footer-bottom">
-        <p>© 2025 Estetica Lui — Toate drepturile rezervate.</p>
+        <p>© 2025 Estetica Lens — Toate drepturile rezervate.</p>
       </div>
     </footer>
     <!-- ---------------------Moodalka Subscribe------------------------>
