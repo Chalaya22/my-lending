@@ -644,7 +644,7 @@ section h2 {
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1.3fr 1fr 1fr 1fr;
-  gap: 40px;
+  gap: 20px;
   align-items: start;
 }
 
@@ -1502,6 +1502,302 @@ dl.definition dt {
   padding: 10px;
   font-size: 13px;
 }
+/* ================= COLLABORATION PAGE ================= */
+.colaborari-hero-bg-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 40%;
+}
+.colaborari-hero-img {
+  position: relative;
+  width: 100%;
+  height: 80vh; /* можно 60–80vh */
+  min-height: 360px;
+  overflow: hidden;
+}
+
+.collaboration-intro {
+  max-width: 720px;
+  margin: 0 auto 60px;
+  padding: 0 16px;
+  text-align: left;
+}
+
+.collaboration-title {
+  font-size: 26px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  margin-bottom: 24px;
+  color: var(--text-main);
+  position: relative;
+}
+
+.collaboration-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 1px;
+  margin-top: 10px;
+  background: linear-gradient(90deg, #f9e7b4, #cfa24a, #fff1c1);
+}
+
+.collaboration-text {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+.collaboration-text strong {
+  color: var(--text-main);
+  font-weight: 500;
+}
+
+.collaboration-list {
+  margin: 20px 0 24px;
+  padding-left: 0;
+  list-style: none;
+}
+
+.collaboration-list li {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-main);
+  margin-bottom: 10px;
+  padding-left: 22px;
+  position: relative;
+}
+
+.collaboration-list li::before {
+  content: "✦";
+  position: absolute;
+  left: 0;
+  color: #cfa24a;
+  font-size: 12px;
+  top: 4px;
+}
+
+.collaboration-note {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-muted);
+  opacity: 0.85;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.collaboration-cta {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-main);
+  font-weight: 500;
+}
+.collaboration-form {
+  max-width: 420px;
+}
+
+/* ================= COLLABORATION FORM ================= */
+
+.collaboration-form {
+  max-width: 720px;
+  margin: 0 auto 80px;
+  padding: 32px 28px;
+
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(207, 162, 74, 0.25);
+
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+  animation: fadeUp 0.6s ease both;
+}
+
+.collaboration-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.collaboration-form input,
+.collaboration-form select,
+.collaboration-form textarea {
+  width: 100%;
+  padding: 12px 14px;
+
+  font-size: 14px;
+  font-family: inherit;
+
+  border-radius: 14px;
+  border: 1px solid rgba(176, 138, 60, 0.35);
+  background: rgba(255, 255, 255, 0.75);
+
+  outline: none;
+  transition: 0.3s ease;
+}
+
+.collaboration-form textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.collaboration-form input:focus,
+.collaboration-form select:focus,
+.collaboration-form textarea:focus {
+  border-color: #cfa24a;
+  box-shadow: 0 0 0 3px rgba(207, 162, 74, 0.15);
+  background: #fff;
+}
+
+.collaboration-form button {
+  margin-top: 12px;
+  align-self: flex-start;
+
+  padding: 10px 24px;
+  border-radius: 26px;
+  border: 1px solid rgba(176, 138, 60, 0.45);
+
+  background: linear-gradient(135deg, #fff1c1, #e6c97f, #cfa24a);
+
+  color: #3a2f2a;
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  font-weight: 500;
+
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.collaboration-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(176, 138, 60, 0.35);
+}
+
+.collaboration-form button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -60%;
+  width: 40%;
+  height: 100%;
+
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.7),
+    transparent
+  );
+
+  transform: skewX(-20deg);
+  animation: shine 3.5s infinite;
+}
+
+@keyframes shine {
+  0% {
+    left: -60%;
+  }
+  50% {
+    left: 120%;
+  }
+  100% {
+    left: 120%;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.collaboration-form input:not(:placeholder-shown),
+.collaboration-form textarea:not(:placeholder-shown),
+.collaboration-form select:has(option:checked:not([value=""])) {
+  border-color: #cfa24a;
+  background: #fff;
+}
+
+.collaboration-form input:not(:placeholder-shown),
+.collaboration-form textarea:not(:placeholder-shown) {
+  box-shadow: 0 0 0 2px rgba(207, 162, 74, 0.12);
+}
+/*SUCCESS MESSAGE */
+
+.collaboration-success {
+  max-width: 720px;
+  margin: 40px auto 80px;
+  padding: 36px 28px;
+
+  text-align: center;
+
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(207, 162, 74, 0.35);
+
+  animation: fadeUp 0.5s ease both;
+}
+
+.success-title {
+  font-size: 22px;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+  color: #3a2f2a;
+}
+
+.success-text {
+  font-size: 15px;
+  line-height: 1.6;
+  opacity: 0.85;
+}
+/* footer btn calaborare*/
+
+.footer-cta {
+  display: flex;
+  align-items: center;
+}
+
+.footer-btn {
+  padding: 5px 10px;
+  border-radius: 22px;
+
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  text-decoration: none;
+
+  color: #3a2f2a;
+  border: 1px solid rgba(176, 138, 60, 0.45);
+
+  background: linear-gradient(135deg, #fff1c1, #e6c97f, #cfa24a);
+
+  transition: all 0.3s ease;
+}
+
+.footer-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(176, 138, 60, 0.35);
+}
 
 /* ================= ========MOBILE ================================ */
 /* ======================== HEDER MOB=======================*/
@@ -1968,5 +2264,53 @@ dl.definition dt {
 
   .site-footer {
     padding: 16px;
+  }
+}
+/* ============================ COLABORARI Pagina MOB =======================*/
+
+@media (max-width: 768px) {
+  .collaboration-title {
+    font-size: 22px;
+    letter-spacing: 1.5px;
+  }
+
+  .collaboration-text,
+  .collaboration-list li,
+  .collaboration-cta {
+    font-size: 14px;
+  }
+}
+/* =================FORMA COLABORERI MOB ================= */
+
+@media (max-width: 768px) {
+  .collaboration-form {
+    padding: 24px 18px;
+    margin-bottom: 60px;
+    border-radius: 18px;
+  }
+
+  .collaboration-form label {
+    font-size: 12px;
+    letter-spacing: 0.8px;
+  }
+
+  .collaboration-form input,
+  .collaboration-form select,
+  .collaboration-form textarea {
+    font-size: 14px;
+    padding: 11px 12px;
+  }
+
+  .collaboration-form button {
+    width: 100%;
+    text-align: center;
+    align-self: stretch;
+  }
+}
+/* footer-btn calaboreri mob */
+@media (max-width: 768px) {
+  .footer-cta {
+    justify-content: center;
+    margin-top: 12px;
   }
 }

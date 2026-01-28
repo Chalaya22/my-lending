@@ -162,3 +162,18 @@ if (modal) {
     location.reload();
   }
 }
+// /colaborare/
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.querySelector(".collaboration-form");
+  const success = document.querySelector(".collaboration-success");
+
+  if (!form || !success) return;
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    // здесь позже подключишь реальную отправку
+    form.style.display = "none";
+    success.hidden = false;
+  });
+});
