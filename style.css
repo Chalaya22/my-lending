@@ -809,7 +809,7 @@ section h2 {
 .page-hero-img {
   position: relative;
   width: 100%;
-  height: 100%; /* можно 60–80vh */
+  height: 80vh; /* можно 60–80vh */
   min-height: 360px;
   overflow: hidden;
   /* inset: 0;
