@@ -1232,7 +1232,9 @@ dl.definition dt {
   margin-top: 8px;
 }
 .related-list {
-  gap: 8px;
+  /* display: flex;
+  flex-direction: column; */
+  gap: 2px;
   list-style-position: outside;
   margin-left: 1.4em;
   padding-left: 0;
@@ -1241,8 +1243,13 @@ dl.definition dt {
   margin-bottom: 8px;
   line-height: 1.6;
 }
+.related-list-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
 
-.related-list a {
+.related-list-sidebar a {
   position: relative;
   padding: 6px 0;
   font-size: 14px;
@@ -1251,18 +1258,18 @@ dl.definition dt {
   transition: color 0.25s ease;
 }
 
-.related-list a::before {
+.related-list-sidebar a::before {
   content: "•";
   color: var(--accent);
   margin-right: 8px;
   opacity: 0.6;
 }
 
-.related-list a:hover {
+.related-list-sidebar a:hover {
   color: var(--accent);
 }
 
-.related-list a {
+.related-list-sidebar a {
   background-image: linear-gradient(to right, var(--accent), var(--accent));
   background-size: 0% 1px;
   background-repeat: no-repeat;
@@ -1272,7 +1279,7 @@ dl.definition dt {
     color 0.25s ease;
 }
 
-.related-list a:hover {
+.related-list-sidebar a:hover {
   color: var(--accent);
   background-size: 100% 1px;
 }
