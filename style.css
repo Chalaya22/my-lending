@@ -1232,9 +1232,14 @@ dl.definition dt {
   margin-top: 8px;
 }
 .related-list {
-  display: flex;
-  flex-direction: column;
   gap: 8px;
+  list-style-position: outside;
+  margin-left: 1.4em;
+  padding-left: 0;
+}
+.related-list li {
+  margin-bottom: 8px;
+  line-height: 1.6;
 }
 
 .related-list a {
@@ -2093,6 +2098,7 @@ dl.definition dt {
 
 /* ================= ========MOBILE ================================ */
 /* ======================== SECTION MOB=======================*/
+
 @media (max-width: 768px) {
   .section-btn-primary {
     padding: 12px 22px;
