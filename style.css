@@ -1211,7 +1211,7 @@ section h2 {
 .grid-2 {
   display: grid;
   grid-template-columns: 1fr 320px;
-  gap: 12px;
+  gap: 24px;
   align-items: start;
 }
 .card {
