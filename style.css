@@ -568,7 +568,21 @@ body.menu-open .hamburger {
     transform: translateY(0) scale(1);
   }
 }
-
+.page-hero-img {
+  position: relative;
+  width: 100%;
+  height: 70dvh;
+  min-height: 360px;
+  overflow: hidden;
+}
+.ingredient-hero-bg-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 33%;
+}
 /* ================= SECTIONS  Destop================= */
 section {
   padding: 14px 0;
@@ -912,21 +926,6 @@ section h2 {
 
 /* ======================ИНРИДИЕНТЫ  Page Desctop=========================-*/
 
-.page-hero-img {
-  position: relative;
-  width: 100%;
-  height: 70dvh;
-  min-height: 360px;
-  overflow: hidden;
-}
-.ingredient-hero-bg-img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 33%;
-}
 .page-intro {
   text-align: center;
   margin: 0 auto 40px;
@@ -2111,7 +2110,7 @@ dl.definition dt {
 @media (max-width: 768px) {
   .section-btn-primary {
     padding: 12px 22px;
-    font-size: 8px;
+    font-size: 12px;
     letter-spacing: 0.14em;
   }
 }
@@ -2500,11 +2499,15 @@ dl.definition dt {
 /* =========================HERO MOB-=======================================*/
 @media (max-width: 768px) {
   .hero {
-    height: 100svh; /* лучше для мобильных */
+    height: 60svh; /* лучше для мобильных */
   }
 
   .hero-title {
     letter-spacing: 0.04em;
+  }
+
+  .page-hero-img {
+    height: 60svh;
   }
 }
 
