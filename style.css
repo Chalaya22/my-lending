@@ -6,7 +6,7 @@
   --bg-header: #fbf7f6; /* хедер */
 
   /* Текст */
-  --text-main: #3a3a3a; /* основной текст */
+  --text-main: black; /* основной текст */
   --text-muted: #7a6f6b; /* background footer */
 
   /* Акценты */
@@ -573,6 +573,9 @@ body.menu-open .hamburger {
 section {
   padding: 14px 0;
 }
+p {
+  color: var(--text-main);
+}
 
 section h2 {
   font-family: "Quicksand", sans-serif;
@@ -638,7 +641,7 @@ section h2 {
   letter-spacing: 0.18em;
   text-transform: uppercase;
 
-  color: #2b2b2b;
+  color: var(--text-main);
   background: linear-gradient(135deg, #f6f1e6, #e9dcc1, #fdf8ec);
 
   border: 1px solid rgba(207, 162, 74, 0.35);
@@ -1318,6 +1321,7 @@ dl.definition dt {
   text-transform: uppercase;
   margin-bottom: 14px;
   color: var(--text-main);
+  text-align: center;
 }
 
 .ingredient-list {
