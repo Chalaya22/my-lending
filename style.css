@@ -953,7 +953,7 @@ section h2 {
   background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(6px);
 
-  border-radius: 18px;
+  border-radius: 8px;
   text-decoration: none;
   color: var(--text-main);
 
@@ -1233,8 +1233,6 @@ dl.definition dt {
   margin-top: 8px;
 }
 .related-list {
-  /* display: flex;
-  flex-direction: column; */
   gap: 2px;
   list-style-position: outside;
   margin-left: 1.4em;
@@ -1391,7 +1389,7 @@ dl.definition dt {
 .ingredient-image img {
   width: 100%;
   max-width: 820px;
-  border-radius: 18px;
+  border-radius: 8px;
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
 }
 
@@ -1411,10 +1409,25 @@ dl.definition dt {
 .ingredient-inline-image img {
   width: 100%;
   max-width: 640px;
-  border-radius: 16px;
+  border-radius: 8px;
   opacity: 0.95;
 }
+.ingredient-inline-image img,
+.ingredient-image img,
+.card-image img,
+.sidebar-img {
+  transition:
+    transform 0.6s ease,
+    box-shadow 0.6s ease;
+}
 
+.ingredient-inline-image img:hover,
+.ingredient-image img:hover,
+.card-image img:hover,
+.sidebar-img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.08);
+}
 .card-image img {
   width: 100%;
   border-radius: 12px;
