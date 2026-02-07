@@ -1382,6 +1382,8 @@ dl.definition dt {
 }
 /* изображения мнгридиентов */
 .ingredient-image {
+  position: relative;
+  overflow: hidden;
   margin: 32px 0 48px;
   text-align: center;
 }
@@ -1438,6 +1440,84 @@ dl.definition dt {
   font-size: 13px;
   color: var(--text-muted);
 }
+/* изображения таблица */
+.ingredient-table-wrapper {
+  overflow-x: auto;
+}
+
+.ingredient-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.ingredient-table th,
+.ingredient-table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #e5e5e5;
+  text-align: left;
+}
+
+.ingredient-table th {
+  font-weight: 500;
+}
+/* надпись поверх изображения */
+
+.image-accent-text {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  max-width: 80%;
+  padding: 10px 16px;
+
+  font-family: "Quicksand", sans-serif;
+  font-size: 15px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+
+  color: #fff;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(6px);
+  border-radius: 999px;
+
+  pointer-events: none;
+}
+
+/* появление надписи при скроле */
+.image-accent-text {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform: translate(-60%, 50%);
+  opacity: 0;
+
+  transition:
+    opacity 0.6s ease,
+    transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+
+  max-width: 80%;
+  padding: 10px 16px;
+
+  font-family: "Quicksand", sans-serif;
+  font-size: 15px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+
+  color: #fff;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(6px);
+  border-radius: 999px;
+
+  pointer-events: none;
+  z-index: 2;
+}
+
+.image-accent-text.is-visible {
+  opacity: 1;
+  transform: translate(-50%, 50%);
+}
+
 /* =================  FORMA STYLE Ingridiente Desctop ================= */
 .review-section {
   max-width: 720px;
@@ -2553,6 +2633,37 @@ dl.definition dt {
 @media (max-width: 480px) {
   .ingredient-steps {
     grid-template-columns: 1fr;
+  }
+}
+/* надпись на изображении ingredient-image MOB */
+@media (max-width: 768px) {
+  .image-accent-text {
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    padding: 8px 12px;
+    max-width: 90%;
+    text-align: center;
+  }
+  .image-accent-text {
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    padding: 8px 12px;
+
+    bottom: 12%;
+    transform: translate(-50%, 70%);
+  }
+
+  .image-accent-text.is-visible {
+    transform: translate(-50%, 0);
+  }
+}
+
+@media (max-width: 420px) {
+  .image-accent-text {
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    padding: 6px 10px;
+    border-radius: 16px;
   }
 }
 /* =====================FAQ MOB page-----------------------------*/

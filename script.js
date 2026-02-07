@@ -177,3 +177,24 @@ document.addEventListener("DOMContentLoaded", () => {
     success.hidden = false;
   });
 });
+/* появление надписи на картинке при скроле */
+
+document.addEventListener("DOMContentLoaded", () => {
+  const accentTexts = document.querySelectorAll(".image-accent-text");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target); // один раз
+        }
+      });
+    },
+    {
+      threshold: 0.4,
+    },
+  );
+
+  accentTexts.forEach((text) => observer.observe(text));
+});
