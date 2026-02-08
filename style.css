@@ -1517,6 +1517,18 @@ dl.definition dt {
   opacity: 1;
   transform: translate(-50%, 50%);
 }
+/* деекоративный разделитель секций */
+.section-divider {
+  height: 1px;
+  margin: 60px auto;
+  width: 60%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(0, 0, 0, 0.15),
+    transparent
+  );
+}
 
 /* =================  FORMA STYLE Ingridiente Desctop ================= */
 .review-section {
