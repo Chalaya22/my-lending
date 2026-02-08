@@ -198,3 +198,29 @@ document.addEventListener("DOMContentLoaded", () => {
 
   accentTexts.forEach((text) => observer.observe(text));
 });
+
+/* <===================button Полезные гайды ========================*/
+
+// var trigger = document.getElementById("guidesTrigger");
+// var panel = document.getElementById("guidesPanel");
+
+// trigger.addEventListener("click", function () {
+//   panel.classList.toggle("active");
+// });
+document.addEventListener("DOMContentLoaded", function () {
+  var trigger = document.querySelector(".guides-trigger");
+  var panel = document.querySelector(".guides-panel");
+
+  if (!trigger || !panel) return;
+
+  trigger.addEventListener("click", function () {
+    panel.classList.toggle("is-open");
+  });
+
+  // закрытие при клике вне
+  document.addEventListener("click", function (e) {
+    if (!panel.contains(e.target) && !trigger.contains(e.target)) {
+      panel.classList.remove("is-open");
+    }
+  });
+});
