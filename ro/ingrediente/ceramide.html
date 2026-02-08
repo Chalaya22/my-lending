@@ -237,100 +237,165 @@
     </header>
 
     <main>
-      <section class="review-section">
-        <p class="review-title">Împărtășește experiența ta ✨</p>
-        <p class="review-intro">
-          Părerea ta îi ajută pe alții să înțeleagă dacă acest ingredient li se
-          potrivește. Chiar și 1–2 fraze sunt utile 💬
-        </p>
-        <p class="review-hint">
-          Nu știți ce să scrieți? Selectați opțiunile — textul se va genera
-          automat ✨
-        </p>
+      <section class="page-hero-img">
+        <div class="hero-overlay"></div>
+        <!-- Картинка -->
+        <img
+          src="../../images/ceramide/ceramide-title-1200.webp"
+          srcset="
+            ../../images/ceramide/ceramide-title-2000.webp 2000w,
+            ../../images/ceramide/ceramide-title-1200.webp 1200w,
+            ../../images/ceramide/ceramide-title-600.webp   600w
+          "
+          sizes="100vw"
+          alt="Ceramide"
+          class="ingredient-hero-bg-img"
+          loading="eager"
+        />
 
-        <form id="reviewForm">
-          <label>
-            🌿 Tip de piele
-            <select id="skinType">
-              <option value="">Alegeți</option>
-              <option>Uscată</option>
-              <option>Grasă</option>
-              <option>Mixtă</option>
-              <option>Normală</option>
-              <option>Sensibilă</option>
-            </select>
-          </label>
-
-          <label>
-            ✨ Ce efect ai observat?
-            <select id="effect">
-              <option value="">Alegeți</option>
-              <option>Uniformizarea tonului</option>
-              <option>Luminozitatea pielii</option>
-              <option>Reducerea imperfecțiunilor</option>
-              <option>Netezirea texturii pielii</option>
-              <option>Nu am observat încă un efect</option>
-            </select>
-          </label>
-
-          <label>
-            ⚠️ Ai avut reacții?
-            <select id="reaction">
-              <option value="">Alegeți</option>
-              <option>Nu, totul a fost confortabil</option>
-              <option>Ușoară senzație de furnicături</option>
-              <option>Roșeață</option>
-              <option>Iritație</option>
-            </select>
-          </label>
-
-          <label>
-            ⏳ După cât timp ai observat rezultatele?
-            <select id="time">
-              <option value="">Alegeți</option>
-              <option>După câteva zile</option>
-              <option>După 1–2 săptămâni</option>
-              <option>După o lună</option>
-              <option>Este prea devreme pentru a spune</option>
-            </select>
-          </label>
-
-          <label>
-            ✍️ Completează recenzia (opțional)
-            <textarea
-              id="extra"
-              placeholder="De exemplu: cum l-ați folosit, cu ce l-ați combinat, dacă l-ați folosi din nou"
-            ></textarea>
-          </label>
-          <div class="rating">
-            <span class="rating-label"
-              >⭐ Cum ți s-a părut acest ingredient?</span
-            >
-            <div class="stars" data-rating="0">
-              <span data-value="1">★</span>
-              <span data-value="2">★</span>
-              <span data-value="3">★</span>
-              <span data-value="4">★</span>
-              <span data-value="5">★</span>
-            </div>
+        <div class="hero-content">
+          <h1 class="hero-title">Ceramide</h1>
+          <p class="hero-subtitle">Beauty blog & Expert care</p>
+          <p class="hero-subtitle">Brow & Makeup</p>
+        </div>
+        <a href="../../ru/mediakit.htm" class="hero-mediakit-btn">
+          <span>Media Kit</span>
+          <span class="arrow">→</span>
+        </a>
+      </section>
+      <article class="ingredient-article">
+        <div>
+          <div class="ingredient-meta">
+            <p class="ingredient-sub">
+              <b>Церамиды</b> — это липиды (жиры), которые естественным образом
+              присутствуют в роговом слое кожи и составляют до 50% её защитного
+              барьера.
+            </p>
+            <p class="ingredient-sub">
+              Они работают как «цемент» между клетками кожи, предотвращая потерю
+              влаги и защищая от внешних раздражителей: холода, ветра,
+              загрязнений и агрессивных косметических средств.
+            </p>
           </div>
 
-          <button type="button" onclick="sendReview()">
-            💬 Trimite recenzia
-          </button>
-        </form>
+          <figure class="ingredient-image">
+            <img
+              src="../../images/ceramide/ceramide-texture-800.webp"
+              srcset="
+                ../../images/ceramide/ceramide-texture-1200.webp 1200w,
+                ../../images/ceramide/ceramide-texture-800.webp   800w,
+                ../../images/ceramide/ceramide-texture-400.webp   400w
+              "
+              sizes="(max-width: 768px) 100vw, 800px"
+              alt="ceramide"
+              loading="lazy"
+            />
+            <span class="image-accent-text">
+              Lipide structurale care întăresc bariera pielii și mențin
+              hidratarea
+            </span>
+          </figure>
 
-        <p class="review-note">
-          Publicăm doar recenzii reale. Reclama și linkurile nu trec de moderare
-        </p>
-        <p class="gdpr">
-          Prin trimiterea comentariului, sunteți de acord cu
-          <a href="../../ro/privacy.html">Politica de confidențialitate</a>.
-        </p>
+          <a class="section-btn-primary" href="../servicii.html">
+            Consultații / Programare
+          </a>
+        </div>
+        <section class="review-section">
+          <p class="review-title">Împărtășește experiența ta ✨</p>
+          <p class="review-intro">
+            Părerea ta îi ajută pe alții să înțeleagă dacă acest ingredient li
+            se potrivește. Chiar și 1–2 fraze sunt utile 💬
+          </p>
+          <p class="review-hint">
+            Nu știți ce să scrieți? Selectați opțiunile — textul se va genera
+            automat ✨
+          </p>
 
-        <!-- DISQUS -->
-        <div id="disqus_thread"></div>
-      </section>
+          <form id="reviewForm">
+            <label>
+              🌿 Tip de piele
+              <select id="skinType">
+                <option value="">Alegeți</option>
+                <option>Uscată</option>
+                <option>Grasă</option>
+                <option>Mixtă</option>
+                <option>Normală</option>
+                <option>Sensibilă</option>
+              </select>
+            </label>
+
+            <label>
+              ✨ Ce efect ai observat?
+              <select id="effect">
+                <option value="">Alegeți</option>
+                <option>Uniformizarea tonului</option>
+                <option>Luminozitatea pielii</option>
+                <option>Reducerea imperfecțiunilor</option>
+                <option>Netezirea texturii pielii</option>
+                <option>Nu am observat încă un efect</option>
+              </select>
+            </label>
+
+            <label>
+              ⚠️ Ai avut reacții?
+              <select id="reaction">
+                <option value="">Alegeți</option>
+                <option>Nu, totul a fost confortabil</option>
+                <option>Ușoară senzație de furnicături</option>
+                <option>Roșeață</option>
+                <option>Iritație</option>
+              </select>
+            </label>
+
+            <label>
+              ⏳ După cât timp ai observat rezultatele?
+              <select id="time">
+                <option value="">Alegeți</option>
+                <option>După câteva zile</option>
+                <option>După 1–2 săptămâni</option>
+                <option>După o lună</option>
+                <option>Este prea devreme pentru a spune</option>
+              </select>
+            </label>
+
+            <label>
+              ✍️ Completează recenzia (opțional)
+              <textarea
+                id="extra"
+                placeholder="De exemplu: cum l-ați folosit, cu ce l-ați combinat, dacă l-ați folosi din nou"
+              ></textarea>
+            </label>
+            <div class="rating">
+              <span class="rating-label"
+                >⭐ Cum ți s-a părut acest ingredient?</span
+              >
+              <div class="stars" data-rating="0">
+                <span data-value="1">★</span>
+                <span data-value="2">★</span>
+                <span data-value="3">★</span>
+                <span data-value="4">★</span>
+                <span data-value="5">★</span>
+              </div>
+            </div>
+
+            <button type="button" onclick="sendReview()">
+              💬 Trimite recenzia
+            </button>
+          </form>
+
+          <p class="review-note">
+            Publicăm doar recenzii reale. Reclama și linkurile nu trec de
+            moderare
+          </p>
+          <p class="gdpr">
+            Prin trimiterea comentariului, sunteți de acord cu
+            <a href="../../ro/privacy.html">Politica de confidențialitate</a>.
+          </p>
+
+          <!-- DISQUS -->
+          <div id="disqus_thread"></div>
+        </section>
+      </article>
     </main>
 
     <!-- FOOTER -->
