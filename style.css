@@ -2927,7 +2927,11 @@ dl.definition dt {
 
   .guides-trigger {
     writing-mode: horizontal-tb;
-    font-size: 10px;
+    transform: none; /* 🔑 ВОТ ОНО */
+    font-size: 14px;
     padding: 12px 8px;
+    border-radius: 999px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
   }
 }
