@@ -70,8 +70,6 @@
   </head>
 
   <body>
-    <!-- HEADER -->
-
     <header>
       <div class="container">
         <!-- Логотип -->
@@ -295,9 +293,7 @@
         </div>
       </div>
     </header>
-
     <main>
-      <!-- HERO -->
       <section class="page-hero-img">
         <div class="hero-overlay"></div>
 
@@ -327,7 +323,6 @@
         </a>
       </section>
 
-      <!-- CONTENT -->
       <section class="page-section ingredients-page">
         <div class="container">
           <p class="page-intro">
@@ -824,5 +819,37 @@
       }
     </script>
     <script src="../script.js"></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Можно ли решать несколько проблем кожи одновременно?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Да, но важно не перегружать уход и правильно сочетать активные ингредиенты, особенно при чувствительной коже."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Почему кожа становится чувствительной?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Чаще всего из-за нарушения кожного барьера, агрессивного ухода или чрезмерного использования активных компонентов."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Можно ли восстановить кожный барьер?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Да. С помощью липидов, церамидов, регулярного увлажнения и отказа от раздражающих ингредиентов."
+            }
+          }
+        ]
+      }
+    </script>
   </body>
 </html>
