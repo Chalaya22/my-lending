@@ -2918,23 +2918,7 @@ dl.definition dt {
   }
 }
 /*=================== button Полезные гайды MOB ======================= */
-/* @media (max-width: 768px) {
-  .guides-trigger {
-    writing-mode: horizontal-tb;
-    transform: none;
-    right: 16px;
-    bottom: 16px;
-    top: auto;
-    padding: 10px 16px;
-    border-radius: 999px;
-    font-size: 12px;
-  }
 
-  .guides-panel {
-    width: 100%;
-    right: -100%;
-  }
-} */
 @media (max-width: 768px) {
   .guides-panel {
     max-width: 90vw;
@@ -2942,6 +2926,7 @@ dl.definition dt {
   }
 
   .guides-trigger {
+    writing-mode: horizontal-tb;
     font-size: 10px;
     padding: 12px 8px;
   }
