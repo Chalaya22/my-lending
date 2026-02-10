@@ -583,6 +583,9 @@ body.menu-open .hamburger {
   object-fit: cover;
   object-position: center 33%;
 }
+.hero-overlay {
+  pointer-events: none;
+}
 /* ================= SECTIONS  Destop================= */
 section {
   padding: 14px 0;
@@ -1087,6 +1090,7 @@ section h2 {
 
 /* <===================button Полезные гайды ========================*/
 .guides-panel {
+  position: fixed;
   background: #0f0f0f;
   color: #fff;
 
@@ -1094,14 +1098,19 @@ section h2 {
   max-width: 320px;
 
   padding: 18px 22px;
+  right: 48px;
+  top: 40%;
   border-radius: 10px;
+  right: 48px;
+  top: 40%;
 
   box-shadow: 0 24px 50px rgba(0, 0, 0, 0.6);
   border: 1px solid rgba(207, 162, 74, 0.35);
 
-  transform: translateX(12px);
+  transform: translateY(-50%) translateX(12px);
   opacity: 0;
   transition: all 0.35s ease;
+  pointer-events: none;
 }
 
 .guides-panel-title {
@@ -1173,14 +1182,6 @@ section h2 {
 
   cursor: pointer;
 }
-.guides-panel {
-  position: fixed;
-  right: 48px;
-  top: 40%;
-  transform: translateY(-50%) translateX(12px);
-  opacity: 0;
-  pointer-events: none;
-}
 
 .guides-panel.is-open {
   opacity: 1;
@@ -1192,9 +1193,15 @@ section h2 {
   position: fixed;
   top: 40%;
   right: 0;
-  z-index: 99999; /* теперь реально поверх ВСЕГО */
+  z-index: 10; /* теперь реально поверх ВСЕГО */
 }
-
+.guides-trigger.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+body.menu-open .guides-wrapper {
+  display: none !important;
+}
 /* ====================SERVICII  Page Desctop=======================-*/
 .servicii-hero-img {
   position: relative;
@@ -2920,18 +2927,28 @@ dl.definition dt {
 /*=================== button Полезные гайды MOB ======================= */
 
 @media (max-width: 768px) {
+  /* Сама панель со ссылками — сделаем её чуть компактнее */
   .guides-panel {
-    max-width: 90vw;
-    right: 5vw;
+    max-width: 80vw;
+    right: 50px; /* Чтобы не перекрывала саму кнопку */
+    top: 50%;
   }
 
+  /* Кнопка: делаем её вертикальной и компактной */
   .guides-trigger {
-    writing-mode: horizontal-tb;
-    transform: none; /* 🔑 ВОТ ОНО */
-    font-size: 14px;
-    padding: 12px 8px;
-    border-radius: 999px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
+    writing-mode: vertical-rl; /* Текст вертикально */
+    transform: rotate(180deg); /* Поворот для правильного чтения снизу вверх */
+
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%) rotate(180deg); /* Центрируем по вертикали */
+
+    font-size: 10px; /* Уменьшаем шрифт */
+    padding: 12px 6px;
+    letter-spacing: 0.15em;
+    border-radius: 8px 0 0 8px; /* Скругляем только внутренние углы */
+
+    white-space: nowrap;
+    height: auto;
   }
 }

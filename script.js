@@ -201,26 +201,54 @@ document.addEventListener("DOMContentLoaded", () => {
 
 /* <===================button Полезные гайды ========================*/
 
-// var trigger = document.getElementById("guidesTrigger");
-// var panel = document.getElementById("guidesPanel");
+// document.addEventListener("DOMContentLoaded", function () {
+//   var trigger = document.querySelector(".guides-trigger");
+//   var panel = document.querySelector(".guides-panel");
 
-// trigger.addEventListener("click", function () {
-//   panel.classList.toggle("active");
+//   if (!trigger || !panel) return;
+
+//   // открыть
+//   trigger.addEventListener("click", function (e) {
+//     e.preventDefault();
+//     e.stopPropagation();
+
+//     panel.classList.add("is-open");
+//     trigger.style.display = "none"; // 🔥 ВОТ ОНО
+//   });
+
+//   // клики внутри панели — не закрывают
+//   panel.addEventListener("click", function (e) {
+//     e.stopPropagation();
+//   });
+
+//   // закрытие
+//   document.addEventListener("click", function () {
+//     panel.classList.remove("is-open");
+//     trigger.style.display = ""; // вернуть кнопку
+//   });
 // });
 document.addEventListener("DOMContentLoaded", function () {
-  var trigger = document.querySelector(".guides-trigger");
-  var panel = document.querySelector(".guides-panel");
+  const trigger = document.querySelector(".guides-trigger");
+  const panel = document.querySelector(".guides-panel");
 
   if (!trigger || !panel) return;
 
-  trigger.addEventListener("click", function () {
+  // Логика клика по кнопке
+  trigger.addEventListener("click", function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+
+    // Переключаем класс открытия (теперь кнопка НЕ пропадает)
     panel.classList.toggle("is-open");
   });
 
-  // закрытие при клике вне
-  document.addEventListener("click", function (e) {
-    if (!panel.contains(e.target) && !trigger.contains(e.target)) {
-      panel.classList.remove("is-open");
-    }
+  // Останавливаем всплытие, чтобы клик внутри панели её не закрывал
+  panel.addEventListener("click", function (e) {
+    e.stopPropagation();
+  });
+
+  // Закрываем панель при клике в любое другое место экрана
+  document.addEventListener("click", function () {
+    panel.classList.remove("is-open");
   });
 });
