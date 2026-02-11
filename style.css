@@ -2458,7 +2458,7 @@ dl.definition dt {
     z-index: 9999;
 
     height: 100vh;
-    width: 100%;
+    width: 100vh;
 
     margin: 0;
     list-style: none;
@@ -2564,7 +2564,6 @@ dl.definition dt {
     justify-content: center;
     gap: 16px;
     flex-wrap: wrap;
-    margin-top: auto;
   }
 
   .mobile-socials .soc {
