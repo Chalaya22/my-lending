@@ -1111,6 +1111,23 @@ section h2 {
   opacity: 0;
   transition: all 0.35s ease;
   pointer-events: none;
+
+  overflow: hidden; /* важно */
+}
+.guides-panel::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 1px;
+
+  background: linear-gradient(90deg, transparent, #cfa24a, transparent);
+
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.6s ease;
 }
 
 .guides-panel-title {
@@ -1140,6 +1157,10 @@ section h2 {
 
   position: relative;
   padding-left: 14px;
+
+  opacity: 0;
+  transform: translateY(8px);
+  transition: all 0.35s ease;
 }
 
 .guides-panel a::before {
@@ -1159,6 +1180,34 @@ section h2 {
 
 .guides-panel a:hover {
   color: #cfa24a;
+}
+.guides-panel.is-open {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0);
+  pointer-events: auto;
+}
+.guides-panel.is-open a {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.guides-panel.is-open a:nth-child(1) {
+  transition-delay: 0.1s;
+}
+.guides-panel.is-open a:nth-child(2) {
+  transition-delay: 0.15s;
+}
+.guides-panel.is-open a:nth-child(3) {
+  transition-delay: 0.2s;
+}
+.guides-panel.is-open a:nth-child(4) {
+  transition-delay: 0.25s;
+}
+.guides-panel.is-open a:nth-child(5) {
+  transition-delay: 0.3s;
+}
+.guides-panel.is-open::before {
+  transform: scaleX(1);
 }
 
 .guides-trigger {
@@ -1181,12 +1230,35 @@ section h2 {
   border-radius: 8px 0 0 8px;
 
   cursor: pointer;
+
+  transition:
+    color 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
-.guides-panel.is-open {
-  opacity: 1;
-  transform: translateY(-50%) translateX(0);
-  pointer-events: auto;
+.guides-trigger:hover {
+  color: #e5b45f;
+  box-shadow: 0 0 12px rgba(207, 162, 74, 0.3);
+}
+
+@keyframes subtleGlow {
+  0% {
+    box-shadow: 0 0 0 rgba(207, 162, 74, 0);
+  }
+  50% {
+    box-shadow: 0 0 10px rgba(207, 162, 74, 0.25);
+  }
+  100% {
+    box-shadow: 0 0 0 rgba(207, 162, 74, 0);
+  }
+}
+
+.guides-trigger:hover {
+  animation: subtleGlow 1.2s ease;
+}
+.guides-trigger.is-hidden {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .guides-wrapper {
@@ -1195,10 +1267,7 @@ section h2 {
   right: 0;
   z-index: 10; /* теперь реально поверх ВСЕГО */
 }
-.guides-trigger.is-hidden {
-  opacity: 0;
-  pointer-events: none;
-}
+
 body.menu-open .guides-wrapper {
   display: none !important;
 }
@@ -2394,24 +2463,29 @@ dl.definition dt {
     margin: 0;
     list-style: none;
 
-    background: linear-gradient(
-      90deg,
-      rgba(110, 100, 96, 0.98) 0%,
-      rgba(125, 115, 110, 0.95) 35%,
-      rgba(150, 141, 135, 0.9) 65%,
-      rgba(200, 194, 187, 0.85) 100%
-    );
+    background: #0b0b0b;
 
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
 
     display: flex;
     flex-direction: column;
-    gap: 18px;
-    padding: 30px;
+    justify-content: center;
+    gap: 28px;
+    padding: 40px;
 
     transform: translateX(100%);
-    transition: transform 0.35s ease;
+    transition: transform 0.45s cubic-bezier(0.77, 0, 0.18, 1);
+  }
+  .nav-menu::before {
+    content: "";
+    position: absolute;
+    left: 30px;
+    top: 15%;
+    width: 1px;
+    height: 70%;
+    background: linear-gradient(to bottom, transparent, #cfa24a, transparent);
+    opacity: 0.4;
   }
 
   .nav-menu.active {
@@ -2419,18 +2493,45 @@ dl.definition dt {
   }
 
   .nav-menu li a {
-    color: var(--bg-header);
+    font-size: 12px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-decoration: none;
+    transition: all 0.3s ease;
   }
 
   .nav-menu li a:hover {
-    color: var(--text-main);
+    color: #cfa24a;
+    transform: translateX(6px);
   }
 
   .menu-close {
     display: block;
-    font-size: 18px;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-size: 22px;
+    color: var(--bg-main);
     cursor: pointer;
-    color: var(--bg-header);
+    transition: 0.3s ease;
+  }
+
+  .menu-close:hover {
+    color: var(--accent);
+  }
+  .nav-menu .btn {
+    background: #111;
+    border: 1px solid rgba(207, 162, 74, 0.5);
+    color: #ffffff;
+    font-size: 12px;
+    letter-spacing: 0.12em;
+  }
+
+  .nav-menu .btn:hover {
+    background: linear-gradient(135deg, #e6c97f, #c89a3c);
+    color: #0b0b0b;
+    box-shadow: 0 6px 20px rgba(207, 162, 74, 0.35);
   }
 }
 /* ======================= HAMBURGER(right)MOB================ */
@@ -2548,6 +2649,11 @@ dl.definition dt {
     letter-spacing: 1px;
     user-select: none;
     cursor: pointer;
+
+    background: #111;
+    border: 1px solid rgba(207, 162, 74, 0.4);
+    border-radius: 30px;
+    padding: 8px 16px;
   }
 
   .mobile-lang-toggle .lang {
@@ -2559,7 +2665,7 @@ dl.definition dt {
   .mobile-lang-toggle .lang.active {
     opacity: 1;
     font-weight: 600;
-    color: #b08a3c;
+    color: var(--accent);
   }
 
   .mobile-lang-toggle .track {
@@ -2567,8 +2673,8 @@ dl.definition dt {
     height: 16px;
 
     border-radius: 20px;
-    border: 1px solid rgba(176, 138, 60, 0.45);
-    background: rgba(255, 255, 255, 0.25);
+    background: #000;
+    border: 1px solid rgba(207, 162, 74, 0.5);
     position: relative;
     backdrop-filter: blur(4px);
   }
@@ -2576,7 +2682,8 @@ dl.definition dt {
   .mobile-lang-toggle .dot {
     width: 12px;
     height: 12px;
-    background: linear-gradient(90deg, #f9e7b4, #cfa24a, #fff1c1);
+    background: var(--accent);
+    box-shadow: 0 0 8px rgba(207, 162, 74, 0.5);
     border-radius: 50%;
     position: absolute;
     top: 2px;
@@ -2943,9 +3050,9 @@ dl.definition dt {
     top: 50%;
     transform: translateY(-50%) rotate(180deg); /* Центрируем по вертикали */
 
-    font-size: 10px; /* Уменьшаем шрифт */
+    font-size: 12px; /* Уменьшаем шрифт */
     padding: 12px 6px;
-    letter-spacing: 0.15em;
+    /* letter-spacing: 0.15em; */
     border-radius: 8px 0 0 8px; /* Скругляем только внутренние углы */
 
     white-space: nowrap;
