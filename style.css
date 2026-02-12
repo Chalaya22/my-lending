@@ -1323,16 +1323,24 @@ section h2 {
   writing-mode: vertical-rl;
   transform: rotate(180deg);
 
-  background: #0f0f0f;
-  color: #cfa24a;
+  color: var(--text-main);
+  background: linear-gradient(135deg, #f6f1e6, #e9dcc1, #fdf8ec);
+
+  border: 1px solid rgba(207, 162, 74, 0.35);
+  text-decoration: none;
+  cursor: pointer;
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.7);
 
   font-family: "Quicksand", sans-serif;
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: 0.3em;
   text-transform: uppercase;
 
-  padding: 14px 10px;
-  border-radius: 8px 0 0 8px;
+  padding: 16px 12px;
+  border-radius: 12px;
 
   cursor: pointer;
 
@@ -1343,24 +1351,8 @@ section h2 {
 
 .guides-trigger:hover {
   color: #e5b45f;
-  box-shadow: 0 0 12px rgba(207, 162, 74, 0.3);
 }
 
-@keyframes subtleGlow {
-  0% {
-    box-shadow: 0 0 0 rgba(207, 162, 74, 0);
-  }
-  50% {
-    box-shadow: 0 0 10px rgba(207, 162, 74, 0.25);
-  }
-  100% {
-    box-shadow: 0 0 0 rgba(207, 162, 74, 0);
-  }
-}
-
-.guides-trigger:hover {
-  animation: subtleGlow 1.2s ease;
-}
 .guides-trigger.is-hidden {
   opacity: 0;
   pointer-events: none;
@@ -3182,7 +3174,7 @@ dl.definition dt {
     font-size: 12px; /* Уменьшаем шрифт */
     padding: 12px 6px;
     /* letter-spacing: 0.15em; */
-    border-radius: 8px 0 0 8px; /* Скругляем только внутренние углы */
+    border-radius: 12px; /* Скругляем только внутренние углы */
 
     white-space: nowrap;
     height: auto;
