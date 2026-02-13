@@ -1324,7 +1324,8 @@ section h2 {
   transform: rotate(180deg);
 
   color: var(--text-main);
-  background: linear-gradient(135deg, #f6f1e6, #e9dcc1, #fdf8ec);
+  /* background: linear-gradient(135deg, #f6f1e6, #e9dcc1, #fdf8ec); */
+  background: var(--text-muted);
 
   border: 1px solid rgba(207, 162, 74, 0.35);
   text-decoration: none;
@@ -3171,9 +3172,9 @@ dl.definition dt {
     top: 50%;
     transform: translateY(-50%) rotate(180deg); /* Центрируем по вертикали */
 
-    font-size: 12px; /* Уменьшаем шрифт */
+    font-size: 14px; /* Уменьшаем шрифт */
     padding: 12px 6px;
-    /* letter-spacing: 0.15em; */
+    letter-spacing: 0.15em;
     border-radius: 12px; /* Скругляем только внутренние углы */
 
     white-space: nowrap;
