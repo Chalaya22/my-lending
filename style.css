@@ -956,7 +956,9 @@ section h2 {
   border-radius: 8px;
   text-decoration: none;
 
-  background: var(--text-muted);
+  background:
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.03), rgba(0, 0, 0, 0.12)),
+    var(--text-muted);
 
   color: #f5f3f0;
 
