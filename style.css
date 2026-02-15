@@ -1004,12 +1004,12 @@ section h2 {
   letter-spacing: 0.12em;
   text-transform: uppercase;
 
-  color: var(--accent-two);
+  color: var(--bg-main);
   margin-bottom: 12px;
 }
 
 .ingredient-card:hover h3 {
-  color: var(--bg-main);
+  color: var(--accent);
 }
 .ingredient-card::after {
   content: "";
@@ -1496,7 +1496,6 @@ body.menu-open .guides-wrapper {
 
   text-shadow: 0 4px 18px rgba(0, 0, 0, 0.6);
   z-index: 2;
- 
 }
 
 /* ===================CONTACT Page Desctop==========================*/
