@@ -1485,7 +1485,7 @@ body.menu-open .guides-wrapper {
   margin: 0 auto;
 
   font-family: "Quicksand", sans-serif;
-  font-size: clamp(14px, 1.8vw, 18px);
+  font-size: clamp(20px, 1.8vw, 18px);
 
   letter-spacing: 0.04rem;
 
