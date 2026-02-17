@@ -1,0 +1,572 @@
+<!doctype html>
+<html lang="ro">
+  <!-- в русской версии ставь lang="ru" -->
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <!-- SEO -->
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Poppins:wght@300;400;500&family=Quicksand:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <a href="../index.html" class="logo">
+          <div class="logo-wrap">
+            <svg
+              class="logo-svg"
+              viewBox="0 0 320 90"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-label="Estetica Lens"
+            >
+              <defs>
+                <linearGradient
+                  id="goldGradient"
+                  x1="0%"
+                  y1="0%"
+                  x2="100%"
+                  y2="0%"
+                >
+                  <stop offset="0%" stop-color="#f9e7b4" />
+                  <stop offset="30%" stop-color="#f1c36d" />
+                  <stop offset="55%" stop-color="#d4a041" />
+                  <stop offset="75%" stop-color="#f1c36d" />
+                  <stop offset="100%" stop-color="#fff1c1" />
+                </linearGradient>
+              </defs>
+
+              <!-- DESKTOP -->
+              <g class="logo-desktop">
+                <text
+                  x="0"
+                  y="40"
+                  font-family="Quicksand, serif"
+                  font-size="30"
+                  letter-spacing="10"
+                  fill="url(#goldGradient)"
+                >
+                  ESTETICA
+                </text>
+
+                <text
+                  x="0"
+                  y="72"
+                  font-family="Quicksand, serif"
+                  font-size="34"
+                  letter-spacing="5"
+                  fill="#1a1a1a"
+                >
+                  LENS
+                </text>
+              </g>
+
+              <!-- MOBILE ONE LINE -->
+              <text
+                class="logo-mobile-line"
+                x="0"
+                y="52"
+                font-family="Quicksand, serif"
+                font-size="34"
+                letter-spacing="3"
+                fill="url(#goldGradient)"
+                textLength="300"
+                lengthAdjust="spacingAndGlyphs"
+              >
+                ESTETICA
+                <tspan fill="#1a1a1a">LENS</tspan>
+              </text>
+            </svg>
+
+            <span class="logo-tagline">Beauty blog & Expert care</span>
+            <span class="logo-tagline">Brow & Makeup</span>
+          </div>
+        </a>
+
+        <div class="nav-row">
+          <!-- Hamburger -->
+          <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <!-- Menu -->
+          <ul class="nav-menu" id="nav-menu">
+            <li class="menu-close" id="menu-close">✕</li>
+            <li><a href="../index.html">Acasă</a></li>
+            <li><a href="../servicii.html">Servicii</a></li>
+            <li><a href="../recenzii.html">Recenzii produse</a></li>
+            <li><a href="../probleme.html">Probleme ale pielii</a></li>
+            <li><a href="../ingrediente.html">Ingrediente & Formule</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+            <li class="menu-actions">
+              <a class="btn" href="../servicii.html">Programeaza-te</a>
+              <a
+                href="#subscribe"
+                class="btn subscribe-btn"
+                data-open-subscribe
+              >
+                Abonează-te
+              </a>
+            </li>
+            <li class="mobile-lang">
+              <div class="mobile-lang-toggle" data-lang="ro">
+                <span class="lang ro active">RO</span>
+                <span class="track">
+                  <span class="dot"></span>
+                </span>
+                <span class="lang ru">RU</span>
+              </div>
+            </li>
+
+            <li class="mobile-socials">
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                aria-label="Instagram"
+                class="soc"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="#ffffff"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.8.3 2.2.5.5.2.9.5 1.3.9s.7.8.9 1.3c.2.4.4 1 .5 2.2.1 1.2.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.3 1.8-.5 2.2-.2.5-.5.9-.9 1.3s-.8.7-1.3.9c-.4.2-1 .4-2.2.5-1.2.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.8-.3-2.2-.5-.5-.2-.9-.5-1.3-.9s-.7-.8-.9-1.3c-.2-.4-.4-1-.5-2.2-.1-1.2-.1-1.6-.1-4.8s0-3.6.1-4.8c.1-1.2.3-1.8.5-2.2.2-.5.5-.9.9-1.3s.8-.7 1.3-.9c.4-.2 1-.4 2.2-.5C8.4 2.2 8.8 2.2 12 2.2zm0-2.2C8.7 0 8.3 0 7.1.1 5.8.2 4.9.4 4.1.7c-.9.3-1.7.7-2.5 1.5-.8.8-1.2 1.6-1.5 2.5-.3.8-.5 1.7-.6 3C0 8.3 0 8.7 0 12s0 3.7.1 4.9c.1 1.3.3 2.2.6 3 .3.9.7 1.7 1.5 2.5.8.8 1.6 1.2 2.5 1.5.8.3 1.7.5 3 .6 1.2.1 1.6.1 4.9.1s3.7 0 4.9-.1c1.3-.1 2.2-.3 3-.6.9-.3 1.7-.7 2.5-1.5.8-.8 1.2-1.6 1.5-2.5.3-.8.5-1.7.6-3 .1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c-.1-1.3-.3-2.2-.6-3-.3-.9-.7-1.7-1.5-2.5-.8-.8-1.6-1.2-2.5-1.5-.8-.3-1.7-.5-3-.6C15.7 0 15.3 0 12 0z"
+                  />
+                  <path
+                    d="M12 5.8c-3.4 0-6.2 2.8-6.2 6.2S8.6 18.2 12 18.2 18.2 15.4 18.2 12 15.4 5.8 12 5.8zm0 10.2c-2.2 0-4-1.8-4-4s1.8-4 4-4 4 1.8 4 4-1.8 4-4 4z"
+                  />
+                  <circle cx="18.4" cy="5.6" r="1.4" />
+                </svg>
+              </a>
+              <a href="https://tiktok.com" aria-label="TikTok" class="soc">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M21 7.5c-1.1 0-2.2-.3-3.2-.9v7.2a6.3 6.3 0 1 1-5.6-6.2v3.3a3 3 0 1 0 2.6 3V2h3.1c.2 1.7 1.3 3.3 3.1 3.9v1.6z"
+                  />
+                </svg>
+              </a>
+              <a href="https://facebook.com" aria-label="Facebook" class="soc">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="#ffffff"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M22.7 0H1.3C.6 0 0 .6 0 1.3v21.3C0 23.4.6 24 1.3 24H12v-9.3H9v-3.6h3V8c0-3 1.8-4.7 4.5-4.7 1.3 0 2.4.1 2.7.1v3h-1.8c-1.4 0-1.7.7-1.7 1.7v2.3h3.4l-.4 3.6h-3V24h5.9c.7 0 1.3-.6 1.3-1.3V1.3c0-.7-.6-1.3-1.3-1.3z"
+                  />
+                </svg>
+              </a>
+              <a href="tel:+37369685152" aria-label="Phone" class="soc">
+                <!-- phone -->
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M6.6 10.8c1.6 3.2 3.4 5 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.3 1.2.4 2.5.6 3.8.6.6 0 1 .4 1 1V21c0 .6-.4 1-1 1C10.3 22 2 13.7 2 3c0-.6.4-1 1-1h4.4c.6 0 1 .4 1 1 0 1.3.2 2.6.6 3.8.1.4 0 .8-.3 1.1l-2.1 1.9z"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://wa.me/380670050050"
+                target="_blank"
+                aria-label="WhatsApp"
+                class="soc"
+              >
+                <!-- whatsapp -->
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 2a10 10 0 0 0-8.6 15l-1.1 4.1 4.2-1.1A10 10 0 1 0 12 2zm5.2 14.4c-.2.5-1.2 1-1.7 1.1-.5.1-1.2.1-1.9-.1-2.9-1-5-3.6-5.8-4.6-.8-1-.9-2.2-.3-3 .3-.4.7-.9 1-.9.3 0 .5 0 .7.5l.9 2.2c.1.3.1.6-.1.8l-.4.5c-.1.2-.3.4-.1.7.2.4.9 1.4 2 2.2 1.4 1 1.7.8 2 .6.3-.2.9-1 .9-1 .2-.3.5-.3.8-.2l2 .9c.4.2.7.4.6.8z"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="viber://chat?number=%2B380670050050"
+                aria-label="Viber"
+                class="soc"
+              >
+                <!-- viber -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="18"
+                  height="18"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M12 2C6.5 2 2 5.8 2 10.5c0 2.4 1.2 4.6 3.2 6.1L5 22l5.7-3.1c.4.1.9.1 1.3.1 5.5 0 10-3.8 10-8.5S17.5 2 12 2zm4.2 10.7c-.2.6-.9 1.1-1.5 1.2-.4.1-.9.2-3-.6-2.7-1.1-4.4-3.8-4.5-4-.1-.2-1.1-1.4-1.1-2.7 0-1.3.7-1.9.9-2.2.3-.3.6-.3.8-.3h.6c.2 0 .5-.1.7.5.2.6.8 2 .9 2.1.1.2.1.4 0 .6-.1.2-.2.4-.4.6-.2.2-.4.4-.6.6-.2.2-.4.4-.2.8.1.4.6 1.1 1.3 1.7.9.8 1.6 1.1 2 .8.4-.2.7-.8.9-1.1.2-.3.4-.3.7-.2.3.1 1.9.9 2.2 1.1.3.2.5.3.6.4.1.1.1.6-.1 1.2z"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://t.me/cleanmakeup"
+                target="_blank"
+                aria-label="Telegram"
+                class="soc"
+              >
+                <!-- telegram -->
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M9.9 15.2l-.4 4.2c.6 0 .9-.3 1.3-.7l3.1-3 6.4 4.7c1.2.7 2 .3 2.3-1.1L24 2.9c.4-1.7-.6-2.4-1.7-2L1.4 9.6c-1.6.6-1.6 1.5-.3 1.9l5.6 1.7L19.6 5.3c.7-.4 1.3-.2.8.2"
+                  />
+                </svg>
+              </a>
+            </li>
+          </ul>
+          <!-- Lang switch -->
+          <div class="lang-toggle desktop-lang" data-lang="ro">
+            <span class="label ro">RO</span>
+            <span class="switch">
+              <span class="knob"></span>
+            </span>
+            <span class="label ru">RU</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero-img">
+        <div class="hero-overlay"></div>
+        <img
+          src="../../images/acid-gialuron/ingridient-title-1200.webp"
+          srcset="
+            ../../images/acid-gialuron/ingridient-title-2000.webp 2000w,
+            ../../images/acid-gialuron/ingridient-title-1200.webp 1200w,
+            ../../images/acid-gialuron/ingridient-title-600.webp   600w
+          "
+          sizes="100vw"
+          alt="Acid Hialuronic"
+          class="ingredient-hero-bg-img"
+          loading="eager"
+        />
+        <div class="hero-content">
+          <h1 class="hero-title">Acid Hialuronic</h1>
+          <p class="hero-subtitle">Beauty blog & Expert care</p>
+          <p class="hero-subtitle">Brow & Makeup</p>
+        </div>
+        <a href="../../ro/mediakit.htm" class="hero-mediakit-btn">
+          <span>Media Kit</span>
+          <span class="arrow">→</span>
+        </a>
+      </section>
+      <article class="ingredient-article">
+        <div>
+          <div class="ingredient-meta">
+            <p class="ingredient-sub">
+              Hidratare profundă — elasticitate și confort pentru piele
+            </p>
+          </div>
+          <figure class="ingredient-image">
+            <img
+              src="../../images/acid-gialuron/acid-gialuron-texture-800.webp"
+              srcset="
+                ../../images/acid-gialuron/acid-gialuron-texture-1200.webp 1200w,
+                ../../images/acid-gialuron/acid-gialuron-texture-800.webp   800w,
+                ../../images/acid-gialuron/acid-gialuron-texture-800.webp   400w
+              "
+              sizes="(max-width: 768px) 100vw, 800px"
+              alt="Текстура средства с кислотами "
+              loading="lazy"
+            />
+            <span class="image-accent-text">
+              Component esențial pentru hidratarea profundă a pielii
+            </span>
+          </figure>
+
+          <a class="section-btn-primary" href="../servicii.html">
+            Consultație / Programează-te
+          </a>
+        </div>
+
+        <div class="grid-2">
+          <div></div>
+
+          <!-- SIDEBAR -->
+          <aside></aside>
+        </div>
+        <!--  Подпишитесь на экспертные разборы ФОРМА -->
+        <section class="newsletter-section">
+          <div class="newsletter-box">
+            <h2 class="newsletter-title">Abonează-te la articolele noastre</h2>
+
+            <p class="newsletter-text">
+              Primește ghiduri despre ingrediente, explicații științifice clare
+              și recomandări pentru problemele pielii. Fără spam. Doar
+              informații utile pentru o îngrijire corectă.
+            </p>
+
+            <form class="newsletter-form">
+              <input type="email" placeholder="Adresa ta de email" required />
+              <button type="submit">Abonare</button>
+            </form>
+
+            <p class="newsletter-note">Te poți dezabona oricând.</p>
+          </div>
+        </section>
+      </article>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- LOGO -->
+        <div class="footer-logo">
+          <a href="../index.html" class="logo-footer">
+            <svg
+              class="footer-logo-svg"
+              viewBox="0 0 260 80"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <defs>
+                <linearGradient
+                  id="goldGradientFooter"
+                  x1="0%"
+                  y1="0%"
+                  x2="100%"
+                  y2="0%"
+                >
+                  <stop offset="0%" stop-color="#f9e7b4" />
+                  <stop offset="30%" stop-color="#f1c36d" />
+                  <stop offset="55%" stop-color="#d4a041" />
+                  <stop offset="75%" stop-color="#f1c36d" />
+                  <stop offset="100%" stop-color="#fff1c1" />
+                </linearGradient>
+              </defs>
+
+              <!-- DESKTOP -->
+              <text
+                x="0"
+                y="19"
+                font-size="20"
+                letter-spacing="10"
+                fill="url(#goldGradientFooter)"
+              >
+                ESTETICA
+              </text>
+              <text
+                x="0"
+                y="42"
+                font-size="24"
+                letter-spacing="5"
+                fill="#1a1a1a"
+              >
+                LENS
+              </text>
+
+              <!-- MOBILE -->
+              <text
+                class="footer-logo-mobile"
+                x="0"
+                y="76"
+                font-size="30"
+                letter-spacing="4"
+                fill="url(#goldGradientFooter)"
+              >
+                ESTETICA
+                <tspan fill="#1a1a1a">LENS</tspan>
+              </text>
+            </svg>
+
+            <span class="footer-tagline">Beauty blog & Expert care</span>
+            <span class="footer-tagline">Brow & Makeup</span>
+          </a>
+        </div>
+
+        <!-- LINKS 1 -->
+        <div class="footer-links">
+          <a href="../index.html">Acasă</a>
+          <a href="../servicii.html">Servicii</a>
+          <a href="../recenzii.html">Recenzii produse</a>
+        </div>
+
+        <!-- LINKS 2 -->
+        <div class="footer-links">
+          <a href="../probleme.html">Probleme ale pielii</a>
+          <a href=".//ingrediente.html">Ingrediente & Formule</a>
+          <a href=".//contact.html">Contact</a>
+        </div>
+
+        <!-- SUBSCRIBE -->
+        <div class="footer-subscribe">
+          <p class="footer-subscribe-title">Abonează-te la noutăți ✨</p>
+
+          <a
+            href="#subscribe"
+            class="btn footer-subscribe-btn"
+            data-open-subscribe
+          >
+            Abonează-te
+          </a>
+        </div>
+        <div class="footer-cta">
+          <a href="../../ro/colaborari.html" class="footer-btn">
+            Colaborări & Parteneriate ✨
+          </a>
+        </div>
+
+        <!-- SOCIALS -->
+        <div class="footer-socials">
+          <a
+            href="https://instagram.com"
+            target="_blank"
+            aria-label="Instagram"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="#ffffff"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.8.3 2.2.5.5.2.9.5 1.3.9s.7.8.9 1.3c.2.4.4 1 .5 2.2.1 1.2.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.3 1.8-.5 2.2-.2.5-.5.9-.9 1.3s-.8.7-1.3.9c-.4.2-1 .4-2.2.5-1.2.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.8-.3-2.2-.5-.5-.2-.9-.5-1.3-.9s-.7-.8-.9-1.3c-.2-.4-.4-1-.5-2.2-.1-1.2-.1-1.6-.1-4.8s0-3.6.1-4.8c.1-1.2.3-1.8.5-2.2.2-.5.5-.9.9-1.3s.8-.7 1.3-.9c.4-.2 1-.4 2.2-.5C8.4 2.2 8.8 2.2 12 2.2zm0-2.2C8.7 0 8.3 0 7.1.1 5.8.2 4.9.4 4.1.7c-.9.3-1.7.7-2.5 1.5-.8.8-1.2 1.6-1.5 2.5-.3.8-.5 1.7-.6 3C0 8.3 0 8.7 0 12s0 3.7.1 4.9c.1 1.3.3 2.2.6 3 .3.9.7 1.7 1.5 2.5.8.8 1.6 1.2 2.5 1.5.8.3 1.7.5 3 .6 1.2.1 1.6.1 4.9.1s3.7 0 4.9-.1c1.3-.1 2.2-.3 3-.6.9-.3 1.7-.7 2.5-1.5.8-.8 1.2-1.6 1.5-2.5.3-.8.5-1.7.6-3 .1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c-.1-1.3-.3-2.2-.6-3-.3-.9-.7-1.7-1.5-2.5-.8-.8-1.6-1.2-2.5-1.5-.8-.3-1.7-.5-3-.6C15.7 0 15.3 0 12 0z"
+              />
+              <path
+                d="M12 5.8c-3.4 0-6.2 2.8-6.2 6.2S8.6 18.2 12 18.2 18.2 15.4 18.2 12 15.4 5.8 12 5.8zm0 10.2c-2.2 0-4-1.8-4-4s1.8-4 4-4 4 1.8 4 4-1.8 4-4 4z"
+              />
+              <circle cx="18.4" cy="5.6" r="1.4" />
+            </svg>
+          </a>
+          <a href="https://tiktok.com" aria-label="TikTok">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M21 7.5c-1.1 0-2.2-.3-3.2-.9v7.2a6.3 6.3 0 1 1-5.6-6.2v3.3a3 3 0 1 0 2.6 3V2h3.1c.2 1.7 1.3 3.3 3.1 3.9v1.6z"
+              />
+            </svg>
+          </a>
+          <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="#ffffff"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M22.7 0H1.3C.6 0 0 .6 0 1.3v21.3C0 23.4.6 24 1.3 24H12v-9.3H9v-3.6h3V8c0-3 1.8-4.7 4.5-4.7 1.3 0 2.4.1 2.7.1v3h-1.8c-1.4 0-1.7.7-1.7 1.7v2.3h3.4l-.4 3.6h-3V24h5.9c.7 0 1.3-.6 1.3-1.3V1.3c0-.7-.6-1.3-1.3-1.3z"
+              />
+            </svg>
+          </a>
+          <a href="tel:+40757172515" aria-label="Phone">
+            <!-- phone -->
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M6.6 10.8c1.6 3.2 3.4 5 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.3 1.2.4 2.5.6 3.8.6.6 0 1 .4 1 1V21c0 .6-.4 1-1 1C10.3 22 2 13.7 2 3c0-.6.4-1 1-1h4.4c.6 0 1 .4 1 1 0 1.3.2 2.6.6 3.8.1.4 0 .8-.3 1.1l-2.1 1.9z"
+              />
+            </svg>
+          </a>
+
+          <a
+            href="https://wa.me/380670050050"
+            target="_blank"
+            aria-label="WhatsApp"
+          >
+            <!-- whatsapp -->
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M12 2a10 10 0 0 0-8.6 15l-1.1 4.1 4.2-1.1A10 10 0 1 0 12 2zm5.2 14.4c-.2.5-1.2 1-1.7 1.1-.5.1-1.2.1-1.9-.1-2.9-1-5-3.6-5.8-4.6-.8-1-.9-2.2-.3-3 .3-.4.7-.9 1-.9.3 0 .5 0 .7.5l.9 2.2c.1.3.1.6-.1.8l-.4.5c-.1.2-.3.4-.1.7.2.4.9 1.4 2 2.2 1.4 1 1.7.8 2 .6.3-.2.9-1 .9-1 .2-.3.5-.3.8-.2l2 .9c.4.2.7.4.6.8z"
+              />
+            </svg>
+          </a>
+
+          <a href="viber://chat?number=%2B380670050050" aria-label="Viber">
+            <!-- viber -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="18"
+              height="18"
+              fill="currentColor"
+            >
+              <path
+                d="M12 2C6.5 2 2 5.8 2 10.5c0 2.4 1.2 4.6 3.2 6.1L5 22l5.7-3.1c.4.1.9.1 1.3.1 5.5 0 10-3.8 10-8.5S17.5 2 12 2zm4.2 10.7c-.2.6-.9 1.1-1.5 1.2-.4.1-.9.2-3-.6-2.7-1.1-4.4-3.8-4.5-4-.1-.2-1.1-1.4-1.1-2.7 0-1.3.7-1.9.9-2.2.3-.3.6-.3.8-.3h.6c.2 0 .5-.1.7.5.2.6.8 2 .9 2.1.1.2.1.4 0 .6-.1.2-.2.4-.4.6-.2.2-.4.4-.6.6-.2.2-.4.4-.2.8.1.4.6 1.1 1.3 1.7.9.8 1.6 1.1 2 .8.4-.2.7-.8.9-1.1.2-.3.4-.3.7-.2.3.1 1.9.9 2.2 1.1.3.2.5.3.6.4.1.1.1.6-.1 1.2z"
+              />
+            </svg>
+          </a>
+
+          <a
+            href="https://t.me/cleanmakeup"
+            target="_blank"
+            aria-label="Telegram"
+          >
+            <!-- telegram -->
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M9.9 15.2l-.4 4.2c.6 0 .9-.3 1.3-.7l3.1-3 6.4 4.7c1.2.7 2 .3 2.3-1.1L24 2.9c.4-1.7-.6-2.4-1.7-2L1.4 9.6c-1.6.6-1.6 1.5-.3 1.9l5.6 1.7L19.6 5.3c.7-.4 1.3-.2.8.2"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="site-footer">
+        <a href="../../ro/privacy.html">Politica de confidențialitate</a>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2025 Estetica Lens — Toate drepturile rezervate.</p>
+      </div>
+    </footer>
+    <!-- ---------------------Moodalka Subscribe------------------------>
+    <div class="subscribe-modal" id="subscribe-modal" aria-hidden="true">
+      <div class="subscribe-overlay" data-close-subscribe></div>
+
+      <div class="subscribe-box" role="dialog" aria-modal="true">
+        <button class="subscribe-close" data-close-subscribe>✕</button>
+
+        <h2>Abonează-te</h2>
+        <p class="subscribe-subtitle">
+          Primește sfaturi reale de beauty, fără spam 💛
+        </p>
+
+        <form class="subscribe-form">
+          <label>
+            Nume
+            <input type="text" required placeholder="Numele tău" />
+          </label>
+
+          <label>
+            Email
+            <input type="email" required placeholder="email@email.com" />
+          </label>
+
+          <label class="checkbox">
+            <input type="checkbox" required />
+            <span> Sunt de acord cu prelucrarea datelor personale </span>
+          </label>
+
+          <button type="submit">Abonează-mă ✨</button>
+        </form>
+      </div>
+    </div>
+    <!-- FIXED GUIDES  button Полезные гайды -->
+    <div class="guides-wrapper">
+      <button class="guides-trigger">Chiduri utile</button>
+      <nav class="guides-panel">
+        <a href="../probleme/piele-deshidratata.html">Piele deshidratată</a>
+        <a href="../probleme/senzatie-de-strangere.html"
+          >Senzație de piele care strânge</a
+        >
+        <a href="../probleme/barrier.html">Refacerea barierei pielii</a>
+      </nav>
+    </div>
+
+    <script src="../../script.js" defer></script>
+
+    <!-- Structured data (schema.org) -->
+
+    <!-- FAQ   schema -->
+  </body>
+</html>

@@ -242,36 +242,112 @@
         </div>
       </div>
     </header>
-    <main>
-      <!-- BLOCK -->
-      <section class="page-hero-img">
-        <div class="hero-overlay"></div>
+    <!-- BLOCK -->
+    <section class="page-hero-img">
+      <div class="hero-overlay"></div>
 
-        <!-- Картинка -->
+      <!-- Картинка -->
 
-        <img
-          src="../images/recenzii/recenzii-title-1200.webp"
-          srcset="
-            ../images/recenzii/recenzii-title-2000.webp 2000w,
-            ../images/recenzii/recenzii-title-1200.webp 1200w,
-            ../images/recenzii/recenzii-title-600.webp   600w
-          "
-          sizes="100vw"
-          alt="Recenzii produse"
-          class="recenzii-hero-bg-img"
-          loading="eager"
-        />
+      <img
+        src="../images/recenzii/recenzii-title-1200.webp"
+        srcset="
+          ../images/recenzii/recenzii-title-2000.webp 2000w,
+          ../images/recenzii/recenzii-title-1200.webp 1200w,
+          ../images/recenzii/recenzii-title-600.webp   600w
+        "
+        sizes="100vw"
+        alt="Recenzii produse"
+        class="recenzii-hero-bg-img"
+        loading="eager"
+      />
 
-        <div class="hero-content">
-          <h1 class="hero-title">Обзоры косметики</h1>
-          <p class="hero-subtitle">Beauty blog & Expert care</p>
-          <p class="hero-subtitle">Brow & Makeup</p>
-        </div>
-        <a href="../ru/mediakit.htm" class="hero-mediakit-btn">
-          <span>Media Kit</span>
-          <span class="arrow">→</span>
-        </a>
+      <div class="hero-content">
+        <h1 class="hero-title">Обзоры косметики</h1>
+        <p class="hero-subtitle">Beauty blog & Expert care</p>
+        <p class="hero-subtitle">Brow & Makeup</p>
+      </div>
+      <a href="../ru/mediakit.htm" class="hero-mediakit-btn">
+        <span>Media Kit</span>
+        <span class="arrow">→</span>
+      </a>
+    </section>
+    <main class="container">
+      <section class="ingredient-section">
+        <h1 class="section-title">Обзоры косметики</h1>
+        <p class="ingredient-sub">
+          Честные тест-драйвы, разборы составов и реальные результаты
+          использования.
+        </p>
       </section>
+
+      <!-- Фильтры по категориям -->
+      <div class="filter-container">
+        <a href="#" class="filter-link active" data-filter="all">Все</a>
+        <a href="#" class="filter-link" data-filter="face">Лицо</a>
+        <a href="#" class="filter-link" data-filter="hair">Волосы</a>
+        <a href="#" class="filter-link" data-filter="budget">Бюджетно</a>
+        <a href="#" class="filter-link" data-filter="luxury">Люкс</a>
+      </div>
+
+      <!-- Сетка карточек -->
+      <div class="reviews-grid">
+        <!-- Карточка 1: Средство от Акне (Категория: face) -->
+        <div class="review-card" data-category="face">
+          <div class="review-badge">Лицо / Акне</div>
+          <div class="review-image">
+            <img
+              src="../../images/reviews/effaclar-duo-400.webp"
+              alt="Обзор La Roche-Posay Effaclar Duo"
+              loading="lazy"
+            />
+          </div>
+          <div class="review-content">
+            <div class="review-rating">⭐⭐⭐⭐⭐</div>
+            <h3 class="review-title">La Roche-Posay Effaclar Duo(+)</h3>
+            <p class="review-excerpt">
+              Тестируем самый популярный крем от несовершенств. Реально ли он
+              убирает пятна постакне за 2 недели или это маркетинг?
+            </p>
+            <a href="recenzii/effaclar-duo.html" class="review-link-btn"
+              >Читать обзор →</a
+            >
+          </div>
+        </div>
+
+        <!-- Карточка 2: Увлажнение (Категории: budget и face) -->
+        <div class="review-card" data-category="budget face">
+          <div class="review-badge">Бюджетно</div>
+          <div class="review-image">
+            <img
+              src="../../images/reviews/cerave-hydrating-400.webp"
+              alt="Обзор CeraVe Hydrating Cleanser"
+              loading="lazy"
+            />
+          </div>
+          <div class="review-content">
+            <div class="review-rating">⭐⭐⭐⭐</div>
+            <h3 class="review-title">CeraVe Hydrating Cleanser</h3>
+            <p class="review-excerpt">
+              Бережное очищение по доступной цене. Разбираем состав и
+              эффективность средства на чувствительной коже.
+            </p>
+            <a href="recenzii/cerave-hydrating.html" class="review-link-btn"
+              >Читать обзор →</a
+            >
+          </div>
+        </div>
+
+        <!-- Карточка 3: Заглушка (Для будущих постов) -->
+        <div class="review-card placeholder">
+          <div class="review-content">
+            <h3 class="review-title">Новый обзор скоро...</h3>
+            <p class="review-excerpt">
+              Мы постоянно тестируем новые продукты, чтобы делиться с вами
+              только честными результатами.
+            </p>
+          </div>
+        </div>
+      </div>
     </main>
 
     <!-- FOOTER -->

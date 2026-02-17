@@ -241,36 +241,115 @@
         </div>
       </div>
     </header>
+    <section class="page-hero-img">
+      <div class="hero-overlay"></div>
+
+      <!-- Картинка -->
+
+      <img
+        src="../images/recenzii/recenzii-title-1200.webp"
+        srcset="
+          ../images/recenzii/recenzii-title-2000.webp 2000w,
+          ../images/recenzii/recenzii-title-1200.webp 1200w,
+          ../images/recenzii/recenzii-title-600.webp   600w
+        "
+        sizes="100vw"
+        alt="Recenzii produse"
+        class="recenzii-hero-bg-img"
+        loading="eager"
+      />
+
+      <div class="hero-content">
+        <h1 class="hero-title">Recenzii produse</h1>
+        <p class="hero-subtitle">Beauty blog & Expert care</p>
+        <p class="hero-subtitle">Brow & Makeup</p>
+      </div>
+      <a href="../ro/mediakit.htm" class="hero-mediakit-btn">
+        <span>Media Kit</span>
+        <span class="arrow">→</span>
+      </a>
+    </section>
     <main>
       <!-- BLOCK -->
-      <section class="page-hero-img">
-        <div class="hero-overlay"></div>
 
-        <!-- Картинка -->
+      <main class="container">
+        <section class="ingredient-section">
+          <h1 class="section-title">Recenzii Produse</h1>
+          <p class="ingredient-sub">
+            Teste oneste, analize de ingrediente și rezultate reale după
+            utilizare.
+          </p>
+        </section>
 
-        <img
-          src="../images/recenzii/recenzii-title-1200.webp"
-          srcset="
-            ../images/recenzii/recenzii-title-2000.webp 2000w,
-            ../images/recenzii/recenzii-title-1200.webp 1200w,
-            ../images/recenzii/recenzii-title-600.webp   600w
-          "
-          sizes="100vw"
-          alt="Recenzii produse"
-          class="recenzii-hero-bg-img"
-          loading="eager"
-        />
-
-        <div class="hero-content">
-          <h1 class="hero-title">Recenzii produse</h1>
-          <p class="hero-subtitle">Beauty blog & Expert care</p>
-          <p class="hero-subtitle">Brow & Makeup</p>
+        <!-- Filtre pe categorii -->
+        <div class="filter-container">
+          <a href="#" class="filter-link active" data-filter="all">Toate</a>
+          <a href="#" class="filter-link" data-filter="face">Ten</a>
+          <a href="#" class="filter-link" data-filter="hair">Păr</a>
+          <a href="#" class="filter-link" data-filter="budget">Buget redus</a>
+          <a href="#" class="filter-link" data-filter="luxury">Luxury</a>
         </div>
-        <a href="../ro/mediakit.htm" class="hero-mediakit-btn">
-          <span>Media Kit</span>
-          <span class="arrow">→</span>
-        </a>
-      </section>
+
+        <!-- Grila de carduri -->
+        <div class="reviews-grid">
+          <!-- Card 1: Tratament Acnee (Ten) -->
+          <div class="review-card" data-category="face">
+            <div class="review-badge">Ten / Acnee</div>
+            <div class="review-image">
+              <img
+                src="../../images/reviews/effaclar-duo-400.webp"
+                alt="Review La Roche-Posay Effaclar Duo"
+                loading="lazy"
+              />
+            </div>
+            <div class="review-content">
+              <div class="review-rating">⭐⭐⭐⭐⭐</div>
+              <h3 class="review-title">La Roche-Posay Effaclar Duo(+)</h3>
+              <p class="review-excerpt">
+                Am testat cel mai popular tratament pentru imperfecțiuni. Reduce
+                cu adevărat semnele post-acneice în 2 săptămâni?
+              </p>
+              <a href="recenzii/effaclar-duo.html" class="review-link-btn"
+                >Citește review →</a
+              >
+            </div>
+          </div>
+
+          <!-- Card 2: Curățare (Buget redus) -->
+          <div class="review-card" data-category="budget face">
+            <div class="review-badge">Buget redus</div>
+            <div class="review-image">
+              <img
+                src="../../images/reviews/cerave-hydrating-400.webp"
+                alt="Review CeraVe Hydrating Cleanser"
+                loading="lazy"
+              />
+            </div>
+            <div class="review-content">
+              <div class="review-rating">⭐⭐⭐⭐</div>
+              <h3 class="review-title">CeraVe Hydrating Cleanser</h3>
+              <p class="review-excerpt">
+                Curățare blândă la un preț accesibil. Analizăm compoziția și
+                eficiența produsului pe un ten sensibil.
+              </p>
+              <a href="recenzii/cerave-hydrating.html" class="review-link-btn"
+                >Citește review →</a
+              >
+            </div>
+          </div>
+
+          <!-- Card 3: Placeholder pentru viitor -->
+          <div class="review-card placeholder">
+            <div class="review-content">
+              <h3 class="review-title">Review nou în curând...</h3>
+              <p class="review-excerpt">
+                Testăm constant produse noi pentru a vă oferi doar rezultate
+                oneste.
+              </p>
+            </div>
+          </div>
+        </div>
+      </main>
     </main>
 
     <!-- FOOTER -->

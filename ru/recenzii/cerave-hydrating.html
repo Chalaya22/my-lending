@@ -1,6 +1,5 @@
 <!doctype html>
-<html lang="ro">
-  <!-- в русской версии ставь lang="ru" -->
+<html lang="ru">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -17,6 +16,7 @@
   <body>
     <header>
       <div class="container">
+        <!-- Логотип -->
         <a href="../index.html" class="logo">
           <div class="logo-wrap">
             <svg
@@ -99,20 +99,20 @@
           <!-- Menu -->
           <ul class="nav-menu" id="nav-menu">
             <li class="menu-close" id="menu-close">✕</li>
-            <li><a href="../index.html">Acasă</a></li>
-            <li><a href="../servicii.html">Servicii</a></li>
-            <li><a href="../recenzii.html">Recenzii produse</a></li>
-            <li><a href="../probleme.html">Probleme ale pielii</a></li>
-            <li><a href="../ingrediente.html">Ingrediente & Formule</a></li>
-            <li><a href="../contact.html">Contact</a></li>
+            <li><a href="../index.html">Главная</a></li>
+            <li><a href="../servicii.html">Услуги</a></li>
+            <li><a href="../recenzii.html">Обзоры косметики</a></li>
+            <li><a href="../probleme.html">Проблемы кожи</a></li>
+            <li><a href="../ingrediente.html">Ингредиенты и составы</a></li>
+            <li><a href="../contact.html">Контакты</a></li>
             <li class="menu-actions">
-              <a class="btn" href="../servicii.html">Programeaza-te</a>
+              <a class="btn" href="../servicii.html">Записаться/Консультация</a>
               <a
                 href="#subscribe"
                 class="btn subscribe-btn"
                 data-open-subscribe
               >
-                Abonează-te
+                Подписка
               </a>
             </li>
             <li class="mobile-lang">
@@ -225,8 +225,9 @@
               </a>
             </li>
           </ul>
+
           <!-- Lang switch -->
-          <div class="lang-toggle desktop-lang" data-lang="ro">
+          <div class="lang-toggle desktop-lang" data-lang="ru">
             <span class="label ro">RO</span>
             <span class="switch">
               <span class="knob"></span>
@@ -240,24 +241,26 @@
     <main>
       <section class="page-hero-img">
         <div class="hero-overlay"></div>
+        <!-- Картинка -->
         <img
-          src="../../images/acid-gialuron/ingridient-title-1200.webp"
+          src="../../images/acid-gialuron/cerave-title-1200.webp"
           srcset="
             ../../images/acid-gialuron/ingridient-title-2000.webp 2000w,
             ../../images/acid-gialuron/ingridient-title-1200.webp 1200w,
             ../../images/acid-gialuron/ingridient-title-600.webp   600w
           "
           sizes="100vw"
-          alt="Acid Hialuronic"
+          alt="Гиалуроновая кислот"
           class="ingredient-hero-bg-img"
           loading="eager"
         />
+
         <div class="hero-content">
-          <h1 class="hero-title">Acid Hialuronic</h1>
+          <h1 class="hero-title">Гиалуроновая кислота</h1>
           <p class="hero-subtitle">Beauty blog & Expert care</p>
           <p class="hero-subtitle">Brow & Makeup</p>
         </div>
-        <a href="../../ro/mediakit.htm" class="hero-mediakit-btn">
+        <a href="../../ru/mediakit.htm" class="hero-mediakit-btn">
           <span>Media Kit</span>
           <span class="arrow">→</span>
         </a>
@@ -265,29 +268,28 @@
       <article class="ingredient-article">
         <div>
           <div class="ingredient-meta">
-            <p class="ingredient-sub">
-              Hidratare profundă — elasticitate și confort pentru piele
-            </p>
+            <p class="ingredient-sub"></p>
           </div>
+
           <figure class="ingredient-image">
             <img
               src="../../images/acid-gialuron/acid-gialuron-texture-800.webp"
               srcset="
                 ../../images/acid-gialuron/acid-gialuron-texture-1200.webp 1200w,
                 ../../images/acid-gialuron/acid-gialuron-texture-800.webp   800w,
-                ../../images/acid-gialuron/acid-gialuron-texture-800.webp   400w
+                ../../images/acid-gialuron/acid-gialuron-texture-400.webp   400w
               "
               sizes="(max-width: 768px) 100vw, 800px"
               alt="Текстура средства с кислотами "
               loading="lazy"
             />
             <span class="image-accent-text">
-              Component esențial pentru hidratarea profundă a pielii
+              Ключевой компонент глубокого и длительного увлажнения кожи
             </span>
           </figure>
 
           <a class="section-btn-primary" href="../servicii.html">
-            Consultație / Programează-te
+            Консультации / Записаться
           </a>
         </div>
 
@@ -300,20 +302,21 @@
         <!--  Подпишитесь на экспертные разборы ФОРМА -->
         <section class="newsletter-section">
           <div class="newsletter-box">
-            <h2 class="newsletter-title">Abonează-te la articolele noastre</h2>
+            <h2 class="newsletter-title">Подпишитесь на экспертные разборы</h2>
 
             <p class="newsletter-text">
-              Primește ghiduri despre ingrediente, explicații științifice clare
-              și recomandări pentru problemele pielii. Fără spam. Doar
-              informații utile pentru o îngrijire corectă.
+              Получайте статьи о составах, проблемах кожи и безопасном уходе.
+              Без спама — только практичная информация.
             </p>
 
             <form class="newsletter-form">
-              <input type="email" placeholder="Adresa ta de email" required />
-              <button type="submit">Abonare</button>
+              <input type="email" placeholder="Ваш e-mail" required />
+              <button type="submit">Подписаться</button>
             </form>
 
-            <p class="newsletter-note">Te poți dezabona oricând.</p>
+            <p class="newsletter-note">
+              Нажимая кнопку, вы соглашаетесь на обработку персональных данных.
+            </p>
           </div>
         </section>
       </article>
@@ -322,7 +325,7 @@
     <!-- FOOTER -->
     <footer class="footer">
       <div class="footer-container">
-        <!-- LOGO -->
+        <!-- 1. LOGO -->
         <div class="footer-logo">
           <a href="../index.html" class="logo-footer">
             <svg
@@ -385,40 +388,39 @@
           </a>
         </div>
 
-        <!-- LINKS 1 -->
-        <div class="footer-links">
-          <a href="../index.html">Acasă</a>
-          <a href="../servicii.html">Servicii</a>
-          <a href="../recenzii.html">Recenzii produse</a>
+        <!-- 2. LINKS COL 1 -->
+        <div class="footer-links footer-col-1">
+          <a href="../index.html">Главная</a>
+          <a href="../servicii.html">Услуги</a>
+          <a href="../recenzii.html">Обзор косметики</a>
         </div>
 
-        <!-- LINKS 2 -->
-        <div class="footer-links">
-          <a href="../probleme.html">Probleme ale pielii</a>
-          <a href=".//ingrediente.html">Ingrediente & Formule</a>
-          <a href=".//contact.html">Contact</a>
+        <!-- 3. LINKS COL 2 -->
+        <div class="footer-links footer-col-2">
+          <a href="../probleme.html">Проблемы кожи</a>
+          <a href="../ingrediente.html">Ингредиенты и составы</a>
+          <a href="../contact.html">Контакт</a>
         </div>
-
         <!-- SUBSCRIBE -->
         <div class="footer-subscribe">
-          <p class="footer-subscribe-title">Abonează-te la noutăți ✨</p>
+          <p class="footer-subscribe-title">Подпишись на обновления ✨</p>
 
           <a
             href="#subscribe"
             class="btn footer-subscribe-btn"
             data-open-subscribe
           >
-            Abonează-te
+            Подписка
           </a>
         </div>
         <div class="footer-cta">
-          <a href="../../ro/colaborari.html" class="footer-btn">
-            Colaborări & Parteneriate ✨
+          <a href="../../ru/colaborari.html" class="footer-btn">
+            Сотрудничество & Партнерство ✨
           </a>
         </div>
 
-        <!-- SOCIALS -->
-        <div class="footer-socials">
+        <!-- 4. SOCIALS -->
+        <div class="footer-socials footer-col-socials">
           <a
             href="https://instagram.com"
             target="_blank"
@@ -512,61 +514,61 @@
         </div>
       </div>
       <div class="site-footer">
-        <a href="../../ro/privacy.html">Politica de confidențialitate</a>
+        <a href="../../privacy.html">Политика конфиденциальности</a>
       </div>
 
       <div class="footer-bottom">
-        <p>© 2025 Estetica Lens — Toate drepturile rezervate.</p>
+        <p>© 2025 Estetica Lui — Все права защищены..</p>
       </div>
     </footer>
-    <!-- ---------------------Moodalka Subscribe------------------------>
+    <!-- modal windows sibscribe -->
     <div class="subscribe-modal" id="subscribe-modal" aria-hidden="true">
       <div class="subscribe-overlay" data-close-subscribe></div>
 
       <div class="subscribe-box" role="dialog" aria-modal="true">
         <button class="subscribe-close" data-close-subscribe>✕</button>
 
-        <h2>Abonează-te</h2>
+        <h2>Подписка</h2>
         <p class="subscribe-subtitle">
-          Primește sfaturi reale de beauty, fără spam 💛
+          Полезные советы по уходу за кожей — без спама 💛
         </p>
 
         <form class="subscribe-form">
           <label>
-            Nume
-            <input type="text" required placeholder="Numele tău" />
+            Имя
+            <input type="text" placeholder="Ваше имя" />
           </label>
 
           <label>
             Email
-            <input type="email" required placeholder="email@email.com" />
+            <input type="email" placeholder="Email" required />
           </label>
 
           <label class="checkbox">
             <input type="checkbox" required />
-            <span> Sunt de acord cu prelucrarea datelor personale </span>
+            <span>Я согласен(на) на обработку персональных данных</span>
           </label>
 
-          <button type="submit">Abonează-mă ✨</button>
+          <button type="submit">Подписаться ✨</button>
         </form>
       </div>
     </div>
     <!-- FIXED GUIDES  button Полезные гайды -->
     <div class="guides-wrapper">
-      <button class="guides-trigger">Chiduri utile</button>
+      <button class="guides-trigger">Полезные гайды</button>
       <nav class="guides-panel">
-        <a href="../probleme/piele-deshidratata.html">Piele deshidratată</a>
-        <a href="../probleme/senzatie-de-strangere.html"
-          >Senzație de piele care strânge</a
-        >
-        <a href="../probleme/barrier.html">Refacerea barierei pielii</a>
+        <a href="../probleme/piele-deshidratata.html">Обезвоженная кожа</a>
+        <a href="../probleme/piele-uscata.html">Сухая кожа</a>
+        <a href="../probleme/barrier.html">Повреждённый кожный барьер</a>
+        <a href="../probleme/senzatie-de-strangere.html">Ощущение стянутости</a>
       </nav>
     </div>
-
     <script src="../../script.js" defer></script>
 
-    <!-- Structured data (schema.org) -->
+    <!-- Structured data (schema.org)   Article   schema-->
 
     <!-- FAQ   schema -->
+
+    <!-- Breadscrumb   schema -->
   </body>
 </html>

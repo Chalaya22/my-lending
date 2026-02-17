@@ -252,3 +252,29 @@ document.addEventListener("DOMContentLoaded", function () {
     panel.classList.remove("is-open");
   });
 });
+
+// логика фильтров в Обзор косметике
+const filterLinks = document.querySelectorAll(".filter-link");
+const cards = document.querySelectorAll(".review-card:not(.placeholder)");
+
+filterLinks.forEach((link) => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    // Переключаем активный класс на кнопках
+    filterLinks.forEach((l) => l.classList.remove("active"));
+    link.classList.add("active");
+
+    const filter = link.getAttribute("data-filter");
+
+    cards.forEach((card) => {
+      const categories = card.getAttribute("data-category");
+
+      if (filter === "all" || categories.includes(filter)) {
+        card.style.display = "flex"; // Показываем подходящие
+      } else {
+        card.style.display = "none"; // Прячем остальные
+      }
+    });
+  });
+});

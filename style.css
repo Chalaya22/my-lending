@@ -957,11 +957,12 @@ section h2 {
   border-radius: 8px;
   text-decoration: none;
 
-  background:
+  /* background:
     linear-gradient(to bottom, rgba(0, 0, 0, 0.03), rgba(0, 0, 0, 0.12)),
-    var(--text-muted);
+    var(--text-muted); */
+  background: var(--bg-main);
 
-  color: #f5f3f0;
+  color: var(--text-main);
 
   border: 1px solid rgba(207, 162, 74, 0.25);
 
@@ -1004,7 +1005,7 @@ section h2 {
   letter-spacing: 0.12em;
   text-transform: uppercase;
 
-  color: var(--bg-main);
+  color: var(--text-main);
   margin-bottom: 12px;
 }
 
@@ -1026,7 +1027,7 @@ section h2 {
   margin: 0;
   font-size: 15px;
   line-height: 1.6;
-  color: rgba(255, 255, 255, 0.75);
+  color: var(--text-muted);
 }
 .card-hint {
   font-size: 13px;
@@ -1426,6 +1427,243 @@ body.menu-open .guides-wrapper {
   object-fit: cover;
   object-position: center 90%;
 }
+/* Контейнер фильтров */
+.filter-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.filter-link {
+  padding: 8px 20px;
+  border: 1px solid #d4a041; /* Твой золотой цвет */
+  background: transparent;
+  color: #1a1a1a;
+  border-radius: 20px;
+  cursor: pointer;
+  font-family: "Quicksand", sans-serif;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.filter-link.active,
+.filter-link:hover {
+  background: #d4a041;
+  color: white;
+}
+
+/* Сетка обзоров */
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+  margin-bottom: 50px;
+}
+
+/* Карточка */
+.review-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.review-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.review-badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 4px 12px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  z-index: 1;
+}
+
+.review-image {
+  height: 200px;
+  overflow: hidden;
+}
+
+.review-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.review-content {
+  padding: 20px;
+  flex-grow: 1;
+}
+
+.review-rating {
+  color: #f1c36d;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+}
+
+.review-title {
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+  color: #1a1a1a;
+}
+
+.review-excerpt {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+.review-link {
+  font-weight: 600;
+  color: #d4a041;
+  font-size: 0.9rem;
+}
+
+/* Заглушка */
+.review-card.placeholder {
+  border: 2px dashed #eee;
+  background: #fafafa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+/*  Стили для страницы Обзоров (Recenzii) */
+/* Сетка для карточек */
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+/* Общий стиль карточки */
+.review-card {
+  background: #ffffff;
+  border-radius: 15px;
+  border: 1px solid #f0f0f0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  position: relative;
+  text-align: left;
+}
+
+/* Эффект при наведении */
+.review-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  border-color: #d4a041; /* Твой золотой акцент */
+}
+
+/* Метка (Badge) поверх фото */
+.review-badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: rgba(255, 255, 255, 0.95);
+  color: #1a1a1a;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  z-index: 2;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  font-family: "Quicksand", sans-serif;
+}
+
+/* Контейнер для фото */
+.review-image {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+}
+
+.review-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.review-card:hover .review-image img {
+  transform: scale(1.08); /* Легкий зум фото */
+}
+
+/* Контентная часть */
+.review-content {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.review-rating {
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+  color: #f1c36d; /* Цвет звездочек */
+}
+
+.review-title {
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.3rem;
+  color: #1a1a1a;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.review-excerpt {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+/* Кнопка-ссылка */
+.review-link-btn {
+  display: inline-block;
+  color: #d4a041;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.3s ease;
+  align-self: flex-start;
+}
+
+.review-link-btn:hover {
+  border-color: #d4a041;
+}
+
+/* Стиль для пустой карточки (заглушки) */
+.review-card.placeholder {
+  border: 2px dashed #e0e0e0;
+  background: #fafafa;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 0.7;
+}
+
 /*======================PROBLEME ALE PIELEI Page Desctop===========-*/
 .probleme-hero-img {
   position: relative;
@@ -1623,6 +1861,7 @@ dl.definition dt {
   color: var(--text-main);
   text-decoration: none;
   transition: color 0.25s ease;
+  margin-bottom: 10px;
 }
 
 .related-list-sidebar a::before {
@@ -2540,11 +2779,11 @@ dl.definition dt {
   font-size: 15px;
   line-height: 1.7;
 
-  color: var(--text-main);
+  color: #50081f;
 }
 
 .media-section {
-  margin-bottom: 60px;
+  margin-bottom: 20px;
 }
 
 .media-list {
@@ -2557,22 +2796,23 @@ dl.definition dt {
 }
 
 .media-list li {
-  background: #fff;
+  background: #50081f;
   padding: 22px 26px;
 
-  border-radius: 14px;
+  border-radius: 8px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
 
   border-left: 3px solid transparent;
-  background-image:
+  /* background-image:
     linear-gradient(#fff, #fff),
-    linear-gradient(180deg, #f6e7b8, #cfa24a, #fff1c1);
+    linear-gradient(180deg, #f6e7b8, #cfa24a, #fff1c1); */
   background-origin: border-box;
   background-clip: padding-box, border-box;
 
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.6;
-  color: var(--text-main);
+  color: white;
+  /* text-decoration: underline; */
 }
 
 .media-list strong {
