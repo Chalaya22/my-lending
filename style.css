@@ -1567,6 +1567,10 @@ body.menu-open .guides-wrapper {
   transition: all 0.3s ease;
   position: relative;
   text-align: left;
+
+  max-width: 380px;
+  width: 100%;
+  margin: 0 auto; /* Или margin: 0 auto; если хочешь по центру */
 }
 
 /* Эффект при наведении */
@@ -1664,6 +1668,26 @@ body.menu-open .guides-wrapper {
   align-items: center;
   text-align: center;
   opacity: 0.7;
+}
+/* карточки обзора */
+.review-main-image {
+  max-width: 500px; /* Ширина фото не больше 500px */
+  height: 450px; /* Высота не больше 450px */
+  margin: 30px auto; /* Центрируем фото */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.review-main-image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* Фото продукта будет видно ЦЕЛИКОМ, без обрезки */
+}
+.review-back-nav {
+  margin: 20px 0 30px 0; /* Отступы вокруг навигации */
+  display: block;
 }
 
 /*======================PROBLEME ALE PIELEI Page Desctop===========-*/
@@ -2814,7 +2838,6 @@ dl.definition dt {
   font-size: 16px;
   line-height: 1.6;
   color: black;
-  
 }
 
 .media-list strong {
