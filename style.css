@@ -2781,7 +2781,7 @@ dl.definition dt {
   font-size: 15px;
   line-height: 1.7;
 
-  color: #50081f;
+  color: black;
 }
 
 .media-section {
@@ -2798,23 +2798,23 @@ dl.definition dt {
 }
 
 .media-list li {
-  background: #50081f;
+  background: var(--bg-main);
   padding: 22px 26px;
 
   border-radius: 8px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
 
   border-left: 3px solid transparent;
-  /* background-image:
+  background-image:
     linear-gradient(#fff, #fff),
-    linear-gradient(180deg, #f6e7b8, #cfa24a, #fff1c1); */
+    linear-gradient(180deg, #f6e7b8, #cfa24a, #fff1c1);
   background-origin: border-box;
   background-clip: padding-box, border-box;
 
   font-size: 16px;
   line-height: 1.6;
-  color: white;
-  /* text-decoration: underline; */
+  color: black;
+  
 }
 
 .media-list strong {
