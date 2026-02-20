@@ -1,24 +1,19 @@
 <!doctype html>
 <html lang="ro">
+  <!-- в русской версии ставь lang="ru" -->
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Beauty Master</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <!-- SEO -->
 
     <!-- Fonts -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Poppins:wght@300;400;500&family=Allura&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Poppins:wght@300;400;500&family=Quicksand:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- Correct path for GitHub Pages -->
-    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../../style.css" />
   </head>
-
   <body>
     <header>
       <div class="container">
@@ -104,14 +99,14 @@
           <!-- Menu -->
           <ul class="nav-menu" id="nav-menu">
             <li class="menu-close" id="menu-close">✕</li>
-            <li><a href="index.html">Acasă</a></li>
-            <li><a href="servicii.html">Servicii</a></li>
-            <li><a href="recenzii.html">Recenzii produse</a></li>
-            <li><a href="probleme.html">Probleme ale pielii</a></li>
-            <li><a href="ingrediente.html">Ingrediente & Formule</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="../index.html">Acasă</a></li>
+            <li><a href="../servicii.html">Servicii</a></li>
+            <li><a href="../recenzii.html">Recenzii produse</a></li>
+            <li><a href="../probleme.html">Probleme ale pielii</a></li>
+            <li><a href="../ingrediente.html">Ingrediente & Formule</a></li>
+            <li><a href="../contact.html">Contact</a></li>
             <li class="menu-actions">
-              <a class="btn" href="servicii.html">Programeaza-te</a>
+              <a class="btn" href="../servicii.html">Programeaza-te</a>
               <a
                 href="#subscribe"
                 class="btn subscribe-btn"
@@ -243,192 +238,359 @@
     </header>
     <section class="page-hero-img">
       <div class="hero-overlay"></div>
-
-      <!-- Картинка -->
-
       <img
-        src="../images/recenzii/recenzii-title-1200.webp"
+        src="../../images/effaclar-duo-recenzii/recenzii-title-1200.webp"
         srcset="
-          ../images/recenzii/recenzii-title-2000.webp 2000w,
-          ../images/recenzii/recenzii-title-1200.webp 1200w,
-          ../images/recenzii/recenzii-title-600.webp   600w
+          ../../images/effaclar-duo-recenzii/recenzii-title-2000.webp 2000w,
+          ../../images/effaclar-duo-recenzii/recenzii-title-1200.webp 1200w,
+          ../../images/effaclar-duo-recenzii/recenzii-title-600.webp   600w
         "
         sizes="100vw"
-        alt="Recenzii produse"
+        alt="Reсenzie La Roche-Posay Toleriane Dermallergo"
         class="recenzii-hero-bg-img"
         loading="eager"
       />
-
       <div class="hero-content">
-        <h1 class="hero-title">Recenzii produse</h1>
+        <h1 class="hero-title">
+          Reсenzie La Roche-Posay Toleriane Dermallergo
+        </h1>
         <p class="hero-subtitle">Beauty blog & Expert care</p>
         <p class="hero-subtitle">Brow & Makeup</p>
       </div>
-      <a href="../ro/mediakit.htm" class="hero-mediakit-btn">
+      <a href="../../ro/mediakit.htm" class="hero-mediakit-btn">
         <span>Media Kit</span>
         <span class="arrow">→</span>
       </a>
     </section>
-    <main>
-      <!-- BLOCK -->
-
-      <main class="container">
-        <section class="ingredient-section">
-          <h1 class="section-title">Recenzii Produse</h1>
+    <main class="container">
+      <section class="ingredient-section">
+        <a class="section-btn-primary" href="../recenzii.html">
+          ← Toate recenziile</a
+        >
+        <div>
+          <h2 class="section-title">
+            La Roche-Posay Lipikar Balm AP+M: Salvarea pentru pielea atopică,
+            deshidratată și uscată
+          </h2>
           <p class="ingredient-sub">
-            Teste oneste, analize de ingrediente și rezultate reale după
-            utilizare.
+            Analizăm de ce acest balsam a devenit un best-seller pentru tenul
+            foarte uscat și atopic: cum calmează mâncărimile (pruritul), reface
+            microbiomul și protejează împotriva iritațiilor, fără a lăsa o
+            peliculă lipicioasă.
           </p>
-        </section>
-
-        <!-- Filtre pe categorii -->
-        <div class="filter-container">
-          <a href="#" class="filter-link active" data-filter="all">Toate</a>
-          <a href="#" class="filter-link" data-filter="face">Ten</a>
-          <a href="#" class="filter-link" data-filter="hair">Păr</a>
-          <a href="#" class="filter-link" data-filter="budget">Buget redus</a>
-          <a href="#" class="filter-link" data-filter="luxury">Luxury</a>
         </div>
-
-        <!-- Grila de carduri -->
-        <div class="reviews-grid">
-          <!-- Card 1: Tratament Acnee (Ten) -->
-          <div class="review-card" data-category="face">
-            <div class="review-badge">Ten / Acnee</div>
-            <div class="review-image">
-              <img
-                src="../images/acnee/effaclar-duo-400.webp"
-                alt="Review La aRoche-Posay Effaclar Duo"
-                loading="lazy"
-              />
-            </div>
-            <div class="review-content">
-              <div class="review-rating">⭐⭐⭐⭐⭐</div>
-              <h3 class="review-title">La Roche-Posay Effaclar Duo(+)</h3>
-              <p class="review-excerpt">
-                Am testat cel mai popular tratament pentru imperfecțiuni. Reduce
-                cu adevărat semnele post-acneice în 2 săptămâni?
-              </p>
-              <a href="recenzii/effaclar-duo.html" class="review-link-btn"
-                >Citește review →</a
-              >
-            </div>
-          </div>
-
-          <!-- Card 2: Curățare (Buget redus) -->
+      </section>
+      <div class="grid-2">
+        <div>
           <div class="review-card" data-category="budget face">
             <div class="review-badge">Buget redus</div>
             <div class="review-image">
               <img
-                src="../images/piele-sensibila/cerave-hydrating-400.webp"
-                alt="Review CeraVe Hydrating Cleanser"
+                src="../../images/piele-reactiva/toleriane-dermallergo-400.webp"
+                alt="Recenzie La Roche-Posay Toleriane Dermallergo"
                 loading="lazy"
               />
             </div>
             <div class="review-content">
-              <div class="review-rating">⭐⭐⭐⭐</div>
-              <h3 class="review-title">CeraVe Hydrating Cleanser</h3>
-              <p class="review-excerpt">
-                Curățare blândă la un preț accesibil. Analizăm compoziția și
-                eficiența produsului pe un ten sensibil.
-              </p>
-              <a href="recenzii/cerave-hydrating.html" class="review-link-btn"
-                >Citește review →</a
-              >
-            </div>
-          </div>
-
-          <!-- Card 3: Curățare (Buget redus) -->
-          <div class="review-card" data-category="budget face">
-            <div class="review-badge">Budget</div>
-            <div class="review-image">
-              <img
-                src="../images/piele-uscata/cerave-moisturizing-cream-400.webp"
-                alt="Review CeraVe Moisturizing Cream"
-                loading="lazy"
-              />
-            </div>
-            <div class="review-content">
-              <div class="review-rating">⭐⭐⭐⭐⭐</div>
-              <h3 class="review-title">CeraVe Moisturizing Cream</h3>
-              <p class="review-excerpt">
-                Soluția SOS pentru tenul foarte uscat. Analizăm cum formula
-                bogată cu ceramide restabilește bariera lipidică.
-              </p>
-              <a
-                href="recenzii/cerave-moisturizing-cream.html"
-                class="review-link-btn"
-                >Citește review →</a
-              >
-            </div>
-          </div>
-          <!-- Card 4: Curățare (Buget redus) -->
-          <div class="review-card" data-category="budget face">
-            <div class="review-badge">Budget</div>
-            <div class="review-image">
-              <img
-                src="../images/piele-deshidratata/lipikar-balm-ap-m-400.webp"
-                alt="Review La Roche-Posay Lipikar Balm AP+M"
-                loading="lazy"
-              />
-            </div>
-            <div class="review-content">
-              <div class="review-rating">⭐⭐⭐⭐⭐</div>
-              <h3 class="review-title">La Roche-Posay Lipikar Balm AP+M</h3>
-              <p class="review-excerpt">
-                La Roche-Posay Lipikar Balm AP+M: Salvarea pentru pielea atopică
-                și uscată
-              </p>
-              <p class="review-excerpt">
-                Analizăm de ce acest balsam a devenit recomandarea №1 a
-                dermatologilor pentru a calma mâncărimile, a reduce roșeața și a
-                reface rapid bariera cutanată.
-              </p>
-              <a
-                href="recenzii/larocheposay-lipikar-apm.html"
-                class="review-link-btn"
-                >Citește review →</a
-              >
-            </div>
-          </div>
-          <!-- Card 5: Curățare (Buget redus) -->
-          <div class="review-card" data-category="budget face">
-            <div class="review-badge">Budget</div>
-            <div class="review-image">
-              <img
-                src="../images/piele-reactiva/toleriane-dermallergo-400.webp"
-                alt="Review La Roche-Posay Toleriane Dermallergo"
-                loading="lazy"
-              />
-            </div>
-            <div class="review-content">
-              <div class="review-rating">⭐⭐⭐⭐⭐</div>
               <h3 class="review-title">La Roche-Posay Toleriane Dermallergo</h3>
               <p class="review-excerpt">
-                Soluția de urgență pentru pielea hipersensibilă. Analizăm modul
-                în care formula sterilă cu Neurosensină „stinge” instantaneu
-                senzația de arsură, roșeața și disconfortul cutanat.
+                Soluție SOS pentru pielea foarte deshidratată. Analizăm modul în
+                care formula, recomandată de dermatologi, calmează mâncărimile
+                și previne apariția de noi focare de iritație și atopie.
               </p>
-              <a
-                href="recenzii/larocheposay-toleriane-dermallergo.html"
-                class="review-link-btn"
-                >Citește review →</a
+            </div>
+          </div>
+          <section class="ingredient-section soft-bg">
+            <h2 class="section-title">Textura și prima utilizare</h2>
+            <p>
+              Spre deosebire de loțiunile obișnuite,
+              <strong>Lipikar Balm AP+M</strong> are o textură de balsam bogat,
+              dar surprinzător de non-gras și non-lipicios. Se absoarbe rapid și
+              lasă pielea moale și protejată.
+            </p>
+            <p>
+              Produsul oferă o calmare instantanee. Este ideal pentru pielea
+              foarte uscată și atopică, asigurând confort și potolind senzația
+              de mâncărime (prurit), ceea ce este esențial în timpul puseelor de
+              atopie.
+            </p>
+          </section>
+
+          <section class="ingredient-section soft-bg">
+            <h2 class="section-title">Analiza compoziției: Ce conține?</h2>
+            <p>
+              Formula inovatoare conține **Niacinamidă** pentru a calma
+              mâncărimile și a reface bariera lipidică, și **Unt de Shea
+              (Karite)** în concentrație de 20% pentru nutriție profundă și
+              redarea elasticității.
+            </p>
+            <p>
+              Secretul eficacității stă în tehnologia exclusivă **AP+M (Aqua
+              Posae + Microresyl)**. Aceasta reface echilibrul microbiomului
+              pielii, prevenind reapariția uscăciunii severe și a inflamațiilor.
+              Această combinație asigură o remisie de lungă durată chiar și
+              pentru cea mai reactivă piele.
+            </p>
+          </section>
+
+          <!-- Secțiunea adaptată pentru deshidratare, combinată în aceeași pagină -->
+          <section class="ingredient-section soft-bg">
+            <h2 class="section-title">Textura și salvarea de „setea” pielii</h2>
+            <p>
+              Spre deosebire de fluidele ușoare,
+              <strong>Lipikar Balm AP+M</strong> are o textură densă, emolientă.
+              Pentru pielea deshidratată, acest lucru este critic: balsamul
+              creează un „ecran” protector care oprește pierderea
+              transepidermică de apă (TEWL).
+            </p>
+            <p>
+              Produsul elimină instantaneu senzația de strângere. Este ideal
+              atunci când pielea este deshidratată din cauza climatului agresiv
+              sau a aerului uscat din încăperi, redându-i catifelarea și
+              elasticitatea fără un finisaj lipicios.
+            </p>
+          </section>
+
+          <section class="ingredient-section soft-bg">
+            <h2 class="section-title">Analiza compoziției: Cum reține apa?</h2>
+            <p>
+              Formula conține **Niacinamidă**, care stimulează sinteza
+              propriilor ceramide, și **Unt de Shea**, care reface deficitul de
+              lipide. Acest lucru permite „sigilarea” umidității în interior,
+              fără a o lăsa să se evapore.
+            </p>
+            <p>
+              Complexul unic **AP+M (Aqua Posae + Microresyl)** reface
+              microbiomul. Acest lucru este important, deoarece în cazul
+              deshidratării, stratul protector este afectat, iar pielea devine
+              vulnerabilă în fața bacteriilor. Balsamul ajută pielea să devină
+              din nou „autonomă” în ceea ce privește hidratarea.
+            </p>
+          </section>
+
+          <section class="ingredient-section soft-bg">
+            <h2 class="section-title">Cui NU i se potrivește?</h2>
+            <p>
+              În ciuda hidratării puternice, balsamul poate fi prea dens pentru
+              **tenul gras și deshidratat** în perioada verii. Sarcina sa este
+              nutriția profundă, așadar, dacă aveți tendința de a bloca porii,
+              este mai bine să îl folosiți local, pe zonele uscate.
+            </p>
+            <p>
+              Dacă aveți tenul mixt, aplicați balsamul într-un strat subțire
+              doar pe obraji și gât, evitând zona T. Este un produs profesional
+              pentru refacere, nu un gel lejer de matifiere.
+            </p>
+          </section>
+
+          <section class="ingredient-section soft-bg">
+            <h2 class="section-title">
+              Trick util: Metoda „Aplică pe pielea umedă”
+            </h2>
+            <p>
+              Pentru a maximiza efectul balsamului, dermatologii recomandă
+              aplicarea unui strat subțire pe **fața sau corpul ușor umed**
+              (imediat după duș, în timp ce pielea este încă caldă și umedă).
+            </p>
+            <p>
+              Această metodă permite „sigilarea” apei în interiorul epidermei și
+              ajută lipidele active să se integreze mai rapid în bariera
+              deteriorată. De asemenea, Lipikar funcționează excelent ca **mască
+              SOS** pentru buzele sau mâinile crăpate, lăsat peste noapte.
+            </p>
+          </section>
+          <section class="ingredient-section soft-bg">
+            <h2 class="section-title">Cui NU i se potrivește?</h2>
+            <p>
+              Lipikar Balm AP+M este un emolient bogat, nu o cremă hidratantă
+              lejeră. Nu este potrivit pentru persoanele cu **ten gras fără
+              semne de uscăciune**, deoarece textura sa densă poate părea
+              greoaie pentru zona T.
+            </p>
+            <p>
+              Dacă aveți tenul mixt/combinat, acest balsam este mai bine să îl
+              folosiți local, pe zonele uscate (obraji, gât) sau ca îngrijire de
+              noapte. Este creat pentru refacerea lipidelor, nu pentru
+              matifiere.
+            </p>
+          </section>
+        </div>
+
+        <!-- SIDEBAR -->
+        <aside>
+          <div class="card" style="border-top: 4px solid #32508f">
+            <h3 class="section-title-sidebar">Specificații</h3>
+            <ul
+              class="related-list"
+              style="font-size: 0.9rem; line-height: 1.6"
+            >
+              <li>
+                <strong>Produs:</strong> Balsam relipidant cu triplă acțiune
+              </li>
+              <li><strong>Volum:</strong> 75 ml / 200 ml / 400 ml</li>
+              <li><strong>Preț:</strong> ~45 - 120 RON / 180 - 550 MDL</li>
+              <li>
+                <strong>Tip de piele:</strong> Uscată, foarte uscată, atopică
+              </li>
+              <li><strong>Grad de protecție:</strong> Fără SPF</li>
+              <li>
+                <strong>Ingrediente:</strong> Unt de Shea, Niacinamidă, Complex
+                AP+M
+              </li>
+              <li>
+                <strong>Formula:</strong> Bogată, non-lipicioasă, absorbție
+                rapidă
+              </li>
+              <li>
+                <strong>Timpul administrării:</strong> Dimineața și/sau Seara
+              </li>
+              <li><strong>Sex:</strong> Unisex (pentru întreaga familie 0+)</li>
+              <li><strong>Clasificarea:</strong> Dermatocosmetic</li>
+              <li><strong>Țara TM:</strong> Franța</li>
+              <li>
+                <strong>Precauții:</strong> Potrivit pentru față și corp.
+                Evitați contactul cu ochii.
+              </li>
+            </ul>
+            <div class="card-image" style="margin-top: 15px">
+              <img
+                src="../../images/piele-deshidratata/lipikar-balm-ap-m-400.webp"
+                alt="Specificații La Roche-Posay Lipikar Balm AP+M"
+                loading="lazy"
+              />
+            </div>
+          </div>
+
+          <div class="card" style="margin-top: 20px; background-color: #f0f4f8">
+            <h3 class="section-title-sidebar">Verdictul nostru</h3>
+            <div
+              class="review-rating"
+              style="font-size: 1.2rem; color: #32508f; margin-bottom: 10px"
+            >
+              ⭐⭐⭐⭐⭐
+            </div>
+            <p style="font-size: 0.9rem; line-height: 1.5">
+              Un produs SOS indispensabil pentru combaterea uscăciunii severe, a
+              pruritului și a atopiei. Formula calmează instantaneu și
+              restabilește bariera cutanată. Un must-have în farmacia familiei,
+              sigur chiar și pentru pielea sensibilă a bebelușilor.
+            </p>
+          </div>
+
+          <div class="card" style="margin-top: 20px">
+            <h3 class="section-title-sidebar">Articole corelate</h3>
+            <div class="related-list-sidebar">
+              <a href="../probleme/piele-deshidratata.html"
+                >Pielea deshidratată: cum redăm hidratarea</a
+              >
+              <a href="../probleme/barrier.html"
+                >Cum refacem bariera protectoare a pielii</a
               >
             </div>
           </div>
 
-          <!-- Card 6: Placeholder pentru viitor -->
-          <div class="review-card placeholder">
-            <div class="review-content">
-              <h3 class="review-title">Review nou în curând...</h3>
-              <p class="review-excerpt">
-                Testăm constant produse noi pentru a vă oferi doar rezultate
-                oneste.
-              </p>
+          <div class="card" style="margin-top: 20px; background-color: #f0f4f8">
+            <h3 class="section-title-sidebar">Verdictul nostru</h3>
+            <div
+              class="review-rating"
+              style="font-size: 1.2rem; color: #32508f; margin-bottom: 10px"
+            >
+              ⭐⭐⭐⭐⭐
             </div>
+            <p style="font-size: 0.9rem; line-height: 1.5">
+              Este produsul de referință pentru pielea extrem de uscată și
+              deshidratată. Textura bogată „sigilează” hidratarea timp de 24 de
+              ore, în timp ce tehnologia AP+M restabilește microbiomul,
+              eliminând pruritul și senzația de strângere încă de la prima
+              aplicare.
+            </p>
           </div>
+
+          <div class="card" style="margin-top: 20px">
+            <h2 class="section-title">
+              Acțiune triplă: restaurare, nutriție și confort
+            </h2>
+            <p>
+              Dacă vă confruntați cu o deshidratare severă, descuamare sau o
+              senzație de disconfort, acest balsam va fi salvarea dumneavoastră.
+              Conține o concentrație ridicată de Unt de Shea și Niacinamidă,
+              care refac instantaneu deficitul de lipide.
+            </p>
+            <p>
+              Utilizarea regulată a Lipikar Balm AP+M ajută la întărirea
+              barierei protectoare a pielii, făcând-o mai puțin reactivă la
+              factorii externi (vânt, frig sau apa dură). Pielea devine
+              catifelată, elastică și scapă de micro-fisuri, fără a lăsa o
+              senzație lipicioasă.
+            </p>
+          </div>
+        </aside>
+      </div>
+      <!--  Подпишитесь на экспертные разборы ФОРМА -->
+      <section class="newsletter-section">
+        <div class="newsletter-box">
+          <h2 class="newsletter-title">Abonează-te la articolele noastre</h2>
+
+          <p class="newsletter-text">
+            Primește ghiduri despre ingrediente, explicații științifice clare și
+            recomandări pentru problemele pielii. Fără spam. Doar informații
+            utile pentru o îngrijire corectă.
+          </p>
+
+          <form class="newsletter-form">
+            <input type="email" placeholder="Adresa ta de email" required />
+            <button type="submit">Abonare</button>
+          </form>
+
+          <p class="newsletter-note">Te poți dezabona oricând.</p>
         </div>
-      </main>
+      </section>
+      <section class="faq">
+        <h2 class="section-title">Întrebări frecvente</h2>
+
+        <div class="faq-item">
+          <h3>
+            Ajută acest balsam în cazul pruritului (mâncărimii) sever și a
+            dermatitei atopice?
+          </h3>
+          <p>
+            Da, aceasta este indicația sa principală. Datorită complexului AP+M
+            și Niacinamidei, balsamul calmează instantaneu mâncărimea, reduce
+            frecvența scărpinatului și ajută la prelungirea perioadelor de
+            remisie (fără pusee) în cazul atopiei.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Pot folosi Lipikar Balm AP+M și pentru față?</h3>
+          <p>
+            Da, formula este dezvoltată pentru utilizare atât pe corp, cât și pe
+            față. Este non-comedogenică, nu conține parfum și este potrivită
+            pentru cea mai sensibilă piele, fiind o alegere sigură pentru tenul
+            cu uscăciune severă.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Este potrivit acest balsam pentru bebeluși și copii?</h3>
+          <p>
+            Absolut. Lipikar Balm AP+M este testat sub control pediatric și
+            dermatologic. Este potrivit pentru utilizare încă de la naștere
+            (0+), ceea ce îl face un produs universal ideal pentru întreaga
+            familie.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Cât de repede reface pielea foarte uscată?</h3>
+          <p>
+            Studiile clinice arată că balsamul oferă confort imediat după prima
+            aplicare, iar prin utilizarea regulată, reface bariera protectoare a
+            pielii în decurs de 48 de ore și reduce riscul de reapariție a
+            uscăciunii.
+          </p>
+        </div>
+      </section>
     </main>
 
     <!-- FOOTER -->
@@ -499,16 +661,16 @@
 
         <!-- LINKS 1 -->
         <div class="footer-links">
-          <a href="index.html">Acasă</a>
-          <a href="servicii.html">Servicii</a>
-          <a href="recenzii.html">Recenzii produse</a>
+          <a href="../index.html">Acasă</a>
+          <a href="../servicii.html">Servicii</a>
+          <a href="../recenzii.html">Recenzii produse</a>
         </div>
 
         <!-- LINKS 2 -->
         <div class="footer-links">
-          <a href="probleme.html">Probleme ale pielii</a>
-          <a href="ingrediente.html">Ingrediente & Formule</a>
-          <a href="contact.html">Contact</a>
+          <a href="../probleme.html">Probleme ale pielii</a>
+          <a href=".//ingrediente.html">Ingrediente & Formule</a>
+          <a href=".//contact.html">Contact</a>
         </div>
 
         <!-- SUBSCRIBE -->
@@ -524,7 +686,7 @@
           </a>
         </div>
         <div class="footer-cta">
-          <a href="../ro/colaborari.html" class="footer-btn">
+          <a href="../../ro/colaborari.html" class="footer-btn">
             Colaborări & Parteneriate ✨
           </a>
         </div>
@@ -624,7 +786,7 @@
         </div>
       </div>
       <div class="site-footer">
-        <a href="../ro/privacy.html">Politica de confidențialitate</a>
+        <a href="../../ro/privacy.html">Politica de confidențialitate</a>
       </div>
 
       <div class="footer-bottom">
@@ -663,7 +825,22 @@
         </form>
       </div>
     </div>
+    <!-- FIXED GUIDES  button Полезные гайды -->
+    <div class="guides-wrapper">
+      <button class="guides-trigger">Ghiduri utile</button>
+      <nav class="guides-panel">
+        <a href="../probleme/piele-uscata.html">Piele uscată vs Deshidratată</a>
+        <a href="../probleme/barrier.html">Refacerea barierei cutante</a>
+        <!-- <a href="../probleme/dermatita-atopica.html">Ghid: Dermatita atopică</a> -->
+        <!-- <a href="../ingrediente/unt-de-shea.html">Beneficiile untului de Shea</a> -->
+      </nav>
+    </div>
 
-    <script src="../script.js"></script>
+    <script src="../../script.js" defer></script>
+    <!-- Article & Review Schema (RO) -->
+
+    <!-- FAQ Schema (RO) -->
+
+    <!-- Breadcrumb Schema (RO) -->
   </body>
 </html>
