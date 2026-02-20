@@ -1,24 +1,19 @@
 <!doctype html>
 <html lang="ro">
+  <!-- в русской версии ставь lang="ru" -->
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Beauty Master</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <!-- SEO -->
 
     <!-- Fonts -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Poppins:wght@300;400;500&family=Allura&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Poppins:wght@300;400;500&family=Quicksand:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- Correct path for GitHub Pages -->
-    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../../style.css" />
   </head>
-
   <body>
     <header>
       <div class="container">
@@ -104,14 +99,14 @@
           <!-- Menu -->
           <ul class="nav-menu" id="nav-menu">
             <li class="menu-close" id="menu-close">✕</li>
-            <li><a href="index.html">Acasă</a></li>
-            <li><a href="servicii.html">Servicii</a></li>
-            <li><a href="recenzii.html">Recenzii produse</a></li>
-            <li><a href="probleme.html">Probleme ale pielii</a></li>
-            <li><a href="ingrediente.html">Ingrediente & Formule</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="../index.html">Acasă</a></li>
+            <li><a href="../servicii.html">Servicii</a></li>
+            <li><a href="../recenzii.html">Recenzii produse</a></li>
+            <li><a href="../probleme.html">Probleme ale pielii</a></li>
+            <li><a href="../ingrediente.html">Ingrediente & Formule</a></li>
+            <li><a href="../contact.html">Contact</a></li>
             <li class="menu-actions">
-              <a class="btn" href="servicii.html">Programeaza-te</a>
+              <a class="btn" href="../servicii.html">Programeaza-te</a>
               <a
                 href="#subscribe"
                 class="btn subscribe-btn"
@@ -243,167 +238,292 @@
     </header>
     <section class="page-hero-img">
       <div class="hero-overlay"></div>
-
-      <!-- Картинка -->
-
       <img
-        src="../images/recenzii/recenzii-title-1200.webp"
+        src="../../images/effaclar-duo-recenzii/recenzii-title-1200.webp"
         srcset="
-          ../images/recenzii/recenzii-title-2000.webp 2000w,
-          ../images/recenzii/recenzii-title-1200.webp 1200w,
-          ../images/recenzii/recenzii-title-600.webp   600w
+          ../../images/effaclar-duo-recenzii/recenzii-title-2000.webp 2000w,
+          ../../images/effaclar-duo-recenzii/recenzii-title-1200.webp 1200w,
+          ../../images/effaclar-duo-recenzii/recenzii-title-600.webp   600w
         "
         sizes="100vw"
-        alt="Recenzii produse"
+        alt="Recenzii La Roche-Posay Effaclar Duo(+)"
         class="recenzii-hero-bg-img"
         loading="eager"
       />
-
       <div class="hero-content">
-        <h1 class="hero-title">Recenzii produse</h1>
+        <h1 class="hero-title">Recenzii La Roche-Posay Effaclar Duo(+)</h1>
         <p class="hero-subtitle">Beauty blog & Expert care</p>
         <p class="hero-subtitle">Brow & Makeup</p>
       </div>
-      <a href="../ro/mediakit.htm" class="hero-mediakit-btn">
+      <a href="../../ro/mediakit.htm" class="hero-mediakit-btn">
         <span>Media Kit</span>
         <span class="arrow">→</span>
       </a>
     </section>
-    <main>
-      <!-- BLOCK -->
-
-      <main class="container">
-        <section class="ingredient-section">
-          <h1 class="section-title">Recenzii Produse</h1>
+    <main class="container">
+      <section class="ingredient-section">
+        <a class="section-btn-primary" href="../recenzii.html">
+          ← Toate recenziile</a
+        >
+        <div>
+          <h2 class="section-title">
+            La Roche-Posay Effaclar Duo(+): Inamicul nr. 1 al imperfecțiunilor
+          </h2>
           <p class="ingredient-sub">
-            Teste oneste, analize de ingrediente și rezultate reale după
-            utilizare.
+            Analizăm de ce acest tratament a devenit un cult-product pentru
+            pielea grasă: cum elimină coșurile, previne semnele post-acneice și
+            matifiază tenul fără a-l usca.
           </p>
-        </section>
-
-        <!-- Filtre pe categorii -->
-        <div class="filter-container">
-          <a href="#" class="filter-link active" data-filter="all">Toate</a>
-          <a href="#" class="filter-link" data-filter="face">Ten</a>
-          <a href="#" class="filter-link" data-filter="hair">Păr</a>
-          <a href="#" class="filter-link" data-filter="budget">Buget redus</a>
-          <a href="#" class="filter-link" data-filter="luxury">Luxury</a>
         </div>
-
-        <!-- Grila de carduri -->
-        <div class="reviews-grid">
-          <!-- Card 1: Tratament Acnee (Ten) -->
-          <div class="review-card" data-category="face">
-            <div class="review-badge">Ten / Acnee</div>
-            <div class="review-image">
-              <img
-                src="../images/acnee/effaclar-duo-400.webp"
-                alt="Review La aRoche-Posay Effaclar Duo"
-                loading="lazy"
-              />
-            </div>
-            <div class="review-content">
-              <div class="review-rating">⭐⭐⭐⭐⭐</div>
-              <h3 class="review-title">La Roche-Posay Effaclar Duo(+)</h3>
-              <p class="review-excerpt">
-                Am testat cel mai popular tratament pentru imperfecțiuni. Reduce
-                cu adevărat semnele post-acneice în 2 săptămâni?
-              </p>
-              <a href="recenzii/effaclar-duo.html" class="review-link-btn"
-                >Citește review →</a
-              >
-            </div>
-          </div>
-
-          <!-- Card 2: Curățare (Buget redus) -->
+      </section>
+      <div class="grid-2">
+        <div>
           <div class="review-card" data-category="budget face">
             <div class="review-badge">Buget redus</div>
             <div class="review-image">
               <img
-                src="../images/piele-sensibila/cerave-hydrating-400.webp"
-                alt="Review CeraVe Hydrating Cleanser"
+                src="../../images/acnee/effaclar-duo-400.webp"
+                alt="Recenzii La Roche-Posay Effaclar Duo(+)"
                 loading="lazy"
               />
             </div>
             <div class="review-content">
-              <div class="review-rating">⭐⭐⭐⭐</div>
-              <h3 class="review-title">CeraVe Hydrating Cleanser</h3>
+              <h3 class="review-title">La Roche-Posay Effaclar Duo(+)</h3>
               <p class="review-excerpt">
-                Curățare blândă la un preț accesibil. Analizăm compoziția și
-                eficiența produsului pe un ten sensibil.
+                Tratament SOS pentru tenul cu imperfecțiuni. Analizăm modul în
+                care formula sa, recomandată de dermatologi, reduce coșurile și
+                previne apariția petelor roșii.
               </p>
-              <a href="recenzii/cerave-hydrating.html" class="review-link-btn"
-                >Citește review →</a
-              >
             </div>
           </div>
+          <section class="ingredient-section soft-bg">
+            <h2 class="section-title">Textura și prima utilizare</h2>
+            <p>
+              Spre deosebire de o cremă nutritivă,
+              <strong>Effaclar Duo(+)</strong> are o textură de gel-cremă
+              ultra-lejeră. Se absoarbe instantaneu în piele și lasă un finisaj
+              mat, non-gras, fiind o bază excelentă pentru machiaj.
+            </p>
+            <p>
+              Produsul oferă o senzație de prospețime imediată. Este ideal
+              pentru tenul gras, mixt sau cel predispus la imperfecțiuni,
+              oferind confort fără a usca excesiv pielea, ceea ce este rar
+              pentru un tratament anti-acnee.
+            </p>
+          </section>
 
-          <!-- Card 3: Curățare (Buget redus) -->
-          <div class="review-card" data-category="budget face">
-            <div class="review-badge">Budget</div>
-            <div class="review-image">
-              <img
-                src="../images/piele-uscata/cerave-moisturizing-cream-400.webp"
-                alt="Review CeraVe Moisturizing Cream"
-                loading="lazy"
-              />
-            </div>
-            <div class="review-content">
-              <div class="review-rating">⭐⭐⭐⭐⭐</div>
-              <h3 class="review-title">CeraVe Moisturizing Cream</h3>
-              <p class="review-excerpt">
-                Soluția SOS pentru tenul foarte uscat. Analizăm cum formula
-                bogată cu ceramide restabilește bariera lipidică.
-              </p>
-              <a
-                href="recenzii/cerave-moisturizing-cream.html"
-                class="review-link-btn"
-                >Citește review →</a
-              >
-            </div>
-          </div>
-          <!-- Card 4: Curățare (Buget redus) -->
-          <div class="review-card" data-category="budget face">
-            <div class="review-badge">Budget</div>
-            <div class="review-image">
-              <img
-                src="../images/piele-deshidratata/lipikar-balm-ap-m-400.webp"
-                alt="Review La Roche-Posay Lipikar Balm AP+M"
-                loading="lazy"
-              />
-            </div>
-            <div class="review-content">
-              <div class="review-rating">⭐⭐⭐⭐⭐</div>
-              <h3 class="review-title">La Roche-Posay Lipikar Balm AP+M</h3>
-              <p class="review-excerpt">
-                La Roche-Posay Lipikar Balm AP+M: Salvarea pentru pielea atopică
-                și uscată
-              </p>
-              <p class="review-excerpt">
-                Analizăm de ce acest balsam a devenit recomandarea №1 a
-                dermatologilor pentru a calma mâncărimile, a reduce roșeața și a
-                reface rapid bariera cutanată.
-              </p>
-              <a
-                href="recenzii/larocheposay-lipikar-apm.html"
-                class="review-link-btn"
-                >Citește review →</a
-              >
-            </div>
-          </div>
+          <section class="ingredient-section soft-bg">
+            <h2 class="section-title">Analiza compoziției: Ce conține?</h2>
+            <p>
+              Formula inovatoare conține **Niacinamidă** (Vitamina B3) în
+              concentrație mare pentru a calma inflamația și a reduce roșeața,
+              și **Piroctonă Olamine** pentru a purifica tenul și a reduce
+              bacteriile (P. acnes).
+            </p>
+            <p>
+              Secretul stă în complexul patentat **Procerad™**, care previne
+              apariția semnelor post-acneice (petele roșii sau maronii) și
+              **Manose**, care stimulează regenerarea celulară. Această
+              combinație asigură o acțiune globală asupra coșurilor și petelor.
+            </p>
+          </section>
 
-          <!-- Card 5: Placeholder pentru viitor -->
-          <div class="review-card placeholder">
-            <div class="review-content">
-              <h3 class="review-title">Review nou în curând...</h3>
-              <p class="review-excerpt">
-                Testăm constant produse noi pentru a vă oferi doar rezultate
-                oneste.
-              </p>
-            </div>
-          </div>
+          <section class="ingredient-section soft-bg">
+            <h2 class="section-title">Cui NU i se potrivește?</h2>
+            <p>
+              Deși este un tratament lăudat, nu este o cremă hidratantă de bază
+              (precum CeraVe) și poate fi perceput ca fiind prea puternic sau
+              usca pentru persoanele cu **ten uscat** natural sau foarte
+              sensibil.
+            </p>
+            <p>
+              Dacă aveți un ten mixt, acest gel-cremă poate fi folosit pe toată
+              fața, dar asigurați-vă că folosiți o cremă hidratantă lejeră
+              suplimentar dacă simțiți nevoia de confort. Este un produs de
+              tratament, nu o cremă de zi universală.
+            </p>
+          </section>
+
+          <section class="ingredient-section soft-bg">
+            <h2 class="section-title">
+              Tratament vs Hidratare: cum îl folosim corect?
+            </h2>
+            <p>
+              Multe persoane confundă un tratament corector cu o cremă
+              hidratantă obișnuită.
+              <strong>Effaclar Duo(+)</strong> este, în primul rând, un produs
+              activ care reglează producția de sebum și exfoliază blând porii.
+            </p>
+            <p>
+              Nu este doar o soluție pentru coșurile active. Este un **produs
+              preventiv**, care restabilește echilibrul microbiomului pielii
+              (datorită ingredientului Aqua Posae Filiformis). După o săptămână
+              de utilizare, tenul devine mai curat, matifiat și vizibil mai
+              uniform.
+            </p>
+          </section>
+
+          <section class="ingredient-section soft-bg">
+            <h2 class="section-title">
+              Trick util: Aplicarea punctuală sau pe toată fața?
+            </h2>
+            <p>
+              Deși mulți tind să aplice produsul doar pe coșuri, dermatologii
+              recomandă aplicarea unui strat subțire pe **toată fața** (evitând
+              zona ochilor). Astfel, ingredientele active pot preveni formarea
+              noilor imperfecțiuni sub piele.
+            </p>
+            <p>
+              Dacă pielea se simte ușor uscată la început, puteți folosi
+              produsul doar seara, iar dimineața să aplicați o cremă hidratantă
+              non-comedogenică (cum este Effaclar H). De asemenea, este o **bază
+              excelentă pentru machiaj**, deoarece previne oxidarea fondului de
+              ten pe parcursul zilei.
+            </p>
+          </section>
+          <section class="ingredient-section soft-bg">
+            <h2 class="section-title">Cui NU i se potrivește?</h2>
+            <p>
+              Acest produs este un tratament activ, nu o cremă de bază. Nu este
+              recomandat persoanelor cu **ten uscat** natural, care nu prezintă
+              imperfecțiuni sau exces de sebum. Formula poate provoca uscăciune
+              și disconfort pe acest tip de piele.
+            </p>
+            <p>
+              De asemenea, dacă aveți pielea **foarte sensibilă**, care
+              reacționează prin roșeață intensă sau usturime la majoritatea
+              ingredientelor active, folosiți acest produs cu prudență (poate
+              doar seara, de 2-3 ori pe săptămână) sau alegeți o variantă mai
+              blândă, precum Effaclar H Iso-Biome.
+            </p>
+          </section>
         </div>
-      </main>
+
+        <!-- SIDEBAR -->
+        <aside>
+          <div class="card" style="border-top: 4px solid #5d9c4a">
+            <h3 class="section-title-sidebar">Specificații</h3>
+            <ul
+              class="related-list"
+              style="font-size: 0.9rem; line-height: 1.6"
+            >
+              <li>
+                <strong>Produs:</strong> Gel-cremă corector cu protecție solară
+              </li>
+              <li><strong>Volum:</strong> 40 ml</li>
+              <li><strong>Preț:</strong> ~70 - 95 RON</li>
+              <li><strong>Tip de ten:</strong> Gras, mixt, cu imperfecțiuni</li>
+              <li>
+                <strong>Grad de protecție:</strong> SPF 30 (protecție UVA/UVB)
+              </li>
+              <li>
+                <strong>Ingrediente:</strong> Niacinamidă, Procerad™, Aqua Posae
+              </li>
+              <li><strong>Formula:</strong> Textură non-grasă, fotostabilă</li>
+              <li><strong>Timpul administrării:</strong> Exclusiv dimineața</li>
+              <li><strong>Sex:</strong> Unisex</li>
+              <li><strong>Clasificarea:</strong> Dermatocosmetic</li>
+              <li><strong>Țara TM:</strong> Franța</li>
+              <li>
+                <strong>Precauții:</strong> Ideal pentru zi. A se evita zona
+                ochilor.
+              </li>
+            </ul>
+            <div class="card-image" style="margin-top: 15px">
+              <img
+                src="../../images/acnee/effaclar-duo-spf-400.webp"
+                alt="Specificații La Roche-Posay Effaclar Duo(+) SPF 30"
+                loading="lazy"
+              />
+            </div>
+          </div>
+
+          <div class="card" style="margin-top: 20px; background-color: #e8f5e9">
+            <!-- O nuanță mai deschisă de verde -->
+            <h3 class="section-title-sidebar">Verdictul nostru</h3>
+            <div
+              class="review-rating"
+              style="font-size: 1.2rem; color: #5d9c4a; margin-bottom: 10px"
+            >
+              ⭐⭐⭐⭐⭐
+            </div>
+            <p style="font-size: 0.9rem; line-height: 1.5">
+              Tratamentul esențial pentru tenul acneic. O formulă lejeră, de tip
+              gel-cremă, care nu doar elimină coșurile active, ci și previne
+              eficient cicatricile inestetice. Un produs must-have în farmacia
+              anti-acnee din România.
+            </p>
+          </div>
+
+          <div class="card" style="margin-top: 20px">
+            <h3 class="section-title-sidebar">Articole corelate</h3>
+            <div class="related-list-sidebar">
+              <!-- Legături relevante pentru tenul acneic -->
+              <a href="../ingrediente/niacinamida.html"
+                >Niacinamida: eroul anti-inflamator</a
+              >
+              <a href="../probleme/acnee-adulta.html"
+                >Acneea la adulți: cauze și soluții</a
+              >
+              <a href="../marci/lapr-ghid.html">Ghid complet La Roche-Posay</a>
+            </div>
+          </div>
+
+          <div class="card" style="margin-top: 20px; background-color: #e8f5e9">
+            <!-- O nuanță mai deschisă de verde -->
+            <h3 class="section-title-sidebar">Verdictul nostru</h3>
+            <div
+              class="review-rating"
+              style="font-size: 1.2rem; color: #5d9c4a; margin-bottom: 10px"
+            >
+              ⭐⭐⭐⭐⭐
+            </div>
+            <p style="font-size: 0.9rem; line-height: 1.5">
+              Acesta este un tratament local esențial pentru coșurile inflamate.
+              Textura lejeră nu lasă o peliculă grasă și, cel mai important,
+              previne apariția petelor inestetice (post-acnee) datorită
+              ingredientelor sale active.
+            </p>
+          </div>
+
+          <div class="card" style="margin-top: 20px">
+            <h2 class="section-title">
+              Acțiune globală: reduce inflamația și semnele
+            </h2>
+            <p>
+              Dacă vă confruntați cu acneea moderată sau coșuri inflamate, acest
+              produs va deveni aliatul dumneavoastră principal. Acesta conține
+              Niacinamidă, care calmează rapid roșeața și disconfortul, fiind un
+              ingredient critic atunci când pielea este iritată.
+            </p>
+            <p>
+              Utilizarea consecventă a Effaclar Duo(+) ajută la minimizarea
+              riscului de hiperpigmentare post-inflamatorie (petele
+              roșii/maronii), uniformizează textura pielii și previne apariția
+              altor leziuni, fără a bloca porii.
+            </p>
+          </div>
+        </aside>
+      </div>
+      <!--  Подпишитесь на экспертные разборы ФОРМА -->
+      <section class="newsletter-section">
+        <div class="newsletter-box">
+          <h2 class="newsletter-title">Abonează-te la articolele noastre</h2>
+
+          <p class="newsletter-text">
+            Primește ghiduri despre ingrediente, explicații științifice clare și
+            recomandări pentru problemele pielii. Fără spam. Doar informații
+            utile pentru o îngrijire corectă.
+          </p>
+
+          <form class="newsletter-form">
+            <input type="email" placeholder="Adresa ta de email" required />
+            <button type="submit">Abonare</button>
+          </form>
+
+          <p class="newsletter-note">Te poți dezabona oricând.</p>
+        </div>
+      </section>
     </main>
 
     <!-- FOOTER -->
@@ -474,16 +594,16 @@
 
         <!-- LINKS 1 -->
         <div class="footer-links">
-          <a href="index.html">Acasă</a>
-          <a href="servicii.html">Servicii</a>
-          <a href="recenzii.html">Recenzii produse</a>
+          <a href="../index.html">Acasă</a>
+          <a href="../servicii.html">Servicii</a>
+          <a href="../recenzii.html">Recenzii produse</a>
         </div>
 
         <!-- LINKS 2 -->
         <div class="footer-links">
-          <a href="probleme.html">Probleme ale pielii</a>
-          <a href="ingrediente.html">Ingrediente & Formule</a>
-          <a href="contact.html">Contact</a>
+          <a href="../probleme.html">Probleme ale pielii</a>
+          <a href=".//ingrediente.html">Ingrediente & Formule</a>
+          <a href=".//contact.html">Contact</a>
         </div>
 
         <!-- SUBSCRIBE -->
@@ -499,7 +619,7 @@
           </a>
         </div>
         <div class="footer-cta">
-          <a href="../ro/colaborari.html" class="footer-btn">
+          <a href="../../ro/colaborari.html" class="footer-btn">
             Colaborări & Parteneriate ✨
           </a>
         </div>
@@ -599,7 +719,7 @@
         </div>
       </div>
       <div class="site-footer">
-        <a href="../ro/privacy.html">Politica de confidențialitate</a>
+        <a href="../../ro/privacy.html">Politica de confidențialitate</a>
       </div>
 
       <div class="footer-bottom">
@@ -638,7 +758,25 @@
         </form>
       </div>
     </div>
+    <!-- FIXED GUIDES  button Полезные гайды -->
+    <div class="guides-wrapper">
+      <button class="guides-trigger">Ghiduri utile</button>
+      <nav class="guides-panel">
+        <a href="../probleme/acnee.html">Acnee și puncte negre</a>
+        <a href="../probleme/ten-gras.html">Îngrijirea tenului gras</a>
+        <a href="../probleme/post-acnee.html"
+          >Eliminarea semnelor post-acneice</a
+        >
+        <a href="../ingrediente/niacinamide.html">Totul despre Niacinamidă</a>
+      </nav>
+    </div>
 
-    <script src="../script.js"></script>
+    <script src="../../script.js" defer></script>
+
+    <!-- Article & Review Schema (RO) -->
+
+    <!-- FAQ Schema (RO) -->
+
+    <!-- Breadcrumb Schema (RO) -->
   </body>
 </html>
