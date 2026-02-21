@@ -948,7 +948,7 @@ section h2 {
 .page-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 26px;
+  gap: 20px;
 }
 
 .ingredient-card {
@@ -957,9 +957,6 @@ section h2 {
   border-radius: 8px;
   text-decoration: none;
 
-  /* background:
-    linear-gradient(to bottom, rgba(0, 0, 0, 0.03), rgba(0, 0, 0, 0.12)),
-    var(--text-muted); */
   background: var(--bg-main);
 
   color: var(--text-main);
@@ -975,7 +972,7 @@ section h2 {
   overflow: hidden;
 }
 
-.ingredient-card::before {
+/* .ingredient-card::before {
   content: "";
   position: absolute;
   left: 0;
@@ -988,7 +985,7 @@ section h2 {
     #cfa24a,
     rgba(249, 231, 180, 0.8)
   );
-}
+} */
 
 .ingredient-card:hover {
   transform: translateY(-6px);
@@ -1909,6 +1906,7 @@ dl.definition dt {
   transition:
     background-size 0.3s ease,
     color 0.25s ease;
+  text-transform: uppercase;
 }
 
 .related-list-sidebar a:hover {
