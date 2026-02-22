@@ -997,7 +997,7 @@ section h2 {
 
 .ingredient-card h3 {
   font-family: "Quicksand", sans-serif;
-  font-weight: 300;
+  font-weight: 700;
   font-size: 14px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -1024,11 +1024,11 @@ section h2 {
   margin: 0;
   font-size: 15px;
   line-height: 1.6;
-  color: var(--text-muted);
+  color: var(--text-main);
 }
 .card-hint {
   font-size: 13px;
-  color: var(--text-muted);
+  color: var(--text-main);
   opacity: 0.8;
 }
 
