@@ -3341,7 +3341,7 @@ dl.definition dt {
   }
 }
 /* надпись на изображении ingredient-image MOB */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .image-accent-text {
     font-size: 12px;
     letter-spacing: 0.08em;
@@ -3370,7 +3370,39 @@ dl.definition dt {
     padding: 6px 10px;
     border-radius: 16px;
   }
+} */
+@media (max-width: 768px) {
+  .image-accent-text {
+    font-size: 12px;
+    line-height: 1.4; /* Четкий межстрочный интервал */
+    letter-spacing: 0.05em; /* Немного уменьшим для читабельности */
+    padding: 6px 14px; /* Уменьшим вертикальный, увеличим горизонтальный отступ */
+    max-width: 85%;
+    width: auto; /* Позволяет блоку подстраиваться под текст */
+    text-align: center;
+    border-radius: 8px; /* Прямоугольные края вместо круглых */
+
+    /* Центрирование */
+    left: 50%;
+    bottom: 10%;
+    transform: translate(-50%, 70%);
+    display: inline-block; /* Чтобы padding работал корректно */
+  }
+
+  .image-accent-text.is-visible {
+    transform: translate(-50%, 0);
+  }
 }
+
+@media (max-width: 420px) {
+  .image-accent-text {
+    font-size: 11px;
+    padding: 5px 12px;
+    border-radius: 6px; /* Еще меньше скругление для узких экранов */
+    max-width: 90%;
+  }
+}
+
 /* =====================FAQ MOB page-----------------------------*/
 @media (max-width: 768px) {
   .faq {
