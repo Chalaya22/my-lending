@@ -887,6 +887,7 @@
         </form>
       </div>
     </div>
+    <!-- FIXED GUIDES  button Полезные гайды -->
     <div class="guides-wrapper">
       <button class="guides-trigger">Полезные гайды</button>
       <nav class="guides-panel">
@@ -897,7 +898,7 @@
       </nav>
     </div>
     <script src="../../script.js" defer></script>
-
+    <!-- FAQ   schema -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -926,6 +927,57 @@
               "@type": "Answer",
               "text": "Да, автобронзат не обеспечивает защиту от ультрафиолета."
             }
+          }
+        ]
+      }
+    </script>
+    <!-- Article Schema  -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Автобронзат: как получить идеальный загар без солнца и пятен",
+        "description": "Полный гид по автозагару: как выбрать текстуру (мусс, капли, крем), секреты подготовки кожи и техника нанесения для ровного тона без желтизны.",
+        "image": "https://chalaya22.github.io",
+        "inLanguage": "ru-MD",
+        "author": {
+          "@type": "Organization",
+          "name": "Estetica Lens"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Estetica Lens"
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://chalaya22.github.io"
+        }
+      }
+    </script>
+
+    <!-- Breadcrumb schema  -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Главная",
+            "item": "https://chalaya22.github.io"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Ингредиенты и Составы",
+            "item": "https://chalaya22.github.ioingrediente/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Автобронзат",
+            "item": "https://chalaya22.github.io"
           }
         ]
       }
