@@ -201,32 +201,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 /* <===================button Полезные гайды ========================*/
 
-// document.addEventListener("DOMContentLoaded", function () {
-//   var trigger = document.querySelector(".guides-trigger");
-//   var panel = document.querySelector(".guides-panel");
-
-//   if (!trigger || !panel) return;
-
-//   // открыть
-//   trigger.addEventListener("click", function (e) {
-//     e.preventDefault();
-//     e.stopPropagation();
-
-//     panel.classList.add("is-open");
-//     trigger.style.display = "none"; // 🔥 ВОТ ОНО
-//   });
-
-//   // клики внутри панели — не закрывают
-//   panel.addEventListener("click", function (e) {
-//     e.stopPropagation();
-//   });
-
-//   // закрытие
-//   document.addEventListener("click", function () {
-//     panel.classList.remove("is-open");
-//     trigger.style.display = ""; // вернуть кнопку
-//   });
-// });
 document.addEventListener("DOMContentLoaded", function () {
   const trigger = document.querySelector(".guides-trigger");
   const panel = document.querySelector(".guides-panel");
@@ -253,7 +227,8 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// логика фильтров в Обзор косметике
+/* <===================// ЛОГИКА ФИЛЬТРОВ В ОБЗОРЫ КОСМЕТИКИ ========================*/
+// Уходовая косметика
 const filterLinks = document.querySelectorAll(".filter-link");
 const cards = document.querySelectorAll(".review-card:not(.placeholder)");
 
@@ -276,5 +251,39 @@ filterLinks.forEach((link) => {
         card.style.display = "none"; // Прячем остальные
       }
     });
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const toggle = document.getElementById("care-toggle");
+  const collapsible = document.getElementById("care-collapsible");
+  const content = document.getElementById("care-content");
+
+  toggle.addEventListener("click", function () {
+    const isOpen = collapsible.classList.toggle("open");
+
+    toggle.setAttribute("aria-expanded", isOpen);
+
+    if (isOpen) {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } else {
+      content.style.maxHeight = null;
+    }
+  });
+});
+// Декоративная косметика
+document.addEventListener("DOMContentLoaded", function () {
+  const toggle = document.getElementById("makeup-toggle");
+  const collapsible = document.getElementById("makeup-collapsible");
+  const content = document.getElementById("makeup-content");
+
+  toggle.addEventListener("click", function () {
+    const isOpen = collapsible.classList.toggle("open");
+    toggle.setAttribute("aria-expanded", isOpen);
+    if (isOpen) {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } else {
+      content.style.maxHeight = null;
+    }
   });
 });

@@ -1422,7 +1422,7 @@ body.menu-open .guides-wrapper {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 90%;
+  object-position: center 35%;
 }
 /* Контейнер фильтров */
 .filter-container {
@@ -1555,6 +1555,10 @@ body.menu-open .guides-wrapper {
 
 /* Общий стиль карточки */
 .review-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
   background: #ffffff;
   border-radius: 15px;
   border: 1px solid #f0f0f0;
@@ -1616,7 +1620,7 @@ body.menu-open .guides-wrapper {
   padding: 25px;
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
+  flex: 1;
 }
 
 .review-rating {
@@ -1685,6 +1689,312 @@ body.menu-open .guides-wrapper {
 .review-back-nav {
   margin: 20px 0 30px 0; /* Отступы вокруг навигации */
   display: block;
+}
+/* стили для блока Уходовая косметика */
+.section-wrap.collapsible {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 28px;
+  background: #ffffff;
+  border-radius: 20px;
+  border: 1px solid #ececec;
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.04),
+    0 12px 28px rgba(0, 0, 0, 0.05);
+}
+
+/* кнопка заголовка */
+.collapsible-toggle {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f7f8fa;
+  border: none;
+  border-radius: 14px;
+  padding: 24px 26px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.collapsible-toggle:hover {
+  background: #f0f2f5;
+}
+
+/*текст в заголовке */
+
+.collapsible-toggle strong {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.collapsible-toggle small {
+  font-size: 13px;
+  opacity: 0.7;
+}
+
+.chevron {
+  width: 22px;
+  height: 22px;
+  transition: transform 0.35s ease;
+}
+
+.collapsible.open .chevron {
+  transform: rotate(180deg);
+}
+
+.collapsible-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.45s ease;
+  padding-top: 0;
+}
+
+.collapsible.open .collapsible-content {
+  padding-top: 28px;
+  max-height: 6000px;
+}
+
+.filter-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  margin-bottom: 34px;
+}
+
+/*кнопки фильтра */
+
+.filter-link {
+  border: 1px solid #e6e6e6;
+  background: #ffffff;
+
+  padding: 8px 16px;
+
+  border-radius: 22px;
+
+  font-size: 14px;
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.filter-link:hover {
+  background: #f5f5f5;
+}
+
+.filter-link.active {
+  background: #111;
+  color: #fff;
+  border-color: #111;
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 40px;
+}
+
+main {
+  padding-bottom: 80px;
+}
+/* декоративная косметика секция*/
+.collapsible-content-inner {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 12px 0;
+}
+
+.makeup-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  align-items: stretch;
+}
+
+.makeup-card {
+  text-align: center;
+  padding: 34px 30px;
+  border-radius: 16px;
+  background-color: #fff;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transition: all 0.25s ease;
+}
+
+.makeup-card:hover {
+  transform: translateY(-4px);
+}
+
+.makeup-icon {
+  display: block;
+  margin-bottom: 14px;
+}
+
+.makeup-icon svg {
+  display: block;
+  margin: 0 auto;
+  width: 40px;
+  height: 40px;
+}
+
+.makeup-icon circle {
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.15));
+}
+
+.makeup-card h3 {
+  margin-bottom: 10px;
+  padding: 0 6px;
+}
+
+.makeup-card p {
+  font-size: 14px;
+  opacity: 0.75;
+  line-height: 1.5;
+  padding: 0 10px;
+  max-width: 220px;
+  margin: 0 auto;
+}
+/* описание заголовка */
+.reviews-intro {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 0 16px;
+  text-align: center;
+}
+
+.reviews-intro h1 {
+  font-size: 30px;
+  margin-bottom: 14px;
+}
+
+.reviews-intro p {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+/* стили сетки - сайдбар+ основной контент */
+.content-wrapper {
+  display: flex;
+  gap: 32px; /* расстояние между сайдбаром и основным блоком */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.sidebar-categories {
+  width: 220px; /* фиксированная ширина для сайдбара */
+  flex-shrink: 0;
+}
+
+.main-block {
+  flex: 1; /* занимает всё оставшееся место */
+}
+
+/* Мобильная версия */
+@media (max-width: 768px) {
+  .content-wrapper {
+    flex-direction: column;
+  }
+  .sidebar-categories {
+    width: 100%;
+  }
+}
+/* стили сайдбара */
+.articles-overview {
+  display: flex;
+  gap: 40px;
+  max-width: 960px;
+  margin: 32px auto;
+  padding: 0 16px;
+  flex-wrap: wrap;
+}
+
+.articles-column {
+  flex: 1;
+  min-width: 220px;
+}
+
+.articles-column h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+  color: #1c6884;
+}
+
+.articles-column ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.articles-column ul li {
+  /* margin-bottom: 8px; */
+}
+
+.articles-column ul li a {
+  text-decoration: none;
+  color: #555;
+  transition: color 0.2s ease;
+}
+
+.articles-column ul li a:hover {
+  color: #1c6884; /* акцентный цвет */
+}
+
+/* Мобильная версия */
+@media (max-width: 768px) {
+  .articles-overview {
+    flex-direction: column;
+    gap: 24px;
+  }
+}
+/* популярные обзоры косметики */
+.popular-reviews {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 16px;
+}
+
+.popular-reviews h2 {
+  font-size: 26px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.popular-reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.popular-review-card {
+  display: block;
+  padding: 18px;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #333;
+  background: #fafafa;
+  transition: all 0.2s ease;
+}
+
+.popular-review-card:hover {
+  background: #f5f5f5;
+  transform: translateY(-3px);
+}
+
+.popular-review-card h3 {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.popular-review-card p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.4;
 }
 
 /*======================PROBLEME ALE PIELEI Page Desctop===========-*/
@@ -1906,7 +2216,6 @@ dl.definition dt {
   transition:
     background-size 0.3s ease,
     color 0.25s ease;
-  text-transform: uppercase;
 }
 
 .related-list-sidebar a:hover {
