@@ -1996,7 +1996,7 @@ main {
   color: #666;
   line-height: 1.4;
 }
-/*======================REVIEW Cosmetica decorativ Page Desctop===========-*/
+/*======================REVIEW Cosmetica decorativ FUNDATION Page Desctop===========-*/
 .foundation-section {
   margin-top: 40px;
   padding: 25px;
@@ -2038,9 +2038,37 @@ main {
 .foundation-table tr:hover {
   background: #fafafa;
 }
+.foundation-note {
+  font-size: 13px;
+  color: #666;
+  margin-top: 6px;
+  line-height: 1.4;
+}
 
 html {
   scroll-behavior: smooth;
+}
+.foundation-gallery .gallery-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.foundation-gallery .gallery-item {
+  flex: 1 1 calc(33.333% - 10px);
+  text-align: center;
+}
+
+.foundation-gallery .gallery-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.foundation-gallery figcaption {
+  margin-top: 5px;
+  font-size: 0.9rem;
+  color: #333;
 }
 
 /*======================PROBLEME ALE PIELEI Page Desctop===========-*/
