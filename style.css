@@ -1996,6 +1996,52 @@ main {
   color: #666;
   line-height: 1.4;
 }
+/*======================REVIEW Cosmetica decorativ Page Desctop===========-*/
+.foundation-section {
+  margin-top: 40px;
+  padding: 25px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.foundation-section h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.foundation-section p {
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+.foundation-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.foundation-table th {
+  text-align: left;
+  padding: 12px;
+  background: #f5f5f5;
+  font-weight: 600;
+}
+
+.foundation-table td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+.foundation-table tr:hover {
+  background: #fafafa;
+}
+
+html {
+  scroll-behavior: smooth;
+}
 
 /*======================PROBLEME ALE PIELEI Page Desctop===========-*/
 .probleme-hero-img {
