@@ -352,11 +352,11 @@
 
       <div class="grid-2">
         <div>
-          <!-- Секция 1: Блок с подборками -->
+          <!-- Секция 1: Блок с навигацией -->
           <section class="ingredient-section soft-bg">
             <h2 class="section-title">Популярные обзоры тональных кремов</h2>
 
-            <div>
+            <div class="popular-reviews-grid">
               <a href="#dry-skin" class="popular-review-card">
                 <h3>Лучшие тональные кремы для сухой кожи</h3>
                 <p>
@@ -368,27 +368,20 @@
                 <h3>Лучшие тональные кремы для жирной кожи</h3>
                 <p>Матирующие средства с хорошей стойкостью.</p>
               </a>
+
               <a href="#combination-skin" class="popular-review-card">
                 <h3>Лучшие тональные кремы для комбинированной кожи</h3>
-                <p>
-                  Универсальные формулы, которые не пересушивают сухие зоны и не
-                  усиливают жирный блеск в Т-зоне
-                </p>
+                <p>Формулы, которые балансируют сухие и жирные зоны.</p>
               </a>
+
               <a href="#sensitive-skin" class="popular-review-card">
                 <h3>Лучшие тональные кремы для чувствительной кожи</h3>
-                <p>
-                  Гипоаллергенные тональные кремы без агрессивных ароматизаторов
-                  и раздражающих компонентов
-                </p>
+                <p>Гипоаллергенные средства без раздражающих компонентов.</p>
               </a>
 
               <a href="#light-coverage" class="popular-review-card">
                 <h3>Тональные кремы с лёгким покрытием</h3>
-                <p>
-                  Идеальны для ежедневного макияжа. Выравнивают тон лица, но не
-                  создают плотного слоя
-                </p>
+                <p>Выравнивают тон кожи без плотного слоя.</p>
               </a>
 
               <a href="#long-lasting" class="popular-review-card">
@@ -422,6 +415,19 @@
 
           <!-- Секция 3: Ссылки на мастеров -->
           <section class="reviews-intro">
+            <div class="ingredient-inline-image">
+              <img
+                src="../../images/foundation/master-foundation-800.webp"
+                srcset="
+                  ../../images/foundation/master-foundation-1200.webp 1200w,
+                  ../../images/foundation/master-foundation-800.webp   800w,
+                  ../../images/foundation/master-foundation-400.webp   400w
+                "
+                sizes="(max-width: 768px) 100vw, 800px"
+                alt="Ссылки на мастеров"
+                loading="lazy"
+              />
+            </div>
             <h2 class="section-title">Нужен профессиональный макияж?</h2>
 
             <p>
@@ -436,6 +442,19 @@
             >
               Посмотреть услуги визажистов
             </a>
+            <div class="ingredient-inline-image">
+              <img
+                src="../../images/foundation/master-foundation-800.webp"
+                srcset="
+                  ../../images/foundation/foundation-1200.webp 1200w,
+                  ../../images/foundation/foundation-800.webp   800w,
+                  ../../images/foundation/foundation-400.webp   400w
+                "
+                sizes="(max-width: 768px) 100vw, 800px"
+                alt="Ссылки на мастеров"
+                loading="lazy"
+              />
+            </div>
           </section>
           <!-- Секция 4: Тональные кремы для сухой кожи -->
           <section id="dry-skin" class="foundation-section">
@@ -459,6 +478,7 @@
                   />
                   <figcaption>
                     Estée Lauder Futurist Hydra Rescue<br />
+                    <div class="review-rating">⭐⭐⭐⭐⭐</div>
                     <small>Интенсивное увлажнение и натуральный финиш</small>
                   </figcaption>
                 </figure>
@@ -474,6 +494,7 @@
                   />
                   <figcaption>
                     L'Oréal True Match Nude<br />
+                    <div class="review-rating">⭐⭐⭐⭐⭐</div>
                     <small>Лёгкая текстура и сияющий эффект</small>
                   </figcaption>
                 </figure>
@@ -489,6 +510,7 @@
                   />
                   <figcaption>
                     IT Cosmetics Your Skin But Better<br />
+                    <div class="review-rating">⭐⭐⭐⭐⭐</div>
                     <small>Хорошо выравнивает тон кожи</small>
                   </figcaption>
                 </figure>
@@ -548,41 +570,46 @@
               <div class="gallery-grid">
                 <figure class="gallery-item">
                   <img
-                    src="../images/foundation/estee-lauder-double-wear-300.webp"
+                    src="../../images/foundation/estee-lauder-double-wear-300.webp"
                     srcset="
-                      ../images/foundation/estee-lauder-double-wear-600.webp 2x
+                      ../../images/foundation/estee-lauder-double-wear-600.webp 2x
                     "
                     alt="Estée Lauder Double Wear"
                     loading="lazy"
                   />
                   <figcaption>
                     Estée Lauder Double Wear<br />
+                    <div class="review-rating">⭐⭐⭐⭐⭐</div>
                     <small>Очень стойкое покрытие</small>
                   </figcaption>
                 </figure>
 
                 <figure class="gallery-item">
                   <img
-                    src="../images/foundation/maybelline-fit-me-300.webp"
-                    srcset="../images/foundation/maybelline-fit-me-600.webp 2x"
+                    src="../../images/foundation/maybelline-fit-me-300.webp"
+                    srcset="
+                      ../../images/foundation/maybelline-fit-me-600.webp 2x
+                    "
                     alt="Maybelline Fit Me Matte + Poreless"
                     loading="lazy"
                   />
                   <figcaption>
                     Maybelline Fit Me Matte + Poreless<br />
+                    <div class="review-rating">⭐⭐⭐⭐⭐</div>
                     <small>Матирующий эффект и лёгкая текстура</small>
                   </figcaption>
                 </figure>
 
                 <figure class="gallery-item">
                   <img
-                    src="../images/foundation/fenty-pro-filtr-300.webp"
-                    srcset="../images/foundation/fenty-pro-filtr-600.webp 2x"
+                    src="../../images/foundation/fenty-pro-filtr-300.webp"
+                    srcset="../../images/foundation/fenty-pro-filtr-600.webp 2x"
                     alt="Fenty Beauty Pro Filt'r"
                     loading="lazy"
                   />
                   <figcaption>
                     Fenty Beauty Pro Filt'r<br />
+                    <div class="review-rating">⭐⭐⭐⭐⭐</div>
                     <small>Хорошо контролирует блеск</small>
                   </figcaption>
                 </figure>
@@ -642,28 +669,30 @@
               <div class="gallery-grid">
                 <figure class="gallery-item">
                   <img
-                    src="../images/foundation/nars-natural-radiant-300.webp"
+                    src="../../images/foundation/nars-natural-radiant-300.webp"
                     srcset="
-                      ../images/foundation/nars-natural-radiant-600.webp 2x
+                      ../../images/foundation/nars-natural-radiant-600.webp 2x
                     "
                     alt="NARS Natural Radiant Longwear"
                     loading="lazy"
                   />
                   <figcaption>
                     NARS Natural Radiant Longwear<br />
+                    <div class="review-rating">⭐⭐⭐⭐⭐</div>
                     <small>Естественное покрытие</small>
                   </figcaption>
                 </figure>
 
                 <figure class="gallery-item">
                   <img
-                    src="../images/foundation/mac-studio-fix-300.webp"
-                    srcset="../images/foundation/mac-studio-fix-600.webp 2x"
+                    src="../../images/foundation/mac-studio-fix-300.webp"
+                    srcset="../../images/foundation/mac-studio-fix-600.webp 2x"
                     alt="MAC Studio Fix Fluid"
                     loading="lazy"
                   />
                   <figcaption>
                     MAC Studio Fix Fluid<br />
+                    <div class="review-rating">⭐⭐⭐⭐⭐</div>
                     <small>Баланс между матовостью и увлажнением</small>
                   </figcaption>
                 </figure>
@@ -711,30 +740,32 @@
               <div class="gallery-grid">
                 <figure class="gallery-item">
                   <img
-                    src="../images/foundation/la-roche-posay-toleriane-300.webp"
+                    src="../../images/foundation/la-roche-posay-toleriane-300.webp"
                     srcset="
-                      ../images/foundation/la-roche-posay-toleriane-600.webp 2x
+                      ../../images/foundation/la-roche-posay-toleriane-600.webp 2x
                     "
                     alt="La Roche-Posay Toleriane Teint"
                     loading="lazy"
                   />
                   <figcaption>
                     La Roche-Posay Toleriane Teint<br />
+                    <div class="review-rating">⭐⭐⭐⭐⭐</div>
                     <small>Подходит для чувствительной кожи</small>
                   </figcaption>
                 </figure>
 
                 <figure class="gallery-item">
                   <img
-                    src="../images/foundation/clinique-even-better-300.webp"
+                    src="../../images/foundation/clinique-even-better-300.webp"
                     srcset="
-                      ../images/foundation/clinique-even-better-600.webp 2x
+                      ../../images/foundation/clinique-even-better-600.webp 2x
                     "
                     alt="Clinique Even Better"
                     loading="lazy"
                   />
                   <figcaption>
                     Clinique Even Better<br />
+                    <div class="review-rating">⭐⭐⭐⭐⭐</div>
                     <small>Лёгкая формула без раздражающих компонентов</small>
                   </figcaption>
                 </figure>
@@ -782,39 +813,46 @@
               <div class="gallery-grid">
                 <figure class="gallery-item">
                   <img
-                    src="../images/foundation/mac-face-body-300.webp"
-                    srcset="../images/foundation/mac-face-body-600.webp 2x"
+                    src="../../images/foundation/mac-face-body-300.webp"
+                    srcset="../../images/foundation/mac-face-body-600.webp 2x"
                     alt="MAC Face & Body"
                     loading="lazy"
                   />
                   <figcaption>
                     MAC Face & Body<br />
+                    <div class="review-rating">⭐⭐⭐⭐⭐</div>
                     <small>Очень лёгкое покрытие и естественное сияние</small>
                   </figcaption>
                 </figure>
 
                 <figure class="gallery-item">
                   <img
-                    src="../images/foundation/loreal-true-match-300.webp"
-                    srcset="../images/foundation/loreal-true-match-600.webp 2x"
+                    src="../../images/foundation/loreal-true-match-nude-300.webp"
+                    srcset="
+                      ../../images/foundation/loreal-true-match-nude-600.webp 2x
+                    "
                     alt="L'Oréal True Match Nude"
                     loading="lazy"
                   />
                   <figcaption>
                     L'Oréal True Match Nude<br />
+                    <div class="review-rating">⭐⭐⭐⭐⭐</div>
                     <small>Лёгкая текстура с эффектом увлажнения</small>
                   </figcaption>
                 </figure>
 
                 <figure class="gallery-item">
                   <img
-                    src="../images/foundation/chanel-les-beiges-300.webp"
-                    srcset="../images/foundation/chanel-les-beiges-600.webp 2x"
+                    src="../../images/foundation/chanel-les-beiges-300.webp"
+                    srcset="
+                      ../../images/foundation/chanel-les-beiges-300.webp 2x
+                    "
                     alt="Chanel Les Beiges Water Fresh Tint"
                     loading="lazy"
                   />
                   <figcaption>
                     Chanel Les Beiges Water Fresh Tint<br />
+                    <div class="review-rating">⭐⭐⭐⭐⭐</div>
                     <small>Очень натуральный результат</small>
                   </figcaption>
                 </figure>
@@ -871,43 +909,46 @@
               <div class="gallery-grid">
                 <figure class="gallery-item">
                   <img
-                    src="../images/foundation/estee-lauder-double-wear-300.webp"
+                    src="../../images/foundation/estee-lauder-double-wear-300.webp"
                     srcset="
-                      ../images/foundation/estee-lauder-double-wear-600.webp 2x
+                      ../../images/foundation/estee-lauder-double-wear-600.webp 2x
                     "
                     alt="Estée Lauder Double Wear"
                     loading="lazy"
                   />
                   <figcaption>
                     Estée Lauder Double Wear<br />
+                    <div class="review-rating">⭐⭐⭐⭐⭐</div>
                     <small>Очень высокая стойкость до 24 часов</small>
                   </figcaption>
                 </figure>
 
                 <figure class="gallery-item">
                   <img
-                    src="../images/foundation/fenty-pro-filtr-300.webp"
-                    srcset="../images/foundation/fenty-pro-filtr-600.webp 2x"
+                    src="../../images/foundation/fenty-pro-filtr-300.webp"
+                    srcset="../../images/foundation/fenty-pro-filtr-600.webp 2x"
                     alt="Fenty Beauty Pro Filt'r"
                     loading="lazy"
                   />
                   <figcaption>
                     Fenty Beauty Pro Filt'r<br />
+                    <div class="review-rating">⭐⭐⭐⭐⭐</div>
                     <small>Матирующий эффект и долговечное покрытие</small>
                   </figcaption>
                 </figure>
 
                 <figure class="gallery-item">
                   <img
-                    src="../images/foundation/maybelline-super-stay-300.webp"
+                    src="../../images/foundation/maybelline-super-stay-300.webp"
                     srcset="
-                      ../images/foundation/maybelline-super-stay-600.webp 2x
+                      ../../images/foundation/maybelline-super-stay-600.webp 2x
                     "
                     alt="Maybelline Super Stay"
                     loading="lazy"
                   />
                   <figcaption>
                     Maybelline Super Stay<br />
+                    <div class="review-rating">⭐⭐⭐⭐⭐</div>
                     <small>Стойкость и плотное покрытие</small>
                   </figcaption>
                 </figure>
@@ -977,8 +1018,18 @@
         </div>
 
         <aside>
-          <div class="card" style="margin-top: 20px">
-            <h3 class="section-title-sidebar">Другие категории косметики</h3>
+          <!-- Другие категории косметики -->
+          <div class="card">
+            <div class="card-image">
+              <img
+                src="../../images/foundation/foundation-rules-400.webp"
+                alt="Правила"
+                loading="lazy"
+              />
+            </div>
+            <h3 class="section-title-sidebar">
+              <strong>Другие категории косметики</strong>
+            </h3>
             <div class="related-list-sidebar">
               <a href="../reviews/concealer.html">Консилеры</a>
               <a href="../reviews/mascara.html">Тушь</a>
@@ -989,6 +1040,75 @@
               <a href="../reviews/eyeshadow.html">Туши</a>
               <a href="../reviews/highlighter-blush.html">Хайлайтеры/Румяна</a>
               <a href="../reviews/brows.html">Брови</a>
+            </div>
+            <div class="card-image" style="margin-top: 20px">
+              <img
+                src="../../images/foundation/foundation-rules-1-400.webp"
+                alt="Правила"
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <!-- Типы кожи -->
+          <div class="card" style="margin-top: 20px">
+            <h3 class="section-title-sidebar"><strong>Типы кожи</strong></h3>
+            <div class="related-list-sidebar">
+              <a href="../probleme/piele-uscata.html">Сухая кожа</a>
+              <a href="../probleme/ten-gras.html">Жирная кожа</a>
+              <a href="../probleme/ten-mixt.html">Комбинированная кожа</a>
+              <a href="../probleme/piele-sensibila.html">Чувствительная кожа</a>
+            </div>
+            <div class="card-image" style="margin-top: 20px">
+              <img
+                src="../../images/foundation/foundation-type-scin-400.webp"
+                alt="Типы кожи"
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <!-- Популярные ингридиенты -->
+          <div class="card" style="margin-top: 20px">
+            <h3 class="section-title-sidebar">
+              <strong>Популярные ингридиенты</strong>
+            </h3>
+            <div class="related-list-sidebar">
+              <a href="../ingrediente/vitamina-c.html">Витамин С</a>
+              <a href="../ingrediente/niacinamide.html">Ниацинамид</a>
+              <a href="../ingrediente/acid-hialuronic.html"
+                >Гиалуроновая кислота</a
+              >
+              <a href="../ingrediente/retinoizi.html">Ретинол</a>
+              <a href="../ingrediente/ceramide.html">Церамиды</a>
+            </div>
+            <div class="card-image" style="margin-top: 20px">
+              <img
+                src="../../images/foundation/foundation-ingridient-400.webp"
+                alt="Типы кожи"
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <!-- Советы по макияжу -->
+          <div class="card" style="margin-top: 20px">
+            <h3 class="section-title-sidebar">
+              <strong>Советы по макияжу</strong>
+            </h3>
+            <div class="related-list-sidebar">
+              <a href="../makeup/cum-alegi-fond-de-ten.html"
+                >Как выбрать тональный крем</a
+              >
+              <a href="../makeup/aplicare-fond-de-ten.html"
+                >Как правильно наносить тон</a
+              >
+              <a href="../makeup/pensule-machiaj.html">Кисти для макияжа</a>
+              <a href="../makeup/burete-machiaj.html">Спонж или кисть?</a>
+            </div>
+            <div class="card-image" style="margin-top: 20px">
+              <img
+                src="../../images/foundation/makeup-sfaturi-400.webp"
+                alt="Советы по макияжу"
+                loading="lazy"
+              />
             </div>
           </div>
         </aside>
