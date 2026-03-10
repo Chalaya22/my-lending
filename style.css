@@ -2098,6 +2098,10 @@ html {
 
 /* карточка */
 .foundation-gallery .gallery-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
   flex: 1 1 calc(33.333% - 14px);
   background: #ffffff;
   border-radius: 12px;
@@ -2121,6 +2125,10 @@ html {
   max-height: 220px;
   object-fit: contain;
   margin-bottom: 10px;
+
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 /* подпись */
@@ -2128,6 +2136,15 @@ html {
   font-size: 0.95rem;
   line-height: 1.4;
   color: #333;
+
+  margin-top: auto; /* дополнительная страховка, чтобы текст был внизу */
+  padding: 10px; /* можно добавить отступы */
+  background: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* если нужно выделить текст на фоне картинки */
 }
 
 .foundation-gallery figcaption small {
