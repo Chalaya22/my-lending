@@ -2196,6 +2196,89 @@ html {
   font-size: 16px;
   color: #b63181;
 }
+/*======================REVIEW Cosmetica decorativ BROWS Page Desctop===========-*/
+/* Броская секция советы бровиста */
+.highlighted-section {
+  background: #fff7fb;
+  border: 1px solid #f1d6e6;
+  border-radius: 12px;
+  padding: 35px 25px;
+  margin: 40px 0;
+}
+
+.highlighted-title {
+  color: #b63181;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+
+.highlighted-text {
+  color: #444;
+  line-height: 1.6;
+}
+
+.highlighted-list li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.highlighted-btn {
+  background: #b63181;
+  color: white;
+  padding: 12px 26px;
+  border-radius: 6px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 15px;
+}
+
+.highlighted-btn:hover {
+  background: #96286c;
+}
+
+/* Броская секция ссылки на мастеров */
+/* .reviews-intro.highlighted-section {
+  background: linear-gradient(135deg, #fff0f5, #ffe6f0);
+  border: 2px solid #b63181;
+  border-radius: 12px;
+  padding: 30px 20px;
+  margin: 40px 0;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.reviews-intro.highlighted-section .highlighted-title {
+  color: #b63181;
+  font-size: 1.9rem;
+  margin-bottom: 15px;
+}
+
+.reviews-intro.highlighted-section .highlighted-text {
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 25px;
+  font-size: 1.1rem;
+}
+
+.reviews-intro.highlighted-section .highlighted-btn {
+  background-color: #b63181;
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.reviews-intro.highlighted-section .highlighted-btn:hover {
+  background-color: #ff66b2;
+  transform: translateY(-2px);
+}
+
+.reviews-intro.highlighted-section .ingredient-inline-image {
+  margin-top: 25px;
+} */
+
 /*======================PROBLEME ALE PIELEI Page Desctop===========-*/
 .probleme-hero-img {
   position: relative;
