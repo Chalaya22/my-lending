@@ -2235,49 +2235,41 @@ html {
 .highlighted-btn:hover {
   background: #96286c;
 }
+/* двойное изображение */
+.double-image-gallery {
+  display: flex;
+  gap: 16px;
+  margin: 20px 0;
+}
 
-/* Броская секция ссылки на мастеров */
-/* .reviews-intro.highlighted-section {
-  background: linear-gradient(135deg, #fff0f5, #ffe6f0);
-  border: 2px solid #b63181;
-  border-radius: 12px;
-  padding: 30px 20px;
-  margin: 40px 0;
+.gallery-item {
+  flex: 1;
   text-align: center;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
 }
 
-.reviews-intro.highlighted-section .highlighted-title {
-  color: #b63181;
-  font-size: 1.9rem;
-  margin-bottom: 15px;
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
 }
 
-.reviews-intro.highlighted-section .highlighted-text {
-  font-weight: 500;
-  color: #333;
-  margin-bottom: 25px;
-  font-size: 1.1rem;
+.image-caption {
+  font-size: 14px;
+  margin-top: 6px;
+  color: #555;
 }
 
-.reviews-intro.highlighted-section .highlighted-btn {
-  background-color: #b63181;
-  color: #fff;
-  padding: 12px 28px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: all 0.3s ease;
+@media (max-width: 768px) {
+  .double-image-gallery {
+    flex-direction: column;
+  }
 }
 
-.reviews-intro.highlighted-section .highlighted-btn:hover {
-  background-color: #ff66b2;
-  transform: translateY(-2px);
+.gallery-item img:hover {
+  transform: scale(1.03);
+  transition: 0.3s;
 }
-
-.reviews-intro.highlighted-section .ingredient-inline-image {
-  margin-top: 25px;
-} */
 
 /*======================PROBLEME ALE PIELEI Page Desctop===========-*/
 .probleme-hero-img {
