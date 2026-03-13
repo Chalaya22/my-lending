@@ -2265,6 +2265,10 @@ html {
 @media (max-width: 768px) {
   .double-image-gallery {
     flex-direction: column;
+    grid-template-columns: 1fr;
+  }
+  .gallery-item img {
+    height: auto;
   }
 }
 
