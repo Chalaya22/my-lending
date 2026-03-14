@@ -53,6 +53,24 @@ body {
   margin: 0 auto;
   padding: 0 20px;
 }
+aside {
+  position: sticky;
+  top: 90px;
+
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
+
+  padding-right: 6px;
+}
+
+aside::-webkit-scrollbar {
+  width: 6px;
+}
+
+aside::-webkit-scrollbar-thumb {
+  background: #d8d8d8;
+  border-radius: 10px;
+}
 
 /* ========================= HEADER Desctop ==================== */
 
@@ -1951,16 +1969,184 @@ main {
     gap: 24px;
   }
 }
-/* популярные обзоры косметики */
-/* SECTION фон */
-.ingredient-section.soft-bg {
-  background: #fafafa;
-  padding: 40px 30px;
-  border-radius: 16px;
-  margin: 50px 0;
+/*================== популярные обзоры косметики =====================*/
+.popular-reviews {
+  margin: 40px 0;
+}
+
+.popular-reviews h2 {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* сетка кнопок */
+
+.popular-reviews-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* кнопки */
+
+.popular-review-btn {
+  display: inline-block;
+
+  padding: 12px 18px;
+
+  background: #f6f6f6;
+  border-radius: 30px;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  text-decoration: none;
+  color: #333;
+
+  border: 1px solid #ececec;
+
+  transition: all 0.25s ease;
+}
+
+.popular-review-btn:hover {
+  background: #ffffff;
+  border-color: #ddd;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+}
+
+@media (max-width: 768px) {
+  .popular-reviews-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .popular-review-btn {
+    text-align: center;
+    padding: 12px;
+    font-size: 13px;
+  }
 }
 
 /* сетка карточек */
+
+.makeup-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  margin-top: 25px;
+}
+
+/* карточка */
+
+.beauty-card {
+  display: block;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 18px;
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.beauty-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
+  filter: brightness(1.03);
+}
+.beauty-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+
+  background: radial-gradient(
+    circle at top left,
+    rgba(255, 255, 255, 0.6),
+    transparent 60%
+  );
+
+  opacity: 0;
+  transition: opacity 0.4s ease;
+
+  pointer-events: none;
+}
+.beauty-card:hover::after {
+  opacity: 1;
+}
+
+/* блок изображения */
+
+.beauty-image {
+  height: 150px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+  filter: brightness(1.03);
+}
+
+.beauty-image img {
+  max-height: 120px;
+  object-fit: contain;
+
+  transition: transform 0.35s ease;
+}
+
+.beauty-card:hover img {
+  transform: scale(1.08);
+}
+
+/* текст */
+
+.beauty-content h3 {
+  font-size: 18px;
+  margin-bottom: 6px;
+  color: #222;
+}
+
+.beauty-content p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  .makeup-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .beauty-image {
+    height: 120px;
+  }
+
+  .beauty-image img {
+    max-height: 90px;
+  }
+
+  .beauty-content h3 {
+    font-size: 16px;
+  }
+
+  .beauty-content p {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .makeup-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* ==============================Навигация по разделам ========= */
 .popular-reviews-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -1968,61 +2154,50 @@ main {
   margin-top: 25px;
 }
 
-/* карточка */
+/* Карточка навигации */
 .popular-review-card {
-  position: relative;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background: #ffffff;
-  padding: 22px;
-  border-radius: 14px;
+  padding: 20px 18px;
+  border-radius: 10px;
   text-decoration: none;
-  color: inherit;
-  border: 1px solid #f1f1f1;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  color: #222;
+  border: 1px solid #eee;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   transition: all 0.25s ease;
+  height: 100%; /* Все карточки одинаковой высоты */
   overflow: hidden;
 }
 
-/* цветная полоска */
-.popular-review-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  background: linear-gradient(90deg, #d7d2cc, #f6f2ed);
-}
-
-/* hover эффект */
+/* Hover эффект */
 .popular-review-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
-/* заголовок */
+/* Заголовок карточки */
 .popular-review-card h3 {
   font-size: 18px;
-  margin-bottom: 10px;
-  color: #222;
+  margin-bottom: 8px;
   line-height: 1.3;
+  color: #222;
 }
 
-/* текст */
+/* Текст карточки */
 .popular-review-card p {
   font-size: 14px;
-  color: #666;
   line-height: 1.5;
+  color: #666;
+  flex-grow: 1; /* Чтобы текст заполнял пространство */
 }
 
-/* мобильная адаптация */
-@media (max-width: 600px) {
-  .ingredient-section.soft-bg {
-    padding: 30px 20px;
-  }
-
-  .popular-review-card {
-    padding: 18px;
+/* Мобильная версия */
+@media (max-width: 768px) {
+  .popular-reviews-grid {
+    grid-template-columns: 1fr; /* Все карточки в одну колонку */
+    gap: 15px;
   }
 
   .popular-review-card h3 {
@@ -2031,6 +2206,53 @@ main {
 
   .popular-review-card p {
     font-size: 13px;
+  }
+}
+/*========стиль карточки страницы Помады (img+ text)===================== */
+.beauty-tip-section {
+  margin: 50px 0;
+}
+
+.beauty-tip-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: stretch; /* ключевое свойство */
+}
+
+.beauty-tip-image img {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  height: 100%;
+  object-fit: cover; /* чтобы картинка не искажалась */
+}
+
+.beauty-tip-content h2 {
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+.beauty-tip-content p {
+  margin-bottom: 14px;
+}
+
+.beauty-tip-list {
+  padding-left: 18px;
+}
+
+.beauty-tip-list li {
+  margin-bottom: 8px;
+}
+.beauty-tip-image,
+.beauty-tip-content {
+  height: 100%;
+}
+/* мобильная версия */
+
+@media (max-width: 768px) {
+  .beauty-tip-grid {
+    grid-template-columns: 1fr;
   }
 }
 /*======================REVIEW Cosmetica decorativ FUNDATION Page Desctop===========-*/
