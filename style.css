@@ -71,6 +71,15 @@ aside::-webkit-scrollbar-thumb {
   background: #d8d8d8;
   border-radius: 10px;
 }
+/*убираем скрол на мобилке */
+@media (max-width: 768px) {
+  aside {
+    position: static; /* убираем sticky */
+    max-height: none; /* снимаем ограничение высоты */
+    overflow-y: visible; /* убираем внутренний скролл */
+    padding-right: 0;
+  }
+}
 
 /* ========================= HEADER Desctop ==================== */
 
