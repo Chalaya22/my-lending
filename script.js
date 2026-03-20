@@ -287,3 +287,11 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+// Карточки обзора (раскрытие на той же странице)
+function toggleDetails(button) {
+  const details = button.nextElementSibling;
+  details.classList.toggle("show");
+  button.textContent = details.classList.contains("show")
+    ? "Скрыть обзор"
+    : "Читать обзор";
+}
