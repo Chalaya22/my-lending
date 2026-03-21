@@ -2591,6 +2591,88 @@ html {
     min-height: auto;
   }
 }
+/* ++++++++++++++++++++++++++++++++++ */
+.eva-share-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  z-index: 9999;
+  transform: translateY(0);
+  transition: transform 0.3s ease;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.eva-share-bar.hide {
+  transform: translateY(100%);
+}
+
+.eva-btn {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 14px 0;
+  border: none;
+  cursor: pointer;
+}
+
+.eva-btn img {
+  width: 22px;
+  height: 22px;
+}
+
+.fb {
+  background: #3b5998;
+}
+.mail {
+  background: #9e9e9e;
+}
+.tg {
+  background: #0088cc;
+}
+.wa {
+  background: #25d366;
+}
+.vb {
+  background: #665cac;
+}
+.copy {
+  background: #444;
+}
+
+.eva-btn:active {
+  opacity: 0.7;
+}
+
+#scrollTopBtn {
+  position: fixed;
+  right: 15px;
+  bottom: 80px;
+  background: #aaa;
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+  display: none;
+  z-index: 9999;
+}
+
+#scrollTopBtn.show {
+  display: block;
+}
+
+body {
+  padding-bottom: 70px;
+}
+
+.eva-btn:hover {
+  opacity: 0.9;
+}
 /* ------------------------- */
 .probleme-hero-img {
   position: relative;

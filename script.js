@@ -300,3 +300,97 @@ function toggleDetails(button) {
     ? closeText
     : openText;
 }
+// ____________________________________________________________________
+// === ЯЗЫК СТРАНИЦЫ ===
+const lang = document.documentElement.lang || "ru";
+
+// === ТЕКСТЫ ===
+const text = {
+  ru: {
+    copied: "Ссылка скопирована!",
+    subject: "Рекомендую статью",
+    shareText: "Смотри статью: ",
+  },
+  ro: {
+    copied: "Link copiat!",
+    subject: "Îți recomand acest articol",
+    shareText: "Vezi acest articol: ",
+  },
+};
+
+const t = text[lang] || text.ru;
+
+// === ЖДЁМ ЗАГРУЗКУ СТРАНИЦЫ ===
+document.addEventListener("DOMContentLoaded", () => {
+  const url = encodeURIComponent(window.location.href);
+  const fullText = encodeURIComponent(t.shareText + window.location.href);
+
+  // === FACEBOOK ===
+  document.querySelectorAll(".fb").forEach((el) => {
+    el.href = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
+  });
+
+  // === TELEGRAM ===
+  document.querySelectorAll(".tg").forEach((el) => {
+    el.href = `https://t.me/share/url?url=${url}&text=${encodeURIComponent(t.shareText)}`;
+  });
+
+  // === WHATSAPP ===
+  document.querySelectorAll(".wa").forEach((el) => {
+    el.href = `https://api.whatsapp.com/send?text=${fullText}`;
+  });
+
+  // === VIBER ===
+  document.querySelectorAll(".vb").forEach((el) => {
+    el.href = `viber://forward?text=${fullText}`;
+  });
+
+  // === EMAIL (FIX) ===
+  document.querySelectorAll(".mail").forEach((el) => {
+    el.href = `mailto:?subject=${encodeURIComponent(t.subject)}&body=${encodeURIComponent(t.shareText + window.location.href)}`;
+  });
+});
+
+// === КОПИРОВАНИЕ ССЫЛКИ ===
+function copyLink() {
+  navigator.clipboard.writeText(window.location.href).then(() => {
+    alert(t.copied);
+  });
+}
+
+// === СКРОЛЛ (СКРЫТИЕ ПАНЕЛИ) ===
+let lastScroll = 0;
+const shareBar = document.getElementById("shareBar");
+
+window.addEventListener("scroll", () => {
+  const currentScroll = window.pageYOffset;
+
+  if (shareBar) {
+    if (currentScroll > lastScroll) {
+      shareBar.classList.add("hide");
+    } else {
+      shareBar.classList.remove("hide");
+    }
+  }
+
+  lastScroll = currentScroll;
+});
+
+// === КНОПКА ВВЕРХ ===
+const btn = document.getElementById("scrollTopBtn");
+
+window.addEventListener("scroll", () => {
+  if (btn) {
+    if (window.scrollY > 300) {
+      btn.classList.add("show");
+    } else {
+      btn.classList.remove("show");
+    }
+  }
+});
+
+if (btn) {
+  btn.onclick = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+}
