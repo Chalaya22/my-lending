@@ -365,12 +365,14 @@ const shareBar = document.getElementById("shareBar");
 window.addEventListener("scroll", () => {
   const currentScroll = window.pageYOffset;
 
-  if (shareBar) {
-    if (currentScroll > lastScroll) {
-      shareBar.classList.add("hide");
-    } else {
-      shareBar.classList.remove("hide");
-    }
+  if (!shareBar) return;
+
+  if (currentScroll > lastScroll && currentScroll > 100) {
+    // вниз
+    shareBar.classList.add("hide");
+  } else {
+    // вверх
+    shareBar.classList.remove("hide");
   }
 
   lastScroll = currentScroll;

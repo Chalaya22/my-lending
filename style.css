@@ -2673,6 +2673,52 @@ body {
 .eva-btn:hover {
   opacity: 0.9;
 }
+.eva-btn {
+  width: 50px;
+  height: 50px;
+}
+
+.eva-btn svg {
+  width: 22px;
+  height: 22px;
+}
+
+/* 💻 ДЕСКТОП */
+@media (min-width: 768px) {
+  .eva-share-bar {
+    bottom: 15px;
+    padding: 6px 10px;
+    border-radius: 25px;
+  }
+
+  .eva-btn {
+    width: 48px;
+    height: 38px;
+  }
+
+  .eva-btn svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+@media (min-width: 768px) {
+  .eva-share-bar {
+    width: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px;
+
+    display: flex;
+    gap: 10px;
+    padding: 8px 14px;
+
+    border-radius: 30px;
+  }
+  .eva-share-bar.hide {
+    transform: translateX(-50%) translateY(100%);
+  }
+}
+
 /* ------------------------- */
 .probleme-hero-img {
   position: relative;
