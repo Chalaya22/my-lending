@@ -2523,6 +2523,13 @@ html {
   transition: all 0.3s ease;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   min-height: 420px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+.review-card-modal:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
 .review-card-modal-image img {
@@ -2570,21 +2577,84 @@ html {
 }
 
 .review-card-modal-btn {
-  background-color: #e67e22;
-  color: #fff;
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
   border: none;
-  padding: 8px 12px;
+  padding: 5px 10px;
   cursor: pointer;
   border-radius: 4px;
-  font-size: 0.9rem;
+  font-size: 14px;
   margin-top: auto;
   align-self: flex-start;
 }
 
 .review-card-modal-btn:hover {
-  background-color: #cf6c1a;
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  background-color: #f7f7f7;
+}
+.review-card-modal-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+/* премиум карточки к Сотрудничеству */
+.products-container {
+  display: flex;
+  flex-wrap: wrap; /* чтобы карточки могли переноситься */
+  gap: 20px; /* расстояние между карточками */
+  align-items: flex-start; /* главное — не stretch */
 }
 
+.review-card-modal-details {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.review-card-modal-details.show {
+  max-height: 2000px; /* большой запас */
+}
+.buttons-row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap; /* на узких экранах перенос */
+}
+
+.buttons-row .review-card-modal-btn {
+  all: unset; /* убираем все браузерные стили */
+  display: inline-flex; /* одинаково для <a> и <button> */
+  align-items: center;
+  justify-content: center;
+  padding: 5px 10px;
+  min-width: 140px; /* одинаковая ширина */
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #fff;
+  color: #333;
+  cursor: pointer;
+  box-sizing: border-box;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background-color 0.25s ease;
+}
+
+.buttons-row .review-card-modal-btn:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  background-color: #f7f7f7;
+}
+
+.buttons-row .review-card-modal-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
 @media (max-width: 768px) {
   .review-card-modal {
     width: 100%;
@@ -3680,8 +3750,6 @@ dl.definition dt {
   margin-top: 10px;
 }
 
-
-
 /* mobile */
 @media (max-width: 768px) {
   .native-review {
@@ -3692,6 +3760,7 @@ dl.definition dt {
     font-size: 22px;
   }
 }
+
 /* ================= COLLABORATION FORM ================= */
 
 .collaboration-form {

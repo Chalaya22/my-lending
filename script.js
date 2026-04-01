@@ -287,20 +287,24 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
-// Карточки обзора (раскрытие на той же странице)
+//____________________ Карточки обзора (раскрытие на той же странице)_______________
 function toggleDetails(button) {
-  const details = button.nextElementSibling;
+  let details =
+    button
+      .closest(".review-card-modal")
+      ?.querySelector(".review-card-modal-details") ||
+    button.parentElement.querySelector(".review-card-modal-details");
+
+  if (!details) return;
 
   details.classList.toggle("show");
 
-  const openText = button.dataset.open;
-  const closeText = button.dataset.close;
-
   button.textContent = details.classList.contains("show")
-    ? closeText
-    : openText;
+    ? button.dataset.close
+    : button.dataset.open;
 }
-// ____________________________________________________________________
+
+// _____ <!-- SHARE BAR -->__________________________________________________
 // === ЯЗЫК СТРАНИЦЫ ===
 const lang = document.documentElement.lang || "ru";
 
