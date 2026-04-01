@@ -2656,9 +2656,36 @@ html {
   box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
 }
 @media (max-width: 768px) {
+  .buttons-row {
+    flex-direction: column; /* кнопки в колонку */
+    gap: 8px; /* расстояние между кнопками */
+  }
+
+  .review-card-modal-btn {
+    width: 100%; /* кнопки растягиваются на всю ширину контейнера */
+  }
+}
+@media (max-width: 768px) {
+  .review-card-modal-btn {
+    height: auto; /* пусть высота определяется контентом */
+    padding: 10px 15px; /* одинаковые внутренние отступы */
+    box-sizing: border-box; /* учитываем паддинги */
+  }
+}
+@media (max-width: 768px) {
   .review-card-modal {
     width: 100%;
     min-height: auto;
+  }
+}
+@media (max-width: 768px) {
+  .review-card-modal-details {
+    max-height: 0;
+    transition: max-height 0.4s ease;
+  }
+
+  .review-card-modal-details.show {
+    max-height: 1000px; /* или достаточно большое значение */
   }
 }
 /* +++++++++++SHARE_BAR+++++++++++++++++ */
