@@ -2533,12 +2533,15 @@ html {
 }
 
 .review-card-modal-image img {
-  width: 100%;
-  height: 180px;
+  width: auto;
+  max-height: 100%;
   object-fit: contain; /* вместо cover */
   display: block;
   background: #fff;
   padding: 10px;
+}
+.review-card-modal-image {
+  height: 300px;
 }
 
 .review-card-modal-content {
@@ -2600,12 +2603,6 @@ html {
   box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
 }
 /* премиум карточки к Сотрудничеству */
-.products-container {
-  display: flex;
-  flex-wrap: wrap; /* чтобы карточки могли переноситься */
-  gap: 20px; /* расстояние между карточками */
-  align-items: flex-start; /* главное — не stretch */
-}
 
 .review-card-modal-details {
   max-height: 0;
@@ -2655,6 +2652,31 @@ html {
   outline: none;
   box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
 }
+/* zoom для карточки */
+.zoom-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.zoom-image {
+  width: 100%;
+  display: block;
+}
+
+.zoom-lens {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+
+  background-repeat: no-repeat;
+  display: none;
+  pointer-events: none;
+  border-radius: 6px;
+}
+.zoom-card .zoom-container {
+  cursor: zoom-in;
+}
+
 @media (max-width: 768px) {
   .buttons-row {
     flex-direction: column; /* кнопки в колонку */

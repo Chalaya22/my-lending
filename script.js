@@ -400,3 +400,38 @@ if (btn) {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 }
+//  Zoom для карточки
+document.querySelectorAll(".zoom-container").forEach((container) => {
+  const img = container.querySelector(".zoom-image");
+  const lens = container.querySelector(".zoom-lens");
+
+  container.addEventListener("mousemove", (e) => {
+    lens.style.display = "block";
+
+    const rect = container.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    const lensSize = 120;
+    let lensX = x - lensSize / 2;
+    let lensY = y - lensSize / 2;
+
+    // ограничение внутри картинки
+    lensX = Math.max(0, Math.min(lensX, rect.width - lensSize));
+    lensY = Math.max(0, Math.min(lensY, rect.height - lensSize));
+
+    lens.style.left = lensX + "px";
+    lens.style.top = lensY + "px";
+
+    // zoom
+    const zoom = 2;
+
+    lens.style.backgroundImage = `url(${img.src})`;
+    lens.style.backgroundSize = `${rect.width * zoom}px ${rect.height * zoom}px`;
+    lens.style.backgroundPosition = `-${lensX * zoom}px -${lensY * zoom}px`;
+  });
+
+  container.addEventListener("mouseleave", () => {
+    lens.style.display = "none";
+  });
+});
