@@ -999,66 +999,6 @@ section h2 {
   overflow: hidden;
 }
 
-/* .ingredient-card::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 28px;
-  bottom: 28px;
-  width: 2px;
-  background: linear-gradient(
-    180deg,
-    rgba(249, 231, 180, 0.8),
-    #cfa24a,
-    rgba(249, 231, 180, 0.8)
-  );
-} */
-
-.ingredient-card:hover {
-  transform: translateY(-6px);
-  border: 1px solid rgba(207, 162, 74, 0.6);
-  box-shadow:
-    0 16px 40px rgba(0, 0, 0, 0.35),
-    0 0 20px rgba(207, 162, 74, 0.15);
-}
-
-.ingredient-card h3 {
-  font-family: "Quicksand", sans-serif;
-  font-weight: 700;
-  font-size: 14px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-
-  color: var(--text-main);
-  margin-bottom: 12px;
-}
-
-.ingredient-card:hover h3 {
-  color: var(--accent);
-}
-.ingredient-card::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(
-    circle at top left,
-    rgba(255, 255, 255, 0.04),
-    transparent 60%
-  );
-}
-
-.ingredient-card p {
-  margin: 0;
-  font-size: 15px;
-  line-height: 1.6;
-  color: var(--text-main);
-}
-.card-hint {
-  font-size: 13px;
-  color: var(--text-main);
-  opacity: 0.8;
-}
-
 /* =======Подпишитесь на экспертные разборы ФОРМА  статьи  Ингридиенты================= */
 .newsletter-section {
   margin: 70px 0;
@@ -2673,9 +2613,9 @@ html {
 .zoom-result {
   position: absolute;
   top: 0;
-  left: 100%; /* справа от картинки */
+  left: 105%; /* справа от картинки */
 
-  width: 300px;
+  width: 350px;
   height: 450px;
 
   background-repeat: no-repeat;
@@ -2709,7 +2649,6 @@ html {
   z-index: 5;
 }
 
-/* показываем при наведении */
 .zoom-container:hover .zoom-result {
   display: block;
 }

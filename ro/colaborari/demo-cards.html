@@ -336,11 +336,14 @@
           <div class="products-container">
             <!-- 1 -->
             <div class="review-card-modal">
-              <div class="review-card-modal-image">
+              <div class="review-card-modal-image zoom-container">
                 <img
                   src="../../images/colaborari/placeholder-400.webp"
                   alt="Brand XYZ – Exemplu de plasare"
+                  class="zoom-image"
                 />
+                <div class="zoom-lens"></div>
+                <div class="zoom-result"></div>
               </div>
 
               <div class="review-card-modal-content">
@@ -522,6 +525,94 @@
           </section>
 
           <div class="products-container">
+            <!-- 2 -->
+            <div class="review-card-modal premium">
+              <!-- Imagine -->
+              <div class="review-card-modal-image zoom-container">
+                <img
+                  src="../../images/colaborari/placeholder-7-400.webp"
+                  alt="Brand XYZ – Exemplu de plasare"
+                  class="zoom-image"
+                />
+                <div class="zoom-lens"></div>
+                <div class="zoom-result"></div>
+              </div>
+
+              <!-- Conținut -->
+              <div class="review-card-modal-content">
+                <div class="review-card-modal-title">
+                  Brand XYZ – Exemplu de plasare
+                </div>
+
+                <div class="review-card-modal-excerpt">Descriere produs</div>
+
+                <div class="buttons-row">
+                  <!-- CTA -->
+                  <a href="#" class="review-card-modal-btn">
+                    Mergi la produs
+                  </a>
+
+                  <!-- Buton extindere -->
+                  <button
+                    class="review-card-modal-btn"
+                    onclick="toggleDetails(this)"
+                    data-open="Extinde recenzia"
+                    data-close="Ascunde"
+                  >
+                    Extinde recenzia
+                  </button>
+                </div>
+
+                <!-- Bloc detalii -->
+                <div class="review-card-modal-details">
+                  <div class="review-details-inner">
+                    <div class="review-specs">
+                      <h4>Caracteristici</h4>
+                      <ul>
+                        <li><strong>Tip:</strong> XXXXXXXXX</li>
+                        <li><strong>Piele:</strong> XXXXXXXXX</li>
+                        <li><strong>Ingrediente active:</strong> XXXXXXXXX</li>
+                        <li><strong>Textură:</strong> XXXXXXXXX</li>
+                        <li><strong>Formulă:</strong> XXXXXXXXX</li>
+                        <li><strong>Volum:</strong> XX ml</li>
+                        <li><strong>Preț:</strong> ~250–350 MDL</li>
+                      </ul>
+
+                      <h4>Când să folosești</h4>
+                      <ul>
+                        <li>XXXXXXXXX</li>
+                        <li>XXXXXXXXX</li>
+                        <li>XXXXXXXXX</li>
+                      </ul>
+                    </div>
+
+                    <div class="review-verdict">
+                      <h4>Rezumat</h4>
+                      <p>XXXXXXXXX XXXXXXXXX XXXXXXXXX XXXXXXXXX</p>
+
+                      <h4>Avantaje</h4>
+                      <ul>
+                        <li>XXXXXXXXX</li>
+                        <li>XXXXXXXXX</li>
+                        <li>XXXXXXXXX</li>
+                      </ul>
+
+                      <h4>De reținut</h4>
+                      <ul>
+                        <li>XXXXXXXXX</li>
+                        <li>XXXXXXXXX</li>
+                      </ul>
+
+                      <h4>Sfaturi de utilizare</h4>
+                      <p>XXXXXXXXX XXXXXXXXX XXXXXXXXX XXXXXXXXX</p>
+
+                      <h4>Rating</h4>
+                      <div class="review-rating">⭐⭐⭐⭐☆</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
             <!-- 1 -->
             <div class="review-card-modal premium">
               <!-- Imagine -->
@@ -569,92 +660,6 @@
                         <li><strong>Formulă:</strong> XXXXXXXXX</li>
                         <li><strong>Volum:</strong> XXX ml</li>
                         <li><strong>Preț:</strong> ~XXX–XXX MDL</li>
-                      </ul>
-
-                      <h4>Când să folosești</h4>
-                      <ul>
-                        <li>XXXXXXXXX</li>
-                        <li>XXXXXXXXX</li>
-                        <li>XXXXXXXXX</li>
-                      </ul>
-                    </div>
-
-                    <div class="review-verdict">
-                      <h4>Rezumat</h4>
-                      <p>XXXXXXXXX XXXXXXXXX XXXXXXXXX XXXXXXXXX</p>
-
-                      <h4>Avantaje</h4>
-                      <ul>
-                        <li>XXXXXXXXX</li>
-                        <li>XXXXXXXXX</li>
-                        <li>XXXXXXXXX</li>
-                      </ul>
-
-                      <h4>De reținut</h4>
-                      <ul>
-                        <li>XXXXXXXXX</li>
-                        <li>XXXXXXXXX</li>
-                      </ul>
-
-                      <h4>Sfaturi de utilizare</h4>
-                      <p>XXXXXXXXX XXXXXXXXX XXXXXXXXX XXXXXXXXX</p>
-
-                      <h4>Rating</h4>
-                      <div class="review-rating">⭐⭐⭐⭐☆</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- 2 -->
-            <div class="review-card-modal premium">
-              <!-- Imagine -->
-              <div class="review-card-modal-image">
-                <img
-                  src="../../images/colaborari/placeholder-7-400.webp"
-                  alt="Brand XYZ – Exemplu de plasare"
-                />
-              </div>
-
-              <!-- Conținut -->
-              <div class="review-card-modal-content">
-                <div class="review-card-modal-title">
-                  Brand XYZ – Exemplu de plasare
-                </div>
-
-                <div class="review-card-modal-excerpt">Descriere produs</div>
-
-                <div class="buttons-row">
-                  <!-- CTA -->
-                  <a href="#" class="review-card-modal-btn">
-                    Mergi la produs
-                  </a>
-
-                  <!-- Buton extindere -->
-                  <button
-                    class="review-card-modal-btn"
-                    onclick="toggleDetails(this)"
-                    data-open="Extinde recenzia"
-                    data-close="Ascunde"
-                  >
-                    Extinde recenzia
-                  </button>
-                </div>
-
-                <!-- Bloc detalii -->
-                <div class="review-card-modal-details">
-                  <div class="review-details-inner">
-                    <div class="review-specs">
-                      <h4>Caracteristici</h4>
-                      <ul>
-                        <li><strong>Tip:</strong> XXXXXXXXX</li>
-                        <li><strong>Piele:</strong> XXXXXXXXX</li>
-                        <li><strong>Ingrediente active:</strong> XXXXXXXXX</li>
-                        <li><strong>Textură:</strong> XXXXXXXXX</li>
-                        <li><strong>Formulă:</strong> XXXXXXXXX</li>
-                        <li><strong>Volum:</strong> XX ml</li>
-                        <li><strong>Preț:</strong> ~250–350 MDL</li>
                       </ul>
 
                       <h4>Când să folosești</h4>

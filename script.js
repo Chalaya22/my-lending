@@ -400,7 +400,7 @@ if (btn) {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 }
-//
+//zoom
 document.querySelectorAll(".zoom-container").forEach((container) => {
   const img = container.querySelector(".zoom-image");
   const lens = container.querySelector(".zoom-lens");
@@ -444,6 +444,57 @@ document.querySelectorAll(".zoom-container").forEach((container) => {
   });
 
   // Скрыть при уходе мыши
+  container.addEventListener("mouseleave", () => {
+    lens.style.display = "none";
+    result.style.display = "none";
+  });
+});
+// zoom for card-review
+document.querySelectorAll(".zoom-v2").forEach((container) => {
+  const img = container.querySelector(".zoom-image");
+  const lens = container.querySelector(".zoom-lens");
+  const result = container.querySelector(".zoom-result");
+
+  if (!img || !lens || !result) return;
+
+  const zoom = 2; // коэффициент увеличения для новых карточек
+
+  // при движении мыши
+  container.addEventListener("mousemove", (e) => {
+    lens.style.display = "block";
+    result.style.display = "block";
+
+    // размеры и позиция контейнера
+    const rect = container.getBoundingClientRect();
+    let x = e.clientX - rect.left;
+    let y = e.clientY - rect.top;
+
+    const lensWidth = lens.offsetWidth;
+    const lensHeight = lens.offsetHeight;
+
+    // ограничиваем линзу внутри изображения
+    let lensX = Math.max(
+      0,
+      Math.min(x - lensWidth / 2, rect.width - lensWidth),
+    );
+    let lensY = Math.max(
+      0,
+      Math.min(y - lensHeight / 2, rect.height - lensHeight),
+    );
+
+    lens.style.left = lensX + "px";
+    lens.style.top = lensY + "px";
+
+    // позиция для окна zoom
+    const rx = (lensX / rect.width) * img.naturalWidth;
+    const ry = (lensY / rect.height) * img.naturalHeight;
+
+    result.style.backgroundImage = `url(${img.src})`;
+    result.style.backgroundSize = `${img.naturalWidth * zoom}px ${img.naturalHeight * zoom}px`;
+    result.style.backgroundPosition = `-${rx * zoom}px -${ry * zoom}px`;
+  });
+
+  // скрываем при уходе мыши
   container.addEventListener("mouseleave", () => {
     lens.style.display = "none";
     result.style.display = "none";

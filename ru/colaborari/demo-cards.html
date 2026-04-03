@@ -334,11 +334,14 @@
           <div class="products-container">
             <!-- 1 -->
             <div class="review-card-modal">
-              <div class="review-card-modal-image">
+              <div class="review-card-modal-image zoom-container">
                 <img
                   src="../../images/colaborari/placeholder-400.webp"
                   alt="Brand XYZ – Пример размещения"
+                  class="zoom-image"
                 />
+                <div class="zoom-lens"></div>
+                <div class="zoom-result"></div>
               </div>
 
               <div class="review-card-modal-content">
@@ -517,6 +520,95 @@
           </section>
 
           <div class="products-container">
+            <!-- 1-->
+            <div class="review-card-modal premium">
+              <!-- ИЗОБРАЖЕНИЕ -->
+              <div class="review-card-modal-image zoom-container">
+                <img
+                  src="../../images/colaborari/placeholder-7-400.webp"
+                  alt="Brand XYZ – Пример размещения"
+                  class="zoom-image"
+                />
+                <div class="zoom-lens"></div>
+                <div class="zoom-result"></div>
+              </div>
+
+              <!-- КОНТЕНТ -->
+              <div class="review-card-modal-content">
+                <div class="review-card-modal-title">
+                  Brand XYZ – Пример размещения
+                </div>
+
+                <div class="review-card-modal-excerpt">Описание продукта</div>
+
+                <div class="buttons-row">
+                  <!-- CTA (монетизация) -->
+                  <a href="#" class="review-card-modal-btn">
+                    Перейти к продукту
+                  </a>
+
+                  <!-- КНОПКА РАСКРЫТИЯ -->
+                  <button
+                    class="review-card-modal-btn"
+                    onclick="toggleDetails(this)"
+                    data-open="Развернуть обзор"
+                    data-close="Скрыть"
+                  >
+                    Развернуть обзор
+                  </button>
+                </div>
+                <!-- РАСКРЫВАЮЩИЙСЯ БЛОК -->
+                <div class="review-card-modal-details">
+                  <div class="review-details-inner">
+                    <!-- ЛЕВАЯ КОЛОНКА -->
+                    <div class="review-specs">
+                      <h4>Характеристики</h4>
+                      <ul>
+                        <li><strong>Тип:</strong> XXXXXXXXX</li>
+                        <li><strong>Кожа:</strong> XXXXXXXXX</li>
+                        <li><strong>Активные вещества:</strong> XXXXXXXXX</li>
+                        <li><strong>Текстура:</strong> XXXXXXXXX</li>
+                        <li><strong>Формула:</strong> XXXXXXXXX</li>
+                        <li><strong>Объём:</strong> XX мл</li>
+                        <li><strong>Цена:</strong> ~250–350 MDL</li>
+                      </ul>
+
+                      <h4>Когда использовать</h4>
+                      <ul>
+                        <li>XXXXXXXXX</li>
+                        <li>XXXXXXXXX</li>
+                        <li>XXXXXXXXX</li>
+                      </ul>
+                    </div>
+
+                    <!-- ПРАВАЯ КОЛОНКА -->
+                    <div class="review-verdict">
+                      <h4>Краткий обзор</h4>
+                      <p>XXXXXXXXX XXXXXXXXX XXXXXXXXX XXXXXXXXX</p>
+
+                      <h4>Плюсы</h4>
+                      <ul>
+                        <li>XXXXXXXXX</li>
+                        <li>XXXXXXXXX</li>
+                        <li>XXXXXXXXX</li>
+                      </ul>
+
+                      <h4>На что обратить внимание</h4>
+                      <ul>
+                        <li>XXXXXXXXX</li>
+                        <li>XXXXXXXXX</li>
+                      </ul>
+
+                      <h4>Советы по применению</h4>
+                      <p>XXXXXXXXX XXXXXXXXX XXXXXXXXX XXXXXXXXX</p>
+
+                      <h4>Рейтинг</h4>
+                      <div class="review-rating">⭐⭐⭐⭐☆</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
             <!-- 1 -->
             <div class="review-card-modal premium">
               <!-- ИЗОБРАЖЕНИЕ -->
@@ -565,92 +657,6 @@
                         <li><strong>Формула:</strong> XXXXXXXXX</li>
                         <li><strong>Объём:</strong> XXX</li>
                         <li><strong>Цена:</strong> ~XXX–XXX MDL</li>
-                      </ul>
-
-                      <h4>Когда использовать</h4>
-                      <ul>
-                        <li>XXXXXXXXX</li>
-                        <li>XXXXXXXXX</li>
-                        <li>XXXXXXXXX</li>
-                      </ul>
-                    </div>
-
-                    <!-- ПРАВАЯ КОЛОНКА -->
-                    <div class="review-verdict">
-                      <h4>Краткий обзор</h4>
-                      <p>XXXXXXXXX XXXXXXXXX XXXXXXXXX XXXXXXXXX</p>
-
-                      <h4>Плюсы</h4>
-                      <ul>
-                        <li>XXXXXXXXX</li>
-                        <li>XXXXXXXXX</li>
-                        <li>XXXXXXXXX</li>
-                      </ul>
-
-                      <h4>На что обратить внимание</h4>
-                      <ul>
-                        <li>XXXXXXXXX</li>
-                        <li>XXXXXXXXX</li>
-                      </ul>
-
-                      <h4>Советы по применению</h4>
-                      <p>XXXXXXXXX XXXXXXXXX XXXXXXXXX XXXXXXXXX</p>
-
-                      <h4>Рейтинг</h4>
-                      <div class="review-rating">⭐⭐⭐⭐☆</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- 2 -->
-            <div class="review-card-modal premium">
-              <!-- ИЗОБРАЖЕНИЕ -->
-              <div class="review-card-modal-image">
-                <img
-                  src="../../images/colaborari/placeholder-7-400.webp"
-                  alt="Brand XYZ – Пример размещения"
-                />
-              </div>
-
-              <!-- КОНТЕНТ -->
-              <div class="review-card-modal-content">
-                <div class="review-card-modal-title">
-                  Brand XYZ – Пример размещения
-                </div>
-
-                <div class="review-card-modal-excerpt">Описание продукта</div>
-
-                <div class="buttons-row">
-                  <!-- CTA (монетизация) -->
-                  <a href="#" class="review-card-modal-btn">
-                    Перейти к продукту
-                  </a>
-
-                  <!-- КНОПКА РАСКРЫТИЯ -->
-                  <button
-                    class="review-card-modal-btn"
-                    onclick="toggleDetails(this)"
-                    data-open="Развернуть обзор"
-                    data-close="Скрыть"
-                  >
-                    Развернуть обзор
-                  </button>
-                </div>
-                <!-- РАСКРЫВАЮЩИЙСЯ БЛОК -->
-                <div class="review-card-modal-details">
-                  <div class="review-details-inner">
-                    <!-- ЛЕВАЯ КОЛОНКА -->
-                    <div class="review-specs">
-                      <h4>Характеристики</h4>
-                      <ul>
-                        <li><strong>Тип:</strong> XXXXXXXXX</li>
-                        <li><strong>Кожа:</strong> XXXXXXXXX</li>
-                        <li><strong>Активные вещества:</strong> XXXXXXXXX</li>
-                        <li><strong>Текстура:</strong> XXXXXXXXX</li>
-                        <li><strong>Формула:</strong> XXXXXXXXX</li>
-                        <li><strong>Объём:</strong> XX мл</li>
-                        <li><strong>Цена:</strong> ~250–350 MDL</li>
                       </ul>
 
                       <h4>Когда использовать</h4>
