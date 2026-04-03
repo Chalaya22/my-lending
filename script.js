@@ -403,59 +403,57 @@ if (btn) {
 //
 document.querySelectorAll(".zoom-container").forEach((container) => {
   const img = container.querySelector(".zoom-image");
-  const result = container.querySelector(".zoom-result");
   const lens = container.querySelector(".zoom-lens");
+  const result = container.querySelector(".zoom-result");
 
-  const zoom = 1; // можешь менять (1.5–2.5 идеально)
-
-  function initZoom() {
-    container.addEventListener("mousemove", (e) => {
-      result.style.display = "block";
-      lens.style.display = "block";
-
-      const rect = img.getBoundingClientRect();
-
-      let x = e.clientX - rect.left;
-      let y = e.clientY - rect.top;
-
-      const lensWidth = lens.offsetWidth;
-      const lensHeight = lens.offsetHeight;
-
-      let lensX = x - lensWidth / 2;
-      let lensY = y - lensHeight / 2;
-
-      // ограничение линзы внутри картинки
-      lensX = Math.max(0, Math.min(lensX, rect.width - lensWidth));
-      lensY = Math.max(0, Math.min(lensY, rect.height - lensHeight));
-
-      lens.style.left = lensX + "px";
-      lens.style.top = lensY + "px";
-
-      // 🔥 правильный расчет без растягивания
-      const scaleX = img.naturalWidth / img.width;
-      const scaleY = img.naturalHeight / img.height;
-
-      const bgWidth = img.naturalWidth * zoom;
-      const bgHeight = img.naturalHeight * zoom;
-
-      const percentX = lensX / rect.width;
-      const percentY = lensY / rect.height;
-
-      result.style.backgroundImage = `url("${img.src}")`;
-      result.style.backgroundSize = `${bgWidth}px ${bgHeight}px`;
-      result.style.backgroundPosition = `${-percentX * bgWidth}px ${-percentY * bgHeight}px`;
-    });
-
-    container.addEventListener("mouseleave", () => {
-      lens.style.display = "none";
-      result.style.display = "none";
-    });
+  // Если result нет — создаём
+  if (!result) {
+    const newResult = document.createElement("div");
+    newResult.className = "zoom-result";
+    document.body.appendChild(newResult);
   }
 
-  // ✅ ждем загрузку картинки
-  if (img.complete) {
-    initZoom();
-  } else {
-    img.onload = initZoom;
-  }
+  container.addEventListener("mousemove", (e) => {
+    lens.style.display = "block";
+    result.style.display = "block";
+
+    const rect = container.getBoundingClientRect();
+    const displayedWidth = img.clientWidth;
+    const displayedHeight = img.clientHeight;
+    const offsetX = (rect.width - displayedWidth) / 2;
+    const offsetY = (rect.height - displayedHeight) / 2;
+
+    let x = e.clientX - rect.left;
+    let y = e.clientY - rect.top;
+
+    // Координаты внутри самой картинки
+    let correctedX = x - offsetX;
+    let correctedY = y - offsetY;
+
+    // Ограничиваем по краям картинки
+    correctedX = Math.max(0, Math.min(correctedX, displayedWidth));
+    correctedY = Math.max(0, Math.min(correctedY, displayedHeight));
+
+    const lensSize = lens.offsetWidth;
+    let lensX = correctedX - lensSize / 2;
+    let lensY = correctedY - lensSize / 2;
+
+    // Ограничиваем движение линзы по изображению
+    lensX = Math.max(0, Math.min(lensX, displayedWidth - lensSize));
+    lensY = Math.max(0, Math.min(lensY, displayedHeight - lensSize));
+
+    lens.style.left = lensX + offsetX + "px";
+    lens.style.top = lensY + offsetY + "px";
+
+    // Zoom для окна справа
+    const zoom = 2; // степень увеличения
+    result.style.backgroundImage = `url(${img.src})`;
+    result.style.backgroundSize = `${displayedWidth * zoom}px ${displayedHeight * zoom}px`;
+    result.style.backgroundPosition = `-${lensX * zoom}px -${lensY * zoom}px`;
+  });
+
+  container.addEventListener("mouseleave", () => {
+    lens.style.display = "none";
+    result.style.display = "none";
+  });
 });
