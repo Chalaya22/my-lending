@@ -400,38 +400,49 @@ if (btn) {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 }
-//  Zoom для карточки
+//
 document.querySelectorAll(".zoom-container").forEach((container) => {
   const img = container.querySelector(".zoom-image");
+  const result = container.querySelector(".zoom-result");
   const lens = container.querySelector(".zoom-lens");
+  const zoom = 1;
+
+  // заранее узнаём реальные размеры картинки
+  const naturalWidth = img.naturalWidth;
+  const naturalHeight = img.naturalHeight;
 
   container.addEventListener("mousemove", (e) => {
+    result.style.display = "block";
     lens.style.display = "block";
 
-    const rect = container.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
+    const rect = img.getBoundingClientRect();
 
-    const lensSize = 120;
-    let lensX = x - lensSize / 2;
-    let lensY = y - lensSize / 2;
+    let x = e.clientX - rect.left;
+    let y = e.clientY - rect.top;
 
-    // ограничение внутри картинки
-    lensX = Math.max(0, Math.min(lensX, rect.width - lensSize));
-    lensY = Math.max(0, Math.min(lensY, rect.height - lensSize));
+    const lensWidth = lens.offsetWidth;
+    const lensHeight = lens.offsetHeight;
+
+    let lensX = x - lensWidth / 2;
+    let lensY = y - lensHeight / 2;
+
+    lensX = Math.max(0, Math.min(lensX, rect.width - lensWidth));
+    lensY = Math.max(0, Math.min(lensY, rect.height - lensHeight));
 
     lens.style.left = lensX + "px";
     lens.style.top = lensY + "px";
 
-    // zoom
-    const zoom = 2;
+    // нормируем позицию относительно реального изображения
+    const percentX = lensX / rect.width;
+    const percentY = lensY / rect.height;
 
-    lens.style.backgroundImage = `url(${img.src})`;
-    lens.style.backgroundSize = `${rect.width * zoom}px ${rect.height * zoom}px`;
-    lens.style.backgroundPosition = `-${lensX * zoom}px -${lensY * zoom}px`;
+    result.style.backgroundImage = `url(${img.src})`;
+    result.style.backgroundSize = `${naturalWidth * zoom}px ${naturalHeight * zoom}px`;
+    result.style.backgroundPosition = `-${percentX * naturalWidth * zoom}px -${percentY * naturalHeight * zoom}px`;
   });
 
   container.addEventListener("mouseleave", () => {
     lens.style.display = "none";
+    result.style.display = "none";
   });
 });

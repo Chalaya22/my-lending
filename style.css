@@ -2516,7 +2516,8 @@ html {
   background: #fff;
   border: 1px solid #ddd;
   border-radius: 8px;
-  overflow: hidden;
+  overflow: visible;
+  z-index: 1;
   width: calc(50% - 10px);
   display: flex;
   flex-direction: column;
@@ -2530,18 +2531,24 @@ html {
 .review-card-modal:hover {
   transform: scale(1.03);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  z-index: 10;
 }
 
 .review-card-modal-image img {
-  width: auto;
+  max-width: 100%;
   max-height: 100%;
   object-fit: contain; /* вместо cover */
   display: block;
   background: #fff;
   padding: 10px;
+  align-items: center;
 }
 .review-card-modal-image {
   height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
 .review-card-modal-content {
@@ -2653,30 +2660,66 @@ html {
   box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
 }
 /* zoom для карточки */
+/* контейнер для зума */
 .zoom-container {
   position: relative;
-  overflow: hidden;
-}
-
-.zoom-image {
+  overflow: visible; /* важно — чтобы окно не обрезалось */
+  z-index: 5;
+  display: inline-block;
   width: 100%;
-  display: block;
 }
 
-.zoom-lens {
+/* окно увеличения справа */
+.zoom-result {
   position: absolute;
-  width: 150px;
-  height: 150px;
+  top: 0;
+  left: 100%; /* справа от картинки */
+
+  width: 300px;
+  height: 450px;
 
   background-repeat: no-repeat;
+  background-color: #fff;
+
+  border: 0.5px solid #d4af37;
+  border-radius: 6px;
+
+  display: none;
+  z-index: 10;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+.zoom-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.zoom-lens {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+
+  background: rgba(255, 255, 255, 0.3); /* матовый эффект */
+  border: 0.5px solid #d4af37;
+
   display: none;
   pointer-events: none;
   border-radius: 6px;
-}
-.zoom-card .zoom-container {
-  cursor: zoom-in;
+
+  z-index: 5;
 }
 
+/* показываем при наведении */
+.zoom-container:hover .zoom-result {
+  display: block;
+}
+
+/* на мобилке отключаем */
+@media (max-width: 768px) {
+  .zoom-result {
+    display: none !important;
+  }
+}
 @media (max-width: 768px) {
   .buttons-row {
     flex-direction: column; /* кнопки в колонку */
@@ -2710,6 +2753,11 @@ html {
     max-height: 1000px; /* или достаточно большое значение */
   }
 }
+/* @media (max-width: 768px) {
+  .zoom-lens {
+    display: none !important;
+  }
+} */
 /* +++++++++++SHARE_BAR+++++++++++++++++ */
 .eva-share-bar {
   position: fixed;
