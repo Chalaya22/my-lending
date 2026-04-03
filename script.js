@@ -406,52 +406,44 @@ document.querySelectorAll(".zoom-container").forEach((container) => {
   const lens = container.querySelector(".zoom-lens");
   const result = container.querySelector(".zoom-result");
 
-  // Если result нет — создаём
-  if (!result) {
-    const newResult = document.createElement("div");
-    newResult.className = "zoom-result";
-    document.body.appendChild(newResult);
-  }
+  if (!lens || !result) return;
 
+  const zoom = 1; // коэффициент увеличения
+
+  // Показать линзу и окно при наведении
   container.addEventListener("mousemove", (e) => {
     lens.style.display = "block";
     result.style.display = "block";
 
-    const rect = container.getBoundingClientRect();
-    const displayedWidth = img.clientWidth;
-    const displayedHeight = img.clientHeight;
-    const offsetX = (rect.width - displayedWidth) / 2;
-    const offsetY = (rect.height - displayedHeight) / 2;
+    // Получаем размеры и позицию картинки
+    const rect = img.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
 
-    let x = e.clientX - rect.left;
-    let y = e.clientY - rect.top;
+    // Размер линзы
+    const lensWidth = lens.offsetWidth;
+    const lensHeight = lens.offsetHeight;
 
-    // Координаты внутри самой картинки
-    let correctedX = x - offsetX;
-    let correctedY = y - offsetY;
+    // Ограничение движения линзы внутри картинки
+    let lensX = x - lensWidth / 2;
+    let lensY = y - lensHeight / 2;
+    lensX = Math.max(0, Math.min(lensX, rect.width - lensWidth));
+    lensY = Math.max(0, Math.min(lensY, rect.height - lensHeight));
 
-    // Ограничиваем по краям картинки
-    correctedX = Math.max(0, Math.min(correctedX, displayedWidth));
-    correctedY = Math.max(0, Math.min(correctedY, displayedHeight));
+    // Перемещаем линзу
+    lens.style.left = lensX + "px";
+    lens.style.top = lensY + "px";
 
-    const lensSize = lens.offsetWidth;
-    let lensX = correctedX - lensSize / 2;
-    let lensY = correctedY - lensSize / 2;
+    // Синхронизация с zoom-result
+    const rx = (lensX / rect.width) * img.naturalWidth;
+    const ry = (lensY / rect.height) * img.naturalHeight;
 
-    // Ограничиваем движение линзы по изображению
-    lensX = Math.max(0, Math.min(lensX, displayedWidth - lensSize));
-    lensY = Math.max(0, Math.min(lensY, displayedHeight - lensSize));
-
-    lens.style.left = lensX + offsetX + "px";
-    lens.style.top = lensY + offsetY + "px";
-
-    // Zoom для окна справа
-    const zoom = 2; // степень увеличения
     result.style.backgroundImage = `url(${img.src})`;
-    result.style.backgroundSize = `${displayedWidth * zoom}px ${displayedHeight * zoom}px`;
-    result.style.backgroundPosition = `-${lensX * zoom}px -${lensY * zoom}px`;
+    result.style.backgroundSize = `${img.naturalWidth * zoom}px ${img.naturalHeight * zoom}px`;
+    result.style.backgroundPosition = `-${rx * zoom}px -${ry * zoom}px`;
   });
 
+  // Скрыть при уходе мыши
   container.addEventListener("mouseleave", () => {
     lens.style.display = "none";
     result.style.display = "none";
