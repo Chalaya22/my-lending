@@ -406,7 +406,7 @@ document.querySelectorAll(".zoom-container").forEach((container) => {
   const result = container.querySelector(".zoom-result");
   const lens = container.querySelector(".zoom-lens");
 
-  const zoom = 2;
+  const zoom = 1; // можешь менять (1.5–2.5 идеально)
 
   function initZoom() {
     container.addEventListener("mousemove", (e) => {
@@ -424,18 +424,26 @@ document.querySelectorAll(".zoom-container").forEach((container) => {
       let lensX = x - lensWidth / 2;
       let lensY = y - lensHeight / 2;
 
+      // ограничение линзы внутри картинки
       lensX = Math.max(0, Math.min(lensX, rect.width - lensWidth));
       lensY = Math.max(0, Math.min(lensY, rect.height - lensHeight));
 
       lens.style.left = lensX + "px";
       lens.style.top = lensY + "px";
 
+      // 🔥 правильный расчет без растягивания
+      const scaleX = img.naturalWidth / img.width;
+      const scaleY = img.naturalHeight / img.height;
+
+      const bgWidth = img.naturalWidth * zoom;
+      const bgHeight = img.naturalHeight * zoom;
+
       const percentX = lensX / rect.width;
       const percentY = lensY / rect.height;
 
       result.style.backgroundImage = `url("${img.src}")`;
-      result.style.backgroundSize = `${img.width * zoom}px ${img.height * zoom}px`;
-      result.style.backgroundPosition = `${-percentX * img.width * zoom}px ${-percentY * img.height * zoom}px`;
+      result.style.backgroundSize = `${bgWidth}px ${bgHeight}px`;
+      result.style.backgroundPosition = `${-percentX * bgWidth}px ${-percentY * bgHeight}px`;
     });
 
     container.addEventListener("mouseleave", () => {
@@ -444,7 +452,7 @@ document.querySelectorAll(".zoom-container").forEach((container) => {
     });
   }
 
-  // 💥 ВАЖНО: ждём загрузку картинки
+  // ✅ ждем загрузку картинки
   if (img.complete) {
     initZoom();
   } else {
