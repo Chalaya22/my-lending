@@ -436,7 +436,7 @@ document.querySelectorAll(".zoom-container").forEach((container) => {
     const percentX = lensX / rect.width;
     const percentY = lensY / rect.height;
 
-    result.style.backgroundImage = `url(${img.src})`;
+    result.style.backgroundImage = `url("${img.getAttribute("src")}")`;
     result.style.backgroundSize = `${naturalWidth * zoom}px ${naturalHeight * zoom}px`;
     result.style.backgroundPosition = `-${percentX * naturalWidth * zoom}px -${percentY * naturalHeight * zoom}px`;
   });
