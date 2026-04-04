@@ -1426,20 +1426,6 @@ body.menu-open .guides-wrapper {
 }
 
 /* Карточка */
-.review-card {
-  background: white;
-  border-radius: 12px;
-  overflow: hidden;
-  text-decoration: none;
-  color: inherit;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-}
 
 .review-card:hover {
   transform: translateY(-5px);
@@ -1525,6 +1511,13 @@ body.menu-open .guides-wrapper {
   display: flex;
   flex-direction: column;
   height: 100%;
+
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 
   background: #ffffff;
   border-radius: 15px;
@@ -2652,10 +2645,174 @@ html {
 .zoom-container:hover .zoom-result {
   display: block;
 }
-/* карусель в ингридиентах */
+/* _______________________________карусель в ингридиентах */
+.recommended-products {
+  position: relative;
+  overflow: hidden;
+}
 
+/* ===== КАРУСЕЛЬ ===== */
+.carousel-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding: 10px 50px;
 
-/* на мобилке отключаем */
+  touch-action: pan-y;
+}
+
+/* скрыть скроллбар */
+.carousel-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+/* ===== ДОРОЖКА ===== */
+.carousel-track {
+  display: flex;
+  gap: 24px;
+  transition: transform 0.35s ease;
+  will-change: transform;
+}
+
+/* ===== КАРТОЧКА ===== */
+.carousel-card {
+  flex: 0 0 340px;
+  max-width: 340px;
+}
+
+/* ===== КАРТОЧКА ВНУТРИ ===== */
+.review-carousel-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease;
+}
+
+.review-carousel-card:hover {
+  transform: translateY(-6px);
+}
+
+/* ===== КАРТИНКА ===== */
+.review-carousel-image {
+  height: 220px;
+}
+
+.review-carousel-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ===== БЕЙДЖ ===== */
+.review-carousel-badge {
+  position: absolute;
+  margin: 12px;
+  background: #fff;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+/* ===== КОНТЕНТ ===== */
+.review-carousel-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 16px;
+}
+
+.review-carousel-content h3 {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.review-carousel-rating {
+  margin-bottom: 8px;
+  color: #f5b50a;
+}
+
+.review-carousel-content p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* ===== КНОПКА ===== */
+.more-info-btn {
+  margin-top: auto;
+  padding: 10px;
+  border: none;
+  background: #000;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* ===== ТЕКСТ ===== */
+.more-info {
+  display: none;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* ===== СТРЕЛКИ ===== */
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 20;
+
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  font-size: 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.carousel-arrow:hover {
+  background: #000;
+  transform: translateY(-50%) scale(1.15);
+}
+
+.carousel-arrow.prev {
+  left: 10px;
+}
+.carousel-arrow.next {
+  right: 10px;
+}
+
+/* ===== МОБИЛКА ===== */
+@media (max-width: 768px) {
+  .carousel-wrapper {
+    padding: 0;
+  }
+
+  .carousel-card {
+    flex: 0 0 85%;
+    max-width: 85%;
+  }
+
+  .carousel-arrow {
+    display: none;
+  }
+}
+
+/*  ZOOM на мобилке отключаем */
 @media (max-width: 768px) {
   .zoom-result {
     display: none !important;
@@ -2694,11 +2851,11 @@ html {
     max-height: 1000px; /* или достаточно большое значение */
   }
 }
-/* @media (max-width: 768px) {
+@media (max-width: 768px) {
   .zoom-lens {
     display: none !important;
   }
-} */
+}
 /* +++++++++++SHARE_BAR+++++++++++++++++ */
 .eva-share-bar {
   position: fixed;
@@ -2827,7 +2984,7 @@ body {
   }
 }
 
-/* ------------------------- */
+/* -------------------------Probleme 2 */
 .probleme-hero-img {
   position: relative;
   width: 100%;
@@ -3034,6 +3191,10 @@ body {
   gap: 24px;
   align-items: start;
 }
+.main-content {
+  overflow: hidden;
+}
+
 .card {
   border: 1px solid rgba(207, 162, 74, 0.25);
   padding: 14px;

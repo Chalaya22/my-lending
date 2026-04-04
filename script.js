@@ -501,4 +501,105 @@ document.querySelectorAll(".zoom-v2").forEach((container) => {
   });
 });
 
-// _______________Карусель
+// _______________Карусель _________________________________________
+document.addEventListener("DOMContentLoaded", () => {
+  const track = document.querySelector(".carousel-track");
+  const next = document.querySelector(".next");
+  const prev = document.querySelector(".prev");
+  const wrapper = document.querySelector(".carousel-wrapper");
+
+  if (!track) return;
+
+  const card = document.querySelector(".carousel-card");
+  const gap = 24;
+  const step = card.offsetWidth + gap;
+
+  let position = 0;
+
+  /* ===== СТРЕЛКИ ===== */
+  next.addEventListener("click", () => {
+    const max = track.scrollWidth - track.clientWidth;
+
+    position += step;
+    if (position > max) position = max;
+
+    track.style.transform = `translateX(-${position}px)`;
+  });
+
+  prev.addEventListener("click", () => {
+    position -= step;
+    if (position < 0) position = 0;
+
+    track.style.transform = `translateX(-${position}px)`;
+  });
+
+  /* ===== DRAG МЫШКОЙ ===== */
+  let isDown = false;
+  let startX;
+
+  wrapper.addEventListener("mousedown", (e) => {
+    isDown = true;
+    startX = e.pageX;
+    wrapper.style.cursor = "grabbing";
+  });
+
+  wrapper.addEventListener("mouseup", () => {
+    isDown = false;
+    wrapper.style.cursor = "grab";
+  });
+
+  wrapper.addEventListener("mouseleave", () => {
+    isDown = false;
+  });
+
+  wrapper.addEventListener("mousemove", (e) => {
+    if (!isDown) return;
+
+    const move = e.pageX - startX;
+    startX = e.pageX;
+
+    position -= move;
+
+    const max = track.scrollWidth - track.clientWidth;
+    if (position < 0) position = 0;
+    if (position > max) position = max;
+
+    track.style.transform = `translateX(-${position}px)`;
+  });
+
+  /* ===== SWIPE (МОБИЛКА) ===== */
+  let touchStartX = 0;
+
+  wrapper.addEventListener("touchstart", (e) => {
+    touchStartX = e.touches[0].clientX;
+  });
+
+  wrapper.addEventListener(
+    "touchmove",
+    (e) => {
+      e.preventDefault();
+
+      const touchX = e.touches[0].clientX;
+      const move = touchStartX - touchX;
+
+      position += move;
+
+      const max = track.scrollWidth - track.clientWidth;
+      if (position < 0) position = 0;
+      if (position > max) position = max;
+
+      track.style.transform = `translateX(-${position}px)`;
+
+      touchStartX = touchX;
+    },
+    { passive: false },
+  );
+
+  /* ===== Подробнее ===== */
+  document.querySelectorAll(".more-info-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const info = btn.nextElementSibling;
+      info.style.display = info.style.display === "block" ? "none" : "block";
+    });
+  });
+});
