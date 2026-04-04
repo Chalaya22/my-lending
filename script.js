@@ -500,3 +500,5 @@ document.querySelectorAll(".zoom-v2").forEach((container) => {
     result.style.display = "none";
   });
 });
+
+// _______________Карусель

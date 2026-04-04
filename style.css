@@ -2652,6 +2652,8 @@ html {
 .zoom-container:hover .zoom-result {
   display: block;
 }
+/* карусель в ингридиентах */
+
 
 /* на мобилке отключаем */
 @media (max-width: 768px) {
