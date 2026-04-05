@@ -500,25 +500,52 @@ document.querySelectorAll(".zoom-v2").forEach((container) => {
     result.style.display = "none";
   });
 });
-
-// _______________Карусель _________________________________________
+//
 document.addEventListener("DOMContentLoaded", () => {
   const track = document.querySelector(".carousel-track");
-  const next = document.querySelector(".next");
-  const prev = document.querySelector(".prev");
   const wrapper = document.querySelector(".carousel-wrapper");
+  const next = document.querySelector(".carousel-arrow.next");
+  const prev = document.querySelector(".carousel-arrow.prev");
 
-  if (!track) return;
-
-  const card = document.querySelector(".carousel-card");
-  const gap = 24;
-  const step = card.offsetWidth + gap;
+  if (!track || !wrapper) return;
 
   let position = 0;
+  let isDragging = false;
+  let startX;
+  let scrollLeft;
 
-  /* ===== СТРЕЛКИ ===== */
+  // Функция для получения актуальной ширины шага (карточка + gap)
+  const getStep = () => {
+    const card = document.querySelector(".carousel-card");
+    const gap = 24; // соответствует значению в CSS
+    return card ? card.offsetWidth + gap : 0;
+  };
+
+  const getMaxScroll = () => track.scrollWidth - wrapper.clientWidth;
+
+  /* ===== 1. ЛОГИКА "ПОДРОБНЕЕ" ===== */
+  document.querySelectorAll(".more-info-btn").forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      // Если мы только что закончили тащить карусель, не открываем текст
+      if (isDragging) return;
+
+      const card = btn.closest(".review-carousel-card");
+      if (!card) return;
+
+      // Переключаем класс (CSS сделает остальное плавно)
+      card.classList.toggle("is-open");
+
+      // Меняем текст кнопки
+      btn.textContent = card.classList.contains("is-open")
+        ? "Скрыть"
+        : "Подробнее";
+    });
+  });
+
+  /* ===== 2. СТРЕЛКИ ===== */
   next.addEventListener("click", () => {
-    const max = track.scrollWidth - track.clientWidth;
+    const step = getStep();
+    const max = getMaxScroll();
 
     position += step;
     if (position > max) position = max;
@@ -527,79 +554,60 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   prev.addEventListener("click", () => {
+    const step = getStep();
     position -= step;
     if (position < 0) position = 0;
 
     track.style.transform = `translateX(-${position}px)`;
   });
 
-  /* ===== DRAG МЫШКОЙ ===== */
-  let isDown = false;
-  let startX;
+  /* ===== 3. DRAG & SWIPE (Универсальный) ===== */
+  const startDrag = (e) => {
+    isDragging = false; // сбрасываем при начале
+    startX = (e.pageX || e.touches[0].pageX) - track.offsetLeft;
+    scrollLeft = position;
 
-  wrapper.addEventListener("mousedown", (e) => {
-    isDown = true;
-    startX = e.pageX;
-    wrapper.style.cursor = "grabbing";
-  });
+    // Добавляем слушатели на движение
+    document.addEventListener("mousemove", moveDrag);
+    document.addEventListener("touchmove", moveDrag, { passive: false });
+    document.addEventListener("mouseup", stopDrag);
+    document.addEventListener("touchend", stopDrag);
+  };
 
-  wrapper.addEventListener("mouseup", () => {
-    isDown = false;
-    wrapper.style.cursor = "grab";
-  });
+  const moveDrag = (e) => {
+    const x = (e.pageX || e.touches[0].pageX) - track.offsetLeft;
+    const walk = startX - x;
 
-  wrapper.addEventListener("mouseleave", () => {
-    isDown = false;
-  });
+    // Если сдвинули больше чем на 5px, считаем это перетаскиванием
+    if (Math.abs(walk) > 5) {
+      isDragging = true;
+      if (e.type === "touchmove") e.preventDefault();
+    }
 
-  wrapper.addEventListener("mousemove", (e) => {
-    if (!isDown) return;
+    let newPos = scrollLeft + walk;
+    const max = getMaxScroll();
 
-    const move = e.pageX - startX;
-    startX = e.pageX;
+    if (newPos < 0) newPos = 0;
+    if (newPos > max) newPos = max;
 
-    position -= move;
-
-    const max = track.scrollWidth - track.clientWidth;
-    if (position < 0) position = 0;
-    if (position > max) position = max;
-
+    position = newPos;
+    track.style.transition = "none"; // отключаем анимацию при движении рукой
     track.style.transform = `translateX(-${position}px)`;
-  });
+  };
 
-  /* ===== SWIPE (МОБИЛКА) ===== */
-  let touchStartX = 0;
+  const stopDrag = () => {
+    track.style.transition = "transform 0.35s ease"; // возвращаем плавность
+    document.removeEventListener("mousemove", moveDrag);
+    document.removeEventListener("touchmove", moveDrag);
+    document.removeEventListener("mouseup", stopDrag);
+    document.removeEventListener("touchend", stopDrag);
 
-  wrapper.addEventListener("touchstart", (e) => {
-    touchStartX = e.touches[0].clientX;
-  });
+    // Небольшая задержка, чтобы клик по кнопке не сработал сразу после драга
+    setTimeout(() => {
+      isDragging = false;
+    }, 50);
+  };
 
-  wrapper.addEventListener(
-    "touchmove",
-    (e) => {
-      e.preventDefault();
-
-      const touchX = e.touches[0].clientX;
-      const move = touchStartX - touchX;
-
-      position += move;
-
-      const max = track.scrollWidth - track.clientWidth;
-      if (position < 0) position = 0;
-      if (position > max) position = max;
-
-      track.style.transform = `translateX(-${position}px)`;
-
-      touchStartX = touchX;
-    },
-    { passive: false },
-  );
-
-  /* ===== Подробнее ===== */
-  document.querySelectorAll(".more-info-btn").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const info = btn.nextElementSibling;
-      info.style.display = info.style.display === "block" ? "none" : "block";
-    });
-  });
+  wrapper.addEventListener("mousedown", startDrag);
+  wrapper.addEventListener("touchstart", startDrag, { passive: true });
 });
