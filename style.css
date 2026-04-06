@@ -2506,8 +2506,6 @@ html {
 }
 
 .review-card-modal-btn {
-  background-color: #fff;
-  color: #333;
   border: 1px solid #ccc;
   box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
   border: none;
@@ -2528,6 +2526,7 @@ html {
   outline: none;
   box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
 }
+
 /* премиум карточки к Сотрудничеству */
 
 .review-card-modal-details {
@@ -2667,6 +2666,7 @@ html {
 .review-carousel-card {
   display: flex;
   flex-direction: column;
+
   width: 100%;
   background: #fff;
   border-radius: 16px;
@@ -2759,7 +2759,78 @@ html {
 }
 
 .more-info-btn:hover {
-  background: #333;
+  background: #7f7c7c;
+}
+.carousel-more-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 10px 26px;
+  margin-bottom: 14px;
+  border-radius: 999px;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+
+  color: var(--text-main);
+  background: linear-gradient(
+    135deg,
+    #f0f0f0,
+    #d9d9d9,
+    #fafafa
+  ); /* серебристый */
+  border: 1px solid rgba(180, 180, 180, 0.35); /* серебристый оттенок */
+  text-decoration: none;
+  cursor: pointer;
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.7);
+
+  transition: all 0.35s ease;
+  overflow: hidden;
+}
+
+.carousel-more-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent 20%,
+    rgba(255, 255, 255, 0.6),
+    transparent 80%
+  );
+  transform: translateX(-120%);
+  transition: transform 0.6s ease;
+}
+
+.carousel-more-btn:hover::before {
+  transform: translateX(120%);
+}
+
+.carousel-more-btn:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 18px 42px rgba(0, 0, 0, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+.carousel-more-btn:active {
+  transform: translateY(0);
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.15),
+    inset 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.carousel-more-btn:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(180, 180, 180, 0.35);
 }
 
 /* ===== ВЫПАДАЮЩИЙ ТЕКСТ ===== */
@@ -3177,10 +3248,10 @@ body {
 
 .cta-title {
   margin-bottom: 10px;
-  color: #2c6e49;
+  color: var(--text-muted);
 }
 
-.cta-button {
+/* .cta-button {
   display: inline-block;
   margin-top: 10px;
   padding: 10px 20px;
@@ -3188,7 +3259,7 @@ body {
   color: #fff;
   text-decoration: none;
   border-radius: 6px;
-}
+} */
 
 .cta-note {
   font-size: 0.8rem;
