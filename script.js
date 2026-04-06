@@ -500,7 +500,7 @@ document.querySelectorAll(".zoom-v2").forEach((container) => {
     result.style.display = "none";
   });
 });
-//
+//___________________________________--КАРУСЕЛЬ
 document.addEventListener("DOMContentLoaded", () => {
   const track = document.querySelector(".carousel-track");
   const wrapper = document.querySelector(".carousel-wrapper");
