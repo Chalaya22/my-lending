@@ -2652,6 +2652,7 @@ html {
   transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   /* Это свойство не дает соседним карточкам растягиваться вниз */
   align-items: flex-start;
+  padding-right: 24px;
 }
 
 /* ===== ОБОЛОЧКА КАРТОЧКИ ===== */
@@ -2665,15 +2666,14 @@ html {
 .review-carousel-card {
   display: flex;
   flex-direction: column;
-
   width: 100%;
   background: #fff;
   border-radius: 16px;
-  overflow: hidden;
+  overflow: visible; /* важно, чтобы контент не обрезался */
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
   transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
 }
 
 .review-carousel-card:hover {
@@ -2684,19 +2684,21 @@ html {
 /* ===== ИЗОБРАЖЕНИЕ ===== */
 .review-carousel-image {
   width: 100%;
-  height: 220px;
-  background: #f8f8f8;
+  height: auto; /* динамическая высота */
+  flex-shrink: 0; /* не сжимается */
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
-  position: relative;
+  overflow: visible; /* чтобы не резать картинку */
+  padding-top: 10px; /* немного пространства сверху */
+  padding-bottom: 10px; /* немного пространства снизу */
 }
 
 .review-carousel-image img {
   width: 100%;
-  height: 100%;
-  object-fit: contain;
+  height: auto; /* сохраняем пропорции */
+  max-height: 220px; /* можно убрать или увеличить, если нужно */
+  object-fit: contain; /* не растягивать */
   transition: transform 0.5s ease;
 }
 
@@ -2723,7 +2725,7 @@ html {
   padding: 20px;
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
+  flex-grow: 1; /* контент растет вниз */
 }
 
 .review-carousel-content h3 {
@@ -2839,15 +2841,17 @@ html {
 
 /* ===== ВЫПАДАЮЩИЙ ТЕКСТ ===== */
 .more-info {
-  max-height: 0; /* Изначально скрыто */
+  max-height: 0;
   opacity: 0;
   overflow: hidden;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition:
+    max-height 0.4s ease,
+    opacity 0.4s ease;
 }
 
 /* Состояние при открытии (через JS добавляем класс карточке) */
 .review-carousel-card.is-open .more-info {
-  max-height: 300px; /* С запасом для текста */
+  max-height: 500px; /* достаточно для текста */
   opacity: 1;
   margin-top: 15px;
   padding-top: 10px;
@@ -2868,37 +2872,42 @@ html {
   font-size: 20px;
   cursor: pointer;
   z-index: 10;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: 0.3s;
 }
 
 .carousel-arrow:hover {
   background: #444;
   transform: translateY(-50%) scale(1.1);
 }
-
 .carousel-arrow.prev {
   left: 10px;
 }
 .carousel-arrow.next {
   right: 10px;
 }
+.recommended-products {
+  overflow-x: hidden;
+}
 
 /* ===== АДАПТИВ ===== */
 @media (max-width: 768px) {
   .carousel-wrapper {
     padding: 0 15px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
   }
+
+  .carousel-track {
+    gap: 15px;
+    /* УБРАЛИ width: max-content */
+  }
+
   .carousel-card {
     flex: 0 0 280px;
   }
+
   .carousel-arrow {
     display: none;
-  }
-  .carousel-track {
-    gap: 15px;
   }
 }
 

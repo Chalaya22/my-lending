@@ -507,113 +507,89 @@ document.addEventListener("DOMContentLoaded", () => {
   const wrapper = document.querySelector(".carousel-wrapper");
   const next = document.querySelector(".carousel-arrow.next");
   const prev = document.querySelector(".carousel-arrow.prev");
-
-  if (!track || !wrapper) return;
-
+  const cards = Array.from(track.querySelectorAll(".carousel-card"));
+  const gap = 24;
   let position = 0;
   let isDragging = false;
-  let startX;
-  let scrollLeft;
+  let startX, scrollStart;
 
-  // ===== Выравниваем стартовую высоту карточек (без .more-info) =====
-  function equalizeInitialHeights() {
-    const cards = Array.from(track.querySelectorAll(".carousel-card"));
-    const heights = cards.map((card) => {
-      const inner = card.querySelector(".review-carousel-card");
-      const more = inner.querySelector(".more-info");
-      if (more) more.style.display = "none"; // временно скрываем
-      const h = inner.scrollHeight;
-      if (more) more.style.display = ""; // возвращаем
-      return h;
-    });
-
-    const maxHeight = Math.max(...heights);
+  // ===== Устанавливаем одинаковую исходную высоту карточек =====
+  function setEqualHeight() {
+    let maxHeight = 0;
     cards.forEach((card) => {
-      const inner = card.querySelector(".review-carousel-card");
-      inner.style.height = maxHeight + "px";
+      const content = card.querySelector(".review-carousel-content");
+      const img = card.querySelector(".review-carousel-image");
+      const contentHeight = content.offsetHeight + img.offsetHeight;
+      if (contentHeight > maxHeight) maxHeight = contentHeight;
     });
+    cards.forEach(
+      (card) =>
+        (card.querySelector(".review-carousel-card").style.minHeight =
+          maxHeight + "px"),
+    );
   }
+  setEqualHeight();
+  window.addEventListener("resize", setEqualHeight);
 
-  window.addEventListener("load", equalizeInitialHeights);
-  window.addEventListener("resize", equalizeInitialHeights);
-
-  // ===== Кнопки "Подробнее" =====
+  // ===== Подробнее =====
   document.querySelectorAll(".more-info-btn").forEach((btn) => {
     btn.addEventListener("click", () => {
       const card = btn.closest(".review-carousel-card");
-      if (!card) return;
-
       card.classList.toggle("is-open");
       btn.textContent = card.classList.contains("is-open")
         ? "Скрыть"
         : "Подробнее";
-      // соседние карточки не дергаются
     });
   });
 
-  // ===== Функция шага движения для стрелок =====
-  const getStep = () => {
-    const card = document.querySelector(".carousel-card");
-    const gap = 24;
-    return card ? card.offsetWidth + gap : 0;
-  };
-
-  const getMaxScroll = () => track.scrollWidth - wrapper.clientWidth;
-
   // ===== Стрелки =====
+  function getCardStep() {
+    return cards[0].offsetWidth + gap;
+  }
+  function getMaxPosition() {
+    return track.scrollWidth - wrapper.clientWidth;
+  }
+
   next.addEventListener("click", () => {
-    position += getStep();
-    const max = getMaxScroll();
-    if (position > max) position = max;
-    track.style.transition = "transform 0.35s ease";
+    position += getCardStep();
+    if (position > getMaxPosition()) position = getMaxPosition();
     track.style.transform = `translateX(-${position}px)`;
   });
-
   prev.addEventListener("click", () => {
-    position -= getStep();
+    position -= getCardStep();
     if (position < 0) position = 0;
-    track.style.transition = "transform 0.35s ease";
     track.style.transform = `translateX(-${position}px)`;
   });
 
   // ===== Drag & Swipe =====
   const startDrag = (e) => {
     isDragging = false;
-    startX = (e.pageX || e.touches[0].pageX) - track.offsetLeft;
-    scrollLeft = position;
-
+    startX = e.pageX || e.touches[0].pageX;
+    scrollStart = position;
     document.addEventListener("mousemove", moveDrag);
     document.addEventListener("touchmove", moveDrag, { passive: false });
     document.addEventListener("mouseup", stopDrag);
     document.addEventListener("touchend", stopDrag);
   };
-
   const moveDrag = (e) => {
-    const x = (e.pageX || e.touches[0].pageX) - track.offsetLeft;
+    const x = e.pageX || e.touches[0].pageX;
     const walk = startX - x;
-
     if (Math.abs(walk) > 5) isDragging = true;
-
-    let newPos = scrollLeft + walk;
-    const max = getMaxScroll();
-
+    let newPos = scrollStart + walk;
+    const max = getMaxPosition();
     if (newPos < 0) newPos = 0;
     if (newPos > max) newPos = max;
-
     position = newPos;
     track.style.transition = "none";
     track.style.transform = `translateX(-${position}px)`;
   };
-
   const stopDrag = () => {
     track.style.transition = "transform 0.35s ease";
     document.removeEventListener("mousemove", moveDrag);
     document.removeEventListener("touchmove", moveDrag);
     document.removeEventListener("mouseup", stopDrag);
     document.removeEventListener("touchend", stopDrag);
-    setTimeout(() => (isDragging = false), 50);
   };
-
   wrapper.addEventListener("mousedown", startDrag);
   wrapper.addEventListener("touchstart", startDrag, { passive: true });
 });
