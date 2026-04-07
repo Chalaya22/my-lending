@@ -2632,7 +2632,6 @@ html {
 }
 /* _______________________________карусель в ингридиентах */
 
-/* ===== СЕКЦИЯ И КОНТЕЙНЕР ===== */
 .recommended-products {
   position: relative;
   overflow: hidden;
@@ -2658,7 +2657,7 @@ html {
 /* ===== ОБОЛОЧКА КАРТОЧКИ ===== */
 .carousel-card {
   flex: 0 0 340px;
-  max-width: 340px;
+  /* max-width: 340px; */
   display: flex;
 }
 
@@ -2724,6 +2723,7 @@ html {
   padding: 20px;
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
 }
 
 .review-carousel-content h3 {
@@ -2756,6 +2756,10 @@ html {
   cursor: pointer;
   font-weight: 500;
   transition: background 0.3s ease;
+}
+.more-info-btn,
+.section-btn-primary {
+  margin-top: auto;
 }
 
 .more-info-btn:hover {
