@@ -504,92 +504,92 @@ document.querySelectorAll(".zoom-v2").forEach((container) => {
 
 document.addEventListener("DOMContentLoaded", () => {
   const track = document.querySelector(".carousel-track");
+  const next = document.querySelector(".next");
+  const prev = document.querySelector(".prev");
   const wrapper = document.querySelector(".carousel-wrapper");
-  const next = document.querySelector(".carousel-arrow.next");
-  const prev = document.querySelector(".carousel-arrow.prev");
-  const cards = Array.from(track.querySelectorAll(".carousel-card"));
-  const gap = 24;
-  let position = 0;
-  let isDragging = false;
-  let startX, scrollStart;
 
-  // ===== Устанавливаем одинаковую исходную высоту карточек =====
-  function setEqualHeight() {
-    let maxHeight = 0;
-    cards.forEach((card) => {
-      const content = card.querySelector(".review-carousel-content");
-      const img = card.querySelector(".review-carousel-image");
-      const contentHeight = content.offsetHeight + img.offsetHeight;
-      if (contentHeight > maxHeight) maxHeight = contentHeight;
-    });
-    cards.forEach(
-      (card) =>
-        (card.querySelector(".review-carousel-card").style.minHeight =
-          maxHeight + "px"),
-    );
-  }
-  setEqualHeight();
-  window.addEventListener("resize", setEqualHeight);
+  const cards = document.querySelectorAll(".carousel-card");
+
+  let position = 0;
+  const gap = 24;
+
+  let isDragging = false;
+  let startX = 0;
+  let startPos = 0;
 
   // ===== Подробнее =====
   document.querySelectorAll(".more-info-btn").forEach((btn) => {
     btn.addEventListener("click", () => {
+      if (isDragging) return;
+
       const card = btn.closest(".review-carousel-card");
       card.classList.toggle("is-open");
+
       btn.textContent = card.classList.contains("is-open")
         ? "Скрыть"
         : "Подробнее";
     });
   });
 
-  // ===== Стрелки =====
-  function getCardStep() {
-    return cards[0].offsetWidth + gap;
-  }
-  function getMaxPosition() {
-    return track.scrollWidth - wrapper.clientWidth;
-  }
+  // ===== Arrow logic =====
+  const getStep = () => cards[0].offsetWidth + gap;
+
+  const getMax = () => track.scrollWidth - wrapper.clientWidth;
 
   next.addEventListener("click", () => {
-    position += getCardStep();
-    if (position > getMaxPosition()) position = getMaxPosition();
+    position += getStep();
+    if (position > getMax()) position = getMax();
     track.style.transform = `translateX(-${position}px)`;
   });
+
   prev.addEventListener("click", () => {
-    position -= getCardStep();
+    position -= getStep();
     if (position < 0) position = 0;
     track.style.transform = `translateX(-${position}px)`;
   });
 
-  // ===== Drag & Swipe =====
-  const startDrag = (e) => {
+  // ===== Drag =====
+  wrapper.addEventListener("mousedown", (e) => {
     isDragging = false;
-    startX = e.pageX || e.touches[0].pageX;
-    scrollStart = position;
-    document.addEventListener("mousemove", moveDrag);
-    document.addEventListener("touchmove", moveDrag, { passive: false });
-    document.addEventListener("mouseup", stopDrag);
-    document.addEventListener("touchend", stopDrag);
-  };
-  const moveDrag = (e) => {
-    const x = e.pageX || e.touches[0].pageX;
-    const walk = startX - x;
+    startX = e.pageX;
+    startPos = position;
+
+    document.onmousemove = move;
+    document.onmouseup = stop;
+  });
+
+  wrapper.addEventListener("touchstart", (e) => {
+    isDragging = false;
+    startX = e.touches[0].pageX;
+    startPos = position;
+  });
+
+  wrapper.addEventListener("touchmove", (e) => {
+    move(e.touches[0]);
+  });
+
+  wrapper.addEventListener("touchend", stop);
+
+  function move(e) {
+    const walk = startX - e.pageX;
+
     if (Math.abs(walk) > 5) isDragging = true;
-    let newPos = scrollStart + walk;
-    const max = getMaxPosition();
-    if (newPos < 0) newPos = 0;
-    if (newPos > max) newPos = max;
-    position = newPos;
+
+    position = startPos + walk;
+
+    const max = getMax();
+    if (position < 0) position = 0;
+    if (position > max) position = max;
+
     track.style.transition = "none";
     track.style.transform = `translateX(-${position}px)`;
-  };
-  const stopDrag = () => {
-    track.style.transition = "transform 0.35s ease";
-    document.removeEventListener("mousemove", moveDrag);
-    document.removeEventListener("touchmove", moveDrag);
-    document.removeEventListener("mouseup", stopDrag);
-    document.removeEventListener("touchend", stopDrag);
-  };
-  wrapper.addEventListener("mousedown", startDrag);
-  wrapper.addEventListener("touchstart", startDrag, { passive: true });
+  }
+
+  function stop() {
+    setTimeout(() => (isDragging = false), 50);
+    track.style.transition = "0.3s";
+
+    document.onmousemove = null;
+    document.onmouseup = null;
+  }
 });
