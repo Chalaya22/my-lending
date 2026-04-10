@@ -507,89 +507,78 @@ document.addEventListener("DOMContentLoaded", () => {
   const next = document.querySelector(".next");
   const prev = document.querySelector(".prev");
   const wrapper = document.querySelector(".carousel-wrapper");
-
   const cards = document.querySelectorAll(".carousel-card");
 
   let position = 0;
   const gap = 24;
 
-  let isDragging = false;
   let startX = 0;
   let startPos = 0;
+  let isDragging = false;
 
-  // ===== Подробнее =====
+  // ===== MORE INFO =====
   document.querySelectorAll(".more-info-btn").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      if (isDragging) return;
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
 
       const card = btn.closest(".review-carousel-card");
-      card.classList.toggle("is-open");
+      if (!card) return;
 
-      btn.textContent = card.classList.contains("is-open")
-        ? "Скрыть"
-        : "Подробнее";
+      const isOpen = card.classList.contains("is-open");
+
+      // закрываем все
+      document.querySelectorAll(".review-carousel-card").forEach((c) => {
+        c.classList.remove("is-open");
+        const b = c.querySelector(".more-info-btn");
+        if (b) b.textContent = "Подробнее";
+      });
+
+      // открываем текущую
+      if (!isOpen) {
+        card.classList.add("is-open");
+        btn.textContent = "Скрыть";
+      }
     });
   });
 
-  // ===== Arrow logic =====
-  const getStep = () => cards[0].offsetWidth + gap;
-
-  const getMax = () => track.scrollWidth - wrapper.clientWidth;
+  // ===== CAROUSEL =====
+  const step = () => cards[0].offsetWidth + gap;
+  const max = () => track.scrollWidth - wrapper.clientWidth;
 
   next.addEventListener("click", () => {
-    position += getStep();
-    if (position > getMax()) position = getMax();
+    position = Math.min(position + step(), max());
     track.style.transform = `translateX(-${position}px)`;
   });
 
   prev.addEventListener("click", () => {
-    position -= getStep();
-    if (position < 0) position = 0;
+    position = Math.max(position - step(), 0);
     track.style.transform = `translateX(-${position}px)`;
   });
 
-  // ===== Drag =====
+  // ===== DRAG (СТАБИЛЬНЫЙ) =====
   wrapper.addEventListener("mousedown", (e) => {
-    isDragging = false;
     startX = e.pageX;
     startPos = position;
-
-    document.onmousemove = move;
-    document.onmouseup = stop;
-  });
-
-  wrapper.addEventListener("touchstart", (e) => {
     isDragging = false;
-    startX = e.touches[0].pageX;
-    startPos = position;
+
+    const move = (e) => {
+      const walk = startX - e.pageX;
+
+      if (Math.abs(walk) > 10) isDragging = true;
+
+      position = Math.min(Math.max(startPos + walk, 0), max());
+      track.style.transition = "none";
+      track.style.transform = `translateX(-${position}px)`;
+    };
+
+    const stop = () => {
+      track.style.transition = "0.3s ease";
+      document.removeEventListener("mousemove", move);
+      document.removeEventListener("mouseup", stop);
+      setTimeout(() => (isDragging = false), 50);
+    };
+
+    document.addEventListener("mousemove", move);
+    document.addEventListener("mouseup", stop);
   });
-
-  wrapper.addEventListener("touchmove", (e) => {
-    move(e.touches[0]);
-  });
-
-  wrapper.addEventListener("touchend", stop);
-
-  function move(e) {
-    const walk = startX - e.pageX;
-
-    if (Math.abs(walk) > 5) isDragging = true;
-
-    position = startPos + walk;
-
-    const max = getMax();
-    if (position < 0) position = 0;
-    if (position > max) position = max;
-
-    track.style.transition = "none";
-    track.style.transform = `translateX(-${position}px)`;
-  }
-
-  function stop() {
-    setTimeout(() => (isDragging = false), 50);
-    track.style.transition = "0.3s";
-
-    document.onmousemove = null;
-    document.onmouseup = null;
-  }
 });

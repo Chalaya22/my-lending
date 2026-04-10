@@ -2631,57 +2631,76 @@ html {
   display: block;
 }
 /* _______________________________карусель в ингридиентах */
-/* ===== СЕКЦИЯ ===== */
+/* =========================
+   SECTION
+========================= */
+
 .recommended-products {
-  padding: 40px 0;
   position: relative;
-  overflow: hidden; /* режем только контент, не стрелки */
+  overflow: hidden;
+  padding: 40px 0;
 }
 
-/* ===== WRAPPER ===== */
+/* =========================
+   WRAPPER
+========================= */
+
 .carousel-wrapper {
   position: relative;
-  overflow: visible; /* 🔥 ключевой фикс */
+  overflow: hidden;
   padding: 0 40px;
+  box-sizing: border-box;
 }
 
-/* ===== TRACK ===== */
+/* =========================
+   TRACK (КАРУСЕЛЬ)
+========================= */
+
 .carousel-track {
   display: flex;
   gap: 24px;
+  align-items: flex-start; /* важно */
   transition: transform 0.4s ease;
-  align-items: stretch;
   will-change: transform;
 }
 
-/* ===== CARD ===== */
+/* =========================
+   CARD WRAPPER
+========================= */
+
 .carousel-card {
   flex: 0 0 320px;
   display: flex;
 }
 
+/* =========================
+   CARD
+========================= */
+
 .review-carousel-card {
   display: flex;
   flex-direction: column;
   width: 100%;
-
+  min-height: 520px; /* одинаковая высота */
   background: #fff;
   border-radius: 16px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease;
-  contain: layout paint;
+  transition: transform 0.25s ease;
 }
 
 .review-carousel-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-4px);
 }
 
-/* ===== IMAGE ===== */
+/* =========================
+   IMAGE
+========================= */
+
 .review-carousel-image {
   padding: 15px;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
 
 .review-carousel-image img {
@@ -2690,99 +2709,104 @@ html {
   object-fit: contain;
 }
 
-/* ===== BADGE ===== */
-.review-carousel-badge {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  background: #fff;
-  padding: 4px 12px;
-  border-radius: 20px;
-  font-size: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
+/* =========================
+   CONTENT
+========================= */
 
-/* ===== CONTENT ===== */
 .review-carousel-content {
-  padding: 20px;
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
-}
 
-/* ===== BUTTONS ===== */
-.card-buttons {
-  margin-top: auto;
-  display: flex;
-  flex-direction: column;
   gap: 10px;
 }
 
+.review-carousel-content h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.review-carousel-content p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
 .more-info-btn {
-  padding: 10px;
+  margin-top: 10px;
+  padding: 10px 14px;
   border: none;
   background: #000;
   color: #fff;
   border-radius: 8px;
   cursor: pointer;
+  transition: 0.2s;
+}
+
+.more-info-btn:hover {
+  background: #333;
 }
 
 .section-btn-primary {
+  margin-top: auto;
+  display: block;
   text-align: center;
   padding: 10px;
-  background: #eee;
   border-radius: 8px;
+  background: #eee;
   text-decoration: none;
   color: #000;
 }
 
-/* ===== MORE INFO ===== */
+/* =========================
+   MORE INFO (СТАБИЛЬНАЯ АНИМАЦИЯ)
+========================= */
+
 .more-info {
-  display: grid;
-  grid-template-rows: 0fr;
+  max-height: 0;
   opacity: 0;
-  transform: translateY(-6px);
-  transition:
-    grid-template-rows 0.35s ease,
-    opacity 0.2s ease,
-    transform 0.35s ease;
-}
-
-/* ВАЖНО: чтобы контент не ломал grid */
-.more-info > * {
   overflow: hidden;
-}
-.more-info {
-  will-change: grid-template-rows, opacity, transform;
+  transform: translateY(-4px);
+  transition:
+    max-height 0.35s ease,
+    opacity 0.2s ease,
+    transform 0.3s ease;
 }
 
-/* ОТКРЫТОЕ СОСТОЯНИЕ */
 .review-carousel-card.is-open .more-info {
-  grid-template-rows: 1fr;
+  max-height: 160px;
   opacity: 1;
   transform: translateY(0);
-  margin-top: 10px;
+  margin-top: 8px;
 }
-/* ===== СТРЕЛКИ ===== */
+
+/* =========================
+   ARROWS
+========================= */
+
 .carousel-arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  z-index: 50; /* 🔥 поверх всего */
+  z-index: 10;
   width: 44px;
   height: 44px;
   border-radius: 50%;
   border: none;
   background: #000;
   color: #fff;
-  font-size: 20px;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* 🔥 ВАЖНО: стрелки ВНЕ контейнера */
+.carousel-arrow:hover {
+  background: #444;
+}
+
 .carousel-arrow.prev {
   left: 10px;
 }
@@ -2791,9 +2815,10 @@ html {
   right: 10px;
 }
 
-.carousel-arrow:hover {
-  background: #444;
-}
+/* =========================
+   GRADIENT EDGES
+========================= */
+
 .carousel-wrapper::before,
 .carousel-wrapper::after {
   content: "";
@@ -2807,26 +2832,47 @@ html {
 
 .carousel-wrapper::before {
   left: 0;
-  background: linear-gradient(to right, white, transparent);
+  background: linear-gradient(to right, #fff, transparent);
 }
 
 .carousel-wrapper::after {
   right: 0;
-  background: linear-gradient(to left, white, transparent);
+  background: linear-gradient(to left, #fff, transparent);
 }
 
-/* ===== MOBILE ===== */
+/* =========================
+   MOBILE
+========================= */
+
 @media (max-width: 768px) {
   .carousel-wrapper {
     padding: 0 15px;
+  }
+
+  .carousel-track {
+    gap: 15px;
   }
 
   .carousel-card {
     flex: 0 0 260px;
   }
 
+  .review-carousel-card {
+    min-height: 480px;
+  }
+
   .carousel-arrow {
     display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-card {
+    flex: 0 0 85%;
+  }
+
+  .review-carousel-card {
+    min-height: auto;
   }
 }
 /*  ZOOM на мобилке отключаем */
