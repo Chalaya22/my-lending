@@ -556,29 +556,39 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // ===== DRAG (СТАБИЛЬНЫЙ) =====
-  wrapper.addEventListener("mousedown", (e) => {
-    startX = e.pageX;
-    startPos = position;
-    isDragging = false;
+  wrapper.addEventListener(
+    "touchstart",
+    (e) => {
+      startX = e.touches[0].clientX;
+      startPos = position;
+      isDragging = false;
+    },
+    { passive: true },
+  );
 
-    const move = (e) => {
-      const walk = startX - e.pageX;
+  wrapper.addEventListener(
+    "touchmove",
+    (e) => {
+      const x = e.touches[0].clientX;
+      const diff = startX - x;
 
-      if (Math.abs(walk) > 10) isDragging = true;
+      if (Math.abs(diff) > 5) isDragging = true;
 
-      position = Math.min(Math.max(startPos + walk, 0), max());
+      const max = track.scrollWidth - wrapper.clientWidth;
+
+      position = startPos + diff;
+
+      if (position < 0) position = 0;
+      if (position > max) position = max;
+
       track.style.transition = "none";
       track.style.transform = `translateX(-${position}px)`;
-    };
+    },
+    { passive: true },
+  );
 
-    const stop = () => {
-      track.style.transition = "0.3s ease";
-      document.removeEventListener("mousemove", move);
-      document.removeEventListener("mouseup", stop);
-      setTimeout(() => (isDragging = false), 50);
-    };
-
-    document.addEventListener("mousemove", move);
-    document.addEventListener("mouseup", stop);
+  wrapper.addEventListener("touchend", () => {
+    track.style.transition = "transform 0.35s ease";
+    setTimeout(() => (isDragging = false), 50);
   });
 });
