@@ -556,6 +556,9 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // ===== DRAG (СТАБИЛЬНЫЙ) =====
+  let rafId = null;
+  let targetPosition = 0;
+
   wrapper.addEventListener(
     "touchstart",
     (e) => {
@@ -576,19 +579,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const max = track.scrollWidth - wrapper.clientWidth;
 
-      position = startPos + diff;
+      targetPosition = startPos + diff;
 
-      if (position < 0) position = 0;
-      if (position > max) position = max;
+      if (targetPosition < 0) targetPosition = 0;
+      if (targetPosition > max) targetPosition = max;
 
-      track.style.transition = "none";
-      track.style.transform = `translateX(-${position}px)`;
+      if (!rafId) {
+        rafId = requestAnimationFrame(() => {
+          track.style.transition = "none";
+          track.style.transform = `translateX(-${targetPosition}px)`;
+          rafId = null;
+        });
+      }
     },
     { passive: true },
   );
 
   wrapper.addEventListener("touchend", () => {
     track.style.transition = "transform 0.35s ease";
-    setTimeout(() => (isDragging = false), 50);
+    position = targetPosition;
+    isDragging = false;
   });
 });
