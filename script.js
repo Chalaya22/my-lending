@@ -511,41 +511,49 @@ document.addEventListener("DOMContentLoaded", () => {
   let position = 0;
   const gap = 24;
 
+  let rafId = null;
+
   // =========================
-  // SIZE HELPERS
+  // HELPERS
   // =========================
   const getStep = () => cards[0].offsetWidth + gap;
   const getMax = () => track.scrollWidth - wrapper.clientWidth;
 
-  const setPosition = (value, withAnimation = true) => {
+  const applyTransform = (value, withAnimation = false) => {
+    if (rafId) cancelAnimationFrame(rafId);
+
+    rafId = requestAnimationFrame(() => {
+      track.style.transition = withAnimation ? "transform 0.35s ease" : "none";
+
+      track.style.transform = `translate3d(-${value}px, 0, 0)`;
+    });
+  };
+
+  const setPosition = (value, withAnimation = false) => {
     const max = getMax();
-
     position = Math.max(0, Math.min(value, max));
-
-    track.style.transition = withAnimation ? "transform 0.35s ease" : "none";
-
-    track.style.transform = `translate3d(-${position}px, 0, 0)`;
+    applyTransform(position, withAnimation);
   };
 
   const snapToCard = () => {
     const step = getStep();
     const snapped = Math.round(position / step) * step;
-    setPosition(snapped);
+    setPosition(snapped, true);
   };
 
   // =========================
   // BUTTONS
   // =========================
   next.addEventListener("click", () => {
-    setPosition(position + getStep());
+    setPosition(position + getStep(), true);
   });
 
   prev.addEventListener("click", () => {
-    setPosition(position - getStep());
+    setPosition(position - getStep(), true);
   });
 
   // =========================
-  // TOUCH / DRAG
+  // TOUCH (FIXED)
   // =========================
   let startX = 0;
   let startPosition = 0;
@@ -571,9 +579,9 @@ document.addEventListener("DOMContentLoaded", () => {
       const currentX = e.touches[0].clientX;
       const diff = startX - currentX;
 
-      const newPosition = startPosition + diff;
+      const newPos = startPosition + diff;
 
-      setPosition(newPosition, false);
+      setPosition(newPos, false);
     },
     { passive: true },
   );
@@ -582,12 +590,11 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!isDragging) return;
 
     isDragging = false;
-
     snapToCard();
   });
 
   // =========================
-  // MOUSE (десктоп drag)
+  // MOUSE DRAG
   // =========================
   let isMouseDown = false;
 
@@ -614,7 +621,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // =========================
-  // MORE INFO (НОРМАЛЬНЫЙ TOGGLE)
+  // MORE INFO (FIXED)
   // =========================
   document.querySelectorAll(".more-info-btn").forEach((btn) => {
     btn.addEventListener("click", (e) => {
@@ -625,28 +632,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const isOpen = card.classList.contains("is-open");
 
-      // закрыть текущую
       if (isOpen) {
         card.classList.remove("is-open");
         btn.textContent = "Подробнее";
         return;
       }
 
-      // закрыть остальные
       document.querySelectorAll(".review-carousel-card").forEach((c) => {
         c.classList.remove("is-open");
         const b = c.querySelector(".more-info-btn");
         if (b) b.textContent = "Подробнее";
       });
 
-      // открыть текущую
       card.classList.add("is-open");
       btn.textContent = "Скрыть";
     });
   });
 
   // =========================
-  // RESIZE FIX
+  // RESIZE
   // =========================
   window.addEventListener("resize", () => {
     snapToCard();
