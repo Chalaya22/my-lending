@@ -2662,8 +2662,11 @@ html {
   gap: 24px;
   align-items: flex-start; /* важно */
   transition: transform 0.4s ease;
+
+  transform: translate3d(0, 0, 0);
   will-change: transform;
-  transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
 }
 
 /* =========================
@@ -2673,6 +2676,9 @@ html {
 .carousel-card {
   flex: 0 0 320px;
   display: flex;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  contain: layout paint;
 }
 
 /* =========================
@@ -2686,8 +2692,10 @@ html {
   min-height: 520px; /* одинаковая высота */
   background: #fff;
   border-radius: 16px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   transition: transform 0.25s ease;
+  backface-visibility: hidden;
+  transform: translateZ(0);
 }
 
 .review-carousel-card:hover {
