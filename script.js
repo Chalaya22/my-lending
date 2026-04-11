@@ -511,6 +511,9 @@ document.addEventListener("DOMContentLoaded", () => {
   let position = 0;
   const gap = 24;
 
+  let startX = 0;
+  let startPosition = 0;
+  let isDragging = false;
   let rafId = null;
 
   // =========================
@@ -519,23 +522,22 @@ document.addEventListener("DOMContentLoaded", () => {
   const getStep = () => cards[0].offsetWidth + gap;
   const getMax = () => track.scrollWidth - wrapper.clientWidth;
 
-  const applyTransform = (value, withAnimation = false) => {
+  const render = (value, animate = false) => {
     if (rafId) cancelAnimationFrame(rafId);
 
     rafId = requestAnimationFrame(() => {
-      track.style.transition = withAnimation ? "transform 0.35s ease" : "none";
-
-      track.style.transform = `translate3d(-${value}px, 0, 0)`;
+      track.style.transition = animate ? "transform 0.3s ease" : "none";
+      track.style.transform = `translate3d(-${value}px,0,0)`;
     });
   };
 
-  const setPosition = (value, withAnimation = false) => {
+  const setPosition = (value, animate = false) => {
     const max = getMax();
     position = Math.max(0, Math.min(value, max));
-    applyTransform(position, withAnimation);
+    render(position, animate);
   };
 
-  const snapToCard = () => {
+  const snap = () => {
     const step = getStep();
     const snapped = Math.round(position / step) * step;
     setPosition(snapped, true);
@@ -553,12 +555,8 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // =========================
-  // TOUCH (FIXED)
+  // TOUCH (ГЛАВНЫЙ ФИКС)
   // =========================
-  let startX = 0;
-  let startPosition = 0;
-  let isDragging = false;
-
   wrapper.addEventListener(
     "touchstart",
     (e) => {
@@ -576,21 +574,21 @@ document.addEventListener("DOMContentLoaded", () => {
     (e) => {
       if (!isDragging) return;
 
+      e.preventDefault(); // 🔥 КЛЮЧЕВОЙ ФИКС
+
       const currentX = e.touches[0].clientX;
       const diff = startX - currentX;
 
-      const newPos = startPosition + diff;
-
-      setPosition(newPos, false);
+      setPosition(startPosition + diff);
     },
-    { passive: true },
+    { passive: false },
   );
 
   wrapper.addEventListener("touchend", () => {
     if (!isDragging) return;
 
     isDragging = false;
-    snapToCard();
+    snap();
   });
 
   // =========================
@@ -610,18 +608,18 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!isMouseDown) return;
 
     const diff = startX - e.clientX;
-    setPosition(startPosition + diff, false);
+    setPosition(startPosition + diff);
   });
 
   window.addEventListener("mouseup", () => {
     if (!isMouseDown) return;
 
     isMouseDown = false;
-    snapToCard();
+    snap();
   });
 
   // =========================
-  // MORE INFO (FIXED)
+  // MORE INFO
   // =========================
   document.querySelectorAll(".more-info-btn").forEach((btn) => {
     btn.addEventListener("click", (e) => {
@@ -652,7 +650,5 @@ document.addEventListener("DOMContentLoaded", () => {
   // =========================
   // RESIZE
   // =========================
-  window.addEventListener("resize", () => {
-    snapToCard();
-  });
+  window.addEventListener("resize", snap);
 });
