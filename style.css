@@ -2648,8 +2648,8 @@ html {
 .carousel-wrapper {
   position: relative;
   overflow: hidden;
+  max-width: 100%;
   padding: 0 40px;
-  box-sizing: border-box;
 }
 
 /* =========================
@@ -2664,6 +2664,11 @@ html {
   transition: transform 0.4s ease;
   will-change: transform;
   transform: translate3d(0, 0, 0);
+  width: 100%;
+  min-width: 0;
+}
+body {
+  overflow-x: hidden;
 }
 
 /* =========================
@@ -2671,7 +2676,10 @@ html {
 ========================= */
 
 .carousel-card {
-  flex: 0 0 320px;
+  flex: 0 0 auto;
+  width: 320px;
+  min-width: 0;
+  flex-shrink: 0;
   display: flex;
   align-items: stretch;
 }
@@ -2879,6 +2887,9 @@ html {
 .carousel-wrapper::after {
   right: 0;
   background: linear-gradient(to left, #fff, transparent);
+}
+.main-content {
+  /* overflow: hidden; */
 }
 
 /* =========================
@@ -3253,13 +3264,11 @@ body {
 }
 .grid-2 {
   display: grid;
-  grid-template-columns: 1fr 320px;
+  grid-template-columns: minmax(0, 1fr) 320px;
   gap: 24px;
   align-items: start;
 }
-.main-content {
-  overflow: hidden;
-}
+.main-content, aside{min-width: 0;}
 
 .card {
   border: 1px solid rgba(207, 162, 74, 0.25);
