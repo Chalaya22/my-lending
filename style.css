@@ -2630,7 +2630,7 @@ html {
 .zoom-container:hover .zoom-result {
   display: block;
 }
-/* _______________________________карусель в ингридиентах */
+/* КАРУСЕЛЬ */
 /* =========================
    SECTION
 ========================= */
@@ -2650,7 +2650,7 @@ html {
   overflow: hidden;
   padding: 0 40px;
   box-sizing: border-box;
-  touch-action: none;
+  touch-action: pan-x;
 }
 
 /* =========================
@@ -2681,6 +2681,7 @@ html {
   flex-direction: column;
   gap: 5px; /* необязательно: задает отступ между кнопками */
   align-items: flex-start;
+  margin-top: auto;
 }
 
 /* =========================
@@ -2916,6 +2917,7 @@ html {
     min-height: auto;
   }
 }
+
 @media (max-width: 768px) {
   .zoom-lens {
     display: none !important;
