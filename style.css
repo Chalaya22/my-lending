@@ -2661,12 +2661,12 @@ html {
   display: flex;
   gap: 24px;
   align-items: flex-start; /* важно */
-  transition: transform 0.4s ease;
 
   transform: translate3d(0, 0, 0);
   will-change: transform;
   backface-visibility: hidden;
-  /* -webkit-transform: translate3d(0, 0, 0); */
+  -webkit-transform: translate3d(0, 0, 0);
+  contain: strict;
 }
 
 /* =========================
@@ -2692,14 +2692,10 @@ html {
   min-height: 520px; /* одинаковая высота */
   background: #fff;
   border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: none;
   transition: transform 0.25s ease;
   backface-visibility: hidden;
   transform: translateZ(0);
-}
-
-.review-carousel-card:hover {
-  transform: translateY(-4px);
 }
 
 /* =========================
