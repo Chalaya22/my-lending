@@ -2650,7 +2650,6 @@ html {
   overflow: hidden;
   padding: 0 40px;
   box-sizing: border-box;
-  touch-action: pan-x;
 }
 
 /* =========================
