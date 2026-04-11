@@ -501,22 +501,121 @@ document.querySelectorAll(".zoom-v2").forEach((container) => {
   });
 });
 //___________________________________--КАРУСЕЛЬ
-
 document.addEventListener("DOMContentLoaded", () => {
   const track = document.querySelector(".carousel-track");
+  const wrapper = document.querySelector(".carousel-wrapper");
   const next = document.querySelector(".next");
   const prev = document.querySelector(".prev");
-  const wrapper = document.querySelector(".carousel-wrapper");
   const cards = document.querySelectorAll(".carousel-card");
 
   let position = 0;
   const gap = 24;
 
+  // =========================
+  // SIZE HELPERS
+  // =========================
+  const getStep = () => cards[0].offsetWidth + gap;
+  const getMax = () => track.scrollWidth - wrapper.clientWidth;
+
+  const setPosition = (value, withAnimation = true) => {
+    const max = getMax();
+
+    position = Math.max(0, Math.min(value, max));
+
+    track.style.transition = withAnimation ? "transform 0.35s ease" : "none";
+
+    track.style.transform = `translate3d(-${position}px, 0, 0)`;
+  };
+
+  const snapToCard = () => {
+    const step = getStep();
+    const snapped = Math.round(position / step) * step;
+    setPosition(snapped);
+  };
+
+  // =========================
+  // BUTTONS
+  // =========================
+  next.addEventListener("click", () => {
+    setPosition(position + getStep());
+  });
+
+  prev.addEventListener("click", () => {
+    setPosition(position - getStep());
+  });
+
+  // =========================
+  // TOUCH / DRAG
+  // =========================
   let startX = 0;
-  let startPos = 0;
+  let startPosition = 0;
   let isDragging = false;
 
-  // ===== MORE INFO =====
+  wrapper.addEventListener(
+    "touchstart",
+    (e) => {
+      startX = e.touches[0].clientX;
+      startPosition = position;
+      isDragging = true;
+
+      track.style.transition = "none";
+    },
+    { passive: true },
+  );
+
+  wrapper.addEventListener(
+    "touchmove",
+    (e) => {
+      if (!isDragging) return;
+
+      const currentX = e.touches[0].clientX;
+      const diff = startX - currentX;
+
+      const newPosition = startPosition + diff;
+
+      setPosition(newPosition, false);
+    },
+    { passive: true },
+  );
+
+  wrapper.addEventListener("touchend", () => {
+    if (!isDragging) return;
+
+    isDragging = false;
+
+    snapToCard();
+  });
+
+  // =========================
+  // MOUSE (десктоп drag)
+  // =========================
+  let isMouseDown = false;
+
+  wrapper.addEventListener("mousedown", (e) => {
+    isMouseDown = true;
+    startX = e.clientX;
+    startPosition = position;
+
+    track.style.transition = "none";
+  });
+
+  window.addEventListener("mousemove", (e) => {
+    if (!isMouseDown) return;
+
+    const diff = startX - e.clientX;
+    setPosition(startPosition + diff, false);
+  });
+
+  window.addEventListener("mouseup", () => {
+    if (!isMouseDown) return;
+
+    isMouseDown = false;
+    snapToCard();
+  });
+
+  // =========================
+  // MORE INFO (НОРМАЛЬНЫЙ TOGGLE)
+  // =========================
   document.querySelectorAll(".more-info-btn").forEach((btn) => {
     btn.addEventListener("click", (e) => {
       e.preventDefault();
@@ -526,78 +625,30 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const isOpen = card.classList.contains("is-open");
 
-      // закрываем все
+      // закрыть текущую
+      if (isOpen) {
+        card.classList.remove("is-open");
+        btn.textContent = "Подробнее";
+        return;
+      }
+
+      // закрыть остальные
       document.querySelectorAll(".review-carousel-card").forEach((c) => {
         c.classList.remove("is-open");
         const b = c.querySelector(".more-info-btn");
         if (b) b.textContent = "Подробнее";
       });
 
-      // открываем текущую
-      if (!isOpen) {
-        card.classList.add("is-open");
-        btn.textContent = "Скрыть";
-      }
+      // открыть текущую
+      card.classList.add("is-open");
+      btn.textContent = "Скрыть";
     });
   });
 
-  // ===== CAROUSEL =====
-  const step = () => cards[0].offsetWidth + gap;
-  const max = () => track.scrollWidth - wrapper.clientWidth;
-
-  next.addEventListener("click", () => {
-    position = Math.min(position + step(), max());
-    track.style.transform = `translateX(-${position}px)`;
-  });
-
-  prev.addEventListener("click", () => {
-    position = Math.max(position - step(), 0);
-    track.style.transform = `translateX(-${position}px)`;
-  });
-
-  // ===== DRAG (СТАБИЛЬНЫЙ) =====
-  let rafId = null;
-  let targetPosition = 0;
-
-  wrapper.addEventListener(
-    "touchstart",
-    (e) => {
-      startX = e.touches[0].clientX;
-      startPos = position;
-      isDragging = false;
-    },
-    { passive: true },
-  );
-
-  wrapper.addEventListener(
-    "touchmove",
-    (e) => {
-      const x = e.touches[0].clientX;
-      const diff = startX - x;
-
-      if (Math.abs(diff) > 5) isDragging = true;
-
-      const max = track.scrollWidth - wrapper.clientWidth;
-
-      targetPosition = startPos + diff;
-
-      if (targetPosition < 0) targetPosition = 0;
-      if (targetPosition > max) targetPosition = max;
-
-      if (!rafId) {
-        rafId = requestAnimationFrame(() => {
-          track.style.transition = "none";
-          track.style.transform = `translateX(-${targetPosition}px)`;
-          rafId = null;
-        });
-      }
-    },
-    { passive: true },
-  );
-
-  wrapper.addEventListener("touchend", () => {
-    track.style.transition = "transform 0.35s ease";
-    position = targetPosition;
-    isDragging = false;
+  // =========================
+  // RESIZE FIX
+  // =========================
+  window.addEventListener("resize", () => {
+    snapToCard();
   });
 });

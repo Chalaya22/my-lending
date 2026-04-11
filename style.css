@@ -2648,6 +2648,7 @@ html {
 .carousel-wrapper {
   position: relative;
   overflow: hidden;
+  touch-action: pan-y;
   padding: 0 40px;
   box-sizing: border-box;
 }
@@ -2662,6 +2663,7 @@ html {
   align-items: flex-start; /* важно */
   transition: transform 0.4s ease;
   will-change: transform;
+  transform: translateZ(0);
 }
 
 /* =========================
@@ -2716,7 +2718,7 @@ html {
 .review-carousel-content {
   display: flex;
   flex-direction: column;
-
+  padding: 12px 16px 16px;
   gap: 10px;
 }
 
