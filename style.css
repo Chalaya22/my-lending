@@ -2648,7 +2648,6 @@ html {
 .carousel-wrapper {
   position: relative;
   overflow: hidden;
-  touch-action: none;
   padding: 0 40px;
   box-sizing: border-box;
 }
@@ -2661,12 +2660,8 @@ html {
   display: flex;
   gap: 24px;
   align-items: flex-start; /* важно */
-
-  transform: translate3d(0, 0, 0);
+  transition: transform 0.4s ease;
   will-change: transform;
-  backface-visibility: hidden;
-  -webkit-transform: translate3d(0, 0, 0);
-  contain: strict;
 }
 
 /* =========================
@@ -2676,9 +2671,12 @@ html {
 .carousel-card {
   flex: 0 0 320px;
   display: flex;
-  backface-visibility: hidden;
-  transform: translateZ(0);
-  contain: layout paint;
+}
+.card-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 5px; /* необязательно: задает отступ между кнопками */
+  align-items: flex-start;
 }
 
 /* =========================
@@ -2692,10 +2690,12 @@ html {
   min-height: 520px; /* одинаковая высота */
   background: #fff;
   border-radius: 16px;
-  box-shadow: none;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
   transition: transform 0.25s ease;
-  backface-visibility: hidden;
-  transform: translateZ(0);
+}
+
+.review-carousel-card:hover {
+  transform: translateY(-4px);
 }
 
 /* =========================
@@ -2756,15 +2756,42 @@ html {
   background: #333;
 }
 
-.section-btn-primary {
-  margin-top: auto;
+.section-btn-primary-carousel {
   display: block;
-  text-align: center;
-  padding: 10px;
-  border-radius: 8px;
-  background: #eee;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 10px 26px;
+  margin-bottom: 14px;
+  border-radius: 9px;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+
+  color: var(--text-main);
+  background: linear-gradient(135deg, #f6f1e6, #e9dcc1, #fdf8ec);
+
+  border: 1px solid rgba(207, 162, 74, 0.35);
   text-decoration: none;
-  color: #000;
+  cursor: pointer;
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.7);
+
+  transition: all 0.35s ease;
+  overflow: hidden;
+}
+.section-btn-primary-carousel:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 18px 42px rgba(0, 0, 0, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
 }
 
 /* =========================
@@ -2880,45 +2907,6 @@ html {
 
   .review-carousel-card {
     min-height: auto;
-  }
-}
-/*  ZOOM на мобилке отключаем */
-@media (max-width: 768px) {
-  .zoom-result {
-    display: none !important;
-  }
-}
-@media (max-width: 768px) {
-  .buttons-row {
-    flex-direction: column; /* кнопки в колонку */
-    gap: 8px; /* расстояние между кнопками */
-  }
-
-  .review-card-modal-btn {
-    width: 100%; /* кнопки растягиваются на всю ширину контейнера */
-  }
-}
-@media (max-width: 768px) {
-  .review-card-modal-btn {
-    height: auto; /* пусть высота определяется контентом */
-    padding: 10px 15px; /* одинаковые внутренние отступы */
-    box-sizing: border-box; /* учитываем паддинги */
-  }
-}
-@media (max-width: 768px) {
-  .review-card-modal {
-    width: 100%;
-    min-height: auto;
-  }
-}
-@media (max-width: 768px) {
-  .review-card-modal-details {
-    max-height: 0;
-    transition: max-height 0.4s ease;
-  }
-
-  .review-card-modal-details.show {
-    max-height: 1000px; /* или достаточно большое значение */
   }
 }
 @media (max-width: 768px) {

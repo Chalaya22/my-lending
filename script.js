@@ -503,124 +503,19 @@ document.querySelectorAll(".zoom-v2").forEach((container) => {
 //___________________________________--КАРУСЕЛЬ
 document.addEventListener("DOMContentLoaded", () => {
   const track = document.querySelector(".carousel-track");
-  const wrapper = document.querySelector(".carousel-wrapper");
   const next = document.querySelector(".next");
   const prev = document.querySelector(".prev");
+  const wrapper = document.querySelector(".carousel-wrapper");
   const cards = document.querySelectorAll(".carousel-card");
 
   let position = 0;
   const gap = 24;
 
   let startX = 0;
-  let startPosition = 0;
+  let startPos = 0;
   let isDragging = false;
-  let rafId = null;
 
-  // =========================
-  // HELPERS
-  // =========================
-  const getStep = () => cards[0].offsetWidth + gap;
-  const getMax = () => track.scrollWidth - wrapper.clientWidth;
-
-  const render = (value, animate = false) => {
-    if (rafId) cancelAnimationFrame(rafId);
-
-    rafId = requestAnimationFrame(() => {
-      track.style.transition = animate ? "transform 0.3s ease" : "none";
-      track.style.transform = `translate3d(-${value}px,0,0)`;
-    });
-  };
-
-  const setPosition = (value, animate = false) => {
-    const max = getMax();
-    position = Math.max(0, Math.min(value, max));
-    render(position, animate);
-  };
-
-  const snap = () => {
-    const step = getStep();
-    const snapped = Math.round(position / step) * step;
-    setPosition(snapped, true);
-  };
-
-  // =========================
-  // BUTTONS
-  // =========================
-  next.addEventListener("click", () => {
-    setPosition(position + getStep(), true);
-  });
-
-  prev.addEventListener("click", () => {
-    setPosition(position - getStep(), true);
-  });
-
-  // =========================
-  // TOUCH (ГЛАВНЫЙ ФИКС)
-  // =========================
-  wrapper.addEventListener(
-    "touchstart",
-    (e) => {
-      startX = e.touches[0].clientX;
-      startPosition = position;
-      isDragging = true;
-
-      track.style.transition = "none";
-    },
-    { passive: true },
-  );
-
-  wrapper.addEventListener(
-    "touchmove",
-    (e) => {
-      if (!isDragging) return;
-
-      e.preventDefault(); // 🔥 КЛЮЧЕВОЙ ФИКС
-
-      const currentX = e.touches[0].clientX;
-      const diff = startX - currentX;
-
-      setPosition(startPosition + diff);
-    },
-    { passive: false },
-  );
-
-  wrapper.addEventListener("touchend", () => {
-    if (!isDragging) return;
-
-    isDragging = false;
-    snap();
-  });
-
-  // =========================
-  // MOUSE DRAG
-  // =========================
-  let isMouseDown = false;
-
-  wrapper.addEventListener("mousedown", (e) => {
-    isMouseDown = true;
-    startX = e.clientX;
-    startPosition = position;
-
-    track.style.transition = "none";
-  });
-
-  window.addEventListener("mousemove", (e) => {
-    if (!isMouseDown) return;
-
-    const diff = startX - e.clientX;
-    setPosition(startPosition + diff);
-  });
-
-  window.addEventListener("mouseup", () => {
-    if (!isMouseDown) return;
-
-    isMouseDown = false;
-    snap();
-  });
-
-  // =========================
-  // MORE INFO
-  // =========================
+  // ===== MORE INFO =====
   document.querySelectorAll(".more-info-btn").forEach((btn) => {
     btn.addEventListener("click", (e) => {
       e.preventDefault();
@@ -630,25 +525,78 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const isOpen = card.classList.contains("is-open");
 
-      if (isOpen) {
-        card.classList.remove("is-open");
-        btn.textContent = "Подробнее";
-        return;
-      }
-
+      // закрываем все
       document.querySelectorAll(".review-carousel-card").forEach((c) => {
         c.classList.remove("is-open");
         const b = c.querySelector(".more-info-btn");
         if (b) b.textContent = "Подробнее";
       });
 
-      card.classList.add("is-open");
-      btn.textContent = "Скрыть";
+      // открываем текущую
+      if (!isOpen) {
+        card.classList.add("is-open");
+        btn.textContent = "Скрыть";
+      }
     });
   });
 
-  // =========================
-  // RESIZE
-  // =========================
-  window.addEventListener("resize", snap);
+  // ===== CAROUSEL =====
+  const step = () => cards[0].offsetWidth + gap;
+  const max = () => track.scrollWidth - wrapper.clientWidth;
+
+  next.addEventListener("click", () => {
+    position = Math.min(position + step(), max());
+    track.style.transform = `translateX(-${position}px)`;
+  });
+
+  prev.addEventListener("click", () => {
+    position = Math.max(position - step(), 0);
+    track.style.transform = `translateX(-${position}px)`;
+  });
+
+  // ===== DRAG (СТАБИЛЬНЫЙ) =====
+  let rafId = null;
+  let targetPosition = 0;
+
+  wrapper.addEventListener(
+    "touchstart",
+    (e) => {
+      startX = e.touches[0].clientX;
+      startPos = position;
+      isDragging = false;
+    },
+    { passive: true },
+  );
+
+  wrapper.addEventListener(
+    "touchmove",
+    (e) => {
+      const x = e.touches[0].clientX;
+      const diff = startX - x;
+
+      if (Math.abs(diff) > 5) isDragging = true;
+
+      const max = track.scrollWidth - wrapper.clientWidth;
+
+      targetPosition = startPos + diff;
+
+      if (targetPosition < 0) targetPosition = 0;
+      if (targetPosition > max) targetPosition = max;
+
+      if (!rafId) {
+        rafId = requestAnimationFrame(() => {
+          track.style.transition = "none";
+          track.style.transform = `translateX(-${targetPosition}px)`;
+          rafId = null;
+        });
+      }
+    },
+    { passive: true },
+  );
+
+  wrapper.addEventListener("touchend", () => {
+    track.style.transition = "transform 0.35s ease";
+    position = targetPosition;
+    isDragging = false;
+  });
 });
