@@ -542,7 +542,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // ===== CAROUSEL =====
   const step = () => cards[0].offsetWidth + gap;
-  const max = () => track.scrollWidth - wrapper.clientWidth;
+  const max = () => Math.max(0, track.scrollWidth - wrapper.clientWidth);
 
   next.addEventListener("click", () => {
     position = Math.min(position + step(), max());

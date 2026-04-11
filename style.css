@@ -2647,9 +2647,11 @@ html {
 
 .carousel-wrapper {
   position: relative;
-  overflow: hidden;
   max-width: 100%;
+  overflow: hidden;
   padding: 0 40px;
+  box-sizing: border-box;
+  touch-action: pan-y;
 }
 
 /* =========================
@@ -2658,17 +2660,11 @@ html {
 
 .carousel-track {
   display: flex;
-  flex: 1;
   gap: 24px;
-  align-items: flex-start; /* важно */
+  align-items: stretch;
   transition: transform 0.4s ease;
   will-change: transform;
-  transform: translate3d(0, 0, 0);
-  width: 100%;
-  min-width: 0;
-}
-body {
-  overflow-x: hidden;
+  user-select: none;
 }
 
 /* =========================
@@ -2676,12 +2672,11 @@ body {
 ========================= */
 
 .carousel-card {
-  flex: 0 0 auto;
+  flex: 0 0 320;
   width: 320px;
   min-width: 0;
   flex-shrink: 0;
   display: flex;
-  align-items: stretch;
 }
 .card-buttons {
   display: flex;
@@ -2740,8 +2735,6 @@ body {
   flex: 1;
   padding: 12px 16px 16px;
   gap: 10px;
-  height: 100%;
-  overflow: visible;
 }
 
 .review-carousel-content h3 {
@@ -2820,14 +2813,14 @@ body {
   max-height: 0;
   opacity: 0;
   overflow: hidden;
-  transform: translateY(-4px);
+
   transition: all 0.3s ease;
 }
 
 .review-carousel-card.is-open .more-info {
-  max-height: 1000px;
+  max-height: 400px;
   opacity: 1;
-  transform: translateY(0);
+
   margin-top: 8px;
 }
 
@@ -3268,7 +3261,10 @@ body {
   gap: 24px;
   align-items: start;
 }
-.main-content, aside{min-width: 0;}
+.main-content,
+aside {
+  min-width: 0;
+}
 
 .card {
   border: 1px solid rgba(207, 162, 74, 0.25);
