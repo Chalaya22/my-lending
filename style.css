@@ -2748,13 +2748,14 @@ html {
 }
 
 .section-btn-carousel {
-  display: inline-block;
-  padding: 10px 14px;
+  display: inline-flex; /* или flex, если кнопка на всю ширину */
+  justify-content: center; /* Центрирует по горизонтали */
+  align-items: center; /* Центрирует по вертикали */
+  padding: 10px 20px;
 
   text-decoration: none;
   background: #eee;
 
-  align-items: center;
   gap: 10px;
 
   margin-bottom: 14px;
@@ -2764,7 +2765,6 @@ html {
   font-size: 13px;
   font-weight: 500;
   letter-spacing: 0.18em;
-  text-transform: uppercase;
 
   color: var(--text-main);
   background: linear-gradient(135deg, #f6f1e6, #e9dcc1, #fdf8ec);
