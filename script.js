@@ -535,3 +535,42 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+/* --------- для видео с Instagram  на услугу Записаться  */
+
+document.addEventListener("DOMContentLoaded", () => {
+  const modal = document.getElementById("videoModal");
+  const trigger = document.getElementById("videoTrigger");
+  const closeBtn = document.getElementById("closeVideo");
+  const video = document.getElementById("videoPlayer");
+
+  function openVideo() {
+    modal.style.display = "flex";
+    document.body.classList.add("modal-open");
+
+    video.currentTime = 0;
+
+    setTimeout(() => {
+      video.play();
+    }, 120);
+  }
+
+  function closeVideo() {
+    modal.style.display = "none";
+    document.body.classList.remove("modal-open");
+
+    video.pause();
+    video.currentTime = 0;
+  }
+
+  trigger.addEventListener("click", openVideo);
+  closeBtn.addEventListener("click", closeVideo);
+
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) closeVideo();
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeVideo();
+  });
+});
