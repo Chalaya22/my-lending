@@ -4381,6 +4381,78 @@ dl.definition dt {
   font-size: 14px;
   color: #7a7a7a;
 }
+/* ---------css для блока Косметология на странице Макияж */
+/* 🔥 ПРЕМИУМ БЛОК (золото / латте) */
+.after-procedure {
+  margin: 60px 0;
+  padding: 32px;
+
+  border-radius: 20px;
+
+  background: linear-gradient(
+    135deg,
+    #f8f5f1 0%,
+    #f3e8dc 40%,
+    #efe1d1 70%,
+    #f9f6f2 100%
+  );
+
+  border: 1px solid rgba(212, 175, 55, 0.25);
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+/* заголовок */
+.after-procedure h3 {
+  font-size: 22px;
+  margin-bottom: 16px;
+  color: #3a2f28;
+}
+
+/* текст */
+.after-procedure p {
+  color: #5a4b42;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+/* список */
+.after-procedure .related-list {
+  margin: 20px 0;
+  padding-left: 18px;
+}
+
+.after-procedure .related-list li {
+  margin-bottom: 10px;
+  color: #4a3d35;
+}
+
+/* 🔥 КНОПКА */
+.after-procedure .section-btn-makeup {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 12px 20px;
+
+  border-radius: 30px;
+
+  background: linear-gradient(135deg, #d4af37, #f2d27a);
+
+  color: #2b2b2b;
+  font-weight: 500;
+  text-decoration: none;
+
+  box-shadow: 0 6px 18px rgba(212, 175, 55, 0.3);
+
+  transition: all 0.3s ease;
+}
+
+/* hover */
+.after-procedure .section-btn-makeup:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(212, 175, 55, 0.4);
+}
 
 /* ---------css для видео с Instagram  на услугу Записаться  */
 
