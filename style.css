@@ -4286,6 +4286,102 @@ dl.definition dt {
     0 18px 42px rgba(0, 0, 0, 0.18),
     inset 0 1px 0 rgba(255, 255, 255, 0.8);
 }
+/* ===== MAKEUP TYPES PREMIUM LUX ===== */
+
+.makeup-types {
+  padding: 70px 20px;
+  background: linear-gradient(180deg, #fffafc, #fffdf7);
+}
+
+/* заголовок */
+.makeup-types .section-title {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* intro */
+.makeup-types .section-intro {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 40px;
+  color: #6b6b6b;
+  line-height: 1.6;
+}
+
+/* GRID */
+.makeup-types-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 22px;
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+/* CARD */
+.makeup-type-card {
+  position: relative;
+  background: linear-gradient(145deg, #fff, #fff7fb);
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+  transition: 0.35s ease;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 220px;
+  overflow: hidden;
+}
+
+/* hover эффект */
+.makeup-type-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 55px rgba(0, 0, 0, 0.12);
+}
+
+/* золотая розовая линия сверху */
+.makeup-type-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(90deg, #f8c6d8, #d4af37, #f3d1b0);
+}
+
+/* заголовок */
+.makeup-type-card h3 {
+  font-size: 17px;
+  margin-bottom: 10px;
+  color: #1e1e1e;
+  line-height: 1.3;
+}
+
+/* текст */
+.makeup-type-card p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 14px;
+}
+
+/* ===== КНОПКА ПРИЖАТА К НИЗУ ===== */
+.section-btn-makeup {
+  margin-top: auto; /* 👈 ключевой момент */
+  display: inline-block;
+  text-align: center;
+  transition: 0.3s ease;
+  box-shadow: 0 8px 20px rgba(212, 175, 55, 0.25);
+}
+
+/* note */
+.section-note {
+  text-align: center;
+  margin-top: 45px;
+  font-size: 14px;
+  color: #7a7a7a;
+}
+
 /* ---------css для видео с Instagram  на услугу Записаться  */
 
 .video-preview {
