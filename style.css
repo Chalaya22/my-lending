@@ -2805,6 +2805,30 @@ html {
 .carousel-arrow.next {
   right: 5px;
 }
+/* .section-btn-carousel.disabled {
+  pointer-events: none;
+  opacity: 0.6;
+  cursor: not-allowed;
+} */
+.effect-level {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border: 1px solid rgba(212, 175, 55, 0.8); /* золотистый */
+  border-radius: 50%;
+  background: transparent;
+  opacity: 0.4;
+}
+
+.dot.active {
+  background: rgba(212, 175, 55, 0.6);
+  opacity: 1;
+}
 
 /* =========================
    MOBILE
