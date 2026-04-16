@@ -73,6 +73,11 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../style.css" />
+    <script>
+      if (window.location.hash) {
+        history.replaceState(null, "", window.location.pathname);
+      }
+    </script>
   </head>
 
   <body>
@@ -2153,36 +2158,36 @@
             <a href="servicii.html" class="section-btn-makeup">
               Посмотреть услуги
             </a>
-          </section>
-          <div class="double-image-gallery">
-            <div class="gallery-item">
-              <img
-                src="../images/makeup/skin-prep-5-800.webp"
-                srcset="
-                  ../images/makeup/skin-prep-5-1200.webp 1200w,
-                  ../images/makeup/skin-prep-5-800.webp   800w,
-                  ../images/makeup/skin-prep-5-400.webp   400w
-                "
-                sizes="(max-width: 768px) 100vw, 800px"
-                alt="Подготовка кожи перед макияжем"
-                loading="lazy"
-              />
-            </div>
+            <div class="double-image-gallery">
+              <div class="gallery-item">
+                <img
+                  src="../images/makeup/skin-prep-5-800.webp"
+                  srcset="
+                    ../images/makeup/skin-prep-5-1200.webp 1200w,
+                    ../images/makeup/skin-prep-5-800.webp   800w,
+                    ../images/makeup/skin-prep-5-400.webp   400w
+                  "
+                  sizes="(max-width: 768px) 100vw, 800px"
+                  alt="Подготовка кожи перед макияжем"
+                  loading="lazy"
+                />
+              </div>
 
-            <div class="gallery-item">
-              <img
-                src="../images/makeup/skin-prep-6-800.webp"
-                srcset="
-                  ../images/makeup/skin-prep-6-1200.webp 1200w,
-                  ../images/makeup/skin-prep-6-800.webp   800w,
-                  ../images/makeup/skin-prep-6-400.webp   400w
-                "
-                sizes="(max-width: 768px) 100vw, 800px"
-                alt="Уход перед макияжем"
-                loading="lazy"
-              />
+              <div class="gallery-item">
+                <img
+                  src="../images/makeup/skin-prep-6-800.webp"
+                  srcset="
+                    ../images/makeup/skin-prep-6-1200.webp 1200w,
+                    ../images/makeup/skin-prep-6-800.webp   800w,
+                    ../images/makeup/skin-prep-6-400.webp   400w
+                  "
+                  sizes="(max-width: 768px) 100vw, 800px"
+                  alt="Уход перед макияжем"
+                  loading="lazy"
+                />
+              </div>
             </div>
-          </div>
+          </section>
 
           <!-- БЛОКИ ДЛЯ КЛИННИК -->
           <section class="after-procedure" id="cosmetic-procedure">

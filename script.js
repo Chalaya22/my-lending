@@ -1,3 +1,16 @@
+// ================= SCROLL LOCK FIX =================
+
+window.addEventListener("load", () => {
+  requestAnimationFrame(() => {
+    window.scrollTo(0, 0);
+
+    // Убираем фокус с элементов
+    if (document.activeElement instanceof HTMLElement) {
+      document.activeElement.blur();
+    }
+  });
+});
+
 document.addEventListener("DOMContentLoaded", () => {
   /* =========================
           HAMBURGER MENU
