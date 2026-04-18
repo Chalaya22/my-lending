@@ -21,6 +21,7 @@
 }
 
 /* ---------------- RESET ---------------- */
+
 * {
   margin: 0;
   padding: 0;
@@ -2515,16 +2516,7 @@ html {
   font-size: 14px;
   margin-top: auto;
   align-self: flex-start;
-}
-
-.review-card-modal-btn:hover {
-  transform: translateY(-2px) scale(1.02);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-  background-color: #f7f7f7;
-}
-.review-card-modal-btn:focus {
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+  background: red;
 }
 
 /* премиум карточки к Сотрудничеству */
@@ -2640,7 +2632,36 @@ html {
 .zoom-container:hover .zoom-result {
   display: block;
 }
-/* КАРУСЕЛЬ */
+/*  */
+.premium-section {
+  background: linear-gradient(135deg, #fdfaf6, #f7f2ea);
+  padding: 40px 20px;
+  border-radius: 14px;
+  margin: 40px 0;
+}
+
+/* золотой акцент */
+.review-card-modal.premium {
+  border: 1px solid #e6d3a3;
+  box-shadow: 0 10px 25px rgba(212, 175, 55, 0.15);
+}
+
+.review-card-modal.premium:hover {
+  box-shadow: 0 15px 35px rgba(212, 175, 55, 0.25);
+}
+
+/* заголовок */
+.premium-section .section-title {
+  color: #3a2f2f;
+}
+
+/* интро */
+.premium-section .section-intro {
+  margin-bottom: 20px;
+  color: #555;
+  max-width: 700px;
+}
+/* ==================================КАРУСЕЛЬ */
 /* =========================
    SECTION
 ========================= */
@@ -3179,7 +3200,7 @@ aside {
 
 .card {
   border: 1px solid rgba(207, 162, 74, 0.25);
-  padding: 14px;
+  padding: 24px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
 }
 
@@ -3490,6 +3511,42 @@ dl.definition dt {
     rgba(0, 0, 0, 0.15),
     transparent
   );
+}
+/* =====================боковое изображение в grid-2 */
+.foundation-row {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-direction: row;
+}
+
+.foundation-text {
+  flex: 1;
+}
+
+.foundation-image {
+  flex: 1;
+  text-align: center;
+}
+
+.foundation-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.foundation-list {
+  margin-top: 15px;
+  padding-left: 18px;
+}
+
+/* мобилка */
+@media (max-width: 768px) {
+  .foundation-row {
+    flex-direction: column;
+    text-align: left;
+  }
 }
 
 /* =================  FORMA STYLE Ingridiente Desctop ================= */
