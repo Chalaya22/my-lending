@@ -2506,7 +2506,7 @@ html {
   line-height: 1.4;
 }
 
-.review-card-modal-btn {
+/* .review-card-modal-btn {
   border: 1px solid #ccc;
   box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
   border: none;
@@ -2516,8 +2516,18 @@ html {
   font-size: 14px;
   margin-top: auto;
   align-self: flex-start;
-  background: red;
+  
 }
+
+.review-card-modal-btn:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  background-color: #f7f7f7;
+}
+.review-card-modal-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+} */
 
 /* премиум карточки к Сотрудничеству */
 
@@ -2547,10 +2557,10 @@ html {
   font-size: 14px;
   font-weight: 500;
   text-align: center;
-  border: 1px solid #ccc;
+  border: 1px solid var(--accent);
   border-radius: 6px;
-  background-color: #fff;
-  color: #333;
+  background-color: var(--text-muted);
+  color: white;
   cursor: pointer;
   box-sizing: border-box;
   transition:
@@ -2561,13 +2571,13 @@ html {
 
 .buttons-row .review-card-modal-btn:hover {
   transform: translateY(-2px) scale(1.02);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+
   background-color: #f7f7f7;
+  color: black;
 }
 
 .buttons-row .review-card-modal-btn:focus {
   outline: none;
-  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
 }
 @media (max-width: 768px) {
   .review-card-modal {
