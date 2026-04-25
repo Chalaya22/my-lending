@@ -2846,10 +2846,6 @@ html {
   background: rgba(212, 175, 55, 0.6);
   opacity: 1;
 }
-/* img {
-  display: block;
-  height: auto;
-} */
 
 a:focus {
   outline: none;
@@ -2863,9 +2859,18 @@ a:focus {
     flex: 0 0 320px;
   }
 }
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .zoom-lens {
     display: none !important;
+  }
+} */
+@media (max-width: 768px) {
+  .zoom-container * {
+    display: none !important;
+  }
+
+  .zoom-container img {
+    display: block !important;
   }
 }
 /* +++++++++++SHARE_BAR+++++++++++++++++ */
