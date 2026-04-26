@@ -2859,11 +2859,7 @@ a:focus {
     flex: 0 0 320px;
   }
 }
-/* @media (max-width: 768px) {
-  .zoom-lens {
-    display: none !important;
-  }
-} */
+
 @media (max-width: 768px) {
   .zoom-container * {
     display: none !important;
