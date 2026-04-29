@@ -1914,62 +1914,201 @@ main {
 }
 /*================== популярные обзоры косметики =====================*/
 .popular-reviews {
-  margin: 40px 0;
+  position: relative;
+  margin: 50px 0;
+  padding: 22px;
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+
+  /* subtle premium border */
+  border: 1px solid rgba(212, 175, 55, 0.18);
 }
 
+/* =========================
+   GOLDEN LUXURY BACKGROUND GLOW
+========================= */
+.popular-reviews::before {
+  content: "";
+  position: absolute;
+  inset: -60px;
+  z-index: 0;
+
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(212, 175, 55, 0.18),
+      transparent 55%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(255, 215, 150, 0.12),
+      transparent 60%
+    );
+
+  filter: blur(14px);
+  opacity: 0.9;
+}
+
+/* content above glow */
+.popular-reviews > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* =========================
+   TITLE
+========================= */
 .popular-reviews h2 {
   font-size: 18px;
-  margin-bottom: 20px;
+  margin-bottom: 14px;
+  font-weight: 600;
 }
 
-/* сетка кнопок */
+/* =========================
+   CLUSTER TITLE (SEO STRUCTURE)
+========================= */
+.cluster-title {
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  opacity: 0.55;
+  margin: 20px 0 10px;
+}
 
+/* =========================
+   GRID LAYOUT
+========================= */
 .popular-reviews-row {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
   gap: 12px;
 }
 
-/* кнопки */
-
+/* =========================
+   BUTTONS (PREMIUM LOOK)
+========================= */
 .popular-review-btn {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  padding: 12px 18px;
-
-  background: #f6f6f6;
-  border-radius: 30px;
+  min-height: 48px;
+  padding: 12px 14px;
 
   font-size: 14px;
   font-weight: 500;
+  text-align: center;
 
-  text-decoration: none;
   color: #333;
+  text-decoration: none;
 
-  border: 0.5px solid #2d98ad;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(6px);
+
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
 
   transition: all 0.25s ease;
+
+  word-break: break-word;
 }
 
+/* =========================
+   HOVER (LUXURY FEEL)
+========================= */
 .popular-review-btn:hover {
-  background: #ffffff;
-  border-color: #ddd;
+  transform: translateY(-3px);
 
-  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.95);
 
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+  border-color: rgba(212, 175, 55, 0.35);
+
+  box-shadow: 0 12px 25px rgba(212, 175, 55, 0.18);
+}
+.editorial-feature {
+  margin: 18px 0 14px;
+  padding: 16px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(212, 175, 55, 0.08),
+    rgba(255, 255, 255, 0.9)
+  );
+
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-radius: 14px;
+
+  backdrop-filter: blur(6px);
 }
 
+.editorial-feature h3 {
+  font-size: 14px;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.editorial-feature p {
+  font-size: 13px;
+  line-height: 1.5;
+  opacity: 0.85;
+  margin-bottom: 8px;
+}
+
+.editorial-link {
+  display: inline-block;
+  margin-top: 6px;
+
+  font-size: 13px;
+  font-weight: 500;
+  color: #b08d2f;
+  text-decoration: none;
+
+  transition: all 0.2s ease;
+}
+
+.editorial-link:hover {
+  color: #8c6f1f;
+  transform: translateX(2px);
+}
+.cosmetology-feature {
+  margin: 18px 0;
+  padding: 18px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(173, 216, 230, 0.12),
+    rgba(255, 255, 255, 0.95)
+  );
+
+  border: 1px solid rgba(8, 8, 8, 0.25);
+  border-radius: 14px;
+
+  backdrop-filter: blur(6px);
+}
+
+/* slight blue tone = skincare association */
+.cosmetology-feature h3 {
+  color: #2c5f6f;
+}
+/* =========================
+   MOBILE
+========================= */
 @media (max-width: 768px) {
+  .popular-reviews {
+    padding: 16px;
+  }
+
   .popular-reviews-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
   }
 
   .popular-review-btn {
-    text-align: center;
-    padding: 12px;
     font-size: 13px;
+    min-height: 44px;
+    padding: 10px;
   }
 }
 
@@ -2505,29 +2644,6 @@ html {
   margin-bottom: 10px;
   line-height: 1.4;
 }
-
-/* .review-card-modal-btn {
-  border: 1px solid #ccc;
-  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
-  border: none;
-  padding: 5px 10px;
-  cursor: pointer;
-  border-radius: 4px;
-  font-size: 14px;
-  margin-top: auto;
-  align-self: flex-start;
-  
-}
-
-.review-card-modal-btn:hover {
-  transform: translateY(-2px) scale(1.02);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-  background-color: #f7f7f7;
-}
-.review-card-modal-btn:focus {
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
-} */
 
 /* премиум карточки к Сотрудничеству */
 
