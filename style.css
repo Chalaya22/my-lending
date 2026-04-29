@@ -1989,7 +1989,7 @@ main {
 /* =========================
    BUTTONS (PREMIUM LOOK)
 ========================= */
-.popular-review-btn {
+/* .popular-review-btn {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2013,12 +2013,12 @@ main {
   transition: all 0.25s ease;
 
   word-break: break-word;
-}
+} */
 
 /* =========================
    HOVER (LUXURY FEEL)
 ========================= */
-.popular-review-btn:hover {
+/* .popular-review-btn:hover {
   transform: translateY(-3px);
 
   background: rgba(255, 255, 255, 0.95);
@@ -2026,6 +2026,47 @@ main {
   border-color: rgba(212, 175, 55, 0.35);
 
   box-shadow: 0 12px 25px rgba(212, 175, 55, 0.18);
+} */
+.popular-review-btn {
+  display: inline-block;
+
+  padding: 12px 18px;
+
+  background: #ffffff;
+  border-radius: 10px;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  text-decoration: none;
+  color: #333;
+
+  border: 1px solid rgba(0, 0, 0, 0.05);
+
+  /* МЯГКАЯ ОБЪЁМНАЯ ТЕНЬ */
+  box-shadow:
+    0 2px 6px rgba(0, 0, 0, 0.04),
+    0 8px 18px rgba(0, 0, 0, 0.06);
+
+  transition: all 0.25s ease;
+}
+
+/* hover эффект — "поднятие" */
+.popular-review-btn:hover {
+  background: #ffffff;
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 6px 14px rgba(0, 0, 0, 0.08),
+    0 14px 28px rgba(0, 0, 0, 0.12);
+}
+
+/* лёгкое нажатие */
+.popular-review-btn:active {
+  transform: translateY(-1px);
+
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
 }
 .editorial-feature {
   margin: 18px 0 14px;
