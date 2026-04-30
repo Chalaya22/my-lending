@@ -304,20 +304,25 @@ document.addEventListener("DOMContentLoaded", () => {
 function toggleDetails(button) {
   if (!button) return;
 
-  const card = button.closest(".review-card-modal") || button.parentElement;
-
+  const card = button.closest(".review-card-modal");
   if (!card) return;
 
   const details = card.querySelector(".review-card-modal-details");
-
   if (!details) return;
 
   details.classList.toggle("show");
 
   const isOpen = details.classList.contains("show");
 
-  const openText = button.dataset.open || "Подробнее";
-  const closeText = button.dataset.close || "Скрыть";
+  const lang = document.documentElement.lang;
+
+  let openText = "Подробнее";
+  let closeText = "Скрыть";
+
+  if (lang.startsWith("ro")) {
+    openText = "Citește recenzia";
+    closeText = "Ascunde";
+  }
 
   button.textContent = isOpen ? closeText : openText;
 }

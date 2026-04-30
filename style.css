@@ -1969,9 +1969,9 @@ main {
    CLUSTER TITLE (SEO STRUCTURE)
 ========================= */
 .cluster-title {
-  font-size: 12px;
+  font-size: 14px;
   text-transform: uppercase;
-  font-weight: 700;
+  color: #014458;
   letter-spacing: 1.2px;
   opacity: 0.55;
   margin: 20px 0 10px;
