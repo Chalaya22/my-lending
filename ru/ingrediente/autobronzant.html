@@ -317,20 +317,20 @@
       </section>
       <article class="ingredient-article">
         <div>
-          <div class="ingredient-meta">
-            <p class="ingredient-sub">
+          <section class="reviews-intro">
+            <p>
               Автобронзат — это косметический ингредиент, создающий эффект
               загара без воздействия ультрафиолета. Чаще всего в составе
               используется DHA (дигидроксиацетон), который взаимодействует с
               верхним слоем кожи, формируя временный бронзовый оттенок.
             </p>
 
-            <p class="ingredient-sub">
+            <p>
               В отличие от солнечного загара, автобронзат не стимулирует
               выработку меланина и не вызывает фотостарение, однако может
               усиливать сухость кожи при недостаточном увлажнении.
             </p>
-          </div>
+          </section>
 
           <figure class="ingredient-image">
             <img
@@ -350,11 +350,12 @@
           </figure>
 
           <a class="section-btn-primary" href="../servicii.html">
-            Консультации / Записаться
+            Записаться
           </a>
         </div>
         <div class="grid-2">
           <div>
+            <!-- Что такое автобронзат? -->
             <section class="ingredient-section">
               <h2 class="section-title">Что такое автобронзат?</h2>
               <p>
@@ -367,7 +368,7 @@
                 образуя временный бронзовый оттенок.
               </p>
             </section>
-
+            <!-- Как работает DHA? -->
             <section class="ingredient-section">
               <h2 class="section-title">Как работает DHA?</h2>
               <ul class="related-list">
@@ -377,7 +378,7 @@
                 <li>создаёт временный эффект на 5–7 дней.</li>
               </ul>
             </section>
-
+            <!-- Преимущества автобронзата -->
             <section class="ingredient-section">
               <h2 class="section-title">Преимущества автобронзата</h2>
               <ul class="related-list">
@@ -387,6 +388,7 @@
                 <li>возможность контроля интенсивности.</li>
               </ul>
             </section>
+            <!-- Как правильно наносить автозагар? -->
             <section class="ingredient-section">
               <h2 class="section-title">Как правильно наносить автозагар?</h2>
 
@@ -422,21 +424,40 @@
                 подготовки кожи. Неровная текстура и сухость усиливают риск
                 пятен.
               </p>
-              <div class="ingredient-inline-image">
-                <img
-                  src="../../images/autobronzat/avtobronzat-petele-800.webp"
-                  srcset="
-                    ../../images/autobronzat/avtobronzat-petele-1200.webp 1200w,
-                    ../../images/autobronzat/avtobronzat-petele-800.webp   800w,
-                    ../../images/autobronzat/avtobronzat-petele-400.webp   400w
-                  "
-                  sizes="(max-width: 768px) 100vw, 800px"
-                  alt="Как правильно наносить автозагар"
-                  loading="lazy"
-                />
+              <div
+                class="double-image-gallery"
+                style="display: flex; gap: 10px; margin-top: 15px"
+              >
+                <div class="gallery-item" style="flex: 1">
+                  <img
+                    src="../../images/autobronzat/avtobronzat-aplica-800.webp"
+                    srcset="
+                      ../../images/autobronzat/avtobronzat-aplica-1200.webp 1200w,
+                      ../../images/autobronzat/avtobronzat-aplica-800.webp   800w,
+                      ../../images/autobronzat/avtobronzat-aplica-400.webp   400w
+                    "
+                    sizes="(max-width: 768px) 100vw, 800px"
+                    alt="Как правильно наносить автозагар"
+                    loading="lazy"
+                  />
+                </div>
+
+                <div class="gallery-item" style="flex: 1">
+                  <img
+                    src="../../images/autobronzat/avtobronzat-aplica-1-800.webp"
+                    srcset="
+                      ../../images/autobronzat/avtobronzat-aplica-1-1200.webp 1200w,
+                      ../../images/autobronzat/avtobronzat-aplica-1-800.webp   800w,
+                      ../../images/autobronzat/avtobronzat-aplica-1-400.webp   400w
+                    "
+                    sizes="(max-width: 768px) 100vw, 800px"
+                    alt="Равномерное нанесение автозагара"
+                    loading="lazy"
+                  />
+                </div>
               </div>
             </section>
-
+            <!--Когда возможны проблемы?  -->
             <section class="ingredient-section warning-section">
               <h2 class="section-title">Когда возможны проблемы?</h2>
               <ul class="related-list">
@@ -447,7 +468,7 @@
               </ul>
               <p><b>Важно:</b> DHA может усиливать ощущение сухости кожи.</p>
             </section>
-
+            <!--Кому подходит?  -->
             <section class="ingredient-section">
               <h2 class="section-title">Кому подходит?</h2>
               <ul class="related-list">
@@ -457,7 +478,7 @@
                 <li>для сезонного выравнивания тона.</li>
               </ul>
             </section>
-
+            <!--Что говорит наука?  -->
             <section class="ingredient-section science-section">
               <h2 class="section-title">Что говорит наука?</h2>
               <p>
@@ -469,6 +490,28 @@
                 <li>не вызывает фотостарение;</li>
                 <li>может усиливать сухость без увлажняющего ухода.</li>
               </ul>
+            </section>
+            <!-- FAQ -->
+            <section class="faq">
+              <h2>Часто задаваемые вопросы об автобронзате</h2>
+
+              <div class="faq-item">
+                <h3>Автобронзат вреден для кожи?</h3>
+                <p>
+                  Нет, при правильном использовании он безопасен и не вызывает
+                  фотостарения.
+                </p>
+              </div>
+
+              <div class="faq-item">
+                <h3>DHA проникает в кожу?</h3>
+                <p>Нет, он действует только на поверхности рогового слоя.</p>
+              </div>
+
+              <div class="faq-item">
+                <h3>Нужен ли SPF после автобронзата?</h3>
+                <p>Да. Автобронзат не защищает от ультрафиолета.</p>
+              </div>
             </section>
           </div>
 
@@ -536,28 +579,7 @@
             </p>
           </div>
         </section>
-        <!-- FAQ -->
-        <section class="faq">
-          <h2>Часто задаваемые вопросы об автобронзате</h2>
 
-          <div class="faq-item">
-            <h3>Автобронзат вреден для кожи?</h3>
-            <p>
-              Нет, при правильном использовании он безопасен и не вызывает
-              фотостарения.
-            </p>
-          </div>
-
-          <div class="faq-item">
-            <h3>DHA проникает в кожу?</h3>
-            <p>Нет, он действует только на поверхности рогового слоя.</p>
-          </div>
-
-          <div class="faq-item">
-            <h3>Нужен ли SPF после автобронзата?</h3>
-            <p>Да. Автобронзат не защищает от ультрафиолета.</p>
-          </div>
-        </section>
         <!-- Review Forma -->
         <section class="review-section">
           <div class="review-box">
