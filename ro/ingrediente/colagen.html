@@ -317,7 +317,7 @@
       </section>
       <article class="ingredient-article">
         <div>
-          <div class="ingredient-meta">
+          <section class="reviews-intro">
             <p class="ingredient-sub">
               Colagenul este principala proteină structurală a pielii,
               responsabilă pentru fermitate, elasticitate și densitate.
@@ -326,7 +326,7 @@
               În cosmetică, colagenul topic are rol hidratant și protector, iar
               stimularea sintezei naturale este cheia unui efect anti-age real.
             </p>
-          </div>
+          </section>
           <figure class="ingredient-image">
             <img
               src="../../images/colagen/colagen-img-800.webp"
@@ -345,11 +345,12 @@
           </figure>
 
           <a class="section-btn-primary" href="../servicii.html">
-            Consultații / Programare
+            Programare
           </a>
         </div>
         <div class="grid-2">
           <div>
+            <!-- Ce este colagenul -->
             <section class="ingredient-section">
               <h2 class="section-title">Ce este colagenul?</h2>
               <p>
@@ -358,7 +359,7 @@
                 la pierderea fermității și apariția ridurilor.
               </p>
             </section>
-
+            <!-- Tipuri de colagen -->
             <section class="ingredient-section">
               <h2 class="section-title">Tipuri de colagen și utilizarea lor</h2>
 
@@ -398,21 +399,40 @@
                   </tr>
                 </tbody>
               </table>
-              <div class="ingredient-inline-image">
-                <img
-                  src="../../images/colagen/colagen-type-800.webp"
-                  srcset="
-                    ../../images/colagen/colagen-type-1200.webp 1200w,
-                    ../../images/colagen/colagen-type-800.webp   800w,
-                    ../../images/colagen/colagen-type-400.webp   400w
-                  "
-                  sizes="(max-width: 768px) 100vw, 800px"
-                  alt="Tipuri de colagen"
-                  loading="lazy"
-                />
+              <div
+                class="double-image-gallery"
+                style="display: flex; gap: 10px; margin-top: 15px"
+              >
+                <div class="gallery-item" style="flex: 1">
+                  <img
+                    src="../../images/colagen/colagen-type-800.webp"
+                    srcset="
+                      ../../images/colagen/colagen-type-1200.webp 1200w,
+                      ../../images/colagen/colagen-type-800.webp   800w,
+                      ../../images/colagen/colagen-type-400.webp   400w
+                    "
+                    sizes="(max-width: 768px) 100vw, 800px"
+                    alt="Tipuri de colagen"
+                    loading="lazy"
+                  />
+                </div>
+
+                <div class="gallery-item" style="flex: 1">
+                  <img
+                    src="../../images/colagen/colagen-type-1-800.webp"
+                    srcset="
+                      ../../images/colagen/colagen-type-1-1200.webp 1200w,
+                      ../../images/colagen/colagen-type-1-800.webp   800w,
+                      ../../images/colagen/colagen-type-1-400.webp   400w
+                    "
+                    sizes="(max-width: 768px) 100vw, 800px"
+                    alt="Tipuri de colagen și utilizarea lor"
+                    loading="lazy"
+                  />
+                </div>
               </div>
             </section>
-
+            <!-- Pentru cine este potrivit -->
             <section class="ingredient-section">
               <h2 class="section-title">Pentru cine este potrivit?</h2>
               <ul class="related-list">
@@ -422,6 +442,7 @@
                 <li>primele semne de îmbătrânire.</li>
               </ul>
             </section>
+            <!-- Opinia specialistului -->
             <section class="ingredient-section expert-section">
               <h2 class="section-title">Opinia specialistului</h2>
 
@@ -443,20 +464,40 @@
                 colagenului, ci pe susținerea mecanismelor biologice naturale
                 ale pielii.
               </p>
-              <div class="ingredient-inline-image">
-                <img
-                  src="../../images/colagen/colagen-stiinta-800.webp"
-                  srcset="
-                    ../../images/colagen/colagen-stiinta-1200.webp 1200w,
-                    ../../images/colagen/colagen-stiinta-800.webp   800w,
-                    ../../images/colagen/colagen-stiinta-400.webp   400w
-                  "
-                  sizes="(max-width: 768px) 100vw, 800px"
-                  alt="Opinia specialistului"
-                  loading="lazy"
-                />
+              <div
+                class="double-image-gallery"
+                style="display: flex; gap: 10px; margin-top: 15px"
+              >
+                <div class="gallery-item" style="flex: 1">
+                  <img
+                    src="../../images/colagen/colagen-opinia-800.webp"
+                    srcset="
+                      ../../images/colagen/colagen-opinia-1200.webp 1200w,
+                      ../../images/colagen/colagen-opinia-800.webp   800w,
+                      ../../images/colagen/colagen-opinia-400.webp   400w
+                    "
+                    sizes="(max-width: 768px) 100vw, 800px"
+                    alt="Opinia specialistului"
+                    loading="lazy"
+                  />
+                </div>
+
+                <div class="gallery-item" style="flex: 1">
+                  <img
+                    src="../../images/colagen/colagen-opinia-1-800.webp"
+                    srcset="
+                      ../../images/colagen/colagen-opinia-1-1200.webp 1200w,
+                      ../../images/colagen/colagen-opinia-1-800.webp   800w,
+                      ../../images/colagen/colagen-opinia-1-400.webp   400w
+                    "
+                    sizes="(max-width: 768px) 100vw, 800px"
+                    alt="Abordarea modernă anti-agingr"
+                    loading="lazy"
+                  />
+                </div>
               </div>
             </section>
+            <!-- Ce spune știința -->
             <section class="ingredient-section science-section">
               <h2 class="section-title">Ce spune știința?</h2>
               <p>
@@ -474,9 +515,35 @@
                 <li>Vitamina C este esențială pentru sinteză.</li>
               </ul>
             </section>
+            <!-- FAQ -->
+            <section class="faq">
+              <h2>Întrebări frecvente despre colagen</h2>
+
+              <div class="faq-item">
+                <h3>Colagenul topic pătrunde în piele?</h3>
+                <p>Nu în derm, dar ajută la hidratare și protecție.</p>
+              </div>
+
+              <div class="faq-item">
+                <h3>Suplimentele cu colagen funcționează?</h3>
+                <p>Pot susține elasticitatea, dar rezultatele variază.</p>
+              </div>
+
+              <div class="faq-item">
+                <h3>De la ce vârstă scade colagenul?</h3>
+                <p>Producția începe să scadă după 25 de ani.</p>
+              </div>
+            </section>
           </div>
           <aside>
             <div class="card">
+              <div class="card-image">
+                <img
+                  src="../../images/colagen/calogen-ingrediente-complementare-400.webp"
+                  alt="Ingrediente complementare"
+                  loading="lazy"
+                />
+              </div>
               <h3 class="section-title-sidebar">Ingrediente complementare</h3>
               <div class="related-list-sidebar">
                 <a href="vitamina-c.html">Vitamina C</a>
@@ -485,6 +552,13 @@
               </div>
             </div>
             <div class="card" style="margin-top: 18px">
+              <div class="card-image">
+                <img
+                  src="../../images/colagen/calogen-sinergii eficient-400.webp"
+                  alt="Sinergii eficient"
+                  loading="lazy"
+                />
+              </div>
               <h3 class="section-title-sidebar">Sinergii eficiente</h3>
               <ul class="related-list">
                 <li>Vitamina C — stimulează sinteza</li>
@@ -495,6 +569,13 @@
             </div>
 
             <div class="card" style="margin-top: 18px">
+              <div class="card-image">
+                <img
+                  src="../../images/colagen/degradează-colagenul-400.webp"
+                  alt="Ce degradează colagenul"
+                  loading="lazy"
+                />
+              </div>
               <h3 class="section-title-sidebar">Ce degradează colagenul?</h3>
               <ul class="related-list">
                 <li>Radiațiile UV</li>
@@ -505,6 +586,13 @@
             </div>
 
             <div class="card" style="margin-top: 18px">
+              <div class="card-image">
+                <img
+                  src="../../images/colagen/colagen-recomandarea-400.webp"
+                  alt="Când este recomandat"
+                  loading="lazy"
+                />
+              </div>
               <h3 class="section-title-sidebar">Când este recomandat?</h3>
               <p class="card-hint">
                 După 25 de ani, prevenția este mai eficientă decât corecția.
@@ -519,13 +607,6 @@
                 Expunerea solară este principalul factor care degradează
                 colagenul din piele.
               </p>
-              <div class="card-image">
-                <img
-                  src="../../images/colagen/calogen-400.webp"
-                  alt="Fact important"
-                  loading="lazy"
-                />
-              </div>
             </div>
           </aside>
         </div>
@@ -548,25 +629,7 @@
             <p class="newsletter-note">Te poți dezabona oricând.</p>
           </div>
         </section>
-        <!-- FAQ -->
-        <section class="faq">
-          <h2>Întrebări frecvente despre colagen</h2>
 
-          <div class="faq-item">
-            <h3>Colagenul topic pătrunde în piele?</h3>
-            <p>Nu în derm, dar ajută la hidratare și protecție.</p>
-          </div>
-
-          <div class="faq-item">
-            <h3>Suplimentele cu colagen funcționează?</h3>
-            <p>Pot susține elasticitatea, dar rezultatele variază.</p>
-          </div>
-
-          <div class="faq-item">
-            <h3>De la ce vârstă scade colagenul?</h3>
-            <p>Producția începe să scadă după 25 de ani.</p>
-          </div>
-        </section>
         <!-- Review Form -->
         <section class="review-section">
           <div class="review-box">
