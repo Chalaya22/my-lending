@@ -54,7 +54,7 @@
     />
     <meta
       property="og:image"
-      content="https://chalaya22.github.io/my-lending/images/og/ingredients-og.webp"
+      content="https://chalaya22.github.io/my-lending/images/og/acne-skin-care-ru-og.jpg"
     />
 
     <link
@@ -317,14 +317,14 @@
       </section>
       <article class="ingredient-article">
         <div>
-          <div class="ingredient-meta">
-            <p class="ingredient-sub">
-              Акне (угревая сыпь) — это воспалительное заболевание кожи,
-              вызванное изменениями в пилосебационных структурах. Узнайте
-              причины появления высыпаний, методы борьбы с ними и правила ухода
-              для предотвращения постакне.
+          <section class="reviews-intro">
+            <p>
+              <strong>Акне (угревая сыпь)</strong> — это воспалительное
+              заболевание кожи, вызванное изменениями в пилосебационных
+              структурах. Узнайте причины появления высыпаний, методы борьбы с
+              ними и правила ухода для предотвращения постакне.
             </p>
-          </div>
+          </section>
 
           <figure class="ingredient-image">
             <img
@@ -345,7 +345,7 @@
           </figure>
 
           <a class="section-btn-primary" href="../servicii.html">
-            Консультации / Записаться
+            Записаться
           </a>
         </div>
 
@@ -433,23 +433,45 @@
                   <td>Природный антисептик для снятия воспаления</td>
                 </tr>
               </table>
-              <div class="ingredient-inline-image">
-                <img
-                  src="../../images/acnee/acnee-functioneaza-800.webp"
-                  srcset="
-                    ../../images/acnee/acnee-functioneaza-1200.webp 1200w,
-                    ../../images/acnee/acnee-functioneaza-800.webp   800w,
-                    ../../images/acnee/acnee-functioneaza-400.webp   400w
-                  "
-                  sizes="(max-width: 768px) 100vw, 800px"
-                  alt="Компоненты, которые реально работают"
-                  loading="lazy"
-                />
+              <div
+                class="double-image-gallery"
+                style="display: flex; gap: 10px; margin-top: 15px"
+              >
+                <div class="gallery-item" style="flex: 1">
+                  <img
+                    src="../../images/acnee/acnee-functioneaza-800.webp"
+                    srcset="
+                      ../../images/acnee/acnee-functioneaza-1200.webp 1200w,
+                      ../../images/acnee/acnee-functioneaza-800.webp   800w,
+                      ../../images/acnee/acnee-functioneaza-400.webp   400w
+                    "
+                    sizes="(max-width: 768px) 100vw, 800px"
+                    alt="Компоненты, которые реально работают"
+                    loading="lazy"
+                  />
+                </div>
+
+                <div class="gallery-item" style="flex: 1">
+                  <img
+                    src="../../images/acnee/acnee-functioneaza-1-800.webp"
+                    srcset="
+                      ../../images/acnee/acnee-functioneaza-1-1200.webp 1200w,
+                      ../../images/acnee/acnee-functioneaza-1-800.webp   800w,
+                      ../../images/acnee/acnee-functioneaza-1-400.webp   400w
+                    "
+                    sizes="(max-width: 768px) 100vw, 800px"
+                    alt="Процедуры при акне"
+                    loading="lazy"
+                  />
+                </div>
               </div>
             </section>
             <!-- Лучшие средства при акне -->
             <section class="premium-cards">
               <h2 class="section-title">Лучшие средства при акне</h2>
+              <p class="ad-label nusponsored">
+                Независимый обзор. Продукты не спонсируются.
+              </p>
 
               <div class="products-container">
                 <!-- 1 -->
@@ -698,6 +720,46 @@
                 количестве воды.
               </p>
             </section>
+            <!-- FAQ -->
+            <section class="faq">
+              <h2 class="section-title">Часто задаваемые вопросы</h2>
+
+              <div class="faq-item">
+                <h3>Можно ли выдавливать прыщи, если они «созрели»?</h3>
+                <p>
+                  Нет. Выдавливание травмирует ткани, загоняет инфекцию глубже и
+                  почти всегда приводит к образованию рубцов и застойных пятен
+                  постакне, от которых сложнее избавиться, чем от самого прыща.
+                </p>
+              </div>
+
+              <div class="faq-item">
+                <h3>Как быстро подействует новый уход против акне?</h3>
+                <p>
+                  Коже требуется время на адаптацию и цикл обновления (около 28
+                  дней). Первые стабильные результаты можно оценивать не ранее,
+                  чем через 4–6 недель регулярного использования средств.
+                </p>
+              </div>
+
+              <div class="faq-item">
+                <h3>Нужно ли сушить жирную кожу спиртовыми лосьонами?</h3>
+                <p>
+                  Это миф. Спирт разрушает защитный барьер. В ответ кожа
+                  начинает вырабатывать еще больше жира, чтобы защититься, что
+                  приводит к новому витку высыпаний и обезвоженности.
+                </p>
+              </div>
+
+              <div class="faq-item">
+                <h3>Влияет ли солнце на лечение акне?</h3>
+                <p>
+                  Солнце дает временный антисептический эффект, но затем
+                  вызывает утолщение рогового слоя кожи (гиперкератоз), что
+                  провоцирует еще более сильное обострение через пару недель.
+                </p>
+              </div>
+            </section>
           </div>
 
           <!-- SIDEBAR -->
@@ -820,46 +882,6 @@
 
             <p class="newsletter-note">
               Нажимая кнопку, вы соглашаетесь на обработку персональных данных.
-            </p>
-          </div>
-        </section>
-        <!-- FAQ -->
-        <section class="faq">
-          <h2 class="section-title">Часто задаваемые вопросы</h2>
-
-          <div class="faq-item">
-            <h3>Можно ли выдавливать прыщи, если они «созрели»?</h3>
-            <p>
-              Нет. Выдавливание травмирует ткани, загоняет инфекцию глубже и
-              почти всегда приводит к образованию рубцов и застойных пятен
-              постакне, от которых сложнее избавиться, чем от самого прыща.
-            </p>
-          </div>
-
-          <div class="faq-item">
-            <h3>Как быстро подействует новый уход против акне?</h3>
-            <p>
-              Коже требуется время на адаптацию и цикл обновления (около 28
-              дней). Первые стабильные результаты можно оценивать не ранее, чем
-              через 4–6 недель регулярного использования средств.
-            </p>
-          </div>
-
-          <div class="faq-item">
-            <h3>Нужно ли сушить жирную кожу спиртовыми лосьонами?</h3>
-            <p>
-              Это миф. Спирт разрушает защитный барьер. В ответ кожа начинает
-              вырабатывать еще больше жира, чтобы защититься, что приводит к
-              новому витку высыпаний и обезвоженности.
-            </p>
-          </div>
-
-          <div class="faq-item">
-            <h3>Влияет ли солнце на лечение акне?</h3>
-            <p>
-              Солнце дает временный антисептический эффект, но затем вызывает
-              утолщение рогового слоя кожи (гиперкератоз), что провоцирует еще
-              более сильное обострение через пару недель.
             </p>
           </div>
         </section>
@@ -1180,26 +1202,34 @@
       {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Акне: причины, стадии и полный гид по уходу за проблемной кожей",
-        "description": "Разбираем всё об акне: от причин возникновения до подбора работающих ингредиентов и профилактики постакне.",
-        "image": "https://chalaya22.github.io",
+
+        "headline": "Акне: причины появления, уход за кожей и методы борьбы",
+        "description": "Полный гид по акне: почему появляются высыпания, как ухаживать за проблемной кожей и какие ингредиенты помогают уменьшить воспаления.",
+
+        "image": "https://chalaya22.github.io/my-lending/images/og/acne-skin-care-ru-og.jpg",
+
+        "inLanguage": "ru-MD",
+
+        "datePublished": "2026-05-01",
+        "dateModified": "2026-05-01",
+
         "author": {
           "@type": "Organization",
           "name": "Estetica Lens"
         },
+
         "publisher": {
           "@type": "Organization",
           "name": "Estetica Lens",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://chalaya22.github.io"
+            "url": "https://chalaya22.github.io/my-lending/images/logo.png"
           }
         },
-        "datePublished": "2024-05-24",
-        "dateModified": "2024-05-24",
+
         "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://chalaya22.github.io"
+          "@id": "https://chalaya22.github.io/my-lending/ru/probleme/acnee.html"
         }
       }
     </script>
@@ -1256,19 +1286,19 @@
             "@type": "ListItem",
             "position": 1,
             "name": "Главная",
-            "item": "https://chalaya22.github.io"
+            "item": "https://chalaya22.github.io/my-lending/ru/index.html"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "Проблемы кожи",
-            "item": "https://chalaya22.github.io"
+            "item": "https://chalaya22.github.io/my-lending/ru/probleme.html"
           },
           {
             "@type": "ListItem",
             "position": 3,
             "name": "Акне",
-            "item": "https://chalaya22.github.io"
+            "item": "https://chalaya22.github.io/my-lending/ru/probleme/acnee.html"
           }
         ]
       }
