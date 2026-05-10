@@ -318,15 +318,19 @@
       </section>
       <article class="ingredient-article">
         <div>
-          <div class="ingredient-meta">
-            <p class="ingredient-sub">
-              Analizăm cum să refacem pielea după peelinguri chimice agresive și
-              o exfoliere incorectă. Află cum să calmezi rapid senzația de
-              arsură, să elimini roșeața și să restabilești bariera de protecție
-              a epidermei cu ajutorul ingredientelor dovedite, esențiale pentru
-              îngrijirea tenului în climatul variabil din România.
+          <section class="reviews-intro">
+            <p>
+              <strong
+                >Analizăm cum să refacem pielea după peelinguri chimice agresive
+                și o exfoliere incorectă.</strong
+              >
+              <br />
+              Află cum să calmezi rapid senzația de arsură, să elimini roșeața
+              și să restabilești bariera de protecție a epidermei cu ajutorul
+              ingredientelor dovedite, esențiale pentru îngrijirea tenului în
+              climatul variabil din România.
             </p>
-          </div>
+          </section>
           <figure class="ingredient-image">
             <img
               src="../../images/exfoliere/piling-img-800.webp"
@@ -346,7 +350,7 @@
           </figure>
 
           <a class="section-btn-primary" href="../servicii.html">
-            Consultație / Programează-te
+            Programează-te
           </a>
         </div>
 
@@ -499,6 +503,9 @@
               <h2 class="section-title">
                 Cele mai bune produse pentru iritații după peeling
               </h2>
+              <p class="ad-label nusponsored">
+                Review independent. Produsele nu sunt sponsorizate.
+              </p>
 
               <div class="products-container">
                 <!-- 1 -->
@@ -522,17 +529,18 @@
                     </div>
 
                     <div class="buttons-row">
-                      <a href="#" class="review-card-modal-btn">
-                        Vezi produsul
+                      <a
+                        class="review-card-modal-btn disabled"
+                        aria-disabled="true"
+                      >
+                        Curând disponibil
                       </a>
 
                       <button
                         class="review-card-modal-btn"
                         onclick="toggleDetails(this)"
-                        data-open="Vezi review"
-                        data-close="Ascunde"
                       >
-                        Vezi review
+                        Citește recenzia
                       </button>
                     </div>
 
@@ -608,7 +616,8 @@
 
                   <div class="review-card-modal-content">
                     <div class="review-card-modal-title">
-                      Dr. Jart+ Cicapair Tiger Grass Cream
+                      Dr. Jart+ <br />
+                      Cicapair Tiger Grass Cream
                     </div>
 
                     <div class="review-card-modal-excerpt">
@@ -616,17 +625,18 @@
                     </div>
 
                     <div class="buttons-row">
-                      <a href="#" class="review-card-modal-btn">
-                        Vezi produsul
+                      <a
+                        class="review-card-modal-btn disabled"
+                        aria-disabled="true"
+                      >
+                        Curând disponibil
                       </a>
 
                       <button
                         class="review-card-modal-btn"
                         onclick="toggleDetails(this)"
-                        data-open="Vezi review"
-                        data-close="Ascunde"
                       >
-                        Vezi review
+                        Citește recenzia
                       </button>
                     </div>
 
@@ -840,6 +850,73 @@
                 mai simplă și sterilă.
               </p>
             </section>
+            <!-- FAQ -->
+            <section class="faq">
+              <h2 class="section-title">
+                Întrebări frecvente despre recuperarea după peeling
+              </h2>
+
+              <div class="faq-item">
+                <h3>
+                  Cât de repede trec senzația de arsură și roșeața după
+                  „over-peeling”?
+                </h3>
+                <p>
+                  Senzația inițială de căldură și disconfort se diminuează, de
+                  obicei, în decurs de
+                  <strong>30–60 de minute</strong> după aplicarea unei creme
+                  CICA. Totuși, refacerea completă a epidermei și dispariția
+                  eritemului persistent (roșeața) durează între 7 și 14 zile, în
+                  funcție de profunzimea deteriorării barierei cutanate.
+                </p>
+              </div>
+
+              <div class="faq-item">
+                <h3>
+                  Pot folosi machiaj dacă pielea se descuamează după acizi?
+                </h3>
+                <p>
+                  În primele 48–72 de ore după un peeling agresiv,
+                  <strong
+                    >nu se recomandă utilizarea cosmeticelor decorative</strong
+                  >. Pigmenții și conservanții din produsele de machiaj pot
+                  pătrunde prin microfisuri în straturile profunde ale pielii,
+                  provocând reacții alergice sau inflamații secundare.
+                </p>
+              </div>
+
+              <div class="faq-item">
+                <h3>
+                  De ce pielea feței „arde” chiar și de la o cremă hidratantă
+                  obișnuită?
+                </h3>
+                <p>
+                  Acesta este un semn al unei bariere lipidice critic
+                  deteriorate. Când stratul protector este distrus de exfoliere,
+                  terminațiile nervoase devin expuse și reacționează la orice
+                  componentă. În această situație, trebuie să treceți temporar
+                  la
+                  <strong>produse farmaceutice sterile</strong> cu o compoziție
+                  minimalistă (de exemplu, Bioderma Cicabio sau gama Toleriane).
+                </p>
+              </div>
+
+              <div class="faq-item">
+                <h3>
+                  Când pot reveni la utilizarea retinolului sau a acizilor?
+                </h3>
+                <p>
+                  Revenirea la ingredientele active este permisă doar după
+                  <strong
+                    >încetarea completă a descuamării și dispariția
+                    sensibilității</strong
+                  >. De obicei, acest lucru se întâmplă după 2 săptămâni.
+                  Reintroduceți activele treptat, combinându-le cu creme
+                  reparatoare pentru a preveni un nou „șoc termic” al vaselor de
+                  sânge.
+                </p>
+              </div>
+            </section>
           </div>
 
           <!-- SIDEBAR -->
@@ -1011,66 +1088,6 @@
             </form>
 
             <p class="newsletter-note">Te poți dezabona oricând.</p>
-          </div>
-        </section>
-        <!-- FAQ -->
-        <section class="faq">
-          <h2 class="section-title">
-            Întrebări frecvente despre recuperarea după peeling
-          </h2>
-
-          <div class="faq-item">
-            <h3>
-              Cât de repede trec senzația de arsură și roșeața după
-              „over-peeling”?
-            </h3>
-            <p>
-              Senzația inițială de căldură și disconfort se diminuează, de
-              obicei, în decurs de
-              <strong>30–60 de minute</strong> după aplicarea unei creme CICA.
-              Totuși, refacerea completă a epidermei și dispariția eritemului
-              persistent (roșeața) durează între 7 și 14 zile, în funcție de
-              profunzimea deteriorării barierei cutanate.
-            </p>
-          </div>
-
-          <div class="faq-item">
-            <h3>Pot folosi machiaj dacă pielea se descuamează după acizi?</h3>
-            <p>
-              În primele 48–72 de ore după un peeling agresiv,
-              <strong>nu se recomandă utilizarea cosmeticelor decorative</strong
-              >. Pigmenții și conservanții din produsele de machiaj pot pătrunde
-              prin microfisuri în straturile profunde ale pielii, provocând
-              reacții alergice sau inflamații secundare.
-            </p>
-          </div>
-
-          <div class="faq-item">
-            <h3>
-              De ce pielea feței „arde” chiar și de la o cremă hidratantă
-              obișnuită?
-            </h3>
-            <p>
-              Acesta este un semn al unei bariere lipidice critic deteriorate.
-              Când stratul protector este distrus de exfoliere, terminațiile
-              nervoase devin expuse și reacționează la orice componentă. În
-              această situație, trebuie să treceți temporar la
-              <strong>produse farmaceutice sterile</strong> cu o compoziție
-              minimalistă (de exemplu, Bioderma Cicabio sau gama Toleriane).
-            </p>
-          </div>
-
-          <div class="faq-item">
-            <h3>Când pot reveni la utilizarea retinolului sau a acizilor?</h3>
-            <p>
-              Revenirea la ingredientele active este permisă doar după
-              <strong
-                >încetarea completă a descuamării și dispariția
-                sensibilității</strong
-              >. De obicei, acest lucru se întâmplă după 2 săptămâni.
-              Reintroduceți activele treptat, combinându-le cu creme reparatoare
-              pentru a preveni un nou „șoc termic” al vaselor de sânge.
-            </p>
           </div>
         </section>
       </article>
