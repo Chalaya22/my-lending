@@ -49,14 +49,14 @@
       property="og:description"
       content="Узнайте, как укрепить кожный барьер и избежать раздражений при повышенной чувствительности."
     />
+    <meta
+      property="og:image"
+      content="https://chalaya22.github.io/my-lending/images/og/sensitive-skin-ru-og.jpg"
+    />
 
     <meta
       property="og:url"
       content="https://chalaya22.github.io/my-lending/ru/probleme/piele-sensibila.html"
-    />
-    <meta
-      property="og:image"
-      content="https://chalaya22.github.io/my-lending/images/og/ingredients-og.webp"
     />
 
     <!-- Fonts -->
@@ -320,14 +320,15 @@
       </section>
       <article class="ingredient-article">
         <div>
-          <div class="ingredient-meta">
-            <p class="ingredient-sub">
-              Чувствительная кожа — это состояние, характеризующееся
-              гиперреактивностью на внешние и внутренние факторы. Узнайте, как
-              отличить чувствительность от аллергии, восстановить защитный
-              липидный барьер и подобрать уход, который подарит коже комфорт.
+          <section class="reviews-intro">
+            <p>
+              <strong>Чувствительная кожа </strong>Чувствительная кожа — это
+              состояние, характеризующееся гиперреактивностью на внешние и
+              внутренние факторы. Узнайте, как отличить чувствительность от
+              аллергии, восстановить защитный липидный барьер и подобрать уход,
+              который подарит коже комфорт.
             </p>
-          </div>
+          </section>
 
           <figure class="ingredient-image">
             <img
@@ -348,7 +349,7 @@
           </figure>
 
           <a class="section-btn-primary" href="../servicii.html">
-            Консультации / Записаться
+            Записаться
           </a>
         </div>
 
@@ -385,18 +386,33 @@
                 воспалению и преждевременному появлению морщин из-за постоянного
                 стресса клеток.
               </p>
-              <div class="ingredient-inline-image">
-                <img
-                  src="../../images/piele-sensibila/piele-sensibila-semne-800.webp"
-                  srcset="
-                    ../../images/piele-sensibila/piele-sensibila-semne-1200.webp 1200w,
-                    ../../images/piele-sensibila/piele-sensibila-semne-800.webp   800w,
-                    ../../images/piele-sensibila/piele-sensibila-semne-600.webp   400w
-                  "
-                  sizes="(max-width: 768px) 100vw, 800px"
-                  alt="Симптомы чувствилельной кожи"
-                  loading="lazy"
-                />
+              <div class="double-image-gallery">
+                <div class="gallery-item">
+                  <img
+                    src="../../images/piele-sensibila/piele-sensibila-semne-800.webp"
+                    srcset="
+                      ../../images/piele-sensibila/piele-sensibila-semne-1200.webp 1200w,
+                      ../../images/piele-sensibila/piele-sensibila-semne-800.webp   800w,
+                      ../../images/piele-sensibila/piele-sensibila-semne-600.webp   400w
+                    "
+                    sizes="(max-width: 768px) 100vw, 800px"
+                    alt="Признаки реактивности и дискомфорта"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="gallery-item">
+                  <img
+                    src="../../images/piele-sensibila/piele-sensibila-semne-1-800.webp"
+                    srcset="
+                      ../../images/piele-sensibila/piele-sensibila-semne-1-1200.webp 1200w,
+                      ../../images/piele-sensibila/piele-sensibila-semne-1-800.webp   800w,
+                      ../../images/piele-sensibila/piele-sensibila-semne-1-600.webp   400w
+                    "
+                    sizes="(max-width: 768px) 100vw, 800px"
+                    alt="Понимание сигналов кожи"
+                    loading="lazy"
+                  />
+                </div>
               </div>
             </section>
             <!-- Правила ухода за чувствительной кожей -->
@@ -514,6 +530,9 @@
               <h2 class="section-title">
                 Лучшие средства для чувствительной кожи
               </h2>
+              <p class="ad-label nusponsored">
+                Независимый обзор. Продукты не спонсируются.
+              </p>
 
               <div class="products-container">
                 <!-- 1 -->
@@ -539,7 +558,10 @@
                     </div>
 
                     <div class="buttons-row">
-                      <a href="#" class="review-card-modal-btn">
+                      <a
+                        class="review-card-modal-btn disabled"
+                        aria-disabled="true"
+                      >
                         Перейти к продукту
                       </a>
 
@@ -549,7 +571,7 @@
                         data-open="Открыть обзор"
                         data-close="Скрыть"
                       >
-                        Открыть обзор
+                        Подробнее
                       </button>
                     </div>
 
@@ -630,12 +652,15 @@
                     </div>
 
                     <div class="review-card-modal-excerpt">
-                      Увлажняющий крем для чувствительной кожи с лёгкой
-                      текстурой.
+                      Увлажняющий крем для чувствительной кожи <br />
+                      с лёгкой текстурой.
                     </div>
 
                     <div class="buttons-row">
-                      <a href="#" class="review-card-modal-btn">
+                      <a
+                        class="review-card-modal-btn disabled"
+                        aria-disabled="true"
+                      >
                         Перейти к продукту
                       </a>
 
@@ -645,10 +670,9 @@
                         data-open="Открыть обзор"
                         data-close="Скрыть"
                       >
-                        Открыть обзор
+                        Подробнее
                       </button>
                     </div>
-
                     <div class="review-card-modal-details">
                       <div class="review-details-inner">
                         <div class="review-specs">
@@ -727,6 +751,53 @@
                 сильных отдушек и эфирных масел, которые являются частыми
                 триггерами раздражения.
               </p>
+            </section>
+            <!-- FAQ -->
+            <section class="faq">
+              <h2 class="section-title">Часто задаваемые вопросы</h2>
+
+              <div class="faq-item">
+                <h3>
+                  Как понять, что у меня именно чувствительная кожа, а не
+                  аллергия?
+                </h3>
+                <p>
+                  Чувствительность проявляется стянутостью и покалыванием в
+                  ответ на внешние факторы (холод, вода). Аллергия обычно
+                  сопровождается сильным зудом, отеком или сыпью и требует
+                  консультации врача.
+                </p>
+              </div>
+
+              <div class="faq-item">
+                <h3>Можно ли использовать пилинги при чувствительности?</h3>
+                <p>
+                  Агрессивные скрабы и сильные концентрации кислот
+                  противопоказаны. Однако мягкие PHA-кислоты или энзимные пудры
+                  допустимы 1 раз в неделю для бережного обновления без
+                  травматизации барьера.
+                </p>
+              </div>
+
+              <div class="faq-item">
+                <h3>
+                  Почему кожа стала чувствительной, если раньше такой не была?
+                </h3>
+                <p>
+                  Это приобретенная чувствительность. Чаще всего она вызвана
+                  агрессивным уходом (перебор с активами), стрессом, сухим
+                  воздухом или нарушением защитного липидного слоя.
+                </p>
+              </div>
+
+              <div class="faq-item">
+                <h3>Нужно ли наносить крем, если кожа «горит» после воды?</h3>
+                <p>
+                  Обязательно. Жжение сигнализирует о микротрещинах в барьере.
+                  Успокаивающий крем с пантенолом или церамидами создаст
+                  защитный слой и поможет коже быстрее восстановиться.
+                </p>
+              </div>
             </section>
           </div>
 
@@ -1142,6 +1213,8 @@
         <a href="../ingrediente/ceramide.html">Церамиды</a>
         <a href="../ingrediente/pantenol.html">Пантенол</a>
         <a href="../ingrediente/acid-hialuronic.html">Гиалуроновая кислота</a>
+        <a href="../probleme/iritatii.html">Раздражения и воспаления на коже</a>
+        <a href="../ingrediente/neurosensina.html">Нейросенсин в косметике</a>
       </nav>
     </div>
     <!-- SHARE BAR -->
@@ -1217,26 +1290,34 @@
       {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Чувствительная кожа: как восстановить барьер и снять раздражение",
-        "description": "Полный гид по уходу за реактивной кожей: симптомы поврежденного барьера, список успокаивающих ингредиентов и правила деликатного ухода.",
-        "image": "https://chalaya22.github.io",
+
+        "headline": "Чувствительная кожа: причины, признаки и правильный уход",
+        "description": "Полный гид по чувствительной коже: почему кожа реагирует на косметику и внешние факторы, какие ингредиенты помогают уменьшить раздражение и восстановить комфорт кожи.",
+
+        "image": "https://chalaya22.github.io/my-lending/images/og/sensitive-skin-ru-og.jpg",
+
+        "inLanguage": "ru-MD",
+
+        "datePublished": "2026-05-01",
+        "dateModified": "2026-05-01",
+
         "author": {
           "@type": "Organization",
           "name": "Estetica Lens"
         },
+
         "publisher": {
           "@type": "Organization",
           "name": "Estetica Lens",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://chalaya22.github.io"
+            "url": "https://chalaya22.github.io/my-lending/images/logo.png"
           }
         },
-        "datePublished": "2024-05-25",
-        "dateModified": "2024-05-25",
+
         "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://chalaya22.github.io"
+          "@id": "https://chalaya22.github.io/my-lending/ru/probleme/piele-sensibila.html"
         }
       }
     </script>
@@ -1293,19 +1374,19 @@
             "@type": "ListItem",
             "position": 1,
             "name": "Главная",
-            "item": "https://chalaya22.github.io"
+            "item": "https://chalaya22.github.io/my-lending/ru/index.html"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "Проблемы кожи",
-            "item": "https://chalaya22.github.io"
+            "item": "https://chalaya22.github.io/my-lending/ru/probleme.html"
           },
           {
             "@type": "ListItem",
             "position": 3,
             "name": "Чувствительная кожа",
-            "item": "https://chalaya22.github.io"
+            "item": "https://chalaya22.github.io/my-lending/ru/probleme/piele-sensibila.html"
           }
         ]
       }

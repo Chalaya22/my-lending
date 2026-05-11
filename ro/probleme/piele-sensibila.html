@@ -49,14 +49,14 @@
       property="og:description"
       content="Află cum să întărești bariera cutanată și să eviți iritațiile în cazul sensibilității sporite."
     />
+    <meta
+      property="og:image"
+      content="https://chalaya22.github.io/my-lending/images/og/piele-sensibila-ro-og.jpg"
+    />
 
     <meta
       property="og:url"
       content="https://chalaya22.github.io/my-lending/ro/probleme/piele-sensibila.html"
-    />
-    <meta
-      property="og:image"
-      content="https://chalaya22.github.io/my-lending/images/og/ingredients-og.webp"
     />
 
     <!-- Fonts -->
@@ -316,15 +316,15 @@
       </section>
       <article class="ingredient-article">
         <div>
-          <div class="ingredient-meta">
+          <section class="reviews-intro">
             <p class="ingredient-sub">
-              Pielea sensibilă este o condiție caracterizată prin
-              hiperreactivitate la factorii externi și interni. Află cum să
+              <strong>Pielea sensibilă</strong> este o condiție caracterizată
+              prin hiperreactivitate la factorii externi și interni. Află cum să
               distingi sensibilitatea de o alergie, cum să refaci bariera
               lipidică de protecție și cum să alegi o rutină de îngrijire care
               să ofere tenului tău confortul necesar.
             </p>
-          </div>
+          </section>
           <figure class="ingredient-image">
             <img
               src="../../images/piele-sensibila/piele-sensibila-img-800.webp"
@@ -344,7 +344,7 @@
           </figure>
 
           <a class="section-btn-primary" href="../servicii.html">
-            Consultație / Programează-te
+            Programează-te
           </a>
         </div>
 
@@ -385,18 +385,33 @@
                 apariția prematură a ridurilor din cauza stresului constant la
                 nivel celular.
               </p>
-              <div class="ingredient-inline-image">
-                <img
-                  src="../../images/piele-sensibila/piele-sensibila-semne-800.webp"
-                  srcset="
-                    ../../images/piele-sensibila/piele-sensibila-semne-1200.webp 1200w,
-                    ../../images/piele-sensibila/piele-sensibila-semne-800.webp   800w,
-                    ../../images/piele-sensibila/piele-sensibila-semne-600.webp   400w
-                  "
-                  sizes="(max-width: 768px) 100vw, 800px"
-                  alt="Semnele reactivității"
-                  loading="lazy"
-                />
+              <div class="double-image-gallery">
+                <div class="gallery-item">
+                  <img
+                    src="../../images/piele-sensibila/piele-sensibila-semne-800.webp"
+                    srcset="
+                      ../../images/piele-sensibila/piele-sensibila-semne-1200.webp 1200w,
+                      ../../images/piele-sensibila/piele-sensibila-semne-800.webp   800w,
+                      ../../images/piele-sensibila/piele-sensibila-semne-600.webp   400w
+                    "
+                    sizes="(max-width: 768px) 100vw, 800px"
+                    alt="Semnele reactivității"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="gallery-item">
+                  <img
+                    src="../../images/piele-sensibila/piele-sensibila-semne-1-800.webp"
+                    srcset="
+                      ../../images/piele-sensibila/piele-sensibila-semne-1-1200.webp 1200w,
+                      ../../images/piele-sensibila/piele-sensibila-semne-1-800.webp   800w,
+                      ../../images/piele-sensibila/piele-sensibila-semne-1-600.webp   400w
+                    "
+                    sizes="(max-width: 768px) 100vw, 800px"
+                    alt="Semnele disconfortului"
+                    loading="lazy"
+                  />
+                </div>
               </div>
             </section>
             <!-- Reguli de îngrijire pentru pielea sensibilă -->
@@ -518,6 +533,9 @@
               <h2 class="section-title">
                 Cele mai bune produse pentru piele sensibilă
               </h2>
+              <p class="ad-label nusponsored">
+                Review independent. Produsele nu sunt sponsorizate.
+              </p>
 
               <div class="products-container">
                 <!-- 1 -->
@@ -542,17 +560,18 @@
                     </div>
 
                     <div class="buttons-row">
-                      <a href="#" class="review-card-modal-btn">
-                        Vezi produsul
+                      <a
+                        class="review-card-modal-btn disabled"
+                        aria-disabled="true"
+                      >
+                        Curând disponibil
                       </a>
 
                       <button
                         class="review-card-modal-btn"
                         onclick="toggleDetails(this)"
-                        data-open="Deschide recenzia"
-                        data-close="Ascunde"
                       >
-                        Deschide recenzia
+                        Citește recenzia
                       </button>
                     </div>
 
@@ -632,21 +651,23 @@
                     </div>
 
                     <div class="review-card-modal-excerpt">
-                      Cremă hidratantă ușoară pentru piele sensibilă.
+                      Cremă hidratantă ușoară <br />
+                      pentru piele sensibilă.
                     </div>
 
                     <div class="buttons-row">
-                      <a href="#" class="review-card-modal-btn">
-                        Vezi produsul
+                      <a
+                        class="review-card-modal-btn disabled"
+                        aria-disabled="true"
+                      >
+                        Curând disponibil
                       </a>
 
                       <button
                         class="review-card-modal-btn"
                         onclick="toggleDetails(this)"
-                        data-open="Deschide recenzia"
-                        data-close="Ascunde"
                       >
-                        Deschide recenzia
+                        Citește recenzia
                       </button>
                     </div>
 
@@ -724,6 +745,55 @@
                 evitând parfumurile puternice și uleiurile esențiale, care sunt
                 triggeri frecvenți ai iritațiilor.
               </p>
+            </section>
+            <!-- FAQ -->
+            <section class="faq">
+              <h2 class="section-title">Întrebări frecvente</h2>
+
+              <div class="faq-item">
+                <h3>
+                  Cum îmi dau seama dacă am piele sensibilă sau o alergie?
+                </h3>
+                <p>
+                  Sensibilitatea se manifestă prin senzație de strângere și
+                  furnicături ca răspuns la factorii externi (frig, apă).
+                  Alergia este de obicei însoțită de mâncărime intensă, umflare
+                  sau erupții cutante și necesită consultarea unui medic.
+                </p>
+              </div>
+
+              <div class="faq-item">
+                <h3>Pot folosi peeling-uri dacă am tenul sensibil?</h3>
+                <p>
+                  Scrub-urile agresive și concentrațiile mari de acizi sunt
+                  contraindicate. Totuși, acizii PHA blânzi sau pudrele
+                  enzimatice sunt permise o dată pe săptămână pentru o reînnoire
+                  delicată, fără a traumatiza bariera cutanată.
+                </p>
+              </div>
+
+              <div class="faq-item">
+                <h3>
+                  De ce pielea a devenit sensibilă, deși înainte nu era așa?
+                </h3>
+                <p>
+                  Aceasta este o sensibilitate dobândită. Cel mai des este
+                  cauzată de o îngrijire agresivă (exces de active), stres, aer
+                  uscat sau deteriorarea stratului lipidic de protecție.
+                </p>
+              </div>
+
+              <div class="faq-item">
+                <h3>
+                  Este necesar să aplic cremă dacă simt că pielea „arde” după
+                  apă?
+                </h3>
+                <p>
+                  Absolut. Senzația de arsură semnalează microfisuri în barieră.
+                  O cremă calmantă cu pantenol sau ceramide va crea un strat
+                  protector și va ajuta pielea să se recupereze mai repede.
+                </p>
+              </div>
             </section>
           </div>
 
@@ -854,49 +924,6 @@
             </form>
 
             <p class="newsletter-note">Te poți dezabona oricând.</p>
-          </div>
-        </section>
-        <section class="faq">
-          <h2 class="section-title">Întrebări frecvente</h2>
-
-          <div class="faq-item">
-            <h3>Cum îmi dau seama dacă am piele sensibilă sau o alergie?</h3>
-            <p>
-              Sensibilitatea se manifestă prin senzație de strângere și
-              furnicături ca răspuns la factorii externi (frig, apă). Alergia
-              este de obicei însoțită de mâncărime intensă, umflare sau erupții
-              cutante și necesită consultarea unui medic.
-            </p>
-          </div>
-
-          <div class="faq-item">
-            <h3>Pot folosi peeling-uri dacă am tenul sensibil?</h3>
-            <p>
-              Scrub-urile agresive și concentrațiile mari de acizi sunt
-              contraindicate. Totuși, acizii PHA blânzi sau pudrele enzimatice
-              sunt permise o dată pe săptămână pentru o reînnoire delicată, fără
-              a traumatiza bariera cutanată.
-            </p>
-          </div>
-
-          <div class="faq-item">
-            <h3>De ce pielea a devenit sensibilă, deși înainte nu era așa?</h3>
-            <p>
-              Aceasta este o sensibilitate dobândită. Cel mai des este cauzată
-              de o îngrijire agresivă (exces de active), stres, aer uscat sau
-              deteriorarea stratului lipidic de protecție.
-            </p>
-          </div>
-
-          <div class="faq-item">
-            <h3>
-              Este necesar să aplic cremă dacă simt că pielea „arde” după apă?
-            </h3>
-            <p>
-              Absolut. Senzația de arsură semnalează microfisuri în barieră. O
-              cremă calmantă cu pantenol sau ceramide va crea un strat protector
-              și va ajuta pielea să se recupereze mai repede.
-            </p>
           </div>
         </section>
       </article>
@@ -1141,6 +1168,8 @@
         <a href="../ingrediente/ceramide.html">Ceramide</a>
         <a href="../ingrediente/pantenol.html">Pantenol</a>
         <a href="../ingrediente/acid-hialuronic.html">Acid Hialuronic</a>
+        <a href="../probleme/iritatii.html">Iritații și roșeață</a>
+        <a href="../ingrediente/neurosensina.html">Neurosensina în cosmetică</a>
       </nav>
     </div>
     <!-- SHARE BAR -->
@@ -1217,26 +1246,34 @@
       {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Pielea sensibilă: cum să refaci bariera cutanată și să calmezi iritațiile",
-        "description": "Ghid complet pentru îngrijirea tenului reactiv: simptomele barierei deteriorate, ingrediente calmante și reguli de îngrijire delicată.",
-        "image": "https://chalaya22.github.io",
+
+        "headline": "Piele sensibilă: cauze, simptome și îngrijirea corectă",
+        "description": "Ghid complet despre pielea sensibilă: de ce pielea reacționează la cosmetice și factori externi și cum reduci iritațiile și refaci confortul pielii.",
+
+        "image": "https://chalaya22.github.io/my-lending/images/og/piele-sensibila-ro-og.jpg",
+
+        "inLanguage": "ro-RO",
+
+        "datePublished": "2026-05-01",
+        "dateModified": "2026-05-01",
+
         "author": {
           "@type": "Organization",
           "name": "Estetica Lens"
         },
+
         "publisher": {
           "@type": "Organization",
           "name": "Estetica Lens",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://chalaya22.github.io"
+            "url": "https://chalaya22.github.io/my-lending/images/logo.png"
           }
         },
-        "datePublished": "2024-05-25",
-        "dateModified": "2024-05-25",
+
         "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://chalaya22.github.io"
+          "@id": "https://chalaya22.github.io/my-lending/ro/probleme/piele-sensibila.html"
         }
       }
     </script>
@@ -1293,19 +1330,19 @@
             "@type": "ListItem",
             "position": 1,
             "name": "Acasă",
-            "item": "https://chalaya22.github.io"
+            "item": "https://chalaya22.github.io/my-lending/ro/index.html"
           },
           {
             "@type": "ListItem",
             "position": 2,
-            "name": "Probleme ale pielii",
-            "item": "https://chalaya22.github.io"
+            "name": "Problemele ale pielii",
+            "item": "https://chalaya22.github.io/my-lending/ro/probleme.html"
           },
           {
             "@type": "ListItem",
             "position": 3,
             "name": "Piele sensibilă",
-            "item": "https://chalaya22.github.io"
+            "item": "https://chalaya22.github.io/my-lending/ro/probleme/piele-sensibila.html"
           }
         ]
       }
