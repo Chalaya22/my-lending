@@ -52,12 +52,12 @@
       content="Analizăm cauzele hiperpigmentării post-inflamatorii. Cele mai bune ingrediente (niacinamidă, acizi, vitamina C) pentru regenerarea pielii după acnee."
     />
     <meta
-      property="og:url"
-      content="https://chalaya22.github.io/my-lending/ro/probleme/post-acnee.html"
+      property="og:image"
+      content="https://chalaya22.github.io/my-lending/images/og/post-acnee-ro-og.jpg"
     />
     <meta
-      property="og:image"
-      content="https://chalaya22.github.io/my-lending/images/og/ingredients-og.webp"
+      property="og:url"
+      content="https://chalaya22.github.io/my-lending/ro/probleme/post-acnee.html"
     />
 
     <!-- Fonts -->
@@ -317,16 +317,20 @@
       </section>
       <article class="ingredient-article">
         <div>
-          <div class="ingredient-meta">
-            <p class="ingredient-sub">
-              Analizăm de ce după coșuri rămân pete roșii și o textură
-              neuniformă: de la eritemul post-inflamator până la
-              hiperpigmentarea persistentă. Află cum să îți refaci corect pielea
-              în condițiile climei din România, luând în calcul impactul apei
-              dure și al soarelui activ, folosind niacinamidă, acid azelaic și
-              vitamina C pentru a reda tenului un aspect uniform și luminos.
+          <section class="reviews-intro">
+            <p>
+              <strong
+                >Post-acnee - analizăm de ce după coșuri rămân pete roșii și o
+                textură neuniformă: de la eritemul post-inflamator până la
+                hiperpigmentarea persistentă.</strong
+              >
+              <br />
+              Află cum să îți refaci corect pielea în condițiile climei din
+              România, luând în calcul impactul apei dure și al soarelui activ,
+              folosind niacinamidă, acid azelaic și vitamina C pentru a reda
+              tenului un aspect uniform și luminos.
             </p>
-          </div>
+          </section>
           <figure class="ingredient-image">
             <img
               src="../../images/post-acne/postacne-img-800.webp"
@@ -346,7 +350,7 @@
           </figure>
 
           <a class="section-btn-primary" href="../servicii.html">
-            Consultație / Programează-te
+            Programează-te
           </a>
         </div>
 
@@ -475,18 +479,33 @@
                   </td>
                 </tr>
               </table>
-              <div class="ingredient-inline-image">
-                <img
-                  src="../../images/post-acne/post-acne-functioneaza-800.webp"
-                  srcset="
-                    ../../images/post-acne/post-acne-functioneaza-1200.webp 1200w,
-                    ../../images/post-acne/post-acne-functioneaza-800.webp   800w,
-                    ../../images/post-acne/post-acne-functioneaza-400.webp   400w
-                  "
-                  sizes="(max-width: 768px) 100vw, 800px"
-                  alt="Ingrediente pentru combaterea semnelor post-acneice"
-                  loading="lazy"
-                />
+              <div class="double-image-gallery">
+                <div class="gallery-item">
+                  <img
+                    src="../../images/post-acne/post-acne-functioneaza-800.webp"
+                    srcset="
+                      ../../images/post-acne/post-acne-functioneaza-1200.webp 1200w,
+                      ../../images/post-acne/post-acne-functioneaza-800.webp   800w,
+                      ../../images/post-acne/post-acne-functioneaza-400.webp   400w
+                    "
+                    sizes="(max-width: 768px) 100vw, 800px"
+                    alt="Ingrediente care luminează și vindecă"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="gallery-item">
+                  <img
+                    src="../../images/post-acne/post-acne-functioneaza-1-800.webp"
+                    srcset="
+                      ../../images/post-acne/post-acne-functioneaza-1-1200.webp 1200w,
+                      ../../images/post-acne/post-acne-functioneaza-1-800.webp   800w,
+                      ../../images/post-acne/post-acne-functioneaza-1-400.webp   400w
+                    "
+                    sizes="(max-width: 768px) 100vw, 800px"
+                    alt="Centella Asiatică (CICA)"
+                    loading="lazy"
+                  />
+                </div>
               </div>
             </section>
             <!-- Cele mai bune produse pentru pete post-acnee -->
@@ -494,6 +513,9 @@
               <h2 class="section-title">
                 Cele mai bune produse pentru pete post-acnee
               </h2>
+              <p class="ad-label nusponsored">
+                Review independent. Produsele nu sunt sponsorizate.
+              </p>
 
               <div class="products-container">
                 <!-- 1 -->
@@ -518,17 +540,18 @@
                     </div>
 
                     <div class="buttons-row">
-                      <a href="#" class="review-card-modal-btn">
-                        Vezi produsul
+                      <a
+                        class="review-card-modal-btn disabled"
+                        aria-disabled="true"
+                      >
+                        Curând disponibil
                       </a>
 
                       <button
                         class="review-card-modal-btn"
                         onclick="toggleDetails(this)"
-                        data-open="Vezi review"
-                        data-close="Ascunde"
                       >
-                        Vezi review
+                        Citește recenzia
                       </button>
                     </div>
 
@@ -610,17 +633,18 @@
                     </div>
 
                     <div class="buttons-row">
-                      <a href="#" class="review-card-modal-btn">
-                        Vezi produsul
+                      <a
+                        class="review-card-modal-btn disabled"
+                        aria-disabled="true"
+                      >
+                        Curând disponibil
                       </a>
 
                       <button
                         class="review-card-modal-btn"
                         onclick="toggleDetails(this)"
-                        data-open="Vezi review"
-                        data-close="Ascunde"
                       >
-                        Vezi review
+                        Citește recenzia
                       </button>
                     </div>
 
@@ -756,6 +780,59 @@
                 semnelor și va ajuta pielea să se refacă fără formarea unei
                 hiperpigmentări persistente.
               </p>
+            </section>
+            <!-- FAQ -->
+            <section class="faq">
+              <h2 class="section-title">
+                Întrebări frecvente despre post-acnee
+              </h2>
+
+              <div class="faq-item">
+                <h3>În cât timp dispar petele roșii post-acneice?</h3>
+                <p>
+                  În medie, procesul natural de vindecare a eritemului
+                  post-inflamator (petele roșii) durează între
+                  <strong>3 și 6 luni</strong>. Cu ajutorul niacinamidei și al
+                  centellei asiatice, această perioadă poate fi redusă la 4–6
+                  săptămâni.
+                </p>
+              </div>
+
+              <div class="faq-item">
+                <h3>
+                  Pot fi eliminate cicatricile adânci doar cu ajutorul
+                  serurilor?
+                </h3>
+                <p>
+                  Din păcate, nu. Îngrijirea la domiciliu cu retinol poate doar
+                  să netezească ușor relieful pielii. Cicatricile atrofice
+                  profunde necesită proceduri profesionale, cum ar fi
+                  microneedling-ul sau rejuvenarea laser în clinicile
+                  dermatologice.
+                </p>
+              </div>
+
+              <div class="faq-item">
+                <h3>De ce petele post-acneice devin maronii?</h3>
+                <p>
+                  Acesta este rezultatul expunerii la razele ultraviolete. În
+                  condițiile
+                  <strong>climei însorite din România</strong>, o pată roșie
+                  fără protecție SPF se transformă rapid în hiperpigmentare
+                  maronie. Soarele „fixează” melanina în locul fostei
+                  inflamații.
+                </p>
+              </div>
+
+              <div class="faq-item">
+                <h3>Ajută acidul salicilic la eliminarea petelor?</h3>
+                <p>
+                  Acidul BHA (salicilic) funcționează mai bine pentru coșurile
+                  active și punctele negre. Pentru luminarea petelor deja
+                  existente, sunt mai eficienți
+                  <strong>acizii azelaic, mandelic sau tranexamic</strong>.
+                </p>
+              </div>
             </section>
           </div>
 
@@ -911,54 +988,6 @@
             </form>
 
             <p class="newsletter-note">Te poți dezabona oricând.</p>
-          </div>
-        </section>
-        <!-- FAQ -->
-        <section class="faq">
-          <h2 class="section-title">Întrebări frecvente despre post-acnee</h2>
-
-          <div class="faq-item">
-            <h3>În cât timp dispar petele roșii post-acneice?</h3>
-            <p>
-              În medie, procesul natural de vindecare a eritemului
-              post-inflamator (petele roșii) durează între
-              <strong>3 și 6 luni</strong>. Cu ajutorul niacinamidei și al
-              centellei asiatice, această perioadă poate fi redusă la 4–6
-              săptămâni.
-            </p>
-          </div>
-
-          <div class="faq-item">
-            <h3>
-              Pot fi eliminate cicatricile adânci doar cu ajutorul serurilor?
-            </h3>
-            <p>
-              Din păcate, nu. Îngrijirea la domiciliu cu retinol poate doar să
-              netezească ușor relieful pielii. Cicatricile atrofice profunde
-              necesită proceduri profesionale, cum ar fi microneedling-ul sau
-              rejuvenarea laser în clinicile dermatologice.
-            </p>
-          </div>
-
-          <div class="faq-item">
-            <h3>De ce petele post-acneice devin maronii?</h3>
-            <p>
-              Acesta este rezultatul expunerii la razele ultraviolete. În
-              condițiile
-              <strong>climei însorite din România</strong>, o pată roșie fără
-              protecție SPF se transformă rapid în hiperpigmentare maronie.
-              Soarele „fixează” melanina în locul fostei inflamații.
-            </p>
-          </div>
-
-          <div class="faq-item">
-            <h3>Ajută acidul salicilic la eliminarea petelor?</h3>
-            <p>
-              Acidul BHA (salicilic) funcționează mai bine pentru coșurile
-              active și punctele negre. Pentru luminarea petelor deja existente,
-              sunt mai eficienți
-              <strong>acizii azelaic, mandelic sau tranexamic</strong>.
-            </p>
           </div>
         </section>
       </article>
@@ -1200,8 +1229,9 @@
     <div class="guides-wrapper">
       <button class="guides-trigger">Ghiduri utile</button>
       <nav class="guides-panel">
-        <a href="../probleme/acnee.html">Acnee și puncte negre</a>
-        <a href="../probleme/post-acnee.html">Cum scapi de post-acnee</a>
+        <a href="../probleme/acnee.html">Acnee </a>
+        <a href="../probleme/puncte-negre.html">Puncte negre</a>
+        <a href="../probleme/barrier.html">Bariera cutanată deteriorată</a>
         <a href="../ingrediente/niacinamide.html">Niacinamida: pete și pori</a>
         <a href="../ingrediente/spf.html">Protecția SPF: de ce este vitală</a>
       </nav>
@@ -1280,26 +1310,34 @@
       {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Post-acnee: cum scapi de pete și cicatrici după coșuri",
-        "description": "Ghid complet pentru combaterea semnelor post-acneice în România: cauzele petelor roșii și maronii, cele mai bune ingrediente (niacinamidă, vitamina C) și reguli de regenerare.",
-        "image": "https://chalaya22.github.io",
+
+        "headline": "Post-acnee: cauze și cum reduci urmele după acnee",
+        "description": "Ghid complet despre post-acnee: de ce rămân pete și urme după coșuri și ce ingrediente ajută la uniformizarea pielii și reducerea imperfecțiunilor.",
+
+        "image": "https://chalaya22.github.io/my-lending/images/og/post-acnee-ro-og.jpg",
+
+        "inLanguage": "ro-RO",
+
+        "datePublished": "2026-05-01",
+        "dateModified": "2026-05-01",
+
         "author": {
           "@type": "Organization",
           "name": "Estetica Lens"
         },
+
         "publisher": {
           "@type": "Organization",
           "name": "Estetica Lens",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://chalaya22.github.io"
+            "url": "https://chalaya22.github.io/my-lending/images/logo.png"
           }
         },
-        "datePublished": "2026-02-28",
-        "dateModified": "2026-02-28",
+
         "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://chalaya22.github.io"
+          "@id": "https://chalaya22.github.io/my-lending/ro/probleme/post-acnee.html"
         }
       }
     </script>
@@ -1356,19 +1394,19 @@
             "@type": "ListItem",
             "position": 1,
             "name": "Acasă",
-            "item": "https://chalaya22.github.io"
+            "item": "https://chalaya22.github.io/my-lending/ro/index.html"
           },
           {
             "@type": "ListItem",
             "position": 2,
-            "name": "Probleme ale pielii",
-            "item": "https://chalaya22.github.ioprobleme/"
+            "name": "Problemele ale pielii",
+            "item": "https://chalaya22.github.io/my-lending/ro/probleme.html"
           },
           {
             "@type": "ListItem",
             "position": 3,
             "name": "Post-acnee",
-            "item": "https://chalaya22.github.io"
+            "item": "https://chalaya22.github.io/my-lending/ro/probleme/post-acnee.html"
           }
         ]
       }
