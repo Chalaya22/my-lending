@@ -52,13 +52,12 @@
       content="Analizăm factorii declanșatori ai rozaceei. Cele mai bune ingrediente (acid azelaic, pantenol, centella) pentru calmarea tenului reactiv și combaterea cuperozei."
     />
     <meta
+      property="og:image"
+      content="https://chalaya22.github.io/my-lending/images/og/rozacee-ro-og.jpg"
+    />
+    <meta
       property="og:url"
       content="https://chalaya22.github.io/my-lending/ro/probleme/rozacee.html"
-    />
-
-    <meta
-      property="og:image"
-      content="https://chalaya22.github.io/my-lending/images/og/ingredients-og.webp"
     />
 
     <!-- Fonts -->
@@ -318,18 +317,20 @@
       </section>
       <article class="ingredient-article">
         <div>
-          <div class="ingredient-meta">
-            <p class="ingredient-sub">
-              Analizăm motivele pentru care tenul este predispus la roșeață
-              persistentă și la apariția vinișoarelor vizibile: de la primele
-              semne de cuperoză până la stadiile de inflamație activă ale
-              rozaceei. Află cum să calmezi reactivitatea pielii în contextul
-              climatului local, luând în calcul variațiile bruște de temperatură
-              și activitatea solară intensă, folosind acidul azelaic, centella
-              asiatica și ceramidele reparatoare pentru a reda confortul și
-              uniformitatea tenului.
+          <section class="reviews-intro">
+            <p>
+              <strong
+                >Analizăm motivele pentru care tenul este predispus la roșeață
+                persistentă și la apariția vinișoarelor vizibile:</strong
+              >
+              de la primele semne de cuperoză până la stadiile de inflamație
+              activă ale rozaceei. Află cum să calmezi reactivitatea pielii în
+              contextul climatului local, luând în calcul variațiile bruște de
+              temperatură și activitatea solară intensă, folosind acidul
+              azelaic, centella asiatica și ceramidele reparatoare pentru a reda
+              confortul și uniformitatea tenului.
             </p>
-          </div>
+          </section>
           <figure class="ingredient-image">
             <img
               src="../../images/rozacee/rozacee-img-800.webp"
@@ -350,7 +351,7 @@
           </figure>
 
           <a class="section-btn-primary" href="../servicii.html">
-            Consultație / Programează-te
+            Programează-te
           </a>
         </div>
 
@@ -494,6 +495,9 @@
               <h2 class="section-title">
                 Cele mai bune produse pentru rozacee
               </h2>
+              <p class="ad-label nusponsored">
+                Review independent. Produsele nu sunt sponsorizate.
+              </p>
 
               <div class="products-container">
                 <!-- 1 -->
@@ -519,17 +523,18 @@
                     </div>
 
                     <div class="buttons-row">
-                      <a href="#" class="review-card-modal-btn">
-                        Vezi produsul
+                      <a
+                        class="review-card-modal-btn disabled"
+                        aria-disabled="true"
+                      >
+                        Curând disponibil
                       </a>
 
                       <button
                         class="review-card-modal-btn"
                         onclick="toggleDetails(this)"
-                        data-open="Vezi review"
-                        data-close="Ascunde"
                       >
-                        Vezi review
+                        Citește recenzia
                       </button>
                     </div>
 
@@ -614,17 +619,18 @@
                     </div>
 
                     <div class="buttons-row">
-                      <a href="#" class="review-card-modal-btn">
-                        Vezi produsul
+                      <a
+                        class="review-card-modal-btn disabled"
+                        aria-disabled="true"
+                      >
+                        Curând disponibil
                       </a>
 
                       <button
                         class="review-card-modal-btn"
                         onclick="toggleDetails(this)"
-                        data-open="Vezi review"
-                        data-close="Ascunde"
                       >
-                        Vezi review
+                        Citește recenzia
                       </button>
                     </div>
 
@@ -692,6 +698,7 @@
             <!-- Ce este INTERZIS în rozacee? -->
             <section class="ingredient-section warning-section">
               <h2 class="section-title">Ce este INTERZIS în rozacee?</h2>
+
               <ul class="related-list">
                 <li>
                   spălarea feței cu apă fierbinte sau foarte rece (variațiile
@@ -732,18 +739,33 @@
                 praful, și va ajuta vasele de sânge să rămână sub protecția
                 sigură a epidermului, reducând frecvența puseelor de roșeață.
               </p>
-              <div class="ingredient-inline-image">
-                <img
-                  src="../../images/rozacee/rozacee-bariera-800.webp"
-                  srcset="
-                    ../../images/rozacee/rozacee-bariera-1200.webp 1200w,
-                    ../../images/rozacee/rozacee-bariera-800.webp   800w,
-                    ../../images/rozacee/rozacee-bariera-400.webp   400w
-                  "
-                  sizes="(max-width: 768px) 100vw, 800px"
-                  alt="Refacerea barierei cutante în rozacee"
-                  loading="lazy"
-                />
+              <div class="double-image-gallery">
+                <div class="gallery-item">
+                  <img
+                    src="../../images/rozacee/rozacee-bariera-800.webp"
+                    srcset="
+                      ../../images/rozacee/rozacee-bariera-1200.webp 1200w,
+                      ../../images/rozacee/rozacee-bariera-800.webp   800w,
+                      ../../images/rozacee/rozacee-bariera-400.webp   400w
+                    "
+                    sizes="(max-width: 768px) 100vw, 800px"
+                    alt="Refacerea barierei cutante în rozacee"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="gallery-item">
+                  <img
+                    src="../../images/rozacee/rozacee-bariera-1-800.webp"
+                    srcset="
+                      ../../images/rozacee/rozacee-bariera-1-1200.webp 1200w,
+                      ../../images/rozacee/rozacee-bariera-1-800.webp   800w,
+                      ../../images/rozacee/rozacee-bariera-1-400.webp   400w
+                    "
+                    sizes="(max-width: 768px) 100vw, 800px"
+                    alt="Cum reducem reactivitatea vasculară"
+                    loading="lazy"
+                  />
+                </div>
               </div>
             </section>
             <!--  Factorii externi și stilul de viață local -->
@@ -768,6 +790,59 @@
                 rol la fel de important ca și îngrijirea farmaceutică corect
                 aleasă.
               </p>
+            </section>
+            <!-- FAQ -->
+            <section class="faq">
+              <h2 class="section-title">Întrebări frecvente despre rozacee</h2>
+
+              <div class="faq-item">
+                <h3>Se poate vindeca definitiv rozaceea?</h3>
+                <p>
+                  Rozaceea este o <strong>afecțiune cronică</strong> ce nu poate
+                  fi „vindecată” permanent, dar poate fi controlată cu succes
+                  pentru a obține o remisie de lungă durată. Prin utilizarea
+                  acidului azelaic și evitarea factorilor declanșatori, se poate
+                  menține un ten curat, fără roșeață vizibilă.
+                </p>
+              </div>
+
+              <div class="faq-item">
+                <h3>Pot cremele să elimine vinișoarele vizibile (cuperoza)?</h3>
+                <p>
+                  Din păcate, produsele cosmetice nu pot „șterge” capilarele
+                  care sunt deja dilatate. Cremele cu venotonice (troxerutin,
+                  castan) pot doar să
+                  <strong>diminueze roșeața difuză</strong> și să prevină
+                  apariția unor noi vase de sânge. Pentru eliminarea rețelei
+                  vasculare vechi, sunt necesare proceduri laser în clinicile
+                  dermatologice.
+                </p>
+              </div>
+
+              <div class="faq-item">
+                <h3>De ce se agravează rozaceea după expunerea la soare?</h3>
+                <p>
+                  Radițiile ultraviolete sunt inamicul principal al vaselor de
+                  sânge. În condițiile <strong>verilor toride</strong>, soarele
+                  provoacă eliberarea mediatorilor inflamatori și dilatarea
+                  capilarelor. Fără un SPF mineral, fața se înroșește rapid și
+                  poate apărea senzația intensă de căldură (flushing).
+                </p>
+              </div>
+
+              <div class="faq-item">
+                <h3>Ajută dieta în controlul rozaceei?</h3>
+                <p>
+                  Da, alimentația influențează direct starea vaselor de sânge.
+                  Pentru a controla rozaceea, se recomandă limitarea consumului
+                  de
+                  <strong
+                    >mâncăruri picante, băuturi foarte fierbinți și vin
+                    roșu</strong
+                  >, deoarece acestea provoacă un flux rapid de sânge către față
+                  și declanșează puseele de roșeață.
+                </p>
+              </div>
             </section>
           </div>
 
@@ -924,56 +999,6 @@
             </form>
 
             <p class="newsletter-note">Te poți dezabona oricând.</p>
-          </div>
-        </section>
-        <!-- FAQ -->
-        <section class="faq">
-          <h2 class="section-title">Întrebări frecvente despre rozacee</h2>
-
-          <div class="faq-item">
-            <h3>Se poate vindeca definitiv rozaceea?</h3>
-            <p>
-              Rozaceea este o <strong>afecțiune cronică</strong> ce nu poate fi
-              „vindecată” permanent, dar poate fi controlată cu succes pentru a
-              obține o remisie de lungă durată. Prin utilizarea acidului azelaic
-              și evitarea factorilor declanșatori, se poate menține un ten
-              curat, fără roșeață vizibilă.
-            </p>
-          </div>
-
-          <div class="faq-item">
-            <h3>Pot cremele să elimine vinișoarele vizibile (cuperoza)?</h3>
-            <p>
-              Din păcate, produsele cosmetice nu pot „șterge” capilarele care
-              sunt deja dilatate. Cremele cu venotonice (troxerutin, castan) pot
-              doar să <strong>diminueze roșeața difuză</strong> și să prevină
-              apariția unor noi vase de sânge. Pentru eliminarea rețelei
-              vasculare vechi, sunt necesare proceduri laser în clinicile
-              dermatologice.
-            </p>
-          </div>
-
-          <div class="faq-item">
-            <h3>De ce se agravează rozaceea după expunerea la soare?</h3>
-            <p>
-              Radițiile ultraviolete sunt inamicul principal al vaselor de
-              sânge. În condițiile <strong>verilor toride</strong>, soarele
-              provoacă eliberarea mediatorilor inflamatori și dilatarea
-              capilarelor. Fără un SPF mineral, fața se înroșește rapid și poate
-              apărea senzația intensă de căldură (flushing).
-            </p>
-          </div>
-
-          <div class="faq-item">
-            <h3>Ajută dieta în controlul rozaceei?</h3>
-            <p>
-              Da, alimentația influențează direct starea vaselor de sânge.
-              Pentru a controla rozaceea, se recomandă limitarea consumului de
-              <strong
-                >mâncăruri picante, băuturi foarte fierbinți și vin roșu</strong
-              >, deoarece acestea provoacă un flux rapid de sânge către față și
-              declanșează puseele de roșeață.
-            </p>
           </div>
         </section>
       </article>
@@ -1296,26 +1321,34 @@
       {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Rozaceea: cauze, factori declanșatori și reguli de îngrijire a tenului vascular",
-        "description": "Ghid complet despre controlul roșeții și al cuperozei în România: cum să gestionezi puseele de rozacee, cele mai bune ingrediente (acid azelaic, centella) și rolul protecției SPF.",
-        "image": "https://chalaya22.github.io",
+
+        "headline": "Rozacee: cauze, simptome și îngrijirea pielii sensibile",
+        "description": "Ghid complet despre rozacee: de ce apare roșeața persistentă a pielii, ce factori pot agrava sensibilitatea și cum îngrijești corect pielea cu rozacee.",
+
+        "image": "https://chalaya22.github.io/my-lending/images/og/rozacee-ro-og.jpg",
+
+        "inLanguage": "ro-RO",
+
+        "datePublished": "2026-05-01",
+        "dateModified": "2026-05-01",
+
         "author": {
           "@type": "Organization",
           "name": "Estetica Lens"
         },
+
         "publisher": {
           "@type": "Organization",
           "name": "Estetica Lens",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://chalaya22.github.io"
+            "url": "https://chalaya22.github.io/my-lending/images/logo.png"
           }
         },
-        "datePublished": "2026-03-01",
-        "dateModified": "2026-03-02",
+
         "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://chalaya22.github.io"
+          "@id": "https://chalaya22.github.io/my-lending/ro/probleme/rozacee.html"
         }
       }
     </script>
@@ -1372,19 +1405,19 @@
             "@type": "ListItem",
             "position": 1,
             "name": "Acasă",
-            "item": "https://chalaya22.github.io"
+            "item": "https://chalaya22.github.io/my-lending/ro/index.html"
           },
           {
             "@type": "ListItem",
             "position": 2,
-            "name": "Probleme ale pielii",
-            "item": "https://chalaya22.github.ioprobleme/"
+            "name": "Problemele ale pielii",
+            "item": "https://chalaya22.github.io/my-lending/ro/probleme.html"
           },
           {
             "@type": "ListItem",
             "position": 3,
             "name": "Rozacee",
-            "item": "https://chalaya22.github.io"
+            "item": "https://chalaya22.github.io/my-lending/ro/probleme/rozacee.html"
           }
         ]
       }
