@@ -49,14 +49,14 @@
       property="og:description"
       content="Cum apar problemele pielii și cum alegi corect îngrijirea și ingredientele potrivite."
     />
+    <meta
+      property="og:image"
+      content="https://chalaya22.github.io/my-lending/images/og/probleme-piele-ro-og.jpg"
+    />
 
     <meta
       property="og:url"
       content="https://chalaya22.github.io/my-lending/ro/probleme.html"
-    />
-    <meta
-      property="og:image"
-      content="https://chalaya22.github.io/my-lending/images/og/ingredients-og.webp"
     />
 
     <!-- Fonts -->
@@ -324,16 +324,18 @@
       <!-- CONTENT -->
       <section class="page-section ingredients-page">
         <div class="container">
-          <div class="ingredient-meta">
-            <p class="ingredient-sub">
-              În această secțiune găsești ghiduri practice despre cele mai
-              frecvente probleme ale pielii: cauze, greșeli de îngrijire și
-              ingrediente care ajută real la refacerea echilibrului și sănătății
-              pielii.
+          <section class="reviews-intro">
+            <p>
+              <strong
+                >În această secțiune găsești ghiduri practice despre cele mai
+                frecvente probleme ale pielii: cauze, greșeli de îngrijire și
+                ingrediente care ajută real la refacerea echilibrului și
+                sănătății pielii.</strong
+              >
             </p>
 
             <a class="section-btn-primary" href="servicii.html"> Programare </a>
-          </div>
+          </section>
           <div class="grid-2">
             <div>
               <div class="page-grid">
@@ -566,6 +568,37 @@
                   </p>
                 </a>
               </div>
+              <!-- FAQ -->
+              <section class="faq">
+                <h2>Întrebări frecvente despre problemele pielii</h2>
+
+                <div class="faq-item">
+                  <h3>
+                    Pot fi tratate mai multe probleme ale pielii simultan?
+                  </h3>
+                  <p class="card-hint">
+                    Da, dar este important să nu supraîncarci rutina și să
+                    combini corect ingredientele active, mai ales în cazul
+                    pielii sensibile.
+                  </p>
+                </div>
+
+                <div class="faq-item">
+                  <h3>De ce devine pielea sensibilă?</h3>
+                  <p class="card-hint">
+                    Cel mai frecvent din cauza deteriorării barierei cutanate,
+                    îngrijirii agresive sau utilizării excesive a activilor.
+                  </p>
+                </div>
+
+                <div class="faq-item">
+                  <h3>Se poate reface bariera pielii?</h3>
+                  <p class="card-hint">
+                    Da. Cu ajutorul lipidelor, ceramidelor, hidratării și
+                    eliminării ingredientelor iritante.
+                  </p>
+                </div>
+              </section>
             </div>
 
             <!-- SIDEBAR -->
@@ -674,35 +707,6 @@
               </div>
             </aside>
           </div>
-
-          <!-- FAQ -->
-          <section class="faq">
-            <h2>Întrebări frecvente despre problemele pielii</h2>
-
-            <div class="faq-item">
-              <h3>Pot fi tratate mai multe probleme ale pielii simultan?</h3>
-              <p class="card-hint">
-                Da, dar este important să nu supraîncarci rutina și să combini
-                corect ingredientele active, mai ales în cazul pielii sensibile.
-              </p>
-            </div>
-
-            <div class="faq-item">
-              <h3>De ce devine pielea sensibilă?</h3>
-              <p class="card-hint">
-                Cel mai frecvent din cauza deteriorării barierei cutanate,
-                îngrijirii agresive sau utilizării excesive a activilor.
-              </p>
-            </div>
-
-            <div class="faq-item">
-              <h3>Se poate reface bariera pielii?</h3>
-              <p class="card-hint">
-                Da. Cu ajutorul lipidelor, ceramidelor, hidratării și eliminării
-                ingredientelor iritante.
-              </p>
-            </div>
-          </section>
         </div>
       </section>
     </main>
@@ -1006,39 +1010,99 @@
     <!-- КНОПКА ВВЕРХ -->
     <button id="scrollTopBtn">▲</button>
 
+    <script src="../script.js"></script>
+    <!-- Aticol Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+
+        "headline": "Problemele pielii: ghid complet despre afecțiunile și nevoile pielii",
+        "description": "Ghid complet despre problemele pielii: acnee, sensibilitate, exces de sebum, deshidratare, pete pigmentare și alte probleme frecvente ale pielii.",
+
+        "image": "https://chalaya22.github.io/my-lending/images/og/probleme-piele-ro-og.jpg",
+
+        "inLanguage": "ro-RO",
+
+        "datePublished": "2026-05-01",
+        "dateModified": "2026-05-01",
+
+        "author": {
+          "@type": "Organization",
+          "name": "Estetica Lens"
+        },
+
+        "publisher": {
+          "@type": "Organization",
+          "name": "Estetica Lens",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://chalaya22.github.io/my-lending/images/logo.png"
+          }
+        },
+
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://chalaya22.github.io/my-lending/ro/probleme.html"
+        }
+      }
+    </script>
+    <!-- FAQ Schema RO -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "FAQPage",
+
         "mainEntity": [
           {
             "@type": "Question",
             "name": "Pot fi tratate mai multe probleme ale pielii simultan?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Da, însă este important să nu supraîncarci rutina de îngrijire și să combini corect ingredientele active, mai ales în cazul pielii sensibile."
+              "text": "Da, dar este important să nu supraîncarci rutina și să combini corect ingredientele active, mai ales în cazul pielii sensibile."
             }
           },
+
           {
             "@type": "Question",
             "name": "De ce devine pielea sensibilă?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Cel mai frecvent, pielea devine sensibilă din cauza deteriorării barierei cutanate, a îngrijirii agresive sau a utilizării excesive a ingredientelor active."
+              "text": "Cel mai frecvent din cauza deteriorării barierei cutanate, îngrijirii agresive sau utilizării excesive a ingredientelor active."
             }
           },
+
           {
             "@type": "Question",
             "name": "Se poate reface bariera pielii?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Da. Bariera pielii poate fi refăcută cu ajutorul lipidelor, ceramidelor, hidratării adecvate și prin evitarea ingredientelor iritante."
+              "text": "Da. Refacerea barierei pielii este susținută de ceramide, lipide, hidratare și evitarea ingredientelor iritante."
             }
           }
         ]
       }
     </script>
-
-    <script src="../script.js"></script>
+    <!-- Breadscramb Shema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Acasă",
+            "item": "https://chalaya22.github.io/my-lending/ro/index.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Problemele ale pielii",
+            "item": "https://chalaya22.github.io/my-lending/ro/probleme.html"
+          }
+        ]
+      }
+    </script>
   </body>
 </html>

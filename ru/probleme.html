@@ -54,7 +54,7 @@
     />
     <meta
       property="og:image"
-      content="https://chalaya22.github.io/my-lending/images/og/ingredients-og.webp"
+      content="https://chalaya22.github.io/my-lending/images/og/skin-problems-ru-og.jpg"
     />
 
     <!-- Fonts -->
@@ -326,17 +326,18 @@
 
       <section class="page-section ingredients-page">
         <div class="container">
-          <div class="ingredient-meta">
-            <p class="ingredient-sub">
-              В этом разделе вы найдете практические руководства по самым частым
-              проблемам кожи: причины, ошибки в уходе и ингредиенты, которые
-              реально помогают восстановить баланс и здоровье кожи.
+          <section class="reviews-intro">
+            <p>
+              <strong
+                >В этом разделе вы найдете практические руководства по самым
+                частым проблемам кожи: причины, ошибки в уходе и ингредиенты,
+                которые реально помогают восстановить баланс и здоровье
+                кожи.</strong
+              >
             </p>
 
-            <a class="section-btn-primary" href="servicii.html">
-              Консультации / Записаться
-            </a>
-          </div>
+            <a class="section-btn-primary" href="servicii.html"> Записаться </a>
+          </section>
 
           <div class="grid-2">
             <!-- MAIN -->
@@ -570,6 +571,34 @@
                   </p>
                 </a>
               </div>
+              <!-- FAQ -->
+              <section class="faq">
+                <h2>Часто задаваемые вопросы о проблемах кожи</h2>
+
+                <div class="faq-item">
+                  <h3>Можно ли решать несколько проблем кожи одновременно?</h3>
+                  <p class="card-hint">
+                    Да, но важно не перегружать уход и правильно сочетать
+                    активные ингредиенты, особенно при чувствительной коже.
+                  </p>
+                </div>
+
+                <div class="faq-item">
+                  <h3>Почему кожа становится чувствительной?</h3>
+                  <p class="card-hint">
+                    Чаще всего из-за нарушения кожного барьера, агрессивного
+                    ухода или чрезмерного использования активов.
+                  </p>
+                </div>
+
+                <div class="faq-item">
+                  <h3>Можно ли восстановить кожный барьер?</h3>
+                  <p class="card-hint">
+                    Да. С помощью липидов, церамидов, увлажнения и отказа от
+                    раздражающих компонентов.
+                  </p>
+                </div>
+              </section>
             </div>
 
             <!-- SIDEBAR -->
@@ -679,35 +708,6 @@
               </div>
             </aside>
           </div>
-
-          <!-- FAQ -->
-          <section class="faq">
-            <h2>Часто задаваемые вопросы о проблемах кожи</h2>
-
-            <div class="faq-item">
-              <h3>Можно ли решать несколько проблем кожи одновременно?</h3>
-              <p class="card-hint">
-                Да, но важно не перегружать уход и правильно сочетать активные
-                ингредиенты, особенно при чувствительной коже.
-              </p>
-            </div>
-
-            <div class="faq-item">
-              <h3>Почему кожа становится чувствительной?</h3>
-              <p class="card-hint">
-                Чаще всего из-за нарушения кожного барьера, агрессивного ухода
-                или чрезмерного использования активов.
-              </p>
-            </div>
-
-            <div class="faq-item">
-              <h3>Можно ли восстановить кожный барьер?</h3>
-              <p class="card-hint">
-                Да. С помощью липидов, церамидов, увлажнения и отказа от
-                раздражающих компонентов.
-              </p>
-            </div>
-          </section>
         </div>
       </section>
     </main>
@@ -1011,10 +1011,48 @@
     <button id="scrollTopBtn">▲</button>
 
     <script src="../script.js"></script>
+    <!-- Aticol schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+
+        "headline": "Проблемы кожи: гид по основным состояниям кожи и уходу",
+        "description": "Полный гид по проблемам кожи: акне, сухость, чувствительность, жирный блеск, пигментация, обезвоженность и другие распространённые состояния кожи.",
+
+        "image": "https://chalaya22.github.io/my-lending/images/og/skin-problems-ru-og.jpg",
+
+        "inLanguage": "ru-MD",
+
+        "datePublished": "2026-05-01",
+        "dateModified": "2026-05-01",
+
+        "author": {
+          "@type": "Organization",
+          "name": "Estetica Lens"
+        },
+
+        "publisher": {
+          "@type": "Organization",
+          "name": "Estetica Lens",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://chalaya22.github.io/my-lending/images/logo.png"
+          }
+        },
+
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://chalaya22.github.io/my-lending/ru/probleme.html"
+        }
+      }
+    </script>
+    <!-- FAQ Schema -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "FAQPage",
+
         "mainEntity": [
           {
             "@type": "Question",
@@ -1024,21 +1062,44 @@
               "text": "Да, но важно не перегружать уход и правильно сочетать активные ингредиенты, особенно при чувствительной коже."
             }
           },
+
           {
             "@type": "Question",
             "name": "Почему кожа становится чувствительной?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Чаще всего из-за нарушения кожного барьера, агрессивного ухода или чрезмерного использования активных компонентов."
+              "text": "Чаще всего это связано с нарушением кожного барьера, агрессивным уходом или чрезмерным использованием активных компонентов."
             }
           },
+
           {
             "@type": "Question",
             "name": "Можно ли восстановить кожный барьер?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Да. С помощью липидов, церамидов, регулярного увлажнения и отказа от раздражающих ингредиентов."
+              "text": "Да. Восстановлению кожного барьера помогают церамиды, липиды, увлажняющие компоненты и отказ от раздражающих ингредиентов."
             }
+          }
+        ]
+      }
+    </script>
+    <!-- Bredscramb -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Главная",
+            "item": "https://chalaya22.github.io/my-lending/ru/index.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Проблемы кожи",
+            "item": "https://chalaya22.github.io/my-lending/ru/probleme.html"
           }
         ]
       }
