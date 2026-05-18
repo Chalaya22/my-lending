@@ -47,12 +47,12 @@
       content="Ce fac ingredientele din skincare și cum le folosești corect."
     />
     <meta
-      property="og:url"
-      content="https://chalaya22.github.io/my-lending/ro/ingrediente.html"
+      property="og:image"
+      content="https://chalaya22.github.io/my-lending/images/og/ingrediente-formule-ro-og.jpg"
     />
     <meta
-      property="og:image"
-      content="https://chalaya22.github.io/my-lending/images/og/ingredients-og.webp"
+      property="og:url"
+      content="https://chalaya22.github.io/my-lending/ro/ingrediente.html"
     />
 
     <!-- Fonts -->
@@ -321,17 +321,17 @@
 
       <section class="ingredients-page">
         <div class="container">
-          <div class="ingredient-meta">
-            <p class="ingredient-sub">
-              Aici găsești explicații simple și clare despre cele mai folosite
-              ingrediente din skincare. Ce fac, cum se folosesc corect și cui se
-              potrivesc.
+          <section class="reviews-intro">
+            <p>
+              <strong
+                >Aici găsești explicații simple și clare despre cele mai
+                folosite ingrediente din skincare. Ce fac, cum se folosesc
+                corect și cui se potrivesc.</strong
+              >
             </p>
 
-            <a class="section-btn-primary" href="servicii.html">
-              Consultații / Programare
-            </a>
-          </div>
+            <a class="section-btn-primary" href="servicii.html"> Programare </a>
+          </section>
 
           <div class="grid-2">
             <div>
@@ -585,7 +585,42 @@
                     senzația de disconfort cutanat.
                   </p>
                 </a>
+                <div class="ingredient-inline-image">
+                  <img
+                    src="../images/ingrediente/ingridiente-card-2-800.webp"
+                    srcset="
+                      ../images/ingrediente/ingridiente-card-2-1200.webp 1200w,
+                      ../images/ingrediente/ingridiente-card-2-800.webp   800w,
+                      ../images/ingrediente/ingridiente-card-2-400.webp   400w
+                    "
+                    sizes="(max-width: 768px) 100vw, 800px"
+                    alt="Ingridient card-2"
+                    loading="lazy"
+                  />
+                </div>
               </div>
+              <!-- FAQ -->
+              <section class="faq">
+                <h2>Întrebări frecvente despre ingrediente cosmetice</h2>
+
+                <div class="faq-item">
+                  <h3>Pot combina vitamina C cu niacinamidă?</h3>
+                  <p>
+                    Da, în formule moderne aceste ingrediente pot fi folosite
+                    împreună fără probleme.
+                  </p>
+                </div>
+
+                <div class="faq-item">
+                  <h3>
+                    Sunt acizii AHA/BHA potriviți pentru pielea sensibilă?
+                  </h3>
+                  <p>
+                    Da, dar trebuie aleși în concentrații mici și introduși
+                    treptat.
+                  </p>
+                </div>
+              </section>
             </div>
 
             <!-- SIDEBAR -->
@@ -651,11 +686,6 @@
               </div>
 
               <div class="card" style="margin-top: 18px">
-                <h3 class="section-title-sidebar">Pagini conexe</h3>
-                <div class="related-list-sidebar">
-                  <a href="ingrediente.html">Ingrediente</a>
-                  <a href="servicii.html">Consultații</a>
-                </div>
                 <div class="card-image">
                   <img
                     src="../images/ingrediente/pagini-conexe-400.webp"
@@ -663,28 +693,16 @@
                     loading="lazy"
                   />
                 </div>
+                <h3 class="section-title-sidebar">Pagini conexe</h3>
+                <div class="related-list-sidebar">
+                  <a href="recenzii.html">Recenzii populare de cosmetice</a>
+                  <a href="makeup.html">Machiaj</a>
+                  <a href="servicii.html">Servicii</a>
+                </div>
               </div>
             </aside>
           </div>
         </div>
-        <section class="faq">
-          <h2>Întrebări frecvente despre ingrediente cosmetice</h2>
-
-          <div class="faq-item">
-            <h3>Pot combina vitamina C cu niacinamidă?</h3>
-            <p>
-              Da, în formule moderne aceste ingrediente pot fi folosite împreună
-              fără probleme.
-            </p>
-          </div>
-
-          <div class="faq-item">
-            <h3>Sunt acizii AHA/BHA potriviți pentru pielea sensibilă?</h3>
-            <p>
-              Da, dar trebuie aleși în concentrații mici și introduși treptat.
-            </p>
-          </div>
-        </section>
       </section>
     </main>
 
@@ -1008,6 +1026,64 @@
               "@type": "Answer",
               "text": "Da, dar trebuie aleși în concentrații mici și introduși treptat."
             }
+          }
+        ]
+      }
+    </script>
+    <!-- Articol Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+
+        "headline": "Ingrediente și formule în cosmetice: ghid complet despre ingredientele active",
+        "description": "Ghid complet despre ingredientele din cosmetice: acizi, retinol, niacinamidă, peptide, ceramide, SPF, antioxidanți și alte ingrediente active pentru îngrijirea pielii.",
+
+        "image": "https://chalaya22.github.io/my-lending/images/og/ingrediente-formule-ro-og.jpg",
+
+        "inLanguage": "ro-RO",
+
+        "datePublished": "2026-05-01",
+        "dateModified": "2026-05-01",
+
+        "author": {
+          "@type": "Organization",
+          "name": "Estetica Lens"
+        },
+
+        "publisher": {
+          "@type": "Organization",
+          "name": "Estetica Lens",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://chalaya22.github.io/my-lending/images/logo.png"
+          }
+        },
+
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://chalaya22.github.io/my-lending/ro/ingrediente.html"
+        }
+      }
+    </script>
+    <!-- Breadscramb Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Acasă",
+            "item": "https://chalaya22.github.io/my-lending/ro/index.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Ingrediente și formule",
+            "item": "https://chalaya22.github.io/my-lending/ro/ingrediente.html"
           }
         ]
       }
