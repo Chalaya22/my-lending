@@ -1986,47 +1986,6 @@ main {
   gap: 12px;
 }
 
-/* =========================
-   BUTTONS (PREMIUM LOOK)
-========================= */
-/* .popular-review-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  min-height: 48px;
-  padding: 12px 14px;
-
-  font-size: 14px;
-  font-weight: 500;
-  text-align: center;
-
-  color: #333;
-  text-decoration: none;
-
-  background: rgba(255, 255, 255, 0.75);
-  backdrop-filter: blur(6px);
-
-  border-radius: 12px;
-  border: 1px solid rgba(0, 0, 0, 0.08);
-
-  transition: all 0.25s ease;
-
-  word-break: break-word;
-} */
-
-/* =========================
-   HOVER (LUXURY FEEL)
-========================= */
-/* .popular-review-btn:hover {
-  transform: translateY(-3px);
-
-  background: rgba(255, 255, 255, 0.95);
-
-  border-color: rgba(212, 175, 55, 0.35);
-
-  box-shadow: 0 12px 25px rgba(212, 175, 55, 0.18);
-} */
 .popular-review-btn {
   display: inline-block;
 
@@ -2714,10 +2673,12 @@ html {
   font-size: 14px;
   font-weight: 500;
   text-align: center;
-  border: 1px solid var(--accent);
+
   border-radius: 6px;
-  background-color: var(--text-muted);
-  color: white;
+  background: linear-gradient(135deg, #f6f1e6, #e9dcc1, #fdf8ec);
+
+  border: 1px solid rgba(207, 162, 74, 0.35);
+  color: var(--text-main);
   cursor: pointer;
   box-sizing: border-box;
   transition:
