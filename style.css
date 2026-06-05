@@ -4271,6 +4271,7 @@ dl.definition dt {
 .collaboration-form textarea:not(:placeholder-shown) {
   box-shadow: 0 0 0 2px rgba(207, 162, 74, 0.12);
 }
+
 /*SUCCESS MESSAGE */
 
 .collaboration-success {
@@ -4327,7 +4328,9 @@ dl.definition dt {
   transform: translateY(-2px);
   box-shadow: 0 10px 24px rgba(176, 138, 60, 0.35);
 }
-
+#form {
+  scroll-margin-top: 100px;
+}
 /* ======================== MEDIAKIT BTN Desctop=======================*/
 
 .hero-mediakit-btn {

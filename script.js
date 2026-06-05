@@ -596,3 +596,23 @@ document.addEventListener("DOMContentLoaded", () => {
     if (e.key === "Escape") closeVideo();
   });
 });
+// Переход по якорям на другие страницы
+
+function scrollToHash() {
+  const hash = window.location.hash;
+  if (!hash) return;
+
+  const el = document.querySelector(hash);
+  if (!el) return;
+
+  el.scrollIntoView({
+    behavior: "smooth",
+    block: "start",
+  });
+}
+
+window.addEventListener("load", () => {
+  setTimeout(scrollToHash, 100);
+});
+
+window.addEventListener("hashchange", scrollToHash);
