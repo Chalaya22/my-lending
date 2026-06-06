@@ -3296,16 +3296,6 @@ body {
   color: var(--text-muted);
 }
 
-/* .cta-button {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 10px 20px;
-  background: #2c6e49;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 6px;
-} */
-
 .cta-note {
   font-size: 0.8rem;
   margin-top: 10px;
@@ -4328,9 +4318,7 @@ dl.definition dt {
   transform: translateY(-2px);
   box-shadow: 0 10px 24px rgba(176, 138, 60, 0.35);
 }
-#form {
-  scroll-margin-top: 100px;
-}
+
 /* ======================== MEDIAKIT BTN Desctop=======================*/
 
 .hero-mediakit-btn {
