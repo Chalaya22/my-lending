@@ -616,3 +616,26 @@ window.addEventListener("load", () => {
 });
 
 window.addEventListener("hashchange", scrollToHash);
+// копирование номера
+
+function handlePhone(btn) {
+  const phone = btn.getAttribute("data-phone");
+
+  // проверяем: мобилка или нет
+  const isMobile = /Android|iPhone|iPad|iPod|IEMobile|Opera Mini/i.test(
+    navigator.userAgent,
+  );
+
+  if (isMobile) {
+    // 📱 сразу звонок
+    window.location.href = "tel:" + phone;
+  } else {
+    // 💻 ПК → показываем номер для копирования
+    copyToClipboard(phone);
+    alert("Номер скопирован: " + phone);
+  }
+}
+
+function copyToClipboard(text) {
+  navigator.clipboard.writeText(text);
+}
