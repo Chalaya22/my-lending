@@ -306,36 +306,38 @@
     </section>
     <main>
       <!-- Вступление -->
-      <!-- HERO -->
-      <section class="reviews-intro highlighted-section">
-        <h1>Визажисты в Молдове: профессиональный макияж и образы</h1>
+      <section class="ingredient-section">
+        <section class="reviews-intro">
+          <h1>Визажисты в Молдове: профессиональный макияж и образы</h1>
 
-        <p class="highlighted-text">
-          Здесь собраны визажисты, которые создают макияж для свадеб,
-          фотосессий, мероприятий и повседневных образов.
-        </p>
+          <p>
+            Здесь собраны визажисты, которые создают макияж для свадеб,
+            фотосессий, мероприятий и повседневных образов.
+          </p>
 
-        <p class="highlighted-text">
-          Подбор специалиста зависит от стиля, типа кожи и желаемого результата
-          — от естественного макияжа до вечернего и креативного образа.
-        </p>
-        <p>
-          <strong
-            >В каталоге представлены визажисты из Кишинёва и других городов
-            Молдовы.</strong
-          >
-        </p>
-        <p class="catalog-intro">
-          <strong
-            >Каталог визажистов Кишинёва включает специалистов по свадебному,
-            вечернему, дневному и коммерческому макияжу, а также мастеров по
-            оформлению бровей и ресниц.</strong
-          >
-        </p>
+          <p>
+            Подбор специалиста зависит от стиля, типа кожи и желаемого
+            результата — от естественного макияжа до вечернего и креативного
+            образа.
+          </p>
+          <p>
+            <strong
+              >В каталоге представлены визажисты из Кишинёва и других городов
+              Молдовы.</strong
+            >
+          </p>
+          <p>
+            <strong
+              >Каталог визажистов Кишинёва включает специалистов по свадебному,
+              вечернему, дневному и коммерческому макияжу, а также мастеров по
+              оформлению бровей и ресниц.</strong
+            >
+          </p>
 
-        <a class="section-btn-primary" href="#masters">
-          Посмотреть визажистов
-        </a>
+          <a class="section-btn-primary" href="#masters">
+            Посмотреть визажистов
+          </a>
+        </section>
       </section>
 
       <div class="grid-2">
@@ -451,7 +453,78 @@
         </div>
 
         <!-- Sidebar -->
-        <aside></aside>
+        <aside>
+          <!-- Категории -->
+          <div class="card">
+            <h3 class="section-title-sidebar">
+              <strong>Категории услуг</strong>
+            </h3>
+
+            <div class="card-image">
+              <img
+                src="../../images/makeup-artists/categories.webp"
+                alt="Категории бьюти услуг"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="related-list-sidebar">
+              <a href="makeup-artists.html">💄 Визажисты</a>
+              <a href="brow-artists.html">✨ Бровисты</a>
+              <a href="cosmetologists.html">🧴 Косметологи</a>
+              <a href="salons.html">💅 Салоны красоты</a>
+            </div>
+          </div>
+
+          <!-- Как выбрать специалиста -->
+          <div class="card sidebar-gap">
+            <h3 class="section-title-sidebar">
+              <strong>Как выбрать визажиста?</strong>
+            </h3>
+
+            <div class="card-image">
+              <img
+                src="../../images/makeup-artists/how-to-choose.webp"
+                alt="Как выбрать визажиста"
+                loading="lazy"
+              />
+            </div>
+
+            <ul class="related-list">
+              <li>Смотрите портфолио работ</li>
+              <li>Обращайте внимание на тип кожи</li>
+              <li>Проверяйте опыт мастера</li>
+              <li>Читайте описание услуг</li>
+              <li>Сравнивайте стиль работ</li>
+            </ul>
+          </div>
+
+          <!-- CTA -->
+          <div class="card sidebar-gap">
+            <h3 class="section-title-sidebar">
+              <strong>Вы визажист?</strong>
+            </h3>
+
+            <div class="card-image">
+              <img
+                src="../../images/makeup-artists/join-makeup.webp"
+                alt="Добавить визажиста в каталог"
+                loading="lazy"
+              />
+            </div>
+
+            <p style="padding: 0 15px 15px">
+              Разместите свой профиль в каталоге и получайте заявки от клиентов
+              по всей Молдове.
+            </p>
+
+            <div class="related-list-sidebar">
+              <a href="../colaborari.html#form">
+                <strong>Добавить профиль</strong>
+              </a>
+            </div>
+          </div>
+        </aside>
       </div>
       <!--  Подпишитесь на экспертные разборы ФОРМА -->
       <section class="newsletter-section">
@@ -775,10 +848,59 @@
     <button id="scrollTopBtn">▲</button>
 
     <script src="../../script.js" defer></script>
-    <!-- Article Schema (RU-MD) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebPage",
+            "name": "Визажисты в Молдове | Макияж и beauty-специалисты",
+            "description": "Каталог визажистов в Молдове: свадебный, вечерний и дневной макияж, оформление бровей и ресниц. Выберите специалиста и запишитесь онлайн.",
+            "url": "https://chalaya22.github.io/my-lending/ru/servicii/makeup-artists.html",
+            "image": "https://chalaya22.github.io/my-lending/images/og/makeup-artists-ru-og.jpg"
+          },
 
-    <!-- ItemList -->
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Главная",
+                "item": "https://chalaya22.github.io/my-lending/ru/"
+              },
 
-    <!-- Breadcrumb Schema -->
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Услуги",
+                "item": "https://chalaya22.github.io/my-lending/ru/servicii.html"
+              },
+
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Визажисты в Молдове"
+                "item": "https://chalaya22.github.io/my-lending/ru/servicii/makeup-artists.html"
+              }
+            ]
+          },
+
+          {
+            "@type": "ItemList",
+            "name": "Визажисты в Молдове",
+            "description": "Каталог визажистов и beauty-специалистов в Молдове.",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Денис — визажист",
+                "url": "https://chalaya22.github.io/my-lending/ru/servicii/makeup-artist-denys.html"
+              }
+            ]
+          }
+        ]
+      }
+    </script>
   </body>
 </html>
