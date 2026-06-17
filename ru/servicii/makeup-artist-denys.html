@@ -57,7 +57,7 @@
 
     <meta
       property="og:image"
-      content="https://chalaya22.github.io/my-lending/images/makeup-artists-ru-denys.jpg"
+      content="https://chalaya22.github.io/my-lending/images/og/makeup-artists-ru-denys.jpg"
     />
     <!-- Fonts -->
     <link
@@ -548,16 +548,30 @@
           <!-- CTA -->
 
           <section class="specialist-videos">
-            <video controls preload="metadata" playsinline>
-              <source
-                src="../../video/makeup-preparation.mp4"
-                type="video/mp4"
-              />
-            </video>
+            <div class="specialist-video-item">
+              <video
+                controls
+                preload="metadata"
+                playsinline
+                poster="../../images/video/makeup-preparation-cover.webp"
+              >
+                <source
+                  src="../../video/makeup-preparation.mp4"
+                  type="video/mp4"
+                />
+              </video>
+            </div>
 
-            <video controls preload="metadata" playsinline>
-              <source src="../../video/makeup-gene.mp4" type="video/mp4" />
-            </video>
+            <div class="specialist-video-item">
+              <video
+                controls
+                preload="metadata"
+                playsinline
+                poster="../../images/video/makeup-gene-cover.webp"
+              >
+                <source src="../../video/makeup-gene.mp4" type="video/mp4" />
+              </video>
+            </div>
           </section>
 
           <!--Стоимость услуг  -->
@@ -1111,11 +1125,169 @@
     <button id="scrollTopBtn">▲</button>
 
     <script src="../../script.js" defer></script>
+    <!-- BreadcrumbList , Person-->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Главная",
+                "item": "https://chalaya22.github.io/my-lending/ru/index.html"
+              },
 
-    <!-- Article Schema (RU-MD) -->
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Услуги",
+                "item": "https://chalaya22.github.io/my-lending/ru/servicii.html"
+              },
 
-    <!-- ItemList -->
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Визажисты",
+                "item": "https://chalaya22.github.io/my-lending/ru/servicii/makeup-artists.html"
+              },
 
-    <!-- Breadcrumb Schema -->
+              {
+                "@type": "ListItem",
+                "position": 4,
+                "name": "Денис"
+              }
+            ]
+          },
+
+          {
+            "@type": "Person",
+
+            "name": "Денис",
+
+            "jobTitle": "Визажист, brow-мастер и lash-мастер",
+
+            "description": "Профессиональный визажист в Молдове. Свадебный, вечерний и дневной макияж, оформление бровей, окрашивание бровей и ресниц. Более 5 лет опыта и более 100 довольных клиентов.",
+
+            "image": "https://chalaya22.github.io/my-lending/images/og/makeup-artists-ru-denys.jpg",
+
+            "telephone": "+37360887588",
+
+            "url": "https://chalaya22.github.io/my-lending/ru/servicii/makeup-artist-denys.html",
+
+            "sameAs": [
+              "https://instagram.com/denis_didukh",
+              "https://wa.me/37360887588"
+            ],
+
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Chișinău",
+              "addressCountry": "MD"
+            },
+
+            "knowsAbout": [
+              "Свадебный макияж",
+
+              "Вечерний макияж",
+
+              "Дневной макияж",
+
+              "Макияж для фотосессий",
+
+              "Оформление бровей",
+
+              "Окрашивание бровей",
+
+              "Окрашивание ресниц"
+            ]
+          }
+        ]
+      }
+    </script>
+    <!-- faq -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+
+        "@type": "FAQPage",
+
+        "mainEntity": [
+          {
+            "@type": "Question",
+
+            "name": "Как записаться на макияж?",
+
+            "acceptedAnswer": {
+              "@type": "Answer",
+
+              "text": "Вы можете связаться со специалистом через WhatsApp, Instagram или по телефону и согласовать удобную дату и время."
+            }
+          },
+
+          {
+            "@type": "Question",
+
+            "name": "С какими типами кожи вы работаете?",
+
+            "acceptedAnswer": {
+              "@type": "Answer",
+
+              "text": "Специалист работает с сухой, жирной, комбинированной, чувствительной, возрастной кожей, а также с кожей, склонной к акне и покраснениям."
+            }
+          },
+
+          {
+            "@type": "Question",
+
+            "name": "Сколько держится макияж?",
+
+            "acceptedAnswer": {
+              "@type": "Answer",
+
+              "text": "Стойкость зависит от типа кожи и условий мероприятия, но профессиональный макияж обычно сохраняет аккуратный вид в течение всего дня или вечера."
+            }
+          },
+
+          {
+            "@type": "Question",
+
+            "name": "Можно ли заказать свадебный макияж?",
+
+            "acceptedAnswer": {
+              "@type": "Answer",
+
+              "text": "Да. Доступен свадебный макияж, а также подготовка образа для фотосессий, мероприятий и других важных событий."
+            }
+          },
+
+          {
+            "@type": "Question",
+
+            "name": "Возможен ли выезд к клиенту?",
+
+            "acceptedAnswer": {
+              "@type": "Answer",
+
+              "text": "Да, в отдельных случаях возможен выезд по Кишинёву и ближайшим районам по предварительной договорённости."
+            }
+          },
+
+          {
+            "@type": "Question",
+
+            "name": "Выполняется ли ретушь фотографий?",
+
+            "acceptedAnswer": {
+              "@type": "Answer",
+
+              "text": "По желанию клиента специалист может выполнить лёгкую ретушь и обработку фотографий для более эстетичного результата."
+            }
+          }
+        ]
+      }
+    </script>
   </body>
 </html>
