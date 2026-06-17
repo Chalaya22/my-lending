@@ -1583,6 +1583,94 @@ body.menu-open .guides-wrapper {
     column-count: 1;
   }
 }
+/* Блок визажиста со стоимостью услуг  */
+.price-layout {
+  display: flex;
+  gap: 35px;
+  align-items: center;
+}
+
+.price-content {
+  flex: 1.5;
+}
+
+.price-image {
+  flex: 1;
+}
+
+.price-image img {
+  width: 100%;
+  max-width: 380px;
+
+  display: block;
+
+  margin: 0 auto;
+
+  border-radius: 16px;
+
+  object-fit: cover;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.price-table {
+  width: 100%;
+
+  border-collapse: collapse;
+}
+
+.price-table td {
+  padding: 14px 0;
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.price-table td:last-child {
+  text-align: right;
+
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .price-layout {
+    flex-direction: column-reverse;
+  }
+
+  .price-image {
+    width: 100%;
+  }
+
+  .price-image img {
+    max-width: 100%;
+  }
+}
+/*  блок СТА с визажистом видео */
+
+.specialist-videos {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 25px;
+
+  margin: 30px 0;
+}
+
+.specialist-videos video {
+  width: 100%;
+
+  border-radius: 16px;
+
+  overflow: hidden;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+@media (max-width: 768px) {
+  .specialist-videos {
+    grid-template-columns: 1fr;
+  }
+}
 
 /*=======================RECENZII PRODUCE- Page Desctop==============*/
 .recenzii-hero-img {
