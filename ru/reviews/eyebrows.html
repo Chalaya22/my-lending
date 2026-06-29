@@ -498,131 +498,265 @@
                 на весь день.
               </li>
             </ol>
-            <p class="ad-label nusponsored">
-              Независимый обзор. Продукты не спонсируются.
+            <p class="ad-label nusponsored" style="font-size: 12px">
+              <strong>Независимый обзор. Продукты не спонсируются.</strong>
               <br />
-              *Ссылка приведена в ознакомительных целях. При наличии партнёрства
-              здесь размещается прямая ссылка на продукт.
+              *Данный материал является независимым редакционным обзором и не
+              спонсируется производителем или продавцом продукта. <br />
+              *Все названия брендов, товарные знаки и наименования продукции
+              принадлежат их законным правообладателям и используются
+              исключительно в информационных и редакционных целях. <br />
+              *Представленная информация отражает мнение автора и не является
+              официальной рекомендацией производителя. <br />
+              <strong
+                >*Ссылки приведены в ознакомительных целях. При наличии
+                партнёрства здесь может быть размещена прямая ссылка на
+                продукт.</strong
+              >
             </p>
 
             <section class="foundation-gallery" id="gallery-eyebrow-styling">
-              <div class="gallery-grid">
-                <figure class="gallery-item">
-                  <img
-                    src="../../images/eyebrows/anastasia-brow-wax-300.webp"
-                    srcset="
-                      ../../images/eyebrows/anastasia-brow-wax-600.webp 2x
-                    "
-                    alt="Anastasia Beverly Hills Brow Wax"
-                    loading="lazy"
-                  />
-                  <figcaption>
-                    Anastasia Beverly Hills Brow Wax<br />
-                    <div class="review-rating">⭐⭐⭐⭐⭐</div>
-                    <small
-                      >Фиксирует брови и моделирует форму на весь день</small
-                    >
-                    <div class="card-buttons">
-                      <a
-                        class="section-btn-carousel disabled"
-                        aria-disabled="true"
-                      >
-                        Скоро доступно
-                      </a>
-                    </div>
-                  </figcaption>
-                </figure>
+              <div class="products-container">
+                <!-- 1 -->
+                <div class="review-card-modal premium">
+                  <div class="review-card-modal-image zoom-container">
+                    <img
+                      src="../../images/placeholder/placeholder-makeup-1.webp"
+                      alt="Anastasia Beverly Hills Brow Wax"
+                      class="zoom-image"
+                    />
+                    <div class="zoom-lens"></div>
+                    <div class="zoom-result"></div>
+                  </div>
 
-                <figure class="gallery-item">
-                  <img
-                    src="../../images/eyebrows/maybelline-brow-drama-300.webp"
-                    srcset="
-                      ../../images/eyebrows/maybelline-brow-drama-600.webp 2x
-                    "
-                    alt="Maybelline Brow Drama Sculpting Gel"
-                    loading="lazy"
-                  />
-                  <figcaption>
-                    Maybelline Brow Drama Gel<br />
-                    <div class="review-rating">⭐⭐⭐⭐</div>
-                    <small
-                      >Гель фиксирует волоски, придавая естественный
-                      блеск</small
-                    >
-                    <div class="card-buttons">
-                      <a
-                        class="section-btn-carousel disabled"
-                        aria-disabled="true"
-                      >
-                        Скоро доступно
-                      </a>
+                  <div class="review-card-modal-content">
+                    <div class="review-card-modal-title">
+                      Anastasia Beverly Hills Brow Wax
                     </div>
-                  </figcaption>
-                </figure>
 
-                <figure class="gallery-item">
-                  <img
-                    src="../../images/eyebrows/revlon-brow-brush-300.webp"
-                    srcset="../../images/eyebrows/revlon-brow-brush-600.webp 2x"
-                    alt="Revlon Brow Brush"
-                    loading="lazy"
-                  />
-                  <figcaption>
-                    Revlon Brow Brush<br />
-                    <div class="review-rating">⭐⭐⭐⭐</div>
-                    <small
-                      >Щётка для равномерного нанесения и аккуратной
-                      растушевки</small
-                    >
-                    <div class="card-buttons">
+                    <div class="review-card-modal-excerpt">
+                      Воск для бровей с сильной фиксацией, создаёт эффект
+                      ламинирования и держит форму весь день.
+                    </div>
+
+                    <div class="buttons-row">
                       <a
-                        class="section-btn-carousel disabled"
+                        class="review-card-modal-btn disabled"
                         aria-disabled="true"
                       >
-                        Скоро доступно
+                        В скором времени
                       </a>
+
+                      <button
+                        class="review-card-modal-btn"
+                        onclick="toggleDetails(this)"
+                        data-open="Открыть обзор"
+                        data-close="Скрыть"
+                      >
+                        Подробнее
+                      </button>
                     </div>
-                  </figcaption>
-                </figure>
+
+                    <div class="review-card-modal-details">
+                      <div class="review-details-inner">
+                        <div class="review-specs">
+                          <h4>Основная информация</h4>
+                          <ul>
+                            <li><strong>Тип:</strong> воск для бровей</li>
+                            <li><strong>Фиксация:</strong> сильная</li>
+                            <li><strong>Эффект:</strong> ламинирование</li>
+                            <li><strong>Брови:</strong> густые, непослушные</li>
+                            <li><strong>Объём:</strong> 8 g</li>
+                            <li><strong>Цена:</strong> ~480–650 MDL</li>
+                          </ul>
+
+                          <h4>Подходит если</h4>
+                          <ul>
+                            <li>хочешь эффект ламинирования</li>
+                            <li>нужна сильная фиксация</li>
+                            <li>брови плохо держат форму</li>
+                          </ul>
+                        </div>
+
+                        <div class="review-verdict">
+                          <h4>Кратко</h4>
+                          <p>
+                            Премиальный воск с очень сильной фиксацией, даёт
+                            салонный эффект укладки бровей.
+                          </p>
+
+                          <h4>Плюсы</h4>
+                          <ul>
+                            <li>очень сильная фиксация</li>
+                            <li>долгое удержание формы</li>
+                            <li>эффект ламинирования</li>
+                          </ul>
+
+                          <h4>Минусы</h4>
+                          <ul>
+                            <li>нужно аккуратно наносить</li>
+                            <li>может требовать воды для активации</li>
+                          </ul>
+
+                          <h4>Рейтинг</h4>
+                          <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 2 -->
+                <div class="review-card-modal premium">
+                  <div class="review-card-modal-image zoom-container">
+                    <img
+                      src="../../images/placeholder/placeholder-makeup-1.webp"
+                      alt="Maybelline Brow Drama"
+                      class="zoom-image"
+                    />
+                    <div class="zoom-lens"></div>
+                    <div class="zoom-result"></div>
+                  </div>
+
+                  <div class="review-card-modal-content">
+                    <div class="review-card-modal-title">
+                      Maybelline Brow Drama Gel
+                    </div>
+
+                    <div class="review-card-modal-excerpt">
+                      Гель для бровей с лёгкой фиксацией, создаёт естественный
+                      ухоженный эффект.
+                    </div>
+
+                    <div class="buttons-row">
+                      <a
+                        class="review-card-modal-btn disabled"
+                        aria-disabled="true"
+                      >
+                        В скором времени
+                      </a>
+
+                      <button
+                        class="review-card-modal-btn"
+                        onclick="toggleDetails(this)"
+                        data-open="Открыть обзор"
+                        data-close="Скрыть"
+                      >
+                        Подробнее
+                      </button>
+                    </div>
+
+                    <div class="review-card-modal-details">
+                      <div class="review-details-inner">
+                        <div class="review-specs">
+                          <h4>Основная информация</h4>
+                          <ul>
+                            <li><strong>Тип:</strong> гель для бровей</li>
+                            <li><strong>Фиксация:</strong> лёгкая</li>
+                            <li><strong>Финиш:</strong> натуральный</li>
+                            <li><strong>Брови:</strong> нормальные, мягкие</li>
+                            <li><strong>Объём:</strong> 7 ml</li>
+                            <li><strong>Цена:</strong> ~120–180 MDL</li>
+                          </ul>
+                        </div>
+
+                        <div class="review-verdict">
+                          <h4>Кратко</h4>
+                          <p>
+                            Идеальный бюджетный вариант для естественного
+                            макияжа бровей на каждый день.
+                          </p>
+
+                          <h4>Плюсы</h4>
+                          <ul>
+                            <li>лёгкая текстура</li>
+                            <li>естественный эффект</li>
+                            <li>доступная цена</li>
+                          </ul>
+
+                          <h4>Рейтинг</h4>
+                          <div class="review-rating">⭐⭐⭐⭐☆</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="review-card-modal premium">
+                  <div class="review-card-modal-image zoom-container">
+                    <img
+                      src="../../images/placeholder/placeholder-makeup-1.webp"
+                      alt="Revlon Brow Brush"
+                      class="zoom-image"
+                    />
+                    <div class="zoom-lens"></div>
+                    <div class="zoom-result"></div>
+                  </div>
+
+                  <div class="review-card-modal-content">
+                    <div class="review-card-modal-title">Revlon Brow Brush</div>
+
+                    <div class="review-card-modal-excerpt">
+                      Щёточка для бровей, помогает расчесать и уложить волоски
+                      перед и после макияжа.
+                    </div>
+
+                    <div class="buttons-row">
+                      <a
+                        class="review-card-modal-btn disabled"
+                        aria-disabled="true"
+                      >
+                        В скором времени
+                      </a>
+
+                      <button
+                        class="review-card-modal-btn"
+                        onclick="toggleDetails(this)"
+                        data-open="Открыть обзор"
+                        data-close="Скрыть"
+                      >
+                        Подробнее
+                      </button>
+                    </div>
+
+                    <div class="review-card-modal-details">
+                      <div class="review-details-inner">
+                        <div class="review-specs">
+                          <h4>Основная информация</h4>
+                          <ul>
+                            <li><strong>Тип:</strong> щёточка для бровей</li>
+                            <li><strong>Назначение:</strong> укладка</li>
+                            <li>
+                              <strong>Использование:</strong> с гелем или воском
+                            </li>
+                            <li><strong>Цена:</strong> ~80–140 MDL</li>
+                          </ul>
+                        </div>
+
+                        <div class="review-verdict">
+                          <h4>Кратко</h4>
+                          <p>
+                            Простой инструмент для аккуратных и ухоженных
+                            бровей.
+                          </p>
+
+                          <h4>Плюсы</h4>
+                          <ul>
+                            <li>удобная форма</li>
+                            <li>долговечность</li>
+                            <li>универсальность</li>
+                          </ul>
+
+                          <h4>Рейтинг</h4>
+                          <div class="review-rating">⭐⭐⭐⭐☆</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </section>
-
-            <table class="foundation-table">
-              <tr>
-                <th>Средство</th>
-                <th>Особенности</th>
-              </tr>
-              <tr>
-                <td style="color: #b63181">
-                  Anastasia Beverly Hills Brow Wax
-                  <p class="foundation-note">
-                    Фиксирует форму бровей на весь день, удерживает волоски в
-                    нужном направлении.
-                  </p>
-                </td>
-                <td>Фиксация и моделирование</td>
-              </tr>
-              <tr>
-                <td style="color: #b63181">
-                  Maybelline Brow Drama Sculpting Gel
-                  <p class="foundation-note">
-                    Гель с натуральным блеском, фиксирует волоски и придаёт
-                    аккуратный вид.
-                  </p>
-                </td>
-                <td>Фиксация и блеск</td>
-              </tr>
-              <tr>
-                <td style="color: #b63181">
-                  Revlon Brow Brush
-                  <p class="foundation-note">
-                    Щётка для равномерного распределения продукта и аккуратной
-                    растушевки.
-                  </p>
-                </td>
-                <td>Укладка и растушевка</td>
-              </tr>
-            </table>
           </section>
 
           <!-- Секция 2: Типы бровей -->
@@ -646,128 +780,249 @@
               дугообразные и изогнутые. Для окрашивания и усиления формы
               используют карандаши, тени и гели.
             </p>
-            <p class="ad-label nusponsored">
-              Независимый обзор. Продукты не спонсируются.
+            <p class="ad-label nusponsored" style="font-size: 12px">
+              <strong>Независимый обзор. Продукты не спонсируются.</strong>
               <br />
-              *Ссылка приведена в ознакомительных целях. При наличии партнёрства
-              здесь размещается прямая ссылка на продукт.
+              *Данный материал является независимым редакционным обзором и не
+              спонсируется производителем или продавцом продукта. <br />
+              *Все названия брендов, товарные знаки и наименования продукции
+              принадлежат их законным правообладателям и используются
+              исключительно в информационных и редакционных целях. <br />
+              *Представленная информация отражает мнение автора и не является
+              официальной рекомендацией производителя. <br />
+              <strong
+                >*Ссылки приведены в ознакомительных целях. При наличии
+                партнёрства здесь может быть размещена прямая ссылка на
+                продукт.</strong
+              >
             </p>
 
             <section class="foundation-gallery" id="gallery-eyebrow-types">
-              <div class="gallery-grid">
-                <figure class="gallery-item">
-                  <img
-                    src="../../images/eyebrows/anastasia-brow-powder-300.webp"
-                    srcset="
-                      ../../images/eyebrows/anastasia-brow-powder-600.webp 2x
-                    "
-                    alt="Anastasia Beverly Hills Brow Powder"
-                    loading="lazy"
-                  />
-                  <figcaption>
-                    Anastasia Beverly Hills Brow Powder<br />
-                    <div class="review-rating">⭐⭐⭐⭐⭐</div>
-                    <small
-                      >Подходит для всех типов бровей, создаёт мягкий
-                      естественный эффект</small
-                    >
-                    <div class="card-buttons">
-                      <a
-                        class="section-btn-carousel disabled"
-                        aria-disabled="true"
-                      >
-                        Скоро доступно
-                      </a>
-                    </div>
-                  </figcaption>
-                </figure>
+              <div class="products-container">
+                <!-- 1 -->
+                <div class="review-card-modal premium">
+                  <div class="review-card-modal-image zoom-container">
+                    <img
+                      src="../../images/placeholder/placeholder-makeup-1.webp"
+                      alt="Anastasia Beverly Hills Brow Powder"
+                      class="zoom-image"
+                    />
+                    <div class="zoom-lens"></div>
+                    <div class="zoom-result"></div>
+                  </div>
 
-                <figure class="gallery-item">
-                  <img
-                    src="../../images/eyebrows/micro-brow-300.webp"
-                    srcset="../../images/eyebrows/micro-brow-600.webp 2x"
-                    alt="NYX Micro Brow Pencil "
-                    loading="lazy"
-                  />
-                  <figcaption>
-                    NYX Micro Brow Pencil l<br />
-                    <div class="review-rating">⭐⭐⭐⭐</div>
-                    <small
-                      >Карандаш для прорисовки и заполнения редких
-                      участков</small
-                    >
-                    <div class="card-buttons">
-                      <a
-                        class="section-btn-carousel disabled"
-                        aria-disabled="true"
-                      >
-                        Скоро доступно
-                      </a>
+                  <div class="review-card-modal-content">
+                    <div class="review-card-modal-title">
+                      Anastasia Beverly Hills Brow Powder
                     </div>
-                  </figcaption>
-                </figure>
 
-                <figure class="gallery-item">
-                  <img
-                    src="../../images/eyebrows/nyx-prof-gel-300.webp"
-                    srcset="../../images/eyebrows/nyx-prof-gel-300.webp 2x"
-                    alt="NYX Professional Makeup The Brow Glu"
-                    loading="lazy"
-                  />
-                  <figcaption>
-                    NYX Professional Makeup The Brow Glu<br />
-                    <div class="review-rating">⭐⭐⭐⭐</div>
-                    <small
-                      >Гель для придания формы и лёгкого окрашивания
-                      бровей</small
-                    >
-                    <div class="card-buttons">
+                    <div class="review-card-modal-excerpt">
+                      Пудра для бровей с мягким естественным эффектом и
+                      возможностью наслаивания.
+                    </div>
+
+                    <div class="buttons-row">
                       <a
-                        class="section-btn-carousel disabled"
+                        class="review-card-modal-btn disabled"
                         aria-disabled="true"
                       >
-                        Скоро доступно
+                        В скором времени
                       </a>
+
+                      <button
+                        class="review-card-modal-btn"
+                        onclick="toggleDetails(this)"
+                        data-open="Открыть обзор"
+                        data-close="Скрыть"
+                      >
+                        Подробнее
+                      </button>
                     </div>
-                  </figcaption>
-                </figure>
+
+                    <div class="review-card-modal-details">
+                      <div class="review-details-inner">
+                        <div class="review-specs">
+                          <h4>Основная информация</h4>
+                          <ul>
+                            <li><strong>Тип:</strong> пудра для бровей</li>
+                            <li><strong>Финиш:</strong> натуральный</li>
+                            <li><strong>Покрытие:</strong> лёгкое–среднее</li>
+                            <li><strong>Брови:</strong> редкие, нормальные</li>
+                            <li><strong>Цена:</strong> ~450–650 MDL</li>
+                          </ul>
+                        </div>
+
+                        <div class="review-verdict">
+                          <h4>Кратко</h4>
+                          <p>
+                            Идеальна для мягкого естественного макияжа бровей
+                            без резких линий.
+                          </p>
+
+                          <h4>Плюсы</h4>
+                          <ul>
+                            <li>натуральный эффект</li>
+                            <li>легко растушёвывается</li>
+                            <li>подходит новичкам</li>
+                          </ul>
+
+                          <h4>Рейтинг</h4>
+                          <div class="review-rating">⭐⭐⭐⭐☆</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 2 -->
+                <div class="review-card-modal premium">
+                  <div class="review-card-modal-image zoom-container">
+                    <img
+                      src="../../images/placeholder/placeholder-makeup-1.webp"
+                      alt="NYX Micro Brow Pencil"
+                      class="zoom-image"
+                    />
+                    <div class="zoom-lens"></div>
+                    <div class="zoom-result"></div>
+                  </div>
+
+                  <div class="review-card-modal-content">
+                    <div class="review-card-modal-title">
+                      NYX Micro Brow Pencil
+                    </div>
+
+                    <div class="review-card-modal-excerpt">
+                      Тонкий карандаш для бровей, позволяет прорисовать волоски
+                      максимально точно.
+                    </div>
+
+                    <div class="buttons-row">
+                      <a
+                        class="review-card-modal-btn disabled"
+                        aria-disabled="true"
+                      >
+                        В скором времени
+                      </a>
+
+                      <button
+                        class="review-card-modal-btn"
+                        onclick="toggleDetails(this)"
+                        data-open="Открыть обзор"
+                        data-close="Скрыть"
+                      >
+                        Подробнее
+                      </button>
+                    </div>
+
+                    <div class="review-card-modal-details">
+                      <div class="review-details-inner">
+                        <div class="review-specs">
+                          <h4>Основная информация</h4>
+                          <ul>
+                            <li><strong>Тип:</strong> карандаш для бровей</li>
+                            <li><strong>Финиш:</strong> натуральный</li>
+                            <li><strong>Покрытие:</strong> среднее</li>
+                            <li><strong>Цена:</strong> ~160–240 MDL</li>
+                          </ul>
+                        </div>
+
+                        <div class="review-verdict">
+                          <h4>Кратко</h4>
+                          <p>
+                            Один из лучших бюджетных карандашей для естественных
+                            бровей.
+                          </p>
+
+                          <h4>Плюсы</h4>
+                          <ul>
+                            <li>тонкий наконечник</li>
+                            <li>легко рисует волоски</li>
+                            <li>доступная цена</li>
+                          </ul>
+
+                          <h4>Рейтинг</h4>
+                          <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="review-card-modal premium">
+                  <div class="review-card-modal-image zoom-container">
+                    <img
+                      src="../../images/placeholder/placeholder-makeup-1.webp"
+                      alt="NYX Brow Glue"
+                      class="zoom-image"
+                    />
+                    <div class="zoom-lens"></div>
+                    <div class="zoom-result"></div>
+                  </div>
+
+                  <div class="review-card-modal-content">
+                    <div class="review-card-modal-title">
+                      NYX Professional Makeup The Brow Glue
+                    </div>
+
+                    <div class="review-card-modal-excerpt">
+                      Гель для экстремальной фиксации бровей с эффектом
+                      ламинирования.
+                    </div>
+
+                    <div class="buttons-row">
+                      <a
+                        class="review-card-modal-btn disabled"
+                        aria-disabled="true"
+                      >
+                        В скором времени
+                      </a>
+
+                      <button
+                        class="review-card-modal-btn"
+                        onclick="toggleDetails(this)"
+                        data-open="Открыть обзор"
+                        data-close="Скрыть"
+                      >
+                        Подробнее
+                      </button>
+                    </div>
+
+                    <div class="review-card-modal-details">
+                      <div class="review-details-inner">
+                        <div class="review-specs">
+                          <h4>Основная информация</h4>
+                          <ul>
+                            <li><strong>Тип:</strong> гель для бровей</li>
+                            <li><strong>Фиксация:</strong> сильная</li>
+                            <li><strong>Эффект:</strong> ламинирование</li>
+                            <li><strong>Цена:</strong> ~180–260 MDL</li>
+                          </ul>
+                        </div>
+
+                        <div class="review-verdict">
+                          <h4>Кратко</h4>
+                          <p>
+                            Лучший вариант для стойкой фиксации бровей без
+                            салона.
+                          </p>
+
+                          <h4>Плюсы</h4>
+                          <ul>
+                            <li>очень сильная фиксация</li>
+                            <li>эффект ламинирования</li>
+                            <li>долгое держание</li>
+                          </ul>
+
+                          <h4>Рейтинг</h4>
+                          <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </section>
-
-            <table class="foundation-table">
-              <tr>
-                <th>Средство</th>
-                <th>Особенности</th>
-              </tr>
-              <tr>
-                <td style="color: #b63181">
-                  Anastasia Beverly Hills Brow Powder
-                  <p class="foundation-note">
-                    Мягко заполняет брови, подходит для всех типов и форм.
-                  </p>
-                </td>
-                <td>Заполнение и моделирование</td>
-              </tr>
-              <tr>
-                <td style="color: #b63181">
-                  Maybelline Brow Precise Micro Pencil
-                  <p class="foundation-note">
-                    Тонкий карандаш для прорисовки редких волосков и
-                    естественного контура.
-                  </p>
-                </td>
-                <td>Прорисовка и точность</td>
-              </tr>
-              <tr>
-                <td style="color: #b63181">
-                  Revlon Brow Shaping Gel
-                  <p class="foundation-note">
-                    Гель фиксирует форму и слегка окрашивает брови.
-                  </p>
-                </td>
-                <td>Форма и лёгкое окрашивание</td>
-              </tr>
-            </table>
           </section>
 
           <!-- Секция 3: Формы бровей -->
@@ -795,127 +1050,247 @@
               дугообразные, прямые, мягко изогнутые и с лёгким подъёмом. Выбор
               формы зависит от структуры лица и густоты волосков.
             </p>
-            <p class="ad-label nusponsored">
-              Независимый обзор. Продукты не спонсируются.
+            <p class="ad-label nusponsored" style="font-size: 12px">
+              <strong>Независимый обзор. Продукты не спонсируются.</strong>
               <br />
-              *Ссылка приведена в ознакомительных целях. При наличии партнёрства
-              здесь размещается прямая ссылка на продукт.
+              *Данный материал является независимым редакционным обзором и не
+              спонсируется производителем или продавцом продукта. <br />
+              *Все названия брендов, товарные знаки и наименования продукции
+              принадлежат их законным правообладателям и используются
+              исключительно в информационных и редакционных целях. <br />
+              *Представленная информация отражает мнение автора и не является
+              официальной рекомендацией производителя. <br />
+              <strong
+                >*Ссылки приведены в ознакомительных целях. При наличии
+                партнёрства здесь может быть размещена прямая ссылка на
+                продукт.</strong
+              >
             </p>
 
             <section class="foundation-gallery" id="gallery-eyebrow-shapes">
-              <div class="gallery-grid">
-                <figure class="gallery-item">
-                  <img
-                    src="../../images/eyebrows/benefit-goof-proof-300.webp"
-                    srcset="
-                      ../../images/eyebrows/benefit-goof-proof-600.webp 2x
-                    "
-                    alt="Benefit Goof Proof Brow Pencil"
-                    loading="lazy"
-                  />
-                  <figcaption>
-                    Benefit Goof Proof Brow Pencil<br />
-                    <div class="review-rating">⭐⭐⭐⭐⭐</div>
-                    <small
-                      >Карандаш для точного формирования и создания мягкой
-                      дугообразной формы</small
-                    >
-                    <div class="card-buttons">
-                      <a
-                        class="section-btn-carousel disabled"
-                        aria-disabled="true"
-                      >
-                        Скоро доступно
-                      </a>
-                    </div>
-                  </figcaption>
-                </figure>
+              <div class="products-container">
+                <!-- 1 -->
+                <div class="review-card-modal premium">
+                  <div class="review-card-modal-image zoom-container">
+                    <img
+                      src="../../images/placeholder/placeholder-makeup-1.webp"
+                      alt="Benefit Goof Proof Brow Pencil"
+                      class="zoom-image"
+                    />
+                    <div class="zoom-lens"></div>
+                    <div class="zoom-result"></div>
+                  </div>
 
-                <figure class="gallery-item">
-                  <img
-                    src="../../images/eyebrows/nyx-micro-brow-300.webp"
-                    srcset="../../images/eyebrows/nyx-micro-brow-600.webp 2x"
-                    alt="NYX Micro Brow Pencil"
-                    loading="lazy"
-                  />
-                  <figcaption>
-                    NYX Micro Brow Pencil<br />
-                    <div class="review-rating">⭐⭐⭐⭐</div>
-                    <small
-                      >Тонкий карандаш для создания естественной линии и
-                      аккуратной формы</small
-                    >
-                    <div class="card-buttons">
-                      <a
-                        class="section-btn-carousel disabled"
-                        aria-disabled="true"
-                      >
-                        Скоро доступно
-                      </a>
+                  <div class="review-card-modal-content">
+                    <div class="review-card-modal-title">
+                      Benefit Goof Proof Brow Pencil
                     </div>
-                  </figcaption>
-                </figure>
 
-                <figure class="gallery-item">
-                  <img
-                    src="../../images/eyebrows/glossier-boy-brow-300.webp"
-                    srcset="../../images/eyebrows/glossier-boy-brow-600.webp 2x"
-                    alt="Benefit Gimme Brow+ "
-                    loading="lazy"
-                  />
-                  <figcaption>
-                    Benefit Gimme Brow+ <br />
-                    <div class="review-rating">⭐⭐⭐⭐⭐</div>
-                    <small>Популярный гель для бровей с микроволокнами.</small>
-                    <div class="card-buttons">
+                    <div class="review-card-modal-excerpt">
+                      Карандаш для бровей с удобной формой, помогает быстро
+                      создать аккуратные и естественные брови.
+                    </div>
+
+                    <div class="buttons-row">
                       <a
-                        class="section-btn-carousel disabled"
+                        class="review-card-modal-btn disabled"
                         aria-disabled="true"
                       >
-                        Скоро доступно
+                        В скором времени
                       </a>
+
+                      <button
+                        class="review-card-modal-btn"
+                        onclick="toggleDetails(this)"
+                        data-open="Открыть обзор"
+                        data-close="Скрыть"
+                      >
+                        Подробнее
+                      </button>
                     </div>
-                  </figcaption>
-                </figure>
+
+                    <div class="review-card-modal-details">
+                      <div class="review-details-inner">
+                        <div class="review-specs">
+                          <h4>Основная информация</h4>
+                          <ul>
+                            <li><strong>Тип:</strong> карандаш для бровей</li>
+                            <li><strong>Финиш:</strong> натуральный</li>
+                            <li><strong>Покрытие:</strong> среднее</li>
+                            <li><strong>Цена:</strong> ~380–520 MDL</li>
+                          </ul>
+                        </div>
+
+                        <div class="review-verdict">
+                          <h4>Кратко</h4>
+                          <p>
+                            Удобный карандаш для быстрого и естественного
+                            макияжа бровей.
+                          </p>
+
+                          <h4>Плюсы</h4>
+                          <ul>
+                            <li>простота использования</li>
+                            <li>естественный эффект</li>
+                            <li>хорошая стойкость</li>
+                          </ul>
+
+                          <h4>Рейтинг</h4>
+                          <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 2 -->
+                <div class="review-card-modal premium">
+                  <div class="review-card-modal-image zoom-container">
+                    <img
+                      src="../../images/placeholder/placeholder-makeup-1.webp"
+                      alt="NYX Micro Brow Pencil"
+                      class="zoom-image"
+                    />
+                    <div class="zoom-lens"></div>
+                    <div class="zoom-result"></div>
+                  </div>
+
+                  <div class="review-card-modal-content">
+                    <div class="review-card-modal-title">
+                      NYX Micro Brow Pencil
+                    </div>
+
+                    <div class="review-card-modal-excerpt">
+                      Тонкий карандаш для прорисовки волосков и естественного
+                      заполнения бровей.
+                    </div>
+
+                    <div class="buttons-row">
+                      <a
+                        class="review-card-modal-btn disabled"
+                        aria-disabled="true"
+                      >
+                        В скором времени
+                      </a>
+
+                      <button
+                        class="review-card-modal-btn"
+                        onclick="toggleDetails(this)"
+                        data-open="Открыть обзор"
+                        data-close="Скрыть"
+                      >
+                        Подробнее
+                      </button>
+                    </div>
+
+                    <div class="review-card-modal-details">
+                      <div class="review-details-inner">
+                        <div class="review-specs">
+                          <h4>Основная информация</h4>
+                          <ul>
+                            <li><strong>Тип:</strong> карандаш для бровей</li>
+                            <li><strong>Финиш:</strong> натуральный</li>
+                            <li><strong>Покрытие:</strong> среднее</li>
+                            <li><strong>Цена:</strong> ~160–240 MDL</li>
+                          </ul>
+                        </div>
+
+                        <div class="review-verdict">
+                          <h4>Кратко</h4>
+                          <p>
+                            Бюджетный и точный карандаш для естественных бровей.
+                          </p>
+
+                          <h4>Плюсы</h4>
+                          <ul>
+                            <li>тонкий грифель</li>
+                            <li>легко рисует волоски</li>
+                            <li>доступная цена</li>
+                          </ul>
+
+                          <h4>Рейтинг</h4>
+                          <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="review-card-modal premium">
+                  <div class="review-card-modal-image zoom-container">
+                    <img
+                      src="../../images/placeholder/placeholder-makeup-1.webp"
+                      alt="Benefit Gimme Brow+"
+                      class="zoom-image"
+                    />
+                    <div class="zoom-lens"></div>
+                    <div class="zoom-result"></div>
+                  </div>
+
+                  <div class="review-card-modal-content">
+                    <div class="review-card-modal-title">
+                      Benefit Gimme Brow+
+                    </div>
+
+                    <div class="review-card-modal-excerpt">
+                      Тинт-гель для бровей с волокнами, придаёт объём и
+                      естественную густоту.
+                    </div>
+
+                    <div class="buttons-row">
+                      <a
+                        class="review-card-modal-btn disabled"
+                        aria-disabled="true"
+                      >
+                        В скором времени
+                      </a>
+
+                      <button
+                        class="review-card-modal-btn"
+                        onclick="toggleDetails(this)"
+                        data-open="Открыть обзор"
+                        data-close="Скрыть"
+                      >
+                        Подробнее
+                      </button>
+                    </div>
+
+                    <div class="review-card-modal-details">
+                      <div class="review-details-inner">
+                        <div class="review-specs">
+                          <h4>Основная информация</h4>
+                          <ul>
+                            <li><strong>Тип:</strong> тинт-гель для бровей</li>
+                            <li><strong>Эффект:</strong> объём + фиксация</li>
+                            <li><strong>Брови:</strong> редкие, нормальные</li>
+                            <li><strong>Цена:</strong> ~420–600 MDL</li>
+                          </ul>
+                        </div>
+
+                        <div class="review-verdict">
+                          <h4>Кратко</h4>
+                          <p>
+                            Идеален для естественного объёмного эффекта без
+                            карандаша.
+                          </p>
+
+                          <h4>Плюсы</h4>
+                          <ul>
+                            <li>визуально добавляет густоту</li>
+                            <li>естественный результат</li>
+                            <li>быстрое нанесение</li>
+                          </ul>
+
+                          <h4>Рейтинг</h4>
+                          <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </section>
-
-            <table class="foundation-table">
-              <tr>
-                <th>Продукт</th>
-                <th>Особенности</th>
-              </tr>
-              <tr>
-                <td style="color: #b63181">
-                  Benefit Goof Proof Brow Pencil
-                  <p class="foundation-note">
-                    Карандаш с мягкой текстурой, позволяет формировать
-                    дугообразную форму и заполнять пробелы.
-                  </p>
-                </td>
-                <td>Моделирование и заполняемость</td>
-              </tr>
-              <tr>
-                <td style="color: #b63181">
-                  NYX Micro Brow Pencil
-                  <p class="foundation-note">
-                    Тонкий карандаш для естественной линии и точного
-                    прорисовывания волосков.
-                  </p>
-                </td>
-                <td>Аккуратная и естественная форма</td>
-              </tr>
-              <tr>
-                <td style="color: #b63181">
-                  Glossier Boy Brow
-                  <p class="foundation-note">
-                    Гель для объёма, подчёркивает форму и фиксирует волоски на
-                    весь день.
-                  </p>
-                </td>
-                <td>Объём и лёгкая фиксация</td>
-              </tr>
-            </table>
           </section>
 
           <!-- Секция 4: Коррекция бровей -->
@@ -926,134 +1301,247 @@
               аккуратно удалять лишние волоски. Используйте пинцет, ножницы и
               щипцы для профессионального результата дома.
             </p>
-            <p class="ad-label nusponsored">
-              Независимый обзор. Продукты не спонсируются.
+            <p class="ad-label nusponsored" style="font-size: 12px">
+              <strong>Независимый обзор. Продукты не спонсируются.</strong>
               <br />
-              *Ссылка приведена в ознакомительных целях. При наличии партнёрства
-              здесь размещается прямая ссылка на продукт.
+              *Данный материал является независимым редакционным обзором и не
+              спонсируется производителем или продавцом продукта. <br />
+              *Все названия брендов, товарные знаки и наименования продукции
+              принадлежат их законным правообладателям и используются
+              исключительно в информационных и редакционных целях. <br />
+              *Представленная информация отражает мнение автора и не является
+              официальной рекомендацией производителя. <br />
+              <strong
+                >*Ссылки приведены в ознакомительных целях. При наличии
+                партнёрства здесь может быть размещена прямая ссылка на
+                продукт.</strong
+              >
             </p>
 
             <section class="foundation-gallery" id="gallery-eyebrow-correction">
-              <div class="gallery-grid">
-                <figure class="gallery-item">
-                  <img
-                    src="../../images/eyebrows/tweezerman-stainless-300.webp"
-                    srcset="
-                      ../../images/eyebrows/tweezerman-stainless-600.webp 2x
-                    "
-                    alt="Tweezerman Stainless Steel Slant Tweezer"
-                    loading="lazy"
-                  />
-                  <figcaption>
-                    Tweezerman Stainless Steel Slant Tweezer<br />
-                    <div class="review-rating">⭐⭐⭐⭐⭐</div>
-                    <small
-                      >Пинцет из нержавеющей стали с наклонным краем для точного
-                      захвата волосков</small
-                    >
-                    <div class="card-buttons">
-                      <a
-                        class="section-btn-carousel disabled"
-                        aria-disabled="true"
-                      >
-                        Скоро доступно
-                      </a>
-                    </div>
-                  </figcaption>
-                </figure>
+              <div class="products-container">
+                <!-- 1 -->
+                <div class="review-card-modal premium">
+                  <div class="review-card-modal-image zoom-container">
+                    <img
+                      src="../../images/placeholder/placeholder-makeup-1.webp"
+                      alt="Benefit Goof Proof Brow Pencil"
+                      class="zoom-image"
+                    />
+                    <div class="zoom-lens"></div>
+                    <div class="zoom-result"></div>
+                  </div>
 
-                <figure class="gallery-item">
-                  <img
-                    src="../../images/eyebrows/shu-uemura-brow-scissors-300.webp"
-                    srcset="
-                      ../../images/eyebrows/shu-uemura-brow-scissors-600.webp 2x
-                    "
-                    alt="Shu Uemura Brow Scissors"
-                    loading="lazy"
-                  />
-                  <figcaption>
-                    Shu Uemura Brow Scissors<br />
-                    <div class="review-rating">⭐⭐⭐⭐⭐</div>
-                    <small
-                      >Маленькие ножницы для аккуратной подрезки длинных
-                      волосков</small
-                    >
-                    <div class="card-buttons">
-                      <a
-                        class="section-btn-carousel disabled"
-                        aria-disabled="true"
-                      >
-                        Скоро доступно
-                      </a>
+                  <div class="review-card-modal-content">
+                    <div class="review-card-modal-title">
+                      Benefit Goof Proof Brow Pencil
                     </div>
-                  </figcaption>
-                </figure>
 
-                <figure class="gallery-item">
-                  <img
-                    src="../../images/eyebrows/revlon-tweezing-300.webp"
-                    srcset="../../images/eyebrows/revlon-tweezing-600.webp 2x"
-                    alt="Revlon Designer Series Slant Tweezer"
-                    loading="lazy"
-                  />
-                  <figcaption>
-                    Revlon Designer Series Slant Tweezert<br />
-                    <div class="review-rating">⭐⭐⭐⭐</div>
-                    <small
-                      >Высококачественный пинцет помогает точно захватывать даже
-                      короткие волоски</small
-                    >
-                    <div class="card-buttons">
+                    <div class="review-card-modal-excerpt">
+                      Карандаш для бровей с удобной формой, помогает быстро
+                      создать аккуратные и естественные брови.
+                    </div>
+
+                    <div class="buttons-row">
                       <a
-                        class="section-btn-carousel disabled"
+                        class="review-card-modal-btn disabled"
                         aria-disabled="true"
                       >
-                        Скоро доступно
+                        В скором времени
                       </a>
+
+                      <button
+                        class="review-card-modal-btn"
+                        onclick="toggleDetails(this)"
+                        data-open="Открыть обзор"
+                        data-close="Скрыть"
+                      >
+                        Подробнее
+                      </button>
                     </div>
-                  </figcaption>
-                </figure>
+
+                    <div class="review-card-modal-details">
+                      <div class="review-details-inner">
+                        <div class="review-specs">
+                          <h4>Основная информация</h4>
+                          <ul>
+                            <li><strong>Тип:</strong> карандаш для бровей</li>
+                            <li><strong>Финиш:</strong> натуральный</li>
+                            <li><strong>Покрытие:</strong> среднее</li>
+                            <li><strong>Цена:</strong> ~380–520 MDL</li>
+                          </ul>
+                        </div>
+
+                        <div class="review-verdict">
+                          <h4>Кратко</h4>
+                          <p>
+                            Удобный карандаш для быстрого и естественного
+                            макияжа бровей.
+                          </p>
+
+                          <h4>Плюсы</h4>
+                          <ul>
+                            <li>простота использования</li>
+                            <li>естественный эффект</li>
+                            <li>хорошая стойкость</li>
+                          </ul>
+
+                          <h4>Рейтинг</h4>
+                          <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 2 -->
+                <div class="review-card-modal premium">
+                  <div class="review-card-modal-image zoom-container">
+                    <img
+                      src="../../images/placeholder/placeholder-makeup-1.webp"
+                      alt="NYX Micro Brow Pencil"
+                      class="zoom-image"
+                    />
+                    <div class="zoom-lens"></div>
+                    <div class="zoom-result"></div>
+                  </div>
+
+                  <div class="review-card-modal-content">
+                    <div class="review-card-modal-title">
+                      NYX Micro Brow Pencil
+                    </div>
+
+                    <div class="review-card-modal-excerpt">
+                      Тонкий карандаш для прорисовки волосков и естественного
+                      заполнения бровей.
+                    </div>
+
+                    <div class="buttons-row">
+                      <a
+                        class="review-card-modal-btn disabled"
+                        aria-disabled="true"
+                      >
+                        В скором времени
+                      </a>
+
+                      <button
+                        class="review-card-modal-btn"
+                        onclick="toggleDetails(this)"
+                        data-open="Открыть обзор"
+                        data-close="Скрыть"
+                      >
+                        Подробнее
+                      </button>
+                    </div>
+
+                    <div class="review-card-modal-details">
+                      <div class="review-details-inner">
+                        <div class="review-specs">
+                          <h4>Основная информация</h4>
+                          <ul>
+                            <li><strong>Тип:</strong> карандаш для бровей</li>
+                            <li><strong>Финиш:</strong> натуральный</li>
+                            <li><strong>Покрытие:</strong> среднее</li>
+                            <li><strong>Цена:</strong> ~160–240 MDL</li>
+                          </ul>
+                        </div>
+
+                        <div class="review-verdict">
+                          <h4>Кратко</h4>
+                          <p>
+                            Бюджетный и точный карандаш для естественных бровей.
+                          </p>
+
+                          <h4>Плюсы</h4>
+                          <ul>
+                            <li>тонкий грифель</li>
+                            <li>легко рисует волоски</li>
+                            <li>доступная цена</li>
+                          </ul>
+
+                          <h4>Рейтинг</h4>
+                          <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="review-card-modal premium">
+                  <div class="review-card-modal-image zoom-container">
+                    <img
+                      src="../../images/placeholder/placeholder-makeup-1.webp"
+                      alt="Benefit Gimme Brow+"
+                      class="zoom-image"
+                    />
+                    <div class="zoom-lens"></div>
+                    <div class="zoom-result"></div>
+                  </div>
+
+                  <div class="review-card-modal-content">
+                    <div class="review-card-modal-title">
+                      Benefit Gimme Brow+
+                    </div>
+
+                    <div class="review-card-modal-excerpt">
+                      Тинт-гель для бровей с волокнами, придаёт объём и
+                      естественную густоту.
+                    </div>
+
+                    <div class="buttons-row">
+                      <a
+                        class="review-card-modal-btn disabled"
+                        aria-disabled="true"
+                      >
+                        В скором времени
+                      </a>
+
+                      <button
+                        class="review-card-modal-btn"
+                        onclick="toggleDetails(this)"
+                        data-open="Открыть обзор"
+                        data-close="Скрыть"
+                      >
+                        Подробнее
+                      </button>
+                    </div>
+
+                    <div class="review-card-modal-details">
+                      <div class="review-details-inner">
+                        <div class="review-specs">
+                          <h4>Основная информация</h4>
+                          <ul>
+                            <li><strong>Тип:</strong> тинт-гель для бровей</li>
+                            <li><strong>Эффект:</strong> объём + фиксация</li>
+                            <li><strong>Брови:</strong> редкие, нормальные</li>
+                            <li><strong>Цена:</strong> ~420–600 MDL</li>
+                          </ul>
+                        </div>
+
+                        <div class="review-verdict">
+                          <h4>Кратко</h4>
+                          <p>
+                            Идеален для естественного объёмного эффекта без
+                            карандаша.
+                          </p>
+
+                          <h4>Плюсы</h4>
+                          <ul>
+                            <li>визуально добавляет густоту</li>
+                            <li>естественный результат</li>
+                            <li>быстрое нанесение</li>
+                          </ul>
+
+                          <h4>Рейтинг</h4>
+                          <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </section>
-
-            <table class="foundation-table">
-              <tr>
-                <th>Продукт</th>
-                <th>Особенности</th>
-              </tr>
-              <tr>
-                <td style="color: #b63181">
-                  Tweezerman Stainless Steel Slant Tweezer
-                  <p class="foundation-note">
-                    Высококачественный пинцет с наклонным краем для точного
-                    удаления волосков и создания идеальной формы.
-                  </p>
-                </td>
-                <td>Точная коррекция волосков</td>
-              </tr>
-              <tr>
-                <td style="color: #b63181">
-                  Shu Uemura Brow Scissors
-                  <p class="foundation-note">
-                    Мини-ножницы для аккуратного подравнивания длинных волосков
-                    без повреждения формы.
-                  </p>
-                </td>
-                <td>Подрезка и аккуратность</td>
-              </tr>
-              <tr>
-                <td style="color: #b63181">
-                  Revlon Designer Series Slant Tweezert
-                  <p class="foundation-note">
-                    Удобный пинцет из нержавеющей стали со скошенным
-                    наконечником, который помогает точно захватывать даже
-                    короткие волоски. Хорошо подходит для домашней коррекции
-                    формы бровей.
-                  </p>
-                </td>
-                <td>Помогает точно захватывать даже короткие волоски</td>
-              </tr>
-            </table>
           </section>
 
           <!-- Секция 5: Средства ухода за бровями -->
@@ -1065,131 +1553,309 @@
               кондиционеры. Они делают волоски сильнее, предотвращают выпадение
               и придают естественный блеск.
             </p>
-            <p class="ad-label nusponsored">
-              Независимый обзор. Продукты не спонсируются.
+            <p class="ad-label nusponsored" style="font-size: 12px">
+              <strong>Независимый обзор. Продукты не спонсируются.</strong>
               <br />
-              *Ссылка приведена в ознакомительных целях. При наличии партнёрства
-              здесь размещается прямая ссылка на продукт.
+              *Данный материал является независимым редакционным обзором и не
+              спонсируется производителем или продавцом продукта. <br />
+              *Все названия брендов, товарные знаки и наименования продукции
+              принадлежат их законным правообладателям и используются
+              исключительно в информационных и редакционных целях. <br />
+              *Представленная информация отражает мнение автора и не является
+              официальной рекомендацией производителя. <br />
+              <strong
+                >*Ссылки приведены в ознакомительных целях. При наличии
+                партнёрства здесь может быть размещена прямая ссылка на
+                продукт.</strong
+              >
             </p>
 
             <section class="foundation-gallery" id="gallery-eyebrow-care">
-              <div class="gallery-grid">
-                <figure class="gallery-item">
-                  <img
-                    src="../../images/nyx-eyebrow-cake-300/rapid-brow-serum-300.webp"
-                    srcset="../../images/eyebrows/rapid-brow-serum-600.webp 2x"
-                    alt="RapidBrow Eyebrow Enhancing Serum"
-                    loading="lazy"
-                  />
-                  <figcaption>
-                    RapidBrow Eyebrow Enhancing Serum<br />
-                    <div class="review-rating">⭐⭐⭐⭐⭐</div>
-                    <small
-                      >Сыворотка для ускоренного роста бровей и укрепления
-                      волосков</small
-                    >
-                    <div class="card-buttons">
-                      <a
-                        class="section-btn-carousel disabled"
-                        aria-disabled="true"
-                      >
-                        Скоро доступно
-                      </a>
-                    </div>
-                  </figcaption>
-                </figure>
+              <div class="products-container">
+                <!-- 1 -->
+                <div class="review-card-modal premium">
+                  <div class="review-card-modal-image zoom-container">
+                    <img
+                      src="../../images/placeholder/placeholder-makeup-1.webp"
+                      alt="RapidBrow Eyebrow Enhancing Serum"
+                      class="zoom-image"
+                    />
+                    <div class="zoom-lens"></div>
+                    <div class="zoom-result"></div>
+                  </div>
 
-                <figure class="gallery-item">
-                  <img
-                    src="../../images/eyebrows/ordinary-lash-brow-300.webp"
-                    srcset="
-                      ../../images/eyebrows/ordinary-lash-brow-300.webp 2x
-                    "
-                    alt="The Ordinary Multi-Peptide Lash and Brow Serum "
-                    loading="lazy"
-                  />
-                  <figcaption>
-                    The Ordinary Multi-Peptide Lash and Brow Serum <br />
-                    <div class="review-rating">⭐⭐⭐⭐</div>
-                    <small
-                      >Популярная сыворотка с пептидами и аминокислотами</small
-                    >
-                    <div class="card-buttons">
-                      <a
-                        class="section-btn-carousel disabled"
-                        aria-disabled="true"
-                      >
-                        Скоро доступно
-                      </a>
+                  <div class="review-card-modal-content">
+                    <div class="review-card-modal-title">
+                      RapidBrow Eyebrow <br />Enhancing Serum
                     </div>
-                  </figcaption>
-                </figure>
 
-                <figure class="gallery-item">
-                  <img
-                    src="../../images/eyebrows/revitabrow-advanced-300.webp"
-                    srcset="
-                      ../../images/eyebrows/revitabrow-advanced-600.webp 2x
-                    "
-                    alt="RevitaBrow Advanced"
-                    loading="lazy"
-                  />
-                  <figcaption>
-                    RevitaBrow Advanced Conditioner<br />
-                    <div class="review-rating">⭐⭐⭐⭐⭐</div>
-                    <small
-                      >Кондиционер для бровей: увлажнение, блеск и мягкость
-                      волосков</small
-                    >
-                    <div class="card-buttons">
+                    <div class="review-card-modal-excerpt">
+                      Сыворотка для бровей, которая помогает сделать волоски
+                      более крепкими, густыми и ухоженными.
+                    </div>
+
+                    <div class="buttons-row">
                       <a
-                        class="section-btn-carousel disabled"
+                        class="review-card-modal-btn disabled"
                         aria-disabled="true"
                       >
-                        Скоро доступно
+                        В скором времени
                       </a>
+
+                      <button
+                        class="review-card-modal-btn"
+                        onclick="toggleDetails(this)"
+                        data-open="Открыть обзор"
+                        data-close="Скрыть"
+                      >
+                        Подробнее
+                      </button>
                     </div>
-                  </figcaption>
-                </figure>
+
+                    <div class="review-card-modal-details">
+                      <div class="review-details-inner">
+                        <div class="review-specs">
+                          <h4>Основная информация</h4>
+                          <ul>
+                            <li><strong>Тип:</strong> сыворотка для бровей</li>
+                            <li>
+                              <strong>Эффект:</strong> укрепление и густота
+                            </li>
+                            <li><strong>Объём:</strong> 3 мл</li>
+                            <li><strong>Цена:</strong> ~340–460 MDL</li>
+                          </ul>
+
+                          <h4>Рекомендуется если</h4>
+                          <ul>
+                            <li>брови стали редкими</li>
+                            <li>волоски ослаблены</li>
+                            <li>нужен ежедневный уход</li>
+                          </ul>
+                        </div>
+
+                        <div class="review-verdict">
+                          <h4>Кратко</h4>
+                          <p>
+                            Популярная сыворотка для ежедневного ухода, которая
+                            помогает сделать брови визуально более густыми.
+                          </p>
+
+                          <h4>Плюсы</h4>
+                          <ul>
+                            <li>простое нанесение</li>
+                            <li>укрепляет волоски</li>
+                            <li>экономичный расход</li>
+                          </ul>
+
+                          <h4>Важно учитывать</h4>
+                          <ul>
+                            <li>
+                              результат появляется при регулярном использовании
+                            </li>
+                          </ul>
+
+                          <h4>Совет по использованию</h4>
+                          <p>
+                            Наносите вечером на чистые и сухие брови один раз в
+                            день.
+                          </p>
+
+                          <h4>Рейтинг</h4>
+                          <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 2 -->
+                <div class="review-card-modal premium">
+                  <div class="review-card-modal-image zoom-container">
+                    <img
+                      src="../../images/placeholder/placeholder-makeup-1.webp"
+                      alt="The Ordinary Multi-Peptide Lash and Brow Serum"
+                      class="zoom-image"
+                    />
+                    <div class="zoom-lens"></div>
+                    <div class="zoom-result"></div>
+                  </div>
+
+                  <div class="review-card-modal-content">
+                    <div class="review-card-modal-title">
+                      The Ordinary Multi-Peptide Lash and Brow Serum
+                    </div>
+
+                    <div class="review-card-modal-excerpt">
+                      Сыворотка с пептидами для укрепления ресниц и бровей,
+                      подходит для ежедневного ухода.
+                    </div>
+
+                    <div class="buttons-row">
+                      <a
+                        class="review-card-modal-btn disabled"
+                        aria-disabled="true"
+                      >
+                        В скором времени
+                      </a>
+
+                      <button
+                        class="review-card-modal-btn"
+                        onclick="toggleDetails(this)"
+                        data-open="Открыть обзор"
+                        data-close="Скрыть"
+                      >
+                        Подробнее
+                      </button>
+                    </div>
+
+                    <div class="review-card-modal-details">
+                      <div class="review-details-inner">
+                        <div class="review-specs">
+                          <h4>Основная информация</h4>
+                          <ul>
+                            <li><strong>Тип:</strong> сыворотка с пептидами</li>
+                            <li><strong>Эффект:</strong> укрепление</li>
+                            <li><strong>Объём:</strong> 5 мл</li>
+                            <li><strong>Цена:</strong> ~170–230 MDL</li>
+                          </ul>
+
+                          <h4>Рекомендуется если</h4>
+                          <ul>
+                            <li>нужен ежедневный уход</li>
+                            <li>волоски стали ломкими</li>
+                            <li>хочется укрепить брови</li>
+                          </ul>
+                        </div>
+
+                        <div class="review-verdict">
+                          <h4>Кратко</h4>
+                          <p>
+                            Одно из самых популярных средств с пептидами для
+                            комплексного ухода за ресницами и бровями.
+                          </p>
+
+                          <h4>Плюсы</h4>
+                          <ul>
+                            <li>хороший состав</li>
+                            <li>доступная цена</li>
+                            <li>экономичный расход</li>
+                          </ul>
+
+                          <h4>Важно учитывать</h4>
+                          <ul>
+                            <li>эффект развивается постепенно</li>
+                          </ul>
+
+                          <h4>Совет по использованию</h4>
+                          <p>
+                            Используйте ежедневно на очищенную кожу перед сном.
+                          </p>
+
+                          <h4>Рейтинг</h4>
+                          <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="review-card-modal premium">
+                  <div class="review-card-modal-image zoom-container">
+                    <img
+                      src="../../images/placeholder/placeholder-makeup-1.webp"
+                      alt="RevitaBrow Advanced Conditioner"
+                      class="zoom-image"
+                    />
+                    <div class="zoom-lens"></div>
+                    <div class="zoom-result"></div>
+                  </div>
+
+                  <div class="review-card-modal-content">
+                    <div class="review-card-modal-title">
+                      RevitaBrow Advanced Conditioner
+                    </div>
+
+                    <div class="review-card-modal-excerpt">
+                      Премиальная сыворотка для восстановления, укрепления и
+                      улучшения внешнего вида бровей.
+                    </div>
+
+                    <div class="buttons-row">
+                      <a
+                        class="review-card-modal-btn disabled"
+                        aria-disabled="true"
+                      >
+                        В скором времени
+                      </a>
+
+                      <button
+                        class="review-card-modal-btn"
+                        onclick="toggleDetails(this)"
+                        data-open="Открыть обзор"
+                        data-close="Скрыть"
+                      >
+                        Подробнее
+                      </button>
+                    </div>
+
+                    <div class="review-card-modal-details">
+                      <div class="review-details-inner">
+                        <div class="review-specs">
+                          <h4>Основная информация</h4>
+                          <ul>
+                            <li>
+                              <strong>Тип:</strong> восстанавливающая сыворотка
+                            </li>
+                            <li>
+                              <strong>Эффект:</strong> укрепление и
+                              восстановление
+                            </li>
+                            <li><strong>Объём:</strong> 3 мл</li>
+                            <li><strong>Цена:</strong> ~680–900 MDL</li>
+                          </ul>
+
+                          <h4>Рекомендуется если</h4>
+                          <ul>
+                            <li>брови повреждены</li>
+                            <li>было чрезмерное выщипывание</li>
+                            <li>ищете премиальный уход</li>
+                          </ul>
+                        </div>
+
+                        <div class="review-verdict">
+                          <h4>Кратко</h4>
+                          <p>
+                            Профессиональное средство для интенсивного ухода и
+                            восстановления густоты бровей.
+                          </p>
+
+                          <h4>Плюсы</h4>
+                          <ul>
+                            <li>концентрированная формула</li>
+                            <li>укрепляет волоски</li>
+                            <li>экономичный расход</li>
+                          </ul>
+
+                          <h4>Важно учитывать</h4>
+                          <ul>
+                            <li>высокая стоимость</li>
+                          </ul>
+
+                          <h4>Совет по использованию</h4>
+                          <p>
+                            Наносите ежедневно вечером на очищенные сухие брови.
+                          </p>
+
+                          <h4>Рейтинг</h4>
+                          <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </section>
-
-            <table class="foundation-table">
-              <tr>
-                <th>Продукт</th>
-                <th>Особенности</th>
-              </tr>
-              <tr>
-                <td style="color: #b63181">
-                  RapidBrow Eyebrow Enhancing Serum
-                  <p class="foundation-note">
-                    Сыворотка для ускоренного роста и укрепления волосков,
-                    подходит для всех типов бровей.
-                  </p>
-                </td>
-                <td>Укрепление и рост волосков</td>
-              </tr>
-              <tr>
-                <td style="color: #b63181">
-                  The Ordinary Multi-Peptide Lash and Brow Serum
-                  <p class="foundation-note">
-                    Популярная сыворотка с пептидами и аминокислотами. Лёгкая
-                    формула быстро впитывается и подходит для ежедневного ухода.
-                  </p>
-                </td>
-                <td>Питание и блеск</td>
-              </tr>
-              <tr>
-                <td style="color: #b63181">
-                  RevitaBrow Advanced
-                  <p class="foundation-note">
-                    Кондиционер для бровей с пептидами и питательными
-                    компонентами (для густоты)
-                  </p>
-                </td>
-                <td>Увлажнение и мягкость</td>
-              </tr>
-            </table>
           </section>
 
           <!-- Секция 6: Ссылки на мастеров (выделенная) -->
@@ -1457,128 +2123,251 @@
               Современные формулы позволяют создать эффект ламинирования и
               подчеркнуть естественную густоту бровей.
             </p>
-            <p class="ad-label nusponsored">
-              Независимый обзор. Продукты не спонсируются.
+            <p class="ad-label nusponsored" style="font-size: 12px">
+              <strong>Независимый обзор. Продукты не спонсируются.</strong>
               <br />
-              *Ссылка приведена в ознакомительных целях. При наличии партнёрства
-              здесь размещается прямая ссылка на продукт.
+              *Данный материал является независимым редакционным обзором и не
+              спонсируется производителем или продавцом продукта. <br />
+              *Все названия брендов, товарные знаки и наименования продукции
+              принадлежат их законным правообладателям и используются
+              исключительно в информационных и редакционных целях. <br />
+              *Представленная информация отражает мнение автора и не является
+              официальной рекомендацией производителя. <br />
+              <strong
+                >*Ссылки приведены в ознакомительных целях. При наличии
+                партнёрства здесь может быть размещена прямая ссылка на
+                продукт.</strong
+              >
             </p>
 
             <section class="foundation-gallery" id="gallery-brow-gels">
-              <div class="gallery-grid">
-                <figure class="gallery-item">
-                  <img
-                    src="../../images/nyx-eyebrow-cake-300/benefit-brow-setter-300.webp"
-                    srcset="
-                      ../../images/eyebrows/benefit-brow-setter-600.webp 2x
-                    "
-                    alt="Benefit 24-HR Brow Setter"
-                    loading="lazy"
-                  />
-                  <figcaption>
-                    Benefit 24-HR Brow Setter<br />
-                    <div class="review-rating">⭐⭐⭐⭐⭐</div>
-                    <small>Сильная фиксация и эффект ламинирования</small>
-                    <div class="card-buttons">
-                      <a
-                        class="section-btn-carousel disabled"
-                        aria-disabled="true"
-                      >
-                        Скоро доступно
-                      </a>
-                    </div>
-                  </figcaption>
-                </figure>
+              <div class="products-container">
+                <!-- 1 -->
+                <div class="review-card-modal premium">
+                  <div class="review-card-modal-image zoom-container">
+                    <img
+                      src="../../images/placeholder/placeholder-makeup-1.webp"
+                      alt="Benefit 24-HR Brow Setter"
+                      class="zoom-image"
+                    />
+                    <div class="zoom-lens"></div>
+                    <div class="zoom-result"></div>
+                  </div>
 
-                <figure class="gallery-item">
-                  <img
-                    src="../../images/eyebrows/anastasia-brow-freeze-300.webp"
-                    srcset="
-                      ../../images/eyebrows/anastasia-brow-freeze-600.webp 2x
-                    "
-                    alt="Anastasia Brow Freeze"
-                    loading="lazy"
-                  />
-                  <figcaption>
-                    Anastasia Brow Freeze<br />
-                    <div class="review-rating">⭐⭐⭐⭐⭐</div>
-                    <small>Популярный воск для укладки бровей</small>
-                    <div class="card-buttons">
-                      <a
-                        class="section-btn-carousel disabled"
-                        aria-disabled="true"
-                      >
-                        Скоро доступно
-                      </a>
+                  <div class="review-card-modal-content">
+                    <div class="review-card-modal-title">
+                      Benefit 24-HR Brow Setter
                     </div>
-                  </figcaption>
-                </figure>
 
-                <figure class="gallery-item">
-                  <img
-                    src="../../images/eyebrows/nyx-control-freak-300.webp"
-                    srcset="../../images/eyebrows/nyx-control-freak-600.webp 2x"
-                    alt="NYX Control Freak Brow Gel"
-                    loading="lazy"
-                  />
-                  <figcaption>
-                    NYX Control Freak<br />
-                    <div class="review-rating">⭐⭐⭐⭐</div>
-                    <small>Лёгкий гель для естественной укладки</small>
-                    <div class="card-buttons">
+                    <div class="review-card-modal-excerpt">
+                      Гель для бровей с экстрасильной фиксацией, который
+                      удерживает форму бровей до 24 часов без склеивания.
+                    </div>
+
+                    <div class="buttons-row">
                       <a
-                        class="section-btn-carousel disabled"
+                        class="review-card-modal-btn disabled"
                         aria-disabled="true"
                       >
-                        Скоро доступно
+                        В скором времени
                       </a>
+
+                      <button
+                        class="review-card-modal-btn"
+                        onclick="toggleDetails(this)"
+                        data-open="Открыть обзор"
+                        data-close="Скрыть"
+                      >
+                        Подробнее
+                      </button>
                     </div>
-                  </figcaption>
-                </figure>
+
+                    <div class="review-card-modal-details">
+                      <div class="review-details-inner">
+                        <div class="review-specs">
+                          <h4>Основная информация</h4>
+                          <ul>
+                            <li>
+                              <strong>Тип:</strong> прозрачный гель для бровей
+                            </li>
+                            <li>
+                              <strong>Фиксация:</strong> сильная (24 часа)
+                            </li>
+                            <li><strong>Финиш:</strong> натуральный</li>
+                            <li><strong>Цена:</strong> ~520–650 MDL</li>
+                          </ul>
+                        </div>
+
+                        <div class="review-verdict">
+                          <h4>Кратко</h4>
+                          <p>
+                            Один из самых надежных гелей для фиксации бровей без
+                            эффекта “жёсткости”.
+                          </p>
+
+                          <h4>Плюсы</h4>
+                          <ul>
+                            <li>очень сильная фиксация</li>
+                            <li>не белеет</li>
+                            <li>естественный результат</li>
+                          </ul>
+
+                          <h4>Рейтинг</h4>
+                          <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 2 -->
+                <div class="review-card-modal premium">
+                  <div class="review-card-modal-image zoom-container">
+                    <img
+                      src="../../images/placeholder/placeholder-makeup-1.webp"
+                      alt="Anastasia Brow Freeze"
+                      class="zoom-image"
+                    />
+                    <div class="zoom-lens"></div>
+                    <div class="zoom-result"></div>
+                  </div>
+
+                  <div class="review-card-modal-content">
+                    <div class="review-card-modal-title">
+                      Anastasia Brow Freeze
+                    </div>
+
+                    <div class="review-card-modal-excerpt">
+                      Воск-гель <br />
+                      для эффекта ламинированных бровей с максимальной фиксацией
+                      и “fluffy brows”.
+                    </div>
+
+                    <div class="buttons-row">
+                      <a
+                        class="review-card-modal-btn disabled"
+                        aria-disabled="true"
+                      >
+                        В скором времени
+                      </a>
+
+                      <button
+                        class="review-card-modal-btn"
+                        onclick="toggleDetails(this)"
+                        data-open="Открыть обзор"
+                        data-close="Скрыть"
+                      >
+                        Подробнее
+                      </button>
+                    </div>
+
+                    <div class="review-card-modal-details">
+                      <div class="review-details-inner">
+                        <div class="review-specs">
+                          <h4>Основная информация</h4>
+                          <ul>
+                            <li><strong>Тип:</strong> воск-гель</li>
+                            <li><strong>Фиксация:</strong> экстрасильная</li>
+                            <li><strong>Финиш:</strong> натуральный</li>
+                            <li><strong>Цена:</strong> ~620–760 MDL</li>
+                          </ul>
+                        </div>
+
+                        <div class="review-verdict">
+                          <h4>Кратко</h4>
+                          <p>
+                            Идеален для трендового эффекта ламинированных
+                            бровей.
+                          </p>
+
+                          <h4>Плюсы</h4>
+                          <ul>
+                            <li>очень сильная фиксация</li>
+                            <li>эффект салонного ламинирования</li>
+                            <li>экономичный расход</li>
+                          </ul>
+
+                          <h4>Рейтинг</h4>
+                          <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="review-card-modal premium">
+                  <div class="review-card-modal-image zoom-container">
+                    <img
+                      src="../../images/placeholder/placeholder-makeup-1.webp"
+                      alt="NYX Control Freak"
+                      class="zoom-image"
+                    />
+                    <div class="zoom-lens"></div>
+                    <div class="zoom-result"></div>
+                  </div>
+
+                  <div class="review-card-modal-content">
+                    <div class="review-card-modal-title">NYX Control Freak</div>
+
+                    <div class="review-card-modal-excerpt">
+                      Прозрачный гель для бровей с лёгкой фиксацией для
+                      естественного ежедневного макияжа.
+                    </div>
+
+                    <div class="buttons-row">
+                      <a
+                        class="review-card-modal-btn disabled"
+                        aria-disabled="true"
+                      >
+                        В скором времени
+                      </a>
+
+                      <button
+                        class="review-card-modal-btn"
+                        onclick="toggleDetails(this)"
+                        data-open="Открыть обзор"
+                        data-close="Скрыть"
+                      >
+                        Подробнее
+                      </button>
+                    </div>
+
+                    <div class="review-card-modal-details">
+                      <div class="review-details-inner">
+                        <div class="review-specs">
+                          <h4>Основная информация</h4>
+                          <ul>
+                            <li><strong>Тип:</strong> прозрачный гель</li>
+                            <li><strong>Фиксация:</strong> средняя</li>
+                            <li><strong>Финиш:</strong> натуральный</li>
+                            <li><strong>Цена:</strong> ~150–220 MDL</li>
+                          </ul>
+                        </div>
+
+                        <div class="review-verdict">
+                          <h4>Кратко</h4>
+                          <p>
+                            Бюджетный вариант для ежедневной лёгкой укладки
+                            бровей.
+                          </p>
+
+                          <h4>Плюсы</h4>
+                          <ul>
+                            <li>доступная цена</li>
+                            <li>естественный результат</li>
+                            <li>не склеивает волоски</li>
+                          </ul>
+
+                          <h4>Рейтинг</h4>
+                          <div class="review-rating">⭐⭐⭐⭐☆</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </section>
-
-            <table class="foundation-table">
-              <tr>
-                <th>Гель для бровей</th>
-                <th>Особенности</th>
-              </tr>
-
-              <tr>
-                <td style="color: #b63181">
-                  Benefit 24-HR Brow Setter
-                  <p class="foundation-note">
-                    Один из самых популярных гелей для фиксации бровей.
-                    Двусторонняя щёточка позволяет аккуратно распределять
-                    средство и создавать эффект ламинированных бровей.
-                  </p>
-                </td>
-                <td>Сильная фиксация до 24 часов</td>
-              </tr>
-
-              <tr>
-                <td style="color: #b63181">
-                  Anastasia Brow Freeze
-                  <p class="foundation-note">
-                    Прозрачный воск-гель с очень сильной фиксацией. Часто
-                    используется визажистами для создания модного «fluffy brow»
-                    эффекта.
-                  </p>
-                </td>
-                <td>Профессиональная укладка</td>
-              </tr>
-
-              <tr>
-                <td style="color: #b63181">
-                  NYX Control Freak
-                  <p class="foundation-note">
-                    Бюджетный гель, который аккуратно укладывает волоски и
-                    сохраняет естественный вид бровей без эффекта склеивания.
-                  </p>
-                </td>
-                <td>Лёгкая фиксация и натуральный результат</td>
-              </tr>
-            </table>
           </section>
           <!-- Секция 12: Лучшие тени для бровей -->
           <section id="best-brow-shadows" class="foundation-section soft-bg">
@@ -1592,128 +2381,249 @@
               дневного образа и позволяют легко регулировать интенсивность
               цвета.
             </p>
-            <p class="ad-label nusponsored">
-              Независимый обзор. Продукты не спонсируются.
+            <p class="ad-label nusponsored" style="font-size: 12px">
+              <strong>Независимый обзор. Продукты не спонсируются.</strong>
               <br />
-              *Ссылка приведена в ознакомительных целях. При наличии партнёрства
-              здесь размещается прямая ссылка на продукт.
+              *Данный материал является независимым редакционным обзором и не
+              спонсируется производителем или продавцом продукта. <br />
+              *Все названия брендов, товарные знаки и наименования продукции
+              принадлежат их законным правообладателям и используются
+              исключительно в информационных и редакционных целях. <br />
+              *Представленная информация отражает мнение автора и не является
+              официальной рекомендацией производителя. <br />
+              <strong
+                >*Ссылки приведены в ознакомительных целях. При наличии
+                партнёрства здесь может быть размещена прямая ссылка на
+                продукт.</strong
+              >
             </p>
 
             <section class="foundation-gallery" id="gallery-brow-shadows">
-              <div class="gallery-grid">
-                <figure class="gallery-item">
-                  <img
-                    src="../../images/eyebrows/anastasia-brow-powder-300.webp"
-                    srcset="
-                      ../../images/eyebrows/anastasia-brow-powder-300.webp 2x
-                    "
-                    alt="Anastasia Brow Powder Duo"
-                    loading="lazy"
-                  />
-                  <figcaption>
-                    Anastasia Brow Powder Duo<br />
-                    <div class="review-rating">⭐⭐⭐⭐⭐</div>
-                    <small>Профессиональные тени для бровей</small>
-                    <div class="card-buttons">
-                      <a
-                        class="section-btn-carousel disabled"
-                        aria-disabled="true"
-                      >
-                        Скоро доступно
-                      </a>
-                    </div>
-                  </figcaption>
-                </figure>
+              <div class="products-container">
+                <!-- 1 -->
+                <div class="review-card-modal premium">
+                  <div class="review-card-modal-image zoom-container">
+                    <img
+                      src="../../images/placeholder/placeholder-makeup-1.webp"
+                      alt="Anastasia Brow Powder Duo"
+                      class="zoom-image"
+                    />
+                    <div class="zoom-lens"></div>
+                    <div class="zoom-result"></div>
+                  </div>
 
-                <figure class="gallery-item">
-                  <img
-                    src="../../images/eyebrows/nyx-eyebrow-cake-300.webp"
-                    srcset="../../images/eyebrows/nyx-eyebrow-cake-600.webp 2x"
-                    alt="NYX Eyebrow Cake Powder"
-                    loading="lazy"
-                  />
-                  <figcaption>
-                    NYX Eyebrow Cake Powder<br />
-                    <div class="review-rating">⭐⭐⭐⭐</div>
-                    <small>Популярный бюджетный набор</small>
-                    <div class="card-buttons">
-                      <a
-                        class="section-btn-carousel disabled"
-                        aria-disabled="true"
-                      >
-                        Скоро доступно
-                      </a>
+                  <div class="review-card-modal-content">
+                    <div class="review-card-modal-title">
+                      Anastasia Brow Powder Duo
                     </div>
-                  </figcaption>
-                </figure>
 
-                <figure class="gallery-item">
-                  <img
-                    src="../../images/eyebrows/benefit-brow-zings-300.webp"
-                    srcset="
-                      ../../images/eyebrows/benefit-brow-zings-600.webp 2x
-                    "
-                    alt="Benefit Brow Zings"
-                    loading="lazy"
-                  />
-                  <figcaption>
-                    Benefit Brow Zings<br />
-                    <div class="review-rating">⭐⭐⭐⭐⭐</div>
-                    <small>Палетка для коррекции бровей</small>
-                    <div class="card-buttons">
+                    <div class="review-card-modal-excerpt">
+                      Двухцветные тени для бровей, <br />
+                      которые позволяют создать мягкий и естественный эффект
+                      заполнения.
+                    </div>
+
+                    <div class="buttons-row">
                       <a
-                        class="section-btn-carousel disabled"
+                        class="review-card-modal-btn disabled"
                         aria-disabled="true"
                       >
-                        Скоро доступно
+                        В скором времени
                       </a>
+
+                      <button
+                        class="review-card-modal-btn"
+                        onclick="toggleDetails(this)"
+                        data-open="Открыть обзор"
+                        data-close="Скрыть"
+                      >
+                        Подробнее
+                      </button>
                     </div>
-                  </figcaption>
-                </figure>
+
+                    <div class="review-card-modal-details">
+                      <div class="review-details-inner">
+                        <div class="review-specs">
+                          <h4>Основная информация</h4>
+                          <ul>
+                            <li><strong>Тип:</strong> тени для бровей</li>
+                            <li><strong>Финиш:</strong> натуральный</li>
+                            <li><strong>Покрытие:</strong> лёгкое–среднее</li>
+                            <li><strong>Цена:</strong> ~420–580 MDL</li>
+                          </ul>
+                        </div>
+
+                        <div class="review-verdict">
+                          <h4>Кратко</h4>
+                          <p>
+                            Профессиональные тени для мягкого и естественного
+                            макияжа бровей.
+                          </p>
+
+                          <h4>Плюсы</h4>
+                          <ul>
+                            <li>естественный эффект</li>
+                            <li>хорошая растушёвка</li>
+                            <li>подходит для новичков</li>
+                          </ul>
+
+                          <h4>Рейтинг</h4>
+                          <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 2 -->
+                <div class="review-card-modal premium">
+                  <div class="review-card-modal-image zoom-container">
+                    <img
+                      src="../../images/placeholder/placeholder-makeup-1.webp"
+                      alt="NYX Eyebrow Cake Powder"
+                      class="zoom-image"
+                    />
+                    <div class="zoom-lens"></div>
+                    <div class="zoom-result"></div>
+                  </div>
+
+                  <div class="review-card-modal-content">
+                    <div class="review-card-modal-title">
+                      NYX Eyebrow Cake Powder
+                    </div>
+
+                    <div class="review-card-modal-excerpt">
+                      Бюджетные тени для бровей с воском, которые помогают
+                      зафиксировать форму и заполнить пробелы.
+                    </div>
+
+                    <div class="buttons-row">
+                      <a
+                        class="review-card-modal-btn disabled"
+                        aria-disabled="true"
+                      >
+                        В скором времени
+                      </a>
+
+                      <button
+                        class="review-card-modal-btn"
+                        onclick="toggleDetails(this)"
+                        data-open="Открыть обзор"
+                        data-close="Скрыть"
+                      >
+                        Подробнее
+                      </button>
+                    </div>
+
+                    <div class="review-card-modal-details">
+                      <div class="review-details-inner">
+                        <div class="review-specs">
+                          <h4>Основная информация</h4>
+                          <ul>
+                            <li><strong>Тип:</strong> тени + воск</li>
+                            <li><strong>Финиш:</strong> натуральный</li>
+                            <li><strong>Покрытие:</strong> среднее</li>
+                            <li><strong>Цена:</strong> ~160–240 MDL</li>
+                          </ul>
+                        </div>
+
+                        <div class="review-verdict">
+                          <h4>Кратко</h4>
+                          <p>
+                            Доступный набор для оформления бровей с фиксирующим
+                            эффектом.
+                          </p>
+
+                          <h4>Плюсы</h4>
+                          <ul>
+                            <li>хорошая цена</li>
+                            <li>есть воск для фиксации</li>
+                            <li>подходит для ежедневного макияжа</li>
+                          </ul>
+
+                          <h4>Рейтинг</h4>
+                          <div class="review-rating">⭐⭐⭐⭐☆</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="review-card-modal premium">
+                  <div class="review-card-modal-image zoom-container">
+                    <img
+                      src="../../images/placeholder/placeholder-makeup-1.webp"
+                      alt="Benefit Brow Zings"
+                      class="zoom-image"
+                    />
+                    <div class="zoom-lens"></div>
+                    <div class="zoom-result"></div>
+                  </div>
+
+                  <div class="review-card-modal-content">
+                    <div class="review-card-modal-title">
+                      Benefit Brow Zings
+                    </div>
+
+                    <div class="review-card-modal-excerpt">
+                      Набор для бровей с тенями и воском, создаёт аккуратные и
+                      естественные брови с лёгкой фиксацией.
+                    </div>
+
+                    <div class="buttons-row">
+                      <a
+                        class="review-card-modal-btn disabled"
+                        aria-disabled="true"
+                      >
+                        В скором времени
+                      </a>
+
+                      <button
+                        class="review-card-modal-btn"
+                        onclick="toggleDetails(this)"
+                        data-open="Открыть обзор"
+                        data-close="Скрыть"
+                      >
+                        Подробнее
+                      </button>
+                    </div>
+
+                    <div class="review-card-modal-details">
+                      <div class="review-details-inner">
+                        <div class="review-specs">
+                          <h4>Основная информация</h4>
+                          <ul>
+                            <li><strong>Тип:</strong> тени + воск</li>
+                            <li><strong>Финиш:</strong> натуральный</li>
+                            <li><strong>Покрытие:</strong> среднее</li>
+                            <li><strong>Цена:</strong> ~380–520 MDL</li>
+                          </ul>
+                        </div>
+
+                        <div class="review-verdict">
+                          <h4>Кратко</h4>
+                          <p>
+                            Классический набор для аккуратного оформления бровей
+                            в одном комплекте.
+                          </p>
+
+                          <h4>Плюсы</h4>
+                          <ul>
+                            <li>удобный формат</li>
+                            <li>хорошая стойкость</li>
+                            <li>естественный результат</li>
+                          </ul>
+
+                          <h4>Рейтинг</h4>
+                          <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </section>
-
-            <table class="foundation-table">
-              <tr>
-                <th>Тени для бровей</th>
-                <th>Особенности</th>
-              </tr>
-
-              <tr>
-                <td style="color: #b63181">
-                  Anastasia Brow Powder Duo
-                  <p class="foundation-note">
-                    Профессиональная палетка из двух оттенков, которая помогает
-                    создать натуральный градиент и аккуратно подчеркнуть форму
-                    бровей.
-                  </p>
-                </td>
-                <td>Натуральный результат</td>
-              </tr>
-
-              <tr>
-                <td style="color: #b63181">
-                  NYX Eyebrow Cake Powder
-                  <p class="foundation-note">
-                    Компактный набор с тенями и воском для фиксации. Хороший
-                    вариант для мягкого дневного макияжа.
-                  </p>
-                </td>
-                <td>Бюджетный и удобный</td>
-              </tr>
-
-              <tr>
-                <td style="color: #b63181">
-                  Benefit Brow Zings
-                  <p class="foundation-note">
-                    Набор с тенями, воском и кистями для полноценной коррекции
-                    бровей. Помогает создать аккуратную форму и подчеркнуть
-                    густоту бровей.
-                  </p>
-                </td>
-                <td>Комплексная коррекция</td>
-              </tr>
-            </table>
           </section>
           <!-- Секция 13:Трафареты и наборы для коррекции бровей-->
           <section id="brow-stencils-kits" class="foundation-section">
@@ -1726,126 +2636,262 @@
               симметричную форму бровей. Они особенно полезны для начинающих и
               позволяют легко поддерживать аккуратный внешний вид бровей дома.
             </p>
-            <p class="ad-label nusponsored">
-              Независимый обзор. Продукты не спонсируются.
+            <p class="ad-label nusponsored" style="font-size: 12px">
+              <strong>Независимый обзор. Продукты не спонсируются.</strong>
               <br />
-              *Ссылка приведена в ознакомительных целях. При наличии партнёрства
-              здесь размещается прямая ссылка на продукт.
+              *Данный материал является независимым редакционным обзором и не
+              спонсируется производителем или продавцом продукта. <br />
+              *Все названия брендов, товарные знаки и наименования продукции
+              принадлежат их законным правообладателям и используются
+              исключительно в информационных и редакционных целях. <br />
+              *Представленная информация отражает мнение автора и не является
+              официальной рекомендацией производителя. <br />
+              <strong
+                >*Ссылки приведены в ознакомительных целях. При наличии
+                партнёрства здесь может быть размещена прямая ссылка на
+                продукт.</strong
+              >
             </p>
 
             <section class="foundation-gallery" id="gallery-brow-kits">
-              <div class="gallery-grid">
-                <figure class="gallery-item">
-                  <img
-                    src="../../images/eyebrows/anastasia-brow-stencils-300.webp"
-                    srcset="
-                      ../../images/eyebrows/anastasia-brow-stencils-600.webp 2x
-                    "
-                    alt="Anastasia Brow Stencils"
-                    loading="lazy"
-                  />
-                  <figcaption>
-                    Anastasia Brow Stencils<br />
-                    <div class="review-rating">⭐⭐⭐⭐⭐</div>
-                    <small>Профессиональные трафареты для бровей</small>
-                    <div class="card-buttons">
-                      <a
-                        class="section-btn-carousel disabled"
-                        aria-disabled="true"
-                      >
-                        Скоро доступно
-                      </a>
-                    </div>
-                  </figcaption>
-                </figure>
+              <div class="products-container">
+                <!-- 1 -->
+                <div class="review-card-modal premium">
+                  <div class="review-card-modal-image zoom-container">
+                    <img
+                      src="../../images/placeholder/placeholder-makeup-1.webp"
+                      alt="Anastasia Brow Stencils"
+                      class="zoom-image"
+                    />
+                    <div class="zoom-lens"></div>
+                    <div class="zoom-result"></div>
+                  </div>
 
-                <figure class="gallery-item">
-                  <img
-                    src="../../images/eyebrows/ardell-brow-kit-300.webp"
-                    srcset="../../images/eyebrows/ardell-brow-kit-600.webp 2x"
-                    alt="Ardell Brow Perfection Kit"
-                    loading="lazy"
-                  />
-                  <figcaption>
-                    Ardell Brow Perfection Kit<br />
-                    <div class="review-rating">⭐⭐⭐⭐</div>
-                    <small>Набор для коррекции бровей</small>
-                    <div class="card-buttons">
-                      <a
-                        class="section-btn-carousel disabled"
-                        aria-disabled="true"
-                      >
-                        Скоро доступно
-                      </a>
+                  <div class="review-card-modal-content">
+                    <div class="review-card-modal-title">
+                      Anastasia Brow Stencils
                     </div>
-                  </figcaption>
-                </figure>
 
-                <figure class="gallery-item">
-                  <img
-                    src="../../images/eyebrows/real-techniques-brow-set-300.webp"
-                    srcset="
-                      ../../images/eyebrows/real-techniques-brow-set-600.webp 2x
-                    "
-                    alt="Real Techniques Brow Set"
-                    loading="lazy"
-                  />
-                  <figcaption>
-                    Real Techniques Brow Set<br />
-                    <div class="review-rating">⭐⭐⭐⭐⭐</div>
-                    <small>Набор инструментов для бровей</small>
-                    <div class="card-buttons">
+                    <div class="review-card-modal-excerpt">
+                      Шаблоны для бровей, которые помогают быстро создать
+                      симметричную и аккуратную форму.
+                    </div>
+
+                    <div class="buttons-row">
                       <a
-                        class="section-btn-carousel disabled"
+                        class="review-card-modal-btn disabled"
                         aria-disabled="true"
                       >
-                        Скоро доступно
+                        В скором времени
                       </a>
+
+                      <button
+                        class="review-card-modal-btn"
+                        onclick="toggleDetails(this)"
+                        data-open="Открыть обзор"
+                        data-close="Скрыть"
+                      >
+                        Подробнее
+                      </button>
                     </div>
-                  </figcaption>
-                </figure>
+
+                    <div class="review-card-modal-details">
+                      <div class="review-details-inner">
+                        <div class="review-specs">
+                          <h4>Основная информация</h4>
+                          <ul>
+                            <li><strong>Тип:</strong> шаблоны для бровей</li>
+                            <li>
+                              <strong>Назначение:</strong> быстрая форма и
+                              симметрия
+                            </li>
+                            <li>
+                              <strong>Подходит:</strong> для всех типов бровей
+                            </li>
+                            <li><strong>Цена:</strong> ~70–100 MDL</li>
+                          </ul>
+                        </div>
+
+                        <div class="review-verdict">
+                          <h4>Кратко</h4>
+                          <p>
+                            Удобный инструмент для новичков и точного построения
+                            формы бровей.
+                          </p>
+
+                          <h4>Плюсы</h4>
+                          <ul>
+                            <li>простота использования</li>
+                            <li>ровная симметрия</li>
+                            <li>ускоряет макияж</li>
+                          </ul>
+
+                          <h4>Рейтинг</h4>
+                          <div class="review-rating">⭐⭐⭐⭐☆</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 2 -->
+                <div class="review-card-modal premium">
+                  <div class="review-card-modal-image zoom-container">
+                    <img
+                      src="../../images/placeholder/placeholder-makeup-1.webp"
+                      alt="Ardell Brow Perfection Kit"
+                      class="zoom-image"
+                    />
+                    <div class="zoom-lens"></div>
+                    <div class="zoom-result"></div>
+                  </div>
+
+                  <div class="review-card-modal-content">
+                    <div class="review-card-modal-title">
+                      Ardell Brow Perfection Kit
+                    </div>
+
+                    <div class="review-card-modal-excerpt">
+                      Набор для бровей с шаблонами и инструментами для точного
+                      оформления и коррекции формы.
+                    </div>
+
+                    <div class="buttons-row">
+                      <a
+                        class="review-card-modal-btn disabled"
+                        aria-disabled="true"
+                      >
+                        В скором времени
+                      </a>
+
+                      <button
+                        class="review-card-modal-btn"
+                        onclick="toggleDetails(this)"
+                        data-open="Открыть обзор"
+                        data-close="Скрыть"
+                      >
+                        Подробнее
+                      </button>
+                    </div>
+
+                    <div class="review-card-modal-details">
+                      <div class="review-details-inner">
+                        <div class="review-specs">
+                          <h4>Основная информация</h4>
+                          <ul>
+                            <li><strong>Тип:</strong> набор для бровей</li>
+                            <li>
+                              <strong>Состав:</strong> шаблоны + инструменты
+                            </li>
+                            <li>
+                              <strong>Назначение:</strong> моделирование формы
+                            </li>
+                            <li><strong>Цена:</strong> ~85–120 MDL</li>
+                          </ul>
+                        </div>
+
+                        <div class="review-verdict">
+                          <h4>Кратко</h4>
+                          <p>
+                            Полный набор для аккуратного оформления бровей дома.
+                          </p>
+
+                          <h4>Плюсы</h4>
+                          <ul>
+                            <li>комплексное решение</li>
+                            <li>удобно для новичков</li>
+                            <li>хороший результат</li>
+                          </ul>
+
+                          <h4>Рейтинг</h4>
+                          <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="review-card-modal premium">
+                  <div class="review-card-modal-image zoom-container">
+                    <img
+                      src="../../images/placeholder/placeholder-makeup-1.webp"
+                      alt="Real Techniques Brow Set"
+                      class="zoom-image"
+                    />
+                    <div class="zoom-lens"></div>
+                    <div class="zoom-result"></div>
+                  </div>
+
+                  <div class="review-card-modal-content">
+                    <div class="review-card-modal-title">
+                      Real Techniques Brow Set
+                    </div>
+
+                    <div class="review-card-modal-excerpt">
+                      Набор инструментов для бровей для ежедневного ухода,
+                      укладки и аккуратного оформления.
+                    </div>
+
+                    <div class="buttons-row">
+                      <a
+                        class="review-card-modal-btn disabled"
+                        aria-disabled="true"
+                      >
+                        В скором времени
+                      </a>
+
+                      <button
+                        class="review-card-modal-btn"
+                        onclick="toggleDetails(this)"
+                        data-open="Открыть обзор"
+                        data-close="Скрыть"
+                      >
+                        Подробнее
+                      </button>
+                    </div>
+
+                    <div class="review-card-modal-details">
+                      <div class="review-details-inner">
+                        <div class="review-specs">
+                          <h4>Основная информация</h4>
+                          <ul>
+                            <li>
+                              <strong>Тип:</strong> набор инструментов для
+                              бровей
+                            </li>
+                            <li><strong>Назначение:</strong> уход и укладка</li>
+                            <li>
+                              <strong>Подходит:</strong> для ежедневного
+                              использования
+                            </li>
+                            <li><strong>Цена:</strong> ~60–90 MDL</li>
+                          </ul>
+                        </div>
+
+                        <div class="review-verdict">
+                          <h4>Кратко</h4>
+                          <p>
+                            Практичный набор для поддержания формы бровей каждый
+                            день.
+                          </p>
+
+                          <h4>Плюсы</h4>
+                          <ul>
+                            <li>удобство</li>
+                            <li>подходит новичкам</li>
+                            <li>доступная цена</li>
+                          </ul>
+
+                          <h4>Рейтинг</h4>
+                          <div class="review-rating">⭐⭐⭐⭐☆</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </section>
-
-            <table class="foundation-table">
-              <tr>
-                <th>Набор для бровей</th>
-                <th>Особенности</th>
-              </tr>
-
-              <tr>
-                <td style="color: #b63181">
-                  Anastasia Brow Stencils
-                  <p class="foundation-note">
-                    Набор трафаретов с несколькими формами бровей. Помогает
-                    быстро подобрать подходящую форму и добиться симметрии.
-                  </p>
-                </td>
-                <td>Разные формы бровей</td>
-              </tr>
-
-              <tr>
-                <td style="color: #b63181">
-                  Ardell Brow Perfection Kit
-                  <p class="foundation-note">
-                    Компактный набор с тенями, пинцетом и кистями для
-                    полноценной коррекции бровей.
-                  </p>
-                </td>
-                <td>Набор для домашнего ухода</td>
-              </tr>
-
-              <tr>
-                <td style="color: #b63181">
-                  Real Techniques Brow Set
-                  <p class="foundation-note">
-                    Набор профессиональных инструментов для укладки и макияжа
-                    бровей, включая щёточки и кисти.
-                  </p>
-                </td>
-                <td>Инструменты для точной коррекции</td>
-              </tr>
-            </table>
           </section>
           <!-- Секция 14: Частые ошибки при оформлении бровей -->
           <section id="eyebrow-mistakes" class="foundation-section soft-bg">

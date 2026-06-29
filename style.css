@@ -3128,6 +3128,7 @@ html {
 .carousel-track {
   display: flex;
   gap: 16px;
+  align-items: flex-start;
 }
 
 /* =========================
@@ -3166,7 +3167,7 @@ html {
 
 .review-carousel-image img {
   width: 100%;
-  max-height: 200px;
+  max-height: 300px;
   object-fit: contain;
 }
 

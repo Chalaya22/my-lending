@@ -523,15 +523,22 @@ document.querySelectorAll(".zoom-v2").forEach((container) => {
     result.style.display = "none";
   });
 });
-// ==========================КАРУСЕЛЬ
+// ========================== КАРУСЕЛЬ
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".carousel-wrapper").forEach((wrapper) => {
     const track = wrapper.querySelector(".carousel-track");
 
     if (!track) return;
 
-    // ===== MORE INFO  caurusel=====
+    // ===== MORE INFO carousel =====
     const cards = wrapper.querySelectorAll(".review-carousel-card");
+
+    // Определяем язык страницы
+    const isRomanian = document.documentElement.lang === "ro";
+
+    const openText = isRomanian ? "Mai multe detalii" : "Подробнее";
+
+    const closeText = isRomanian ? "Ascunde" : "Скрыть";
 
     cards.forEach((card) => {
       const btn = card.querySelector(".more-info-btn");
@@ -542,13 +549,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
         cards.forEach((c) => {
           c.classList.remove("is-open");
+
           const b = c.querySelector(".more-info-btn");
-          if (b) b.textContent = "Подробнее";
+          if (b) {
+            b.textContent = openText;
+          }
         });
 
         if (!isOpen) {
           card.classList.add("is-open");
-          btn.textContent = "Скрыть";
+          btn.textContent = closeText;
         }
       });
     });

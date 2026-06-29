@@ -542,11 +542,21 @@
             <h2>
               <strong>Лучшие консилеры от тёмных кругов под глазами</strong>
             </h2>
-            <p class="ad-label nusponsored">
-              Независимый обзор. Продукты не спонсируются.
+            <p class="ad-label nusponsored" style="font-size: 12px">
+              <strong>Независимый обзор. Продукты не спонсируются.</strong>
               <br />
-              *Ссылка приведена в ознакомительных целях. При наличии партнёрства
-              здесь размещается прямая ссылка на продукт.
+              *Данный материал является независимым редакционным обзором и не
+              спонсируется производителем или продавцом продукта. <br />
+              *Все названия брендов, товарные знаки и наименования продукции
+              принадлежат их законным правообладателям и используются
+              исключительно в информационных и редакционных целях. <br />
+              *Представленная информация отражает мнение автора и не является
+              официальной рекомендацией производителя. <br />
+              <strong
+                >*Ссылки приведены в ознакомительных целях. При наличии
+                партнёрства здесь может быть размещена прямая ссылка на
+                продукт.</strong
+              >
             </p>
 
             <p>
@@ -557,131 +567,316 @@
             </p>
 
             <section class="foundation-gallery" id="gallery-dark-circles">
-              <div class="gallery-grid">
-                <figure class="gallery-item">
-                  <img
-                    src="../../images/concealer/tarte-shape-tape-300.webp"
-                    srcset="../../images/concealer/tarte-shape-tape-600.webp 2x"
-                    alt="Tarte Shape Tape Concealer"
-                    loading="lazy"
-                  />
-                  <figcaption>
-                    Tarte Shape Tape<br />
-                    <div class="review-rating">⭐⭐⭐⭐⭐</div>
-                    <small>Плотное покрытие и высокая стойкость</small>
-                    <div class="card-buttons">
-                      <a
-                        class="section-btn-carousel disabled"
-                        aria-disabled="true"
-                      >
-                        Скоро доступно
-                      </a>
-                    </div>
-                  </figcaption>
-                </figure>
+              <div class="products-container">
+                <!-- 1 -->
+                <div class="review-card-modal premium">
+                  <div class="review-card-modal-image zoom-container">
+                    <img
+                      src="../../images/placeholder/placeholder-makeup-1.webp"
+                      alt="Tarte Shape Tape Concealer"
+                      class="zoom-image"
+                    />
+                    <div class="zoom-lens"></div>
+                    <div class="zoom-result"></div>
+                  </div>
 
-                <figure class="gallery-item">
-                  <img
-                    src="../../images/concealer/nars-radiant-creamy-300.webp"
-                    srcset="
-                      ../../images/concealer/nars-radiant-creamy-600.webp 2x
-                    "
-                    alt="NARS Radiant Creamy Concealer"
-                    loading="lazy"
-                  />
-                  <figcaption>
-                    NARS Radiant Creamy Concealer<br />
-                    <div class="review-rating">⭐⭐⭐⭐⭐</div>
-                    <small
-                      >Освежает взгляд и хорошо перекрывает тёмные круги</small
-                    >
-                    <div class="card-buttons">
-                      <a
-                        class="section-btn-carousel disabled"
-                        aria-disabled="true"
-                      >
-                        Скоро доступно
-                      </a>
+                  <div class="review-card-modal-content">
+                    <div class="review-card-modal-title">
+                      Tarte Shape Tape Concealer
                     </div>
-                  </figcaption>
-                </figure>
 
-                <figure class="gallery-item">
-                  <img
-                    src="../../images/concealer/maybelline-age-rewind-300.webp"
-                    srcset="
-                      ../../images/concealer/maybelline-age-rewind-600.webp 2x
-                    "
-                    alt="Maybelline Instant Age Rewind"
-                    loading="lazy"
-                  />
-                  <figcaption>
-                    Maybelline Instant Age Rewind<br />
-                    <div class="review-rating">⭐⭐⭐⭐⭐</div>
-                    <small>Популярный консилер для зоны под глазами</small>
-                    <div class="card-buttons">
+                    <div class="review-card-modal-excerpt">
+                      Один из самых популярных консилеров с плотным покрытием,
+                      который хорошо маскирует тёмные круги под глазами и
+                      держится весь день.
+                    </div>
+
+                    <div class="buttons-row">
                       <a
-                        class="section-btn-carousel disabled"
+                        class="review-card-modal-btn disabled"
                         aria-disabled="true"
                       >
-                        Скоро доступно
+                        Проверить цену
                       </a>
+
+                      <button
+                        class="review-card-modal-btn"
+                        onclick="toggleDetails(this)"
+                        data-open="Открыть обзор"
+                        data-close="Скрыть"
+                      >
+                        Открыть обзор
+                      </button>
                     </div>
-                  </figcaption>
-                </figure>
+
+                    <div class="review-card-modal-details">
+                      <div class="review-details-inner">
+                        <div class="review-specs">
+                          <h4>Основная информация</h4>
+                          <ul>
+                            <li><strong>Тип:</strong> жидкий консилер</li>
+                            <li><strong>Покрытие:</strong> плотное</li>
+                            <li><strong>Финиш:</strong> матовый</li>
+                            <li><strong>Стойкость:</strong> до 16 часов</li>
+                            <li><strong>Объём:</strong> 10 мл</li>
+                            <li><strong>Цена:</strong> ~850–1050 MDL</li>
+                          </ul>
+
+                          <h4>Лучше всего подойдёт, если</h4>
+                          <ul>
+                            <li>выраженные тёмные круги</li>
+                            <li>нужно плотное покрытие</li>
+                            <li>важна высокая стойкость</li>
+                          </ul>
+                        </div>
+
+                        <div class="review-verdict">
+                          <h4>Кратко</h4>
+                          <p>
+                            Отличный выбор для тех, кому нужен максимум
+                            маскировки без необходимости часто поправлять
+                            макияж.
+                          </p>
+
+                          <h4>Плюсы</h4>
+                          <ul>
+                            <li>очень плотное покрытие</li>
+                            <li>высокая стойкость</li>
+                            <li>экономичный расход</li>
+                          </ul>
+
+                          <h4>Важно учитывать</h4>
+                          <ul>
+                            <li>может подчеркнуть сухость кожи</li>
+                            <li>лучше наносить небольшое количество</li>
+                          </ul>
+
+                          <h4>Совет по использованию</h4>
+                          <p>
+                            Нанесите несколько точек под глазами и растушуйте
+                            влажным спонжем или кистью.
+                          </p>
+
+                          <h4>Рейтинг</h4>
+                          <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 2 -->
+                <div class="review-card-modal premium">
+                  <div class="review-card-modal-image zoom-container">
+                    <img
+                      src="../../images/placeholder/placeholder-makeup-1.webp"
+                      alt="NARS Radiant Creamy Concealer"
+                      class="zoom-image"
+                    />
+                    <div class="zoom-lens"></div>
+                    <div class="zoom-result"></div>
+                  </div>
+
+                  <div class="review-card-modal-content">
+                    <div class="review-card-modal-title">
+                      NARS Radiant Creamy Concealer
+                    </div>
+
+                    <div class="review-card-modal-excerpt">
+                      Легендарный консилер с естественным сияющим финишем,
+                      который хорошо скрывает следы усталости и выглядит
+                      естественно.
+                    </div>
+
+                    <div class="buttons-row">
+                      <a
+                        class="review-card-modal-btn disabled"
+                        aria-disabled="true"
+                      >
+                        Проверить цену
+                      </a>
+
+                      <button
+                        class="review-card-modal-btn"
+                        onclick="toggleDetails(this)"
+                        data-open="Открыть обзор"
+                        data-close="Скрыть"
+                      >
+                        Открыть обзор
+                      </button>
+                    </div>
+
+                    <div class="review-card-modal-details">
+                      <div class="review-details-inner">
+                        <div class="review-specs">
+                          <h4>Основная информация</h4>
+                          <ul>
+                            <li><strong>Тип:</strong> жидкий консилер</li>
+                            <li><strong>Покрытие:</strong> среднее–плотное</li>
+                            <li><strong>Финиш:</strong> естественный</li>
+                            <li><strong>Стойкость:</strong> до 12 часов</li>
+                            <li><strong>Объём:</strong> 6 мл</li>
+                            <li><strong>Цена:</strong> ~700–950 MDL</li>
+                          </ul>
+
+                          <h4>Лучше всего подойдёт, если</h4>
+                          <ul>
+                            <li>нужен естественный результат</li>
+                            <li>есть тёмные круги средней выраженности</li>
+                            <li>кожа склонна к сухости</li>
+                          </ul>
+                        </div>
+
+                        <div class="review-verdict">
+                          <h4>Кратко</h4>
+                          <p>
+                            Универсальный консилер, который сочетает хорошее
+                            покрытие и комфортную текстуру.
+                          </p>
+
+                          <h4>Плюсы</h4>
+                          <ul>
+                            <li>не перегружает кожу</li>
+                            <li>естественный финиш</li>
+                            <li>широкая палитра оттенков</li>
+                          </ul>
+
+                          <h4>Важно учитывать</h4>
+                          <ul>
+                            <li>объём меньше, чем у многих аналогов</li>
+                            <li>стоимость выше средней</li>
+                          </ul>
+
+                          <h4>Совет по использованию</h4>
+                          <p>
+                            Хорошо работает поверх увлажняющего крема для
+                            области вокруг глаз.
+                          </p>
+
+                          <h4>Рейтинг</h4>
+                          <div class="review-rating">⭐⭐⭐⭐☆</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="review-card-modal premium">
+                  <div class="review-card-modal-image zoom-container">
+                    <img
+                      src="../../images/placeholder/placeholder-makeup-1.webp"
+                      alt="Maybelline Instant Age Rewind"
+                      class="zoom-image"
+                    />
+                    <div class="zoom-lens"></div>
+                    <div class="zoom-result"></div>
+                  </div>
+
+                  <div class="review-card-modal-content">
+                    <div class="review-card-modal-title">
+                      Maybelline Instant Age Rewind
+                    </div>
+
+                    <div class="review-card-modal-excerpt">
+                      Популярный бюджетный консилер, который хорошо освежает
+                      взгляд и помогает скрыть тёмные круги без эффекта маски.
+                    </div>
+
+                    <div class="buttons-row">
+                      <a
+                        class="review-card-modal-btn disabled"
+                        aria-disabled="true"
+                      >
+                        Проверить цену
+                      </a>
+
+                      <button
+                        class="review-card-modal-btn"
+                        onclick="toggleDetails(this)"
+                        data-open="Открыть обзор"
+                        data-close="Скрыть"
+                      >
+                        Открыть обзор
+                      </button>
+                    </div>
+
+                    <div class="review-card-modal-details">
+                      <div class="review-details-inner">
+                        <div class="review-specs">
+                          <h4>Основная информация</h4>
+                          <ul>
+                            <li><strong>Тип:</strong> жидкий консилер</li>
+                            <li><strong>Покрытие:</strong> среднее</li>
+                            <li><strong>Финиш:</strong> естественный</li>
+                            <li><strong>Стойкость:</strong> до 8 часов</li>
+                            <li><strong>Объём:</strong> 6 мл</li>
+                            <li><strong>Цена:</strong> ~220–350 MDL</li>
+                          </ul>
+
+                          <h4>Лучше всего подойдёт, если</h4>
+                          <ul>
+                            <li>нужен бюджетный вариант</li>
+                            <li>необходим ежедневный макияж</li>
+                            <li>хочется лёгкого покрытия</li>
+                          </ul>
+                        </div>
+
+                        <div class="review-verdict">
+                          <h4>Кратко</h4>
+                          <p>
+                            Хорошее сочетание цены и качества для ежедневного
+                            использования.
+                          </p>
+
+                          <h4>Плюсы</h4>
+                          <ul>
+                            <li>доступная цена</li>
+                            <li>лёгкое нанесение</li>
+                            <li>не создаёт тяжёлого покрытия</li>
+                          </ul>
+
+                          <h4>Важно учитывать</h4>
+                          <ul>
+                            <li>не перекрывает очень тёмные круги полностью</li>
+                            <li>может потребовать обновления к концу дня</li>
+                          </ul>
+
+                          <h4>Совет по использованию</h4>
+                          <p>
+                            Для более свежего взгляда наносите консилер
+                            треугольником под глазами и растушёвывайте спонжем.
+                          </p>
+
+                          <h4>Рейтинг</h4>
+                          <div class="review-rating">⭐⭐⭐⭐☆</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </section>
-
-            <table class="foundation-table">
-              <tr>
-                <th>Консилер</th>
-                <th>Особенности</th>
-              </tr>
-
-              <tr>
-                <td style="color: #b63181">
-                  Tarte Shape Tape
-                  <p class="foundation-note">
-                    Плотное покрытие, хорошо маскирует тёмные круги и
-                    несовершенства. Подходит для стойкого макияжа и
-                    профессионального использования.
-                  </p>
-                </td>
-                <td>Высокое покрытие и стойкость</td>
-              </tr>
-
-              <tr>
-                <td style="color: #b63181">
-                  NARS Radiant Creamy Concealer
-                  <p class="foundation-note">
-                    Кремовая текстура, легко растушевывается и придаёт зоне под
-                    глазами более свежий и сияющий вид.
-                  </p>
-                </td>
-                <td>Натуральный финиш и комфорт</td>
-              </tr>
-
-              <tr>
-                <td style="color: #b63181">
-                  Maybelline Instant Age Rewind
-                  <p class="foundation-note">
-                    Лёгкая формула с удобным аппликатором, помогает визуально
-                    осветлить область под глазами.
-                  </p>
-                </td>
-                <td>Осветляет и освежает взгляд</td>
-              </tr>
-            </table>
           </section>
 
           <!-- Секция 5: Консилеры для жирной кожи -->
           <section id="oily-skin" class="foundation-section">
             <h2><strong>Лучшие консилеры для жирной кожи</strong></h2>
-            <p class="ad-label nusponsored">
-              Независимый обзор. Продукты не спонсируются.
+            <p class="ad-label nusponsored" style="font-size: 12px">
+              <strong>Независимый обзор. Продукты не спонсируются.</strong>
               <br />
-              *Ссылка приведена в ознакомительных целях. При наличии партнёрства
-              здесь размещается прямая ссылка на продукт.
+              *Данный материал является независимым редакционным обзором и не
+              спонсируется производителем или продавцом продукта. <br />
+              *Все названия брендов, товарные знаки и наименования продукции
+              принадлежат их законным правообладателям и используются
+              исключительно в информационных и редакционных целях. <br />
+              *Представленная информация отражает мнение автора и не является
+              официальной рекомендацией производителя. <br />
+              <strong
+                >*Ссылки приведены в ознакомительных целях. При наличии
+                партнёрства здесь может быть размещена прямая ссылка на
+                продукт.</strong
+              >
             </p>
             <p>
               Для жирной кожи важно выбирать консилеры с матирующим эффектом и
@@ -692,127 +887,332 @@
             </p>
 
             <section class="foundation-gallery" id="gallery-oily-skin">
-              <div class="gallery-grid">
-                <figure class="gallery-item">
-                  <img
-                    src="../../images/concealer/tarte-shape-tape-300.webp"
-                    srcset="../../images/concealer/tarte-shape-tape-600.webp 2x"
-                    alt="Tarte Shape Tape Concealer"
-                    loading="lazy"
-                  />
-                  <figcaption>
-                    Tarte Shape Tape<br />
-                    <div class="review-rating">⭐⭐⭐⭐⭐</div>
-                    <small>Плотное покрытие и высокая стойкость</small>
-                    <div class="card-buttons">
-                      <a
-                        class="section-btn-carousel disabled"
-                        aria-disabled="true"
-                      >
-                        Скоро доступно
-                      </a>
-                    </div>
-                  </figcaption>
-                </figure>
+              <div class="products-container">
+                <!-- 1 -->
+                <div class="review-card-modal premium">
+                  <div class="review-card-modal-image zoom-container">
+                    <img
+                      src="../../images/placeholder/placeholder-makeup-1.webp"
+                      alt="Tarte Shape Tape Concealer"
+                      class="zoom-image"
+                    />
+                    <div class="zoom-lens"></div>
+                    <div class="zoom-result"></div>
+                  </div>
 
-                <figure class="gallery-item">
-                  <img
-                    src="../../images/concealer/fenty-pro-filtr-300.webp"
-                    srcset="../../images/concealer/fenty-pro-filtr-600.webp 2x"
-                    alt="Fenty Beauty Pro Filt’r Concealer"
-                    loading="lazy"
-                  />
-                  <figcaption>
-                    Fenty Beauty Pro Filt’r<br />
-                    <div class="review-rating">⭐⭐⭐⭐⭐</div>
-                    <small>Матирующий эффект и лёгкая текстура</small>
-                    <div class="card-buttons">
-                      <a
-                        class="section-btn-carousel disabled"
-                        aria-disabled="true"
-                      >
-                        Скоро доступно
-                      </a>
+                  <div class="review-card-modal-content">
+                    <div class="review-card-modal-title">
+                      Tarte Shape Tape Concealer
                     </div>
-                  </figcaption>
-                </figure>
 
-                <figure class="gallery-item">
-                  <img
-                    src="../../images/concealer/maybelline-fit-me-300.webp"
-                    srcset="
-                      ../../images/concealer/maybelline-fit-me-600.webp 2x
-                    "
-                    alt="Maybelline Fit Me Concealer"
-                    loading="lazy"
-                  />
-                  <figcaption>
-                    Maybelline Fit Me<br />
-                    <div class="review-rating">⭐⭐⭐⭐</div>
-                    <small>Лёгкая формула для ежедневного макияжа</small>
-                    <div class="card-buttons">
+                    <div class="review-card-modal-excerpt">
+                      Плотный матовый консилер, который хорошо держится на
+                      жирной коже и эффективно скрывает несовершенства без
+                      необходимости частого обновления.
+                    </div>
+
+                    <div class="buttons-row">
                       <a
-                        class="section-btn-carousel disabled"
+                        class="review-card-modal-btn disabled"
                         aria-disabled="true"
                       >
-                        Скоро доступно
+                        Проверить цену
                       </a>
+
+                      <button
+                        class="review-card-modal-btn"
+                        onclick="toggleDetails(this)"
+                        data-open="Открыть обзор"
+                        data-close="Скрыть"
+                      >
+                        Открыть обзор
+                      </button>
                     </div>
-                  </figcaption>
-                </figure>
+
+                    <div class="review-card-modal-details">
+                      <div class="review-details-inner">
+                        <div class="review-specs">
+                          <h4>Основная информация</h4>
+                          <ul>
+                            <li><strong>Тип:</strong> жидкий консилер</li>
+                            <li>
+                              <strong>Кожа:</strong> жирная, комбинированная
+                            </li>
+                            <li><strong>Покрытие:</strong> плотное</li>
+                            <li><strong>Финиш:</strong> матовый</li>
+                            <li><strong>Стойкость:</strong> до 16 часов</li>
+                            <li><strong>Объём:</strong> 10 мл</li>
+                            <li><strong>Цена:</strong> ~850–1050 MDL</li>
+                          </ul>
+
+                          <h4>Лучше всего подойдёт, если</h4>
+                          <ul>
+                            <li>кожа быстро начинает блестеть</li>
+                            <li>нужно скрыть покраснения и высыпания</li>
+                            <li>важна высокая стойкость</li>
+                          </ul>
+                        </div>
+
+                        <div class="review-verdict">
+                          <h4>Кратко</h4>
+                          <p>
+                            Один из лучших вариантов для жирной кожи благодаря
+                            плотному покрытию и стойкой матовой формуле.
+                          </p>
+
+                          <h4>Плюсы</h4>
+                          <ul>
+                            <li>очень стойкий</li>
+                            <li>матовый финиш</li>
+                            <li>не скатывается при правильном нанесении</li>
+                          </ul>
+
+                          <h4>Важно учитывать</h4>
+                          <ul>
+                            <li>может подчеркнуть сухие участки</li>
+                            <li>лучше наносить тонким слоем</li>
+                          </ul>
+
+                          <h4>Совет по использованию</h4>
+                          <p>
+                            Закрепите консилер лёгкой рассыпчатой пудрой для
+                            максимальной стойкости.
+                          </p>
+
+                          <h4>Рейтинг</h4>
+                          <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 2 -->
+                <div class="review-card-modal premium">
+                  <div class="review-card-modal-image zoom-container">
+                    <img
+                      src="../../images/placeholder/placeholder-makeup-1.webp"
+                      alt="Fenty Beauty Pro Filt'r Instant Retouch Concealer"
+                      class="zoom-image"
+                    />
+                    <div class="zoom-lens"></div>
+                    <div class="zoom-result"></div>
+                  </div>
+
+                  <div class="review-card-modal-content">
+                    <div class="review-card-modal-title">
+                      Fenty Beauty Pro Filt'r Concealer
+                    </div>
+
+                    <div class="review-card-modal-excerpt">
+                      Стойкий консилер <br />с мягким матовым финишем,
+                      разработанный для длительного комфорта <br />
+                      и контроля жирного блеска.
+                    </div>
+
+                    <div class="buttons-row">
+                      <a
+                        class="review-card-modal-btn disabled"
+                        aria-disabled="true"
+                      >
+                        Проверить цену
+                      </a>
+
+                      <button
+                        class="review-card-modal-btn"
+                        onclick="toggleDetails(this)"
+                        data-open="Открыть обзор"
+                        data-close="Скрыть"
+                      >
+                        Открыть обзор
+                      </button>
+                    </div>
+
+                    <div class="review-card-modal-details">
+                      <div class="review-details-inner">
+                        <div class="review-specs">
+                          <h4>Основная информация</h4>
+                          <ul>
+                            <li><strong>Тип:</strong> жидкий консилер</li>
+                            <li>
+                              <strong>Кожа:</strong> жирная, комбинированная
+                            </li>
+                            <li><strong>Покрытие:</strong> среднее–плотное</li>
+                            <li><strong>Финиш:</strong> мягкий матовый</li>
+                            <li><strong>Стойкость:</strong> до 12 часов</li>
+                            <li><strong>Объём:</strong> 8 мл</li>
+                            <li><strong>Цена:</strong> ~650–850 MDL</li>
+                          </ul>
+
+                          <h4>Лучше всего подойдёт, если</h4>
+                          <ul>
+                            <li>необходим естественный матовый эффект</li>
+                            <li>важно контролировать жирный блеск</li>
+                            <li>нужен комфорт в течение дня</li>
+                          </ul>
+                        </div>
+
+                        <div class="review-verdict">
+                          <h4>Кратко</h4>
+                          <p>
+                            Отличный вариант для ежедневного макияжа жирной кожи
+                            благодаря балансу покрытия и стойкости.
+                          </p>
+
+                          <h4>Плюсы</h4>
+                          <ul>
+                            <li>матовый естественный финиш</li>
+                            <li>не ощущается тяжёлым</li>
+                            <li>широкий выбор оттенков</li>
+                          </ul>
+
+                          <h4>Важно учитывать</h4>
+                          <ul>
+                            <li>
+                              для очень тёмных кругов может понадобиться второй
+                              слой
+                            </li>
+                            <li>лучше закреплять пудрой</li>
+                          </ul>
+
+                          <h4>Совет по использованию</h4>
+                          <p>
+                            Наносите небольшими точками и быстро растушёвывайте
+                            до фиксации формулы.
+                          </p>
+
+                          <h4>Рейтинг</h4>
+                          <div class="review-rating">⭐⭐⭐⭐☆</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="review-card-modal premium">
+                  <div class="review-card-modal-image zoom-container">
+                    <img
+                      src="../../images/placeholder/placeholder-makeup-1.webp"
+                      alt="Maybelline Fit Me Concealer"
+                      class="zoom-image"
+                    />
+                    <div class="zoom-lens"></div>
+                    <div class="zoom-result"></div>
+                  </div>
+
+                  <div class="review-card-modal-content">
+                    <div class="review-card-modal-title">
+                      Maybelline Fit Me Concealer
+                    </div>
+
+                    <div class="review-card-modal-excerpt">
+                      Доступный консилер с естественным матовым финишем, который
+                      подходит для ежедневного макияжа жирной и комбинированной
+                      кожи.
+                    </div>
+
+                    <div class="buttons-row">
+                      <a
+                        class="review-card-modal-btn disabled"
+                        aria-disabled="true"
+                      >
+                        Проверить цену
+                      </a>
+
+                      <button
+                        class="review-card-modal-btn"
+                        onclick="toggleDetails(this)"
+                        data-open="Открыть обзор"
+                        data-close="Скрыть"
+                      >
+                        Открыть обзор
+                      </button>
+                    </div>
+
+                    <div class="review-card-modal-details">
+                      <div class="review-details-inner">
+                        <div class="review-specs">
+                          <h4>Основная информация</h4>
+                          <ul>
+                            <li><strong>Тип:</strong> жидкий консилер</li>
+                            <li>
+                              <strong>Кожа:</strong> жирная, комбинированная
+                            </li>
+                            <li><strong>Покрытие:</strong> среднее</li>
+                            <li>
+                              <strong>Финиш:</strong> естественный матовый
+                            </li>
+                            <li><strong>Стойкость:</strong> до 8 часов</li>
+                            <li><strong>Объём:</strong> 6,8 мл</li>
+                            <li><strong>Цена:</strong> ~180–280 MDL</li>
+                          </ul>
+
+                          <h4>Лучше всего подойдёт, если</h4>
+                          <ul>
+                            <li>нужен бюджетный консилер</li>
+                            <li>макияж выполняется ежедневно</li>
+                            <li>важно лёгкое естественное покрытие</li>
+                          </ul>
+                        </div>
+
+                        <div class="review-verdict">
+                          <h4>Кратко</h4>
+                          <p>
+                            Один из лучших бюджетных консилеров для жирной кожи
+                            с хорошим соотношением цены и качества.
+                          </p>
+
+                          <h4>Плюсы</h4>
+                          <ul>
+                            <li>доступная цена</li>
+                            <li>не перегружает кожу</li>
+                            <li>легко растушёвывается</li>
+                          </ul>
+
+                          <h4>Важно учитывать</h4>
+                          <ul>
+                            <li>стойкость ниже премиальных аналогов</li>
+                            <li>
+                              при сильной жирности лучше закреплять пудрой
+                            </li>
+                          </ul>
+
+                          <h4>Совет по использованию</h4>
+                          <p>
+                            Используйте вместе с матирующим праймером и
+                            фиксируйте тонким слоем пудры.
+                          </p>
+
+                          <h4>Рейтинг</h4>
+                          <div class="review-rating">⭐⭐⭐⭐☆</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </section>
-
-            <table class="foundation-table">
-              <tr>
-                <th>Консилер</th>
-                <th>Особенности</th>
-              </tr>
-
-              <tr>
-                <td style="color: #b63181">
-                  Tarte Shape Tape
-                  <p class="foundation-note">
-                    Очень стойкий консилер с плотным покрытием. Хорошо маскирует
-                    несовершенства и подходит для жирной кожи благодаря
-                    длительной стойкости.
-                  </p>
-                </td>
-                <td>Плотное покрытие и высокая стойкость</td>
-              </tr>
-
-              <tr>
-                <td style="color: #b63181">
-                  Fenty Beauty Pro Filt’r Concealer
-                  <p class="foundation-note">
-                    Матирующая формула, которая помогает контролировать блеск и
-                    создаёт аккуратный макияж на протяжении всего дня.
-                  </p>
-                </td>
-                <td>Матирующий эффект</td>
-              </tr>
-
-              <tr>
-                <td style="color: #b63181">
-                  Maybelline Fit Me Concealer
-                  <p class="foundation-note">
-                    Лёгкий консилер с натуральным финишем. Хорошо подходит для
-                    ежедневного макияжа и не перегружает кожу.
-                  </p>
-                </td>
-                <td>Натуральный финиш</td>
-              </tr>
-            </table>
           </section>
 
           <!-- Секция 6: Консилеры для комбинированной кожи -->
           <section id="combination-skin" class="foundation-section">
             <h2><strong>Лучшие консилеры для комбинированной кожи</strong></h2>
-            <p class="ad-label nusponsored">
-              Независимый обзор. Продукты не спонсируются.
+            <p class="ad-label nusponsored" style="font-size: 12px">
+              <strong>Независимый обзор. Продукты не спонсируются.</strong>
               <br />
-              *Ссылка приведена в ознакомительных целях. При наличии партнёрства
-              здесь размещается прямая ссылка на продукт.
+              *Данный материал является независимым редакционным обзором и не
+              спонсируется производителем или продавцом продукта. <br />
+              *Все названия брендов, товарные знаки и наименования продукции
+              принадлежат их законным правообладателям и используются
+              исключительно в информационных и редакционных целях. <br />
+              *Представленная информация отражает мнение автора и не является
+              официальной рекомендацией производителя. <br />
+              <strong
+                >*Ссылки приведены в ознакомительных целях. При наличии
+                партнёрства здесь может быть размещена прямая ссылка на
+                продукт.</strong
+              >
             </p>
             <p>
               Комбинированная кожа требует баланса между лёгкостью и стойкостью
@@ -823,130 +1223,324 @@
             </p>
 
             <section class="foundation-gallery" id="gallery-combination-skin">
-              <div class="gallery-grid">
-                <figure class="gallery-item">
-                  <img
-                    src="../../images/concealer/nars-radiant-creamy-300.webp"
-                    srcset="
-                      ../../images/concealer/nars-radiant-creamy-600.webp 2x
-                    "
-                    alt="NARS Radiant Creamy Concealer"
-                    loading="lazy"
-                  />
-                  <figcaption>
-                    NARS Radiant Creamy Concealer<br />
-                    <div class="review-rating">⭐⭐⭐⭐⭐</div>
-                    <small>Кремовая текстура и естественный финиш</small>
-                    <div class="card-buttons">
-                      <a
-                        class="section-btn-carousel disabled"
-                        aria-disabled="true"
-                      >
-                        Скоро доступно
-                      </a>
-                    </div>
-                  </figcaption>
-                </figure>
+              <div class="products-container">
+                <!-- 1 -->
+                <div class="review-card-modal premium">
+                  <div class="review-card-modal-image zoom-container">
+                    <img
+                      src="../../images/placeholder/placeholder-makeup-1.webp"
+                      alt="NARS Radiant Creamy Concealer"
+                      class="zoom-image"
+                    />
+                    <div class="zoom-lens"></div>
+                    <div class="zoom-result"></div>
+                  </div>
 
-                <figure class="gallery-item">
-                  <img
-                    src="../../images/concealer/maybelline-fit-me-300.webp"
-                    srcset="
-                      ../../images/concealer/maybelline-fit-me-600.webp 2x
-                    "
-                    alt="Maybelline Fit Me Concealer"
-                    loading="lazy"
-                  />
-                  <figcaption>
-                    Maybelline Fit Me<br />
-                    <div class="review-rating">⭐⭐⭐⭐</div>
-                    <small>Лёгкая формула для ежедневного макияжа</small>
-                    <div class="card-buttons">
-                      <a
-                        class="section-btn-carousel disabled"
-                        aria-disabled="true"
-                      >
-                        Скоро доступно
-                      </a>
+                  <div class="review-card-modal-content">
+                    <div class="review-card-modal-title">
+                      NARS Radiant Creamy Concealer
                     </div>
-                  </figcaption>
-                </figure>
 
-                <figure class="gallery-item">
-                  <img
-                    src="../../images/concealer/clinique-even-better-300.webp"
-                    srcset="
-                      ../../images/concealer/clinique-even-better-600.webp 2x
-                    "
-                    alt="Clinique Even Better Concealer"
-                    loading="lazy"
-                  />
-                  <figcaption>
-                    Clinique Even Better Concealer<br />
-                    <div class="review-rating">⭐⭐⭐⭐⭐</div>
-                    <small>Натуральный эффект и комфорт для кожи</small>
-                    <div class="card-buttons">
+                    <div class="review-card-modal-excerpt">
+                      Популярный консилер с кремовой текстурой и естественным
+                      сияющим финишем, который хорошо подходит для сухой кожи и
+                      области вокруг глаз.
+                    </div>
+
+                    <div class="buttons-row">
                       <a
-                        class="section-btn-carousel disabled"
+                        class="review-card-modal-btn disabled"
                         aria-disabled="true"
                       >
-                        Скоро доступно
+                        Проверить цену
                       </a>
+
+                      <button
+                        class="review-card-modal-btn"
+                        onclick="toggleDetails(this)"
+                        data-open="Открыть обзор"
+                        data-close="Скрыть"
+                      >
+                        Открыть обзор
+                      </button>
                     </div>
-                  </figcaption>
-                </figure>
+
+                    <div class="review-card-modal-details">
+                      <div class="review-details-inner">
+                        <div class="review-specs">
+                          <h4>Основная информация</h4>
+                          <ul>
+                            <li><strong>Тип:</strong> жидкий консилер</li>
+                            <li><strong>Кожа:</strong> сухая, нормальная</li>
+                            <li><strong>Покрытие:</strong> среднее–плотное</li>
+                            <li>
+                              <strong>Финиш:</strong> естественный, сияющий
+                            </li>
+                            <li><strong>Стойкость:</strong> до 12 часов</li>
+                            <li><strong>Объём:</strong> 6 мл</li>
+                            <li><strong>Цена:</strong> ~700–950 MDL</li>
+                          </ul>
+
+                          <h4>Лучше всего подойдёт, если</h4>
+                          <ul>
+                            <li>кожа склонна к сухости</li>
+                            <li>есть тёмные круги под глазами</li>
+                            <li>нужен естественный результат</li>
+                          </ul>
+                        </div>
+
+                        <div class="review-verdict">
+                          <h4>Кратко</h4>
+                          <p>
+                            Один из лучших консилеров для сухой кожи благодаря
+                            комфортной текстуре и естественному покрытию.
+                          </p>
+
+                          <h4>Плюсы</h4>
+                          <ul>
+                            <li>не подчёркивает шелушения</li>
+                            <li>кремовая текстура</li>
+                            <li>естественный финиш</li>
+                          </ul>
+
+                          <h4>Важно учитывать</h4>
+                          <ul>
+                            <li>
+                              для очень жирной кожи может потребоваться пудра
+                            </li>
+                            <li>стоимость выше средней</li>
+                          </ul>
+
+                          <h4>Совет по использованию</h4>
+                          <p>
+                            Перед нанесением используйте увлажняющий крем для
+                            области вокруг глаз.
+                          </p>
+
+                          <h4>Рейтинг</h4>
+                          <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 2 -->
+                <div class="review-card-modal premium">
+                  <div class="review-card-modal-image zoom-container">
+                    <img
+                      src="../../images/placeholder/placeholder-makeup-1.webp"
+                      alt="Maybelline Fit Me Concealer"
+                      class="zoom-image"
+                    />
+                    <div class="zoom-lens"></div>
+                    <div class="zoom-result"></div>
+                  </div>
+
+                  <div class="review-card-modal-content">
+                    <div class="review-card-modal-title">
+                      Maybelline Fit Me Concealer
+                    </div>
+
+                    <div class="review-card-modal-excerpt">
+                      Лёгкий консилер с натуральным финишем, который подходит
+                      для ежедневного макияжа сухой и нормальной кожи.
+                    </div>
+
+                    <div class="buttons-row">
+                      <a
+                        class="review-card-modal-btn disabled"
+                        aria-disabled="true"
+                      >
+                        Проверить цену
+                      </a>
+
+                      <button
+                        class="review-card-modal-btn"
+                        onclick="toggleDetails(this)"
+                        data-open="Открыть обзор"
+                        data-close="Скрыть"
+                      >
+                        Открыть обзор
+                      </button>
+                    </div>
+
+                    <div class="review-card-modal-details">
+                      <div class="review-details-inner">
+                        <div class="review-specs">
+                          <h4>Основная информация</h4>
+                          <ul>
+                            <li><strong>Тип:</strong> жидкий консилер</li>
+                            <li><strong>Кожа:</strong> сухая, нормальная</li>
+                            <li><strong>Покрытие:</strong> среднее</li>
+                            <li><strong>Финиш:</strong> естественный</li>
+                            <li><strong>Стойкость:</strong> до 8 часов</li>
+                            <li><strong>Объём:</strong> 6,8 мл</li>
+                            <li><strong>Цена:</strong> ~180–280 MDL</li>
+                          </ul>
+
+                          <h4>Лучше всего подойдёт, если</h4>
+                          <ul>
+                            <li>нужен бюджетный консилер</li>
+                            <li>предпочитаете лёгкое покрытие</li>
+                            <li>делаете макияж каждый день</li>
+                          </ul>
+                        </div>
+
+                        <div class="review-verdict">
+                          <h4>Кратко</h4>
+                          <p>
+                            Хороший бюджетный вариант с комфортной текстурой и
+                            естественным покрытием.
+                          </p>
+
+                          <h4>Плюсы</h4>
+                          <ul>
+                            <li>доступная цена</li>
+                            <li>не ощущается тяжёлым</li>
+                            <li>легко растушёвывается</li>
+                          </ul>
+
+                          <h4>Важно учитывать</h4>
+                          <ul>
+                            <li>не перекрывает очень выраженные недостатки</li>
+                            <li>может потребовать обновления в течение дня</li>
+                          </ul>
+
+                          <h4>Совет по использованию</h4>
+                          <p>
+                            Для более естественного эффекта наносите тонким
+                            слоем и растушёвывайте влажным спонжем.
+                          </p>
+
+                          <h4>Рейтинг</h4>
+                          <div class="review-rating">⭐⭐⭐⭐☆</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="review-card-modal premium">
+                  <div class="review-card-modal-image zoom-container">
+                    <img
+                      src="../../images/placeholder/placeholder-makeup-1.webp"
+                      alt="Clinique Even Better Concealer"
+                      class="zoom-image"
+                    />
+                    <div class="zoom-lens"></div>
+                    <div class="zoom-result"></div>
+                  </div>
+
+                  <div class="review-card-modal-content">
+                    <div class="review-card-modal-title">
+                      Clinique Even Better Concealer
+                    </div>
+
+                    <div class="review-card-modal-excerpt">
+                      Увлажняющий консилер с комфортной формулой, который
+                      помогает скрыть тёмные круги, не подчёркивая сухость кожи.
+                    </div>
+
+                    <div class="buttons-row">
+                      <a
+                        class="review-card-modal-btn disabled"
+                        aria-disabled="true"
+                      >
+                        Проверить цену
+                      </a>
+
+                      <button
+                        class="review-card-modal-btn"
+                        onclick="toggleDetails(this)"
+                        data-open="Открыть обзор"
+                        data-close="Скрыть"
+                      >
+                        Открыть обзор
+                      </button>
+                    </div>
+
+                    <div class="review-card-modal-details">
+                      <div class="review-details-inner">
+                        <div class="review-specs">
+                          <h4>Основная информация</h4>
+                          <ul>
+                            <li><strong>Тип:</strong> жидкий консилер</li>
+                            <li>
+                              <strong>Кожа:</strong> сухая, чувствительная
+                            </li>
+                            <li><strong>Покрытие:</strong> среднее</li>
+                            <li><strong>Финиш:</strong> естественный</li>
+                            <li><strong>Стойкость:</strong> до 12 часов</li>
+                            <li><strong>Объём:</strong> 6 мл</li>
+                            <li><strong>Цена:</strong> ~650–850 MDL</li>
+                          </ul>
+
+                          <h4>Лучше всего подойдёт, если</h4>
+                          <ul>
+                            <li>кожа чувствительная</li>
+                            <li>важен комфорт в течение дня</li>
+                            <li>нужен естественный макияж</li>
+                          </ul>
+                        </div>
+
+                        <div class="review-verdict">
+                          <h4>Кратко</h4>
+                          <p>
+                            Отличный вариант для сухой и чувствительной кожи
+                            благодаря ухаживающей формуле и комфортному
+                            покрытию.
+                          </p>
+
+                          <h4>Плюсы</h4>
+                          <ul>
+                            <li>не подчёркивает сухость</li>
+                            <li>комфортная текстура</li>
+                            <li>подходит чувствительной коже</li>
+                          </ul>
+
+                          <h4>Важно учитывать</h4>
+                          <ul>
+                            <li>не самое плотное покрытие</li>
+                            <li>стоимость выше бюджетных аналогов</li>
+                          </ul>
+
+                          <h4>Совет по использованию</h4>
+                          <p>
+                            Наносите поверх хорошо увлажнённой кожи для
+                            максимально естественного результата.
+                          </p>
+
+                          <h4>Рейтинг</h4>
+                          <div class="review-rating">⭐⭐⭐⭐☆</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </section>
-
-            <table class="foundation-table">
-              <tr>
-                <th>Консилер</th>
-                <th>Особенности</th>
-              </tr>
-
-              <tr>
-                <td style="color: #b63181">
-                  NARS Radiant Creamy Concealer
-                  <p class="foundation-note">
-                    Один из самых популярных консилеров с кремовой текстурой.
-                    Хорошо скрывает несовершенства и придаёт коже свежий вид.
-                  </p>
-                </td>
-                <td>Натуральный финиш и среднее покрытие</td>
-              </tr>
-
-              <tr>
-                <td style="color: #b63181">
-                  Maybelline Fit Me Concealer
-                  <p class="foundation-note">
-                    Лёгкий консилер, который не перегружает кожу и подходит для
-                    повседневного макияжа.
-                  </p>
-                </td>
-                <td>Лёгкая текстура</td>
-              </tr>
-
-              <tr>
-                <td style="color: #b63181">
-                  Clinique Even Better Concealer
-                  <p class="foundation-note">
-                    Комфортная формула, которая помогает скрыть тёмные круги и
-                    несовершенства, не пересушивая кожу.
-                  </p>
-                </td>
-                <td>Комфортное покрытие</td>
-              </tr>
-            </table>
           </section>
 
           <!-- Секция 7: Консилеры для чувствительной кожи -->
           <section id="sensitive-skin" class="foundation-section">
             <h2><strong>Лучшие консилеры для чувствительной кожи</strong></h2>
-            <p class="ad-label nusponsored">
-              Независимый обзор. Продукты не спонсируются.
+            <p class="ad-label nusponsored" style="font-size: 12px">
+              <strong>Независимый обзор. Продукты не спонсируются.</strong>
               <br />
-              *Ссылка приведена в ознакомительных целях. При наличии партнёрства
-              здесь размещается прямая ссылка на продукт.
+              *Данный материал является независимым редакционным обзором и не
+              спонсируется производителем или продавцом продукта. <br />
+              *Все названия брендов, товарные знаки и наименования продукции
+              принадлежат их законным правообладателям и используются
+              исключительно в информационных и редакционных целях. <br />
+              *Представленная информация отражает мнение автора и не является
+              официальной рекомендацией производителя. <br />
+              <strong
+                >*Ссылки приведены в ознакомительных целях. При наличии
+                партнёрства здесь может быть размещена прямая ссылка на
+                продукт.</strong
+              >
             </p>
             <p>
               Для чувствительной кожи важно выбирать гипоаллергенные консилеры
@@ -956,129 +1550,322 @@
             </p>
 
             <section class="foundation-gallery" id="gallery-sensitive-skin">
-              <div class="gallery-grid">
-                <figure class="gallery-item">
-                  <img
-                    src="../../images/concealer/la-roche-posay-toleriane-300.webp"
-                    srcset="
-                      ../../images/concealer/la-roche-posay-toleriane-600.webp 2x
-                    "
-                    alt="La Roche-Posay Toleriane Concealer"
-                    loading="lazy"
-                  />
-                  <figcaption>
-                    La Roche-Posay Toleriane<br />
-                    <div class="review-rating">⭐⭐⭐⭐⭐</div>
-                    <small>Подходит для чувствительной кожи</small>
-                    <div class="card-buttons">
-                      <a
-                        class="section-btn-carousel disabled"
-                        aria-disabled="true"
-                      >
-                        Скоро доступно
-                      </a>
-                    </div>
-                  </figcaption>
-                </figure>
+              <div class="products-container">
+                <!-- 1 -->
+                <div class="review-card-modal premium">
+                  <div class="review-card-modal-image zoom-container">
+                    <img
+                      src="../../images/placeholder/placeholder-makeup-1.webp"
+                      alt="La Roche-Posay Toleriane Concealer"
+                      class="zoom-image"
+                    />
+                    <div class="zoom-lens"></div>
+                    <div class="zoom-result"></div>
+                  </div>
 
-                <figure class="gallery-item">
-                  <img
-                    src="../../images/concealer/clinique-even-better-300.webp"
-                    srcset="
-                      ../../images/concealer/clinique-even-better-600.webp 2x
-                    "
-                    alt="Clinique Even Better Concealer"
-                    loading="lazy"
-                  />
-                  <figcaption>
-                    Clinique Even Better<br />
-                    <div class="review-rating">⭐⭐⭐⭐⭐</div>
-                    <small>Гипоаллергенная формула</small>
-                    <div class="card-buttons">
-                      <a
-                        class="section-btn-carousel disabled"
-                        aria-disabled="true"
-                      >
-                        Скоро доступно
-                      </a>
+                  <div class="review-card-modal-content">
+                    <div class="review-card-modal-title">
+                      La Roche-Posay Toleriane Concealer
                     </div>
-                  </figcaption>
-                </figure>
 
-                <figure class="gallery-item">
-                  <img
-                    src="../../images/concealer/bareminerals-concealer-300.webp"
-                    srcset="
-                      ../../images/concealer/bareminerals-concealer-600.webp 2x
-                    "
-                    alt="bareMinerals Concealer"
-                    loading="lazy"
-                  />
-                  <figcaption>
-                    bareMinerals Concealer<br />
-                    <div class="review-rating">⭐⭐⭐⭐</div>
-                    <small>Минеральная формула</small>
-                    <div class="card-buttons">
+                    <div class="review-card-modal-excerpt">
+                      Консилер для чувствительной кожи с мягкой формулой,
+                      который помогает скрыть покраснения и несовершенства без
+                      ощущения дискомфорта.
+                    </div>
+
+                    <div class="buttons-row">
                       <a
-                        class="section-btn-carousel disabled"
+                        class="review-card-modal-btn disabled"
                         aria-disabled="true"
                       >
-                        Скоро доступно
+                        Проверить цену
                       </a>
+
+                      <button
+                        class="review-card-modal-btn"
+                        onclick="toggleDetails(this)"
+                        data-open="Открыть обзор"
+                        data-close="Скрыть"
+                      >
+                        Открыть обзор
+                      </button>
                     </div>
-                  </figcaption>
-                </figure>
+
+                    <div class="review-card-modal-details">
+                      <div class="review-details-inner">
+                        <div class="review-specs">
+                          <h4>Основная информация</h4>
+                          <ul>
+                            <li><strong>Тип:</strong> жидкий консилер</li>
+                            <li><strong>Кожа:</strong> чувствительная</li>
+                            <li><strong>Покрытие:</strong> среднее</li>
+                            <li><strong>Финиш:</strong> естественный</li>
+                            <li><strong>Формула:</strong> без отдушек</li>
+                            <li><strong>Объём:</strong> 5 мл</li>
+                            <li><strong>Цена:</strong> ~450–650 MDL</li>
+                          </ul>
+
+                          <h4>Лучше всего подойдёт, если</h4>
+                          <ul>
+                            <li>кожа склонна к раздражению</li>
+                            <li>есть покраснения</li>
+                            <li>нужен деликатный ежедневный макияж</li>
+                          </ul>
+                        </div>
+
+                        <div class="review-verdict">
+                          <h4>Кратко</h4>
+                          <p>
+                            Хороший выбор для чувствительной кожи благодаря
+                            мягкой формуле и комфортному покрытию.
+                          </p>
+
+                          <h4>Плюсы</h4>
+                          <ul>
+                            <li>подходит чувствительной коже</li>
+                            <li>комфортная текстура</li>
+                            <li>естественный результат</li>
+                          </ul>
+
+                          <h4>Важно учитывать</h4>
+                          <ul>
+                            <li>не самое плотное покрытие</li>
+                            <li>палитра оттенков ограничена</li>
+                          </ul>
+
+                          <h4>Совет по использованию</h4>
+                          <p>
+                            Наносите тонким слоем после увлажняющего крема и
+                            аккуратно растушёвывайте подушечками пальцев или
+                            спонжем.
+                          </p>
+
+                          <h4>Рейтинг</h4>
+                          <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 2 -->
+                <div class="review-card-modal premium">
+                  <div class="review-card-modal-image zoom-container">
+                    <img
+                      src="../../images/placeholder/placeholder-makeup-1.webp"
+                      alt="Clinique Even Better Concealer"
+                      class="zoom-image"
+                    />
+                    <div class="zoom-lens"></div>
+                    <div class="zoom-result"></div>
+                  </div>
+
+                  <div class="review-card-modal-content">
+                    <div class="review-card-modal-title">
+                      Clinique Even Better Concealer
+                    </div>
+
+                    <div class="review-card-modal-excerpt">
+                      Увлажняющий консилер с комфортной формулой, который
+                      помогает скрыть тёмные круги и подходит для чувствительной
+                      кожи.
+                    </div>
+
+                    <div class="buttons-row">
+                      <a
+                        class="review-card-modal-btn disabled"
+                        aria-disabled="true"
+                      >
+                        Проверить цену
+                      </a>
+
+                      <button
+                        class="review-card-modal-btn"
+                        onclick="toggleDetails(this)"
+                        data-open="Открыть обзор"
+                        data-close="Скрыть"
+                      >
+                        Открыть обзор
+                      </button>
+                    </div>
+
+                    <div class="review-card-modal-details">
+                      <div class="review-details-inner">
+                        <div class="review-specs">
+                          <h4>Основная информация</h4>
+                          <ul>
+                            <li><strong>Тип:</strong> жидкий консилер</li>
+                            <li>
+                              <strong>Кожа:</strong> чувствительная, сухая
+                            </li>
+                            <li><strong>Покрытие:</strong> среднее</li>
+                            <li><strong>Финиш:</strong> естественный</li>
+                            <li><strong>Стойкость:</strong> до 12 часов</li>
+                            <li><strong>Объём:</strong> 6 мл</li>
+                            <li><strong>Цена:</strong> ~650–850 MDL</li>
+                          </ul>
+
+                          <h4>Лучше всего подойдёт, если</h4>
+                          <ul>
+                            <li>кожа чувствительная</li>
+                            <li>нужно естественное покрытие</li>
+                            <li>важен комфорт в течение дня</li>
+                          </ul>
+                        </div>
+
+                        <div class="review-verdict">
+                          <h4>Кратко</h4>
+                          <p>
+                            Один из лучших вариантов для чувствительной кожи
+                            благодаря мягкой текстуре и ухаживающей формуле.
+                          </p>
+
+                          <h4>Плюсы</h4>
+                          <ul>
+                            <li>не подчёркивает сухость</li>
+                            <li>комфортно ощущается</li>
+                            <li>естественный финиш</li>
+                          </ul>
+
+                          <h4>Важно учитывать</h4>
+                          <ul>
+                            <li>не предназначен для очень плотного покрытия</li>
+                            <li>стоимость выше средней</li>
+                          </ul>
+
+                          <h4>Совет по использованию</h4>
+                          <p>
+                            Для максимально естественного результата наносите
+                            небольшое количество средства локально.
+                          </p>
+
+                          <h4>Рейтинг</h4>
+                          <div class="review-rating">⭐⭐⭐⭐☆</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="review-card-modal premium">
+                  <div class="review-card-modal-image zoom-container">
+                    <img
+                      src="../../images/placeholder/placeholder-makeup-1.webp"
+                      alt="BareMinerals Concealer"
+                      class="zoom-image"
+                    />
+                    <div class="zoom-lens"></div>
+                    <div class="zoom-result"></div>
+                  </div>
+
+                  <div class="review-card-modal-content">
+                    <div class="review-card-modal-title">
+                      BareMinerals Concealer
+                    </div>
+
+                    <div class="review-card-modal-excerpt">
+                      Минеральный консилер с лёгкой формулой, который помогает
+                      скрыть несовершенства и подходит даже чувствительной коже.
+                    </div>
+
+                    <div class="buttons-row">
+                      <a
+                        class="review-card-modal-btn disabled"
+                        aria-disabled="true"
+                      >
+                        Проверить цену
+                      </a>
+
+                      <button
+                        class="review-card-modal-btn"
+                        onclick="toggleDetails(this)"
+                        data-open="Открыть обзор"
+                        data-close="Скрыть"
+                      >
+                        Открыть обзор
+                      </button>
+                    </div>
+
+                    <div class="review-card-modal-details">
+                      <div class="review-details-inner">
+                        <div class="review-specs">
+                          <h4>Основная информация</h4>
+                          <ul>
+                            <li><strong>Тип:</strong> минеральный консилер</li>
+                            <li>
+                              <strong>Кожа:</strong> чувствительная, нормальная
+                            </li>
+                            <li><strong>Покрытие:</strong> среднее</li>
+                            <li><strong>Финиш:</strong> естественный</li>
+                            <li><strong>Формула:</strong> минеральная</li>
+                            <li><strong>Объём:</strong> 2 г</li>
+                            <li><strong>Цена:</strong> ~500–700 MDL</li>
+                          </ul>
+
+                          <h4>Лучше всего подойдёт, если</h4>
+                          <ul>
+                            <li>кожа чувствительная</li>
+                            <li>предпочитаете минеральную косметику</li>
+                            <li>нужно лёгкое естественное покрытие</li>
+                          </ul>
+                        </div>
+
+                        <div class="review-verdict">
+                          <h4>Кратко</h4>
+                          <p>
+                            Отличный выбор для тех, кто предпочитает минеральную
+                            декоративную косметику и бережный уход за кожей.
+                          </p>
+
+                          <h4>Плюсы</h4>
+                          <ul>
+                            <li>минеральная формула</li>
+                            <li>не ощущается тяжёлым</li>
+                            <li>подходит чувствительной коже</li>
+                          </ul>
+
+                          <h4>Важно учитывать</h4>
+                          <ul>
+                            <li>покрытие менее плотное</li>
+                            <li>требует аккуратного нанесения</li>
+                          </ul>
+
+                          <h4>Совет по использованию</h4>
+                          <p>
+                            Наносите небольшой кистью тонкими слоями, постепенно
+                            увеличивая плотность покрытия при необходимости.
+                          </p>
+
+                          <h4>Рейтинг</h4>
+                          <div class="review-rating">⭐⭐⭐⭐☆</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </section>
-
-            <table class="foundation-table">
-              <tr>
-                <th>Консилер</th>
-                <th>Особенности</th>
-              </tr>
-
-              <tr>
-                <td style="color: #b63181">
-                  La Roche-Posay Toleriane
-                  <p class="foundation-note">
-                    Гипоаллергенная формула, разработанная для чувствительной
-                    кожи. Хорошо маскирует покраснения и несовершенства.
-                  </p>
-                </td>
-                <td>Подходит для чувствительной кожи</td>
-              </tr>
-
-              <tr>
-                <td style="color: #b63181">
-                  Clinique Even Better
-                  <p class="foundation-note">
-                    Лёгкая формула без раздражающих компонентов. Подходит для
-                    ежедневного макияжа.
-                  </p>
-                </td>
-                <td>Гипоаллергенная формула</td>
-              </tr>
-
-              <tr>
-                <td style="color: #b63181">
-                  bareMinerals Concealer
-                  <p class="foundation-note">
-                    Минеральная формула с мягким покрытием, которая не
-                    раздражает кожу.
-                  </p>
-                </td>
-                <td>Минеральный состав</td>
-              </tr>
-            </table>
           </section>
           <!-- Секция 8: Консилеры с лёгким покрытием -->
           <section id="light-coverage" class="foundation-section">
             <h2><strong>Лучшие консилеры с лёгким покрытием</strong></h2>
-            <p class="ad-label nusponsored">
-              Независимый обзор. Продукты не спонсируются.
+            <p class="ad-label nusponsored" style="font-size: 12px">
+              <strong>Независимый обзор. Продукты не спонсируются.</strong>
               <br />
-              *Ссылка приведена в ознакомительных целях. При наличии партнёрства
-              здесь размещается прямая ссылка на продукт.
+              *Данный материал является независимым редакционным обзором и не
+              спонсируется производителем или продавцом продукта. <br />
+              *Все названия брендов, товарные знаки и наименования продукции
+              принадлежат их законным правообладателям и используются
+              исключительно в информационных и редакционных целях. <br />
+              *Представленная информация отражает мнение автора и не является
+              официальной рекомендацией производителя. <br />
+              <strong
+                >*Ссылки приведены в ознакомительных целях. При наличии
+                партнёрства здесь может быть размещена прямая ссылка на
+                продукт.</strong
+              >
             </p>
             <p>
               Консилеры с лёгким покрытием идеально подходят для естественного
@@ -1087,125 +1874,323 @@
             </p>
 
             <section class="foundation-gallery" id="gallery-light-coverage">
-              <div class="gallery-grid">
-                <figure class="gallery-item">
-                  <img
-                    src="../../images/concealer/glossier-stretch-300.webp"
-                    srcset="../../images/concealer/glossier-stretch-600.webp 2x"
-                    alt="Glossier Stretch Concealer"
-                    loading="lazy"
-                  />
-                  <figcaption>
-                    Glossier Stretch<br />
-                    <div class="review-rating">⭐⭐⭐⭐</div>
-                    <small>Естественный эффект</small>
-                    <div class="card-buttons">
-                      <a
-                        class="section-btn-carousel disabled"
-                        aria-disabled="true"
-                      >
-                        Скоро доступно
-                      </a>
-                    </div>
-                  </figcaption>
-                </figure>
+              <div class="products-container">
+                <!-- 1 -->
+                <div class="review-card-modal premium">
+                  <div class="review-card-modal-image zoom-container">
+                    <img
+                      src="../../images/placeholder/placeholder-makeup-1.webp"
+                      alt="Glossier Stretch Concealer"
+                      class="zoom-image"
+                    />
+                    <div class="zoom-lens"></div>
+                    <div class="zoom-result"></div>
+                  </div>
 
-                <figure class="gallery-item">
-                  <img
-                    src="../../images/concealer/maybelline-fit-me-300.webp"
-                    srcset="
-                      ../../images/concealer/maybelline-fit-me-600.webp 2x
-                    "
-                    alt="Maybelline Fit Me Concealer"
-                    loading="lazy"
-                  />
-                  <figcaption>
-                    Maybelline Fit Me<br />
-                    <div class="review-rating">⭐⭐⭐⭐</div>
-                    <small>Лёгкая текстура</small>
-                    <div class="card-buttons">
-                      <a
-                        class="section-btn-carousel disabled"
-                        aria-disabled="true"
-                      >
-                        Скоро доступно
-                      </a>
+                  <div class="review-card-modal-content">
+                    <div class="review-card-modal-title">
+                      Glossier Stretch Concealer
                     </div>
-                  </figcaption>
-                </figure>
 
-                <figure class="gallery-item">
-                  <img
-                    src="../../images/concealer/nars-radiant-creamy-300.webp"
-                    srcset="
-                      ../../images/concealer/nars-radiant-creamy-600.webp 2x
-                    "
-                    alt="NARS Radiant Creamy Concealer"
-                    loading="lazy"
-                  />
-                  <figcaption>
-                    NARS Radiant Creamy<br />
-                    <div class="review-rating">⭐⭐⭐⭐⭐</div>
-                    <small>Натуральный финиш</small>
-                    <div class="card-buttons">
+                    <div class="review-card-modal-excerpt">
+                      Лёгкий кремовый консилер с естественным сияющим финишем,
+                      который мягко выравнивает тон кожи, не создавая эффекта
+                      плотного макияжа.
+                    </div>
+
+                    <div class="buttons-row">
                       <a
-                        class="section-btn-carousel disabled"
+                        class="review-card-modal-btn disabled"
                         aria-disabled="true"
                       >
-                        Скоро доступно
+                        Проверить цену
                       </a>
+
+                      <button
+                        class="review-card-modal-btn"
+                        onclick="toggleDetails(this)"
+                        data-open="Открыть обзор"
+                        data-close="Скрыть"
+                      >
+                        Открыть обзор
+                      </button>
                     </div>
-                  </figcaption>
-                </figure>
+
+                    <div class="review-card-modal-details">
+                      <div class="review-details-inner">
+                        <div class="review-specs">
+                          <h4>Основная информация</h4>
+                          <ul>
+                            <li><strong>Тип:</strong> кремовый консилер</li>
+                            <li><strong>Покрытие:</strong> лёгкое</li>
+                            <li>
+                              <strong>Финиш:</strong> естественный, сияющий
+                            </li>
+                            <li><strong>Кожа:</strong> нормальная, сухая</li>
+                            <li><strong>Объём:</strong> 5 г</li>
+                            <li><strong>Цена:</strong> ~550–750 MDL</li>
+                          </ul>
+
+                          <h4>Лучше всего подойдёт, если</h4>
+                          <ul>
+                            <li>нужен максимально естественный макияж</li>
+                            <li>не хочется плотного покрытия</li>
+                            <li>важно сохранить естественное сияние кожи</li>
+                          </ul>
+                        </div>
+
+                        <div class="review-verdict">
+                          <h4>Кратко</h4>
+                          <p>
+                            Идеальный выбор для поклонников макияжа без эффекта
+                            маски и естественного свежего вида кожи.
+                          </p>
+
+                          <h4>Плюсы</h4>
+                          <ul>
+                            <li>очень комфортная текстура</li>
+                            <li>естественный финиш</li>
+                            <li>не подчёркивает сухость</li>
+                          </ul>
+
+                          <h4>Важно учитывать</h4>
+                          <ul>
+                            <li>не перекрывает выраженные недостатки</li>
+                            <li>не рассчитан на плотную маскировку</li>
+                          </ul>
+
+                          <h4>Совет по использованию</h4>
+                          <p>
+                            Наносите подушечками пальцев для максимально
+                            естественного результата.
+                          </p>
+
+                          <h4>Рейтинг</h4>
+                          <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 2 -->
+                <div class="review-card-modal premium">
+                  <div class="review-card-modal-image zoom-container">
+                    <img
+                      src="../../images/placeholder/placeholder-makeup-1.webp"
+                      alt="Maybelline Fit Me Concealer"
+                      class="zoom-image"
+                    />
+                    <div class="zoom-lens"></div>
+                    <div class="zoom-result"></div>
+                  </div>
+
+                  <div class="review-card-modal-content">
+                    <div class="review-card-modal-title">
+                      Maybelline Fit Me Concealer
+                    </div>
+
+                    <div class="review-card-modal-excerpt">
+                      Бюджетный консилер с лёгким естественным покрытием для
+                      ежедневного макияжа без ощущения тяжести.
+                    </div>
+
+                    <div class="buttons-row">
+                      <a
+                        class="review-card-modal-btn disabled"
+                        aria-disabled="true"
+                      >
+                        Проверить цену
+                      </a>
+
+                      <button
+                        class="review-card-modal-btn"
+                        onclick="toggleDetails(this)"
+                        data-open="Открыть обзор"
+                        data-close="Скрыть"
+                      >
+                        Открыть обзор
+                      </button>
+                    </div>
+
+                    <div class="review-card-modal-details">
+                      <div class="review-details-inner">
+                        <div class="review-specs">
+                          <h4>Основная информация</h4>
+                          <ul>
+                            <li><strong>Тип:</strong> жидкий консилер</li>
+                            <li><strong>Покрытие:</strong> лёгкое–среднее</li>
+                            <li><strong>Финиш:</strong> естественный</li>
+                            <li><strong>Кожа:</strong> все типы</li>
+                            <li><strong>Объём:</strong> 6,8 мл</li>
+                            <li><strong>Цена:</strong> ~180–280 MDL</li>
+                          </ul>
+
+                          <h4>Лучше всего подойдёт, если</h4>
+                          <ul>
+                            <li>нужен макияж на каждый день</li>
+                            <li>важен естественный результат</li>
+                            <li>ищете доступный вариант</li>
+                          </ul>
+                        </div>
+
+                        <div class="review-verdict">
+                          <h4>Кратко</h4>
+                          <p>
+                            Один из лучших бюджетных консилеров для лёгкого
+                            ежедневного покрытия.
+                          </p>
+
+                          <h4>Плюсы</h4>
+                          <ul>
+                            <li>доступная цена</li>
+                            <li>легко растушёвывается</li>
+                            <li>не выглядит тяжёлым</li>
+                          </ul>
+
+                          <h4>Важно учитывать</h4>
+                          <ul>
+                            <li>
+                              не скрывает сильные несовершенства полностью
+                            </li>
+                            <li>стойкость средняя</li>
+                          </ul>
+
+                          <h4>Совет по использованию</h4>
+                          <p>
+                            Для более свежего эффекта наносите небольшое
+                            количество средства и хорошо растушёвывайте.
+                          </p>
+
+                          <h4>Рейтинг</h4>
+                          <div class="review-rating">⭐⭐⭐⭐☆</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="review-card-modal premium">
+                  <div class="review-card-modal-image zoom-container">
+                    <img
+                      src="../../images/placeholder/placeholder-makeup-1.webp"
+                      alt="NARS Radiant Creamy Concealer"
+                      class="zoom-image"
+                    />
+                    <div class="zoom-lens"></div>
+                    <div class="zoom-result"></div>
+                  </div>
+
+                  <div class="review-card-modal-content">
+                    <div class="review-card-modal-title">
+                      NARS Radiant Creamy Concealer
+                    </div>
+
+                    <div class="review-card-modal-excerpt">
+                      Кремовый консилер с естественным покрытием, который
+                      освежает область вокруг глаз и создаёт эффект здоровой
+                      кожи.
+                    </div>
+
+                    <div class="buttons-row">
+                      <a
+                        class="review-card-modal-btn disabled"
+                        aria-disabled="true"
+                      >
+                        Проверить цену
+                      </a>
+
+                      <button
+                        class="review-card-modal-btn"
+                        onclick="toggleDetails(this)"
+                        data-open="Открыть обзор"
+                        data-close="Скрыть"
+                      >
+                        Открыть обзор
+                      </button>
+                    </div>
+
+                    <div class="review-card-modal-details">
+                      <div class="review-details-inner">
+                        <div class="review-specs">
+                          <h4>Основная информация</h4>
+                          <ul>
+                            <li><strong>Тип:</strong> жидкий консилер</li>
+                            <li><strong>Покрытие:</strong> лёгкое–среднее</li>
+                            <li>
+                              <strong>Финиш:</strong> естественный, сияющий
+                            </li>
+                            <li><strong>Кожа:</strong> нормальная, сухая</li>
+                            <li><strong>Объём:</strong> 6 мл</li>
+                            <li><strong>Цена:</strong> ~700–950 MDL</li>
+                          </ul>
+
+                          <h4>Лучше всего подойдёт, если</h4>
+                          <ul>
+                            <li>нужно освежить взгляд</li>
+                            <li>важен естественный финиш</li>
+                            <li>не требуется плотное покрытие</li>
+                          </ul>
+                        </div>
+
+                        <div class="review-verdict">
+                          <h4>Кратко</h4>
+                          <p>
+                            Универсальный консилер с комфортной текстурой,
+                            который создаёт лёгкое естественное покрытие.
+                          </p>
+
+                          <h4>Плюсы</h4>
+                          <ul>
+                            <li>не подчёркивает текстуру кожи</li>
+                            <li>естественный вид</li>
+                            <li>комфортно носится весь день</li>
+                          </ul>
+
+                          <h4>Важно учитывать</h4>
+                          <ul>
+                            <li>
+                              не предназначен для очень плотной маскировки
+                            </li>
+                            <li>стоимость выше средней</li>
+                          </ul>
+
+                          <h4>Совет по использованию</h4>
+                          <p>
+                            Для максимально натурального эффекта наносите только
+                            на участки, требующие коррекции.
+                          </p>
+
+                          <h4>Рейтинг</h4>
+                          <div class="review-rating">⭐⭐⭐⭐☆</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </section>
-
-            <table class="foundation-table">
-              <tr>
-                <th>Консилер</th>
-                <th>Особенности</th>
-              </tr>
-
-              <tr>
-                <td style="color: #b63181">
-                  Glossier Stretch
-                  <p class="foundation-note">
-                    Лёгкая кремовая текстура, создаёт очень естественный эффект.
-                  </p>
-                </td>
-                <td>Натуральное покрытие</td>
-              </tr>
-
-              <tr>
-                <td style="color: #b63181">
-                  Maybelline Fit Me
-                  <p class="foundation-note">
-                    Лёгкий консилер для ежедневного макияжа.
-                  </p>
-                </td>
-                <td>Лёгкая формула</td>
-              </tr>
-
-              <tr>
-                <td style="color: #b63181">
-                  NARS Radiant Creamy
-                  <p class="foundation-note">
-                    Освежает кожу и придаёт естественное сияние.
-                  </p>
-                </td>
-                <td>Натуральный финиш</td>
-              </tr>
-            </table>
           </section>
 
           <!-- Секция 9: Стойкие консилеры -->
           <section id="long-lasting" class="foundation-section">
             <h2><strong>Лучшие стойкие консилеры</strong></h2>
-            <p class="ad-label nusponsored">
-              Независимый обзор. Продукты не спонсируются.
+            <p class="ad-label nusponsored" style="font-size: 12px">
+              <strong>Независимый обзор. Продукты не спонсируются.</strong>
               <br />
-              *Ссылка приведена в ознакомительных целях. При наличии партнёрства
-              здесь размещается прямая ссылка на продукт.
+              *Данный материал является независимым редакционным обзором и не
+              спонсируется производителем или продавцом продукта. <br />
+              *Все названия брендов, товарные знаки и наименования продукции
+              принадлежат их законным правообладателям и используются
+              исключительно в информационных и редакционных целях. <br />
+              *Представленная информация отражает мнение автора и не является
+              официальной рекомендацией производителя. <br />
+              <strong
+                >*Ссылки приведены в ознакомительных целях. При наличии
+                партнёрства здесь может быть размещена прямая ссылка на
+                продукт.</strong
+              >
             </p>
             <p>
               Стойкие консилеры подходят для долгого дня, мероприятий и
@@ -1215,122 +2200,322 @@
             </p>
 
             <section class="foundation-gallery" id="gallery-long-lasting">
-              <div class="gallery-grid">
-                <figure class="gallery-item">
-                  <img
-                    src="../../images/concealer/tarte-shape-tape-300.webp"
-                    srcset="../../images/concealer/tarte-shape-tape-600.webp 2x"
-                    alt="Tarte Shape Tape Concealer"
-                    loading="lazy"
-                  />
-                  <figcaption>
-                    Tarte Shape Tape<br />
-                    <div class="review-rating">⭐⭐⭐⭐⭐</div>
-                    <small>Очень стойкая формула</small>
-                    <div class="card-buttons">
-                      <a
-                        class="section-btn-carousel disabled"
-                        aria-disabled="true"
-                      >
-                        Скоро доступно
-                      </a>
-                    </div>
-                  </figcaption>
-                </figure>
+              <div class="products-container">
+                <!-- 1 -->
+                <div class="review-card-modal premium">
+                  <div class="review-card-modal-image zoom-container">
+                    <img
+                      src="../../images/placeholder/placeholder-makeup-1.webp"
+                      alt="Tarte Shape Tape Concealer"
+                      class="zoom-image"
+                    />
+                    <div class="zoom-lens"></div>
+                    <div class="zoom-result"></div>
+                  </div>
 
-                <figure class="gallery-item">
-                  <img
-                    src="../../images/concealer/fenty-pro-filtr-300.webp"
-                    srcset="../../images/concealer/fenty-pro-filtr-600.webp 2x"
-                    alt="Fenty Beauty Pro Filt’r Concealer"
-                    loading="lazy"
-                  />
-                  <figcaption>
-                    Fenty Pro Filt’r<br />
-                    <div class="review-rating">⭐⭐⭐⭐⭐</div>
-                    <small>Долгая стойкость</small>
-                    <div class="card-buttons">
-                      <a
-                        class="section-btn-carousel disabled"
-                        aria-disabled="true"
-                      >
-                        Скоро доступно
-                      </a>
+                  <div class="review-card-modal-content">
+                    <div class="review-card-modal-title">
+                      Tarte Shape Tape Concealer
                     </div>
-                  </figcaption>
-                </figure>
 
-                <figure class="gallery-item">
-                  <img
-                    src="../../images/concealer/mac-pro-longwear-300.webp"
-                    srcset="../../images/concealer/mac-pro-longwear-600.webp 2x"
-                    alt="MAC Pro Longwear Concealer"
-                    loading="lazy"
-                  />
-                  <figcaption>
-                    MAC Pro Longwear<br />
-                    <div class="review-rating">⭐⭐⭐⭐⭐</div>
-                    <small>Профессиональная стойкость</small>
-                    <div class="card-buttons">
+                    <div class="review-card-modal-excerpt">
+                      Один из самых стойких консилеров с плотным покрытием,
+                      который отлично маскирует тёмные круги и сохраняет
+                      аккуратный вид макияжа в течение дня.
+                    </div>
+
+                    <div class="buttons-row">
                       <a
-                        class="section-btn-carousel disabled"
+                        class="review-card-modal-btn disabled"
                         aria-disabled="true"
                       >
-                        Скоро доступно
+                        Проверить цену
                       </a>
+
+                      <button
+                        class="review-card-modal-btn"
+                        onclick="toggleDetails(this)"
+                        data-open="Открыть обзор"
+                        data-close="Скрыть"
+                      >
+                        Открыть обзор
+                      </button>
                     </div>
-                  </figcaption>
-                </figure>
+
+                    <div class="review-card-modal-details">
+                      <div class="review-details-inner">
+                        <div class="review-specs">
+                          <h4>Основная информация</h4>
+                          <ul>
+                            <li><strong>Тип:</strong> жидкий консилер</li>
+                            <li><strong>Покрытие:</strong> плотное</li>
+                            <li><strong>Финиш:</strong> матовый</li>
+                            <li><strong>Стойкость:</strong> до 16 часов</li>
+                            <li><strong>Объём:</strong> 10 мл</li>
+                            <li><strong>Цена:</strong> ~850–1050 MDL</li>
+                          </ul>
+
+                          <h4>Лучше всего подойдёт, если</h4>
+                          <ul>
+                            <li>нужен стойкий макияж на весь день</li>
+                            <li>важно скрыть тёмные круги</li>
+                            <li>необходимо плотное покрытие</li>
+                          </ul>
+                        </div>
+
+                        <div class="review-verdict">
+                          <h4>Кратко</h4>
+                          <p>
+                            Один из лучших консилеров для длительной стойкости и
+                            максимального покрытия.
+                          </p>
+
+                          <h4>Плюсы</h4>
+                          <ul>
+                            <li>очень стойкая формула</li>
+                            <li>плотное покрытие</li>
+                            <li>экономичный расход</li>
+                          </ul>
+
+                          <h4>Важно учитывать</h4>
+                          <ul>
+                            <li>может подчеркнуть сухие участки</li>
+                            <li>лучше наносить тонким слоем</li>
+                          </ul>
+
+                          <h4>Совет по использованию</h4>
+                          <p>
+                            Закрепите консилер лёгкой рассыпчатой пудрой для
+                            максимальной стойкости.
+                          </p>
+
+                          <h4>Рейтинг</h4>
+                          <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 2 -->
+                <div class="review-card-modal premium">
+                  <div class="review-card-modal-image zoom-container">
+                    <img
+                      src="../../images/placeholder/placeholder-makeup-1.webp"
+                      alt="Fenty Beauty Pro Filt'r Instant Retouch Concealer"
+                      class="zoom-image"
+                    />
+                    <div class="zoom-lens"></div>
+                    <div class="zoom-result"></div>
+                  </div>
+
+                  <div class="review-card-modal-content">
+                    <div class="review-card-modal-title">
+                      Fenty Beauty Pro Filt'r Concealer
+                    </div>
+
+                    <div class="review-card-modal-excerpt">
+                      Стойкий консилер с мягким матовым финишем, который
+                      помогает сохранить свежий макияж даже при длительном
+                      ношении.
+                    </div>
+
+                    <div class="buttons-row">
+                      <a
+                        class="review-card-modal-btn disabled"
+                        aria-disabled="true"
+                      >
+                        Проверить цену
+                      </a>
+
+                      <button
+                        class="review-card-modal-btn"
+                        onclick="toggleDetails(this)"
+                        data-open="Открыть обзор"
+                        data-close="Скрыть"
+                      >
+                        Открыть обзор
+                      </button>
+                    </div>
+
+                    <div class="review-card-modal-details">
+                      <div class="review-details-inner">
+                        <div class="review-specs">
+                          <h4>Основная информация</h4>
+                          <ul>
+                            <li><strong>Тип:</strong> жидкий консилер</li>
+                            <li><strong>Покрытие:</strong> среднее–плотное</li>
+                            <li><strong>Финиш:</strong> мягкий матовый</li>
+                            <li><strong>Стойкость:</strong> до 12 часов</li>
+                            <li><strong>Объём:</strong> 8 мл</li>
+                            <li><strong>Цена:</strong> ~650–850 MDL</li>
+                          </ul>
+
+                          <h4>Лучше всего подойдёт, если</h4>
+                          <ul>
+                            <li>нужен стойкий макияж</li>
+                            <li>кожа склонна к жирности</li>
+                            <li>важен естественный матовый эффект</li>
+                          </ul>
+                        </div>
+
+                        <div class="review-verdict">
+                          <h4>Кратко</h4>
+                          <p>
+                            Надёжный выбор для тех, кто ищет стойкий консилер
+                            без ощущения тяжёлого покрытия.
+                          </p>
+
+                          <h4>Плюсы</h4>
+                          <ul>
+                            <li>стойкая формула</li>
+                            <li>комфортная текстура</li>
+                            <li>широкая палитра оттенков</li>
+                          </ul>
+
+                          <h4>Важно учитывать</h4>
+                          <ul>
+                            <li>
+                              для максимальной стойкости рекомендуется пудра
+                            </li>
+                            <li>может быстро фиксироваться после нанесения</li>
+                          </ul>
+
+                          <h4>Совет по использованию</h4>
+                          <p>
+                            Растушёвывайте сразу после нанесения, пока средство
+                            не зафиксировалось.
+                          </p>
+
+                          <h4>Рейтинг</h4>
+                          <div class="review-rating">⭐⭐⭐⭐☆</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="review-card-modal premium">
+                  <div class="review-card-modal-image zoom-container">
+                    <img
+                      src="../../images/placeholder/placeholder-makeup-1.webp"
+                      alt="MAC Pro Longwear Concealer"
+                      class="zoom-image"
+                    />
+                    <div class="zoom-lens"></div>
+                    <div class="zoom-result"></div>
+                  </div>
+
+                  <div class="review-card-modal-content">
+                    <div class="review-card-modal-title">
+                      MAC Pro Longwear Concealer
+                    </div>
+
+                    <div class="review-card-modal-excerpt">
+                      Профессиональный консилер с длительной стойкостью и
+                      высоким покрытием, который подходит для повседневного и
+                      вечернего макияжа.
+                    </div>
+
+                    <div class="buttons-row">
+                      <a
+                        class="review-card-modal-btn disabled"
+                        aria-disabled="true"
+                      >
+                        Проверить цену
+                      </a>
+
+                      <button
+                        class="review-card-modal-btn"
+                        onclick="toggleDetails(this)"
+                        data-open="Открыть обзор"
+                        data-close="Скрыть"
+                      >
+                        Открыть обзор
+                      </button>
+                    </div>
+
+                    <div class="review-card-modal-details">
+                      <div class="review-details-inner">
+                        <div class="review-specs">
+                          <h4>Основная информация</h4>
+                          <ul>
+                            <li><strong>Тип:</strong> жидкий консилер</li>
+                            <li><strong>Покрытие:</strong> среднее–плотное</li>
+                            <li><strong>Финиш:</strong> натуральный матовый</li>
+                            <li><strong>Стойкость:</strong> до 15 часов</li>
+                            <li><strong>Объём:</strong> 9 мл</li>
+                            <li><strong>Цена:</strong> ~650–850 MDL</li>
+                          </ul>
+
+                          <h4>Лучше всего подойдёт, если</h4>
+                          <ul>
+                            <li>нужен стойкий профессиональный макияж</li>
+                            <li>необходимо скрыть несовершенства</li>
+                            <li>важно сохранить покрытие надолго</li>
+                          </ul>
+                        </div>
+
+                        <div class="review-verdict">
+                          <h4>Кратко</h4>
+                          <p>
+                            Отличный выбор для тех, кому нужен стойкий консилер
+                            с хорошим балансом между покрытием и естественным
+                            результатом.
+                          </p>
+
+                          <h4>Плюсы</h4>
+                          <ul>
+                            <li>очень хорошая стойкость</li>
+                            <li>экономичный расход</li>
+                            <li>подходит для фотосъёмки</li>
+                          </ul>
+
+                          <h4>Важно учитывать</h4>
+                          <ul>
+                            <li>
+                              дозатор может выдавать больше средства, чем нужно
+                            </li>
+                            <li>лучше наносить небольшими порциями</li>
+                          </ul>
+
+                          <h4>Совет по использованию</h4>
+                          <p>
+                            Используйте минимальное количество средства и
+                            закрепляйте лёгкой пудрой для максимального
+                            результата.
+                          </p>
+
+                          <h4>Рейтинг</h4>
+                          <div class="review-rating">⭐⭐⭐⭐☆</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </section>
-
-            <table class="foundation-table">
-              <tr>
-                <th>Консилер</th>
-                <th>Особенности</th>
-              </tr>
-
-              <tr>
-                <td style="color: #b63181">
-                  Tarte Shape Tape
-                  <p class="foundation-note">
-                    Один из самых известных стойких консилеров с плотным
-                    покрытием.
-                  </p>
-                </td>
-                <td>Очень высокая стойкость</td>
-              </tr>
-
-              <tr>
-                <td style="color: #b63181">
-                  Fenty Pro Filt’r
-                  <p class="foundation-note">
-                    Матирующий консилер с длительным эффектом.
-                  </p>
-                </td>
-                <td>Матирующая формула</td>
-              </tr>
-
-              <tr>
-                <td style="color: #b63181">
-                  MAC Pro Longwear
-                  <p class="foundation-note">
-                    Профессиональный консилер, который держится весь день.
-                  </p>
-                </td>
-                <td>Долгая стойкость</td>
-              </tr>
-            </table>
           </section>
 
           <!-- Секция 10: Консилеры для сухой кожи -->
           <section id="dry-skin" class="foundation-section">
             <h2><strong>Лучшие консилеры для сухой кожи</strong></h2>
-            <p class="ad-label nusponsored">
-              Независимый обзор. Продукты не спонсируются.
+            <p class="ad-label nusponsored" style="font-size: 12px">
+              <strong>Независимый обзор. Продукты не спонсируются.</strong>
               <br />
-              *Ссылка приведена в ознакомительных целях. При наличии партнёрства
-              здесь размещается прямая ссылка на продукт.
+              *Данный материал является независимым редакционным обзором и не
+              спонсируется производителем или продавцом продукта. <br />
+              *Все названия брендов, товарные знаки и наименования продукции
+              принадлежат их законным правообладателям и используются
+              исключительно в информационных и редакционных целях. <br />
+              *Представленная информация отражает мнение автора и не является
+              официальной рекомендацией производителя. <br />
+              <strong
+                >*Ссылки приведены в ознакомительных целях. При наличии
+                партнёрства здесь может быть размещена прямая ссылка на
+                продукт.</strong
+              >
             </p>
             <p>
               Для сухой кожи важно выбирать консилеры с увлажняющими
@@ -1340,118 +2525,300 @@
             </p>
 
             <section class="foundation-gallery" id="gallery-dry-skin">
-              <div class="gallery-grid">
-                <figure class="gallery-item">
-                  <img
-                    src="../../images/concealer/nars-soft-matte-300.webp"
-                    srcset="../../images/concealer/nars-soft-matte-600.webp 2x"
-                    alt="NARS Soft Matte Concealer"
-                    loading="lazy"
-                  />
-                  <figcaption>
-                    NARS Soft Matte<br />
-                    <div class="review-rating">⭐⭐⭐⭐⭐</div>
-                    <small>Увлажняет и выравнивает тон кожи</small>
-                    <div class="card-buttons">
-                      <a
-                        class="section-btn-carousel disabled"
-                        aria-disabled="true"
-                      >
-                        Скоро доступно
-                      </a>
-                    </div>
-                  </figcaption>
-                </figure>
+              <div class="products-container">
+                <!-- 1 -->
+                <div class="review-card-modal premium">
+                  <div class="review-card-modal-image zoom-container">
+                    <img
+                      src="../../images/placeholder/placeholder-makeup-1.webp"
+                      alt="NARS Soft Matte Complete Concealer"
+                      class="zoom-image"
+                    />
+                    <div class="zoom-lens"></div>
+                    <div class="zoom-result"></div>
+                  </div>
 
-                <figure class="gallery-item">
-                  <img
-                    src="../../images/concealer/it-cosmetics-your-skin-300.webp"
-                    srcset="
-                      ../../images/concealer/it-cosmetics-your-skin-600.webp 2x
-                    "
-                    alt="IT Cosmetics Your Skin But Better Concealer"
-                    loading="lazy"
-                  />
-                  <figcaption>
-                    IT Cosmetics Your Skin But Better<br />
-                    <div class="review-rating">⭐⭐⭐⭐⭐</div>
-                    <small>Кремовая текстура, комфортное покрытие</small>
-                    <div class="card-buttons">
-                      <a
-                        class="section-btn-carousel disabled"
-                        aria-disabled="true"
-                      >
-                        Скоро доступно
-                      </a>
+                  <div class="review-card-modal-content">
+                    <div class="review-card-modal-title">
+                      NARS <br />
+                      Soft Matte Complete Concealer
                     </div>
-                  </figcaption>
-                </figure>
 
-                <figure class="gallery-item">
-                  <img
-                    src="../../images/concealer/clinique-repairwear-300.webp"
-                    srcset="
-                      ../../images/concealer/clinique-repairwear-600.webp 2x
-                    "
-                    alt="Clinique Repairwear Concealer"
-                    loading="lazy"
-                  />
-                  <figcaption>
-                    Clinique Repairwear<br />
-                    <div class="review-rating">⭐⭐⭐⭐</div>
-                    <small>Лёгкое увлажняющее покрытие</small>
-                    <div class="card-buttons">
+                    <div class="review-card-modal-excerpt">
+                      Плотный кремовый консилер, который хорошо маскирует
+                      несовершенства. При правильном увлажнении кожи подходит и
+                      для сухой кожи.
+                    </div>
+
+                    <div class="buttons-row">
                       <a
-                        class="section-btn-carousel disabled"
+                        class="review-card-modal-btn disabled"
                         aria-disabled="true"
                       >
-                        Скоро доступно
+                        Проверить цену
                       </a>
+
+                      <button
+                        class="review-card-modal-btn"
+                        onclick="toggleDetails(this)"
+                        data-open="Открыть обзор"
+                        data-close="Скрыть"
+                      >
+                        Открыть обзор
+                      </button>
                     </div>
-                  </figcaption>
-                </figure>
+
+                    <div class="review-card-modal-details">
+                      <div class="review-details-inner">
+                        <div class="review-specs">
+                          <h4>Основная информация</h4>
+                          <ul>
+                            <li><strong>Тип:</strong> кремовый консилер</li>
+                            <li><strong>Кожа:</strong> сухая, нормальная</li>
+                            <li><strong>Покрытие:</strong> плотное</li>
+                            <li><strong>Финиш:</strong> мягкий матовый</li>
+                            <li><strong>Объём:</strong> 6,2 г</li>
+                            <li><strong>Цена:</strong> ~700–900 MDL</li>
+                          </ul>
+
+                          <h4>Лучше всего подойдёт, если</h4>
+                          <ul>
+                            <li>нужно скрыть выраженные недостатки</li>
+                            <li>важно плотное покрытие</li>
+                            <li>кожа хорошо увлажнена</li>
+                          </ul>
+                        </div>
+
+                        <div class="review-verdict">
+                          <h4>Кратко</h4>
+                          <p>
+                            Отлично перекрывает несовершенства, но перед
+                            нанесением сухую кожу желательно хорошо увлажнить.
+                          </p>
+
+                          <h4>Плюсы</h4>
+                          <ul>
+                            <li>очень плотное покрытие</li>
+                            <li>стойкость</li>
+                            <li>экономичный расход</li>
+                          </ul>
+
+                          <h4>Важно учитывать</h4>
+                          <ul>
+                            <li>
+                              может подчеркнуть сухость без подготовки кожи
+                            </li>
+                            <li>лучше наносить небольшими слоями</li>
+                          </ul>
+
+                          <h4>Совет по использованию</h4>
+                          <p>
+                            Перед нанесением используйте увлажняющий крем или
+                            праймер для сухой кожи.
+                          </p>
+
+                          <h4>Рейтинг</h4>
+                          <div class="review-rating">⭐⭐⭐⭐☆</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 2 -->
+                <div class="review-card-modal premium">
+                  <div class="review-card-modal-image zoom-container">
+                    <img
+                      src="../../images/placeholder/placeholder-makeup-1.webp"
+                      alt="IT Cosmetics Your Skin But Better Concealer"
+                      class="zoom-image"
+                    />
+                    <div class="zoom-lens"></div>
+                    <div class="zoom-result"></div>
+                  </div>
+
+                  <div class="review-card-modal-content">
+                    <div class="review-card-modal-title">
+                      IT Cosmetics Your Skin But Better Concealer
+                    </div>
+
+                    <div class="review-card-modal-excerpt">
+                      Увлажняющий консилер с натуральным покрытием, который
+                      помогает скрыть тёмные круги и не подчёркивает сухость
+                      кожи.
+                    </div>
+
+                    <div class="buttons-row">
+                      <a
+                        class="review-card-modal-btn disabled"
+                        aria-disabled="true"
+                      >
+                        Проверить цену
+                      </a>
+
+                      <button
+                        class="review-card-modal-btn"
+                        onclick="toggleDetails(this)"
+                        data-open="Открыть обзор"
+                        data-close="Скрыть"
+                      >
+                        Открыть обзор
+                      </button>
+                    </div>
+
+                    <div class="review-card-modal-details">
+                      <div class="review-details-inner">
+                        <div class="review-specs">
+                          <h4>Основная информация</h4>
+                          <ul>
+                            <li><strong>Тип:</strong> жидкий консилер</li>
+                            <li><strong>Кожа:</strong> сухая, нормальная</li>
+                            <li><strong>Покрытие:</strong> среднее</li>
+                            <li><strong>Финиш:</strong> естественный</li>
+                            <li><strong>Объём:</strong> 12 мл</li>
+                            <li><strong>Цена:</strong> ~700–900 MDL</li>
+                          </ul>
+
+                          <h4>Лучше всего подойдёт, если</h4>
+                          <ul>
+                            <li>коже требуется дополнительное увлажнение</li>
+                            <li>есть тёмные круги</li>
+                            <li>нужен естественный макияж</li>
+                          </ul>
+                        </div>
+
+                        <div class="review-verdict">
+                          <h4>Кратко</h4>
+                          <p>
+                            Один из лучших вариантов для сухой кожи благодаря
+                            комфортной ухаживающей формуле.
+                          </p>
+
+                          <h4>Плюсы</h4>
+                          <ul>
+                            <li>увлажняет кожу</li>
+                            <li>не подчёркивает морщинки</li>
+                            <li>естественный финиш</li>
+                          </ul>
+
+                          <h4>Важно учитывать</h4>
+                          <ul>
+                            <li>не самый матовый вариант</li>
+                            <li>может потребовать закрепления пудрой</li>
+                          </ul>
+
+                          <h4>Совет по использованию</h4>
+                          <p>
+                            Для свежего результата наносите небольшое количество
+                            только на проблемные зоны.
+                          </p>
+
+                          <h4>Рейтинг</h4>
+                          <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="review-card-modal premium">
+                  <div class="review-card-modal-image zoom-container">
+                    <img
+                      src="../../images/placeholder/placeholder-makeup-1.webp"
+                      alt="Clinique Even Better All-Over Concealer + Eraser"
+                      class="zoom-image"
+                    />
+                    <div class="zoom-lens"></div>
+                    <div class="zoom-result"></div>
+                  </div>
+
+                  <div class="review-card-modal-content">
+                    <div class="review-card-modal-title">
+                      Clinique Even Better All-Over Concealer + Eraser
+                    </div>
+
+                    <div class="review-card-modal-excerpt">
+                      Комфортный консилер с ухаживающей формулой, который
+                      помогает скрыть тёмные круги и не пересушивает кожу.
+                    </div>
+
+                    <div class="buttons-row">
+                      <a
+                        class="review-card-modal-btn disabled"
+                        aria-disabled="true"
+                      >
+                        Проверить цену
+                      </a>
+
+                      <button
+                        class="review-card-modal-btn"
+                        onclick="toggleDetails(this)"
+                        data-open="Открыть обзор"
+                        data-close="Скрыть"
+                      >
+                        Открыть обзор
+                      </button>
+                    </div>
+
+                    <div class="review-card-modal-details">
+                      <div class="review-details-inner">
+                        <div class="review-specs">
+                          <h4>Основная информация</h4>
+                          <ul>
+                            <li><strong>Тип:</strong> жидкий консилер</li>
+                            <li>
+                              <strong>Кожа:</strong> сухая, чувствительная
+                            </li>
+                            <li><strong>Покрытие:</strong> среднее</li>
+                            <li><strong>Финиш:</strong> естественный</li>
+                            <li><strong>Объём:</strong> 6 мл</li>
+                            <li><strong>Цена:</strong> ~650–850 MDL</li>
+                          </ul>
+
+                          <h4>Лучше всего подойдёт, если</h4>
+                          <ul>
+                            <li>кожа склонна к сухости</li>
+                            <li>есть тёмные круги</li>
+                            <li>важен комфорт в течение дня</li>
+                          </ul>
+                        </div>
+
+                        <div class="review-verdict">
+                          <h4>Кратко</h4>
+                          <p>
+                            Универсальный консилер с хорошим балансом покрытия,
+                            стойкости и ухода за кожей.
+                          </p>
+
+                          <h4>Плюсы</h4>
+                          <ul>
+                            <li>комфортная формула</li>
+                            <li>не подчёркивает сухость</li>
+                            <li>естественный результат</li>
+                          </ul>
+
+                          <h4>Важно учитывать</h4>
+                          <ul>
+                            <li>не рассчитан на очень плотное покрытие</li>
+                            <li>стоимость выше бюджетных моделей</li>
+                          </ul>
+
+                          <h4>Совет по использованию</h4>
+                          <p>
+                            Перед макияжем используйте лёгкий увлажняющий крем
+                            для области вокруг глаз.
+                          </p>
+
+                          <h4>Рейтинг</h4>
+                          <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </section>
-
-            <table class="foundation-table">
-              <tr>
-                <th>Консилер</th>
-                <th>Особенности</th>
-              </tr>
-
-              <tr>
-                <td style="color: #b63181">
-                  NARS Soft Matte
-                  <p class="foundation-note">
-                    Кремовая текстура, увлажняет сухую кожу, скрывает
-                    несовершенства, не подчеркивает шелушения.
-                  </p>
-                </td>
-                <td>Увлажнение и выравнивание тона</td>
-              </tr>
-
-              <tr>
-                <td style="color: #b63181">
-                  IT Cosmetics Your Skin But Better
-                  <p class="foundation-note">
-                    Обеспечивает комфортное кремовое покрытие, подходит для
-                    сухой кожи и маскирует темные круги.
-                  </p>
-                </td>
-                <td>Кремовая текстура</td>
-              </tr>
-
-              <tr>
-                <td style="color: #b63181">
-                  Clinique Repairwear
-                  <p class="foundation-note">
-                    Лёгкое увлажняющее средство, не сушит кожу, создаёт
-                    натуральный вид.
-                  </p>
-                </td>
-                <td>Лёгкое увлажняющее покрытие</td>
-              </tr>
-            </table>
           </section>
           <!-- Секция: Частые ошибки при использовании консилера -->
           <section id="concealer-mistakes" class="foundation-section soft-bg">
