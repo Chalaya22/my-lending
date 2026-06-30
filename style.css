@@ -3012,6 +3012,7 @@ html {
 .buttons-row .review-card-modal-btn:focus {
   outline: none;
 }
+
 @media (max-width: 768px) {
   .review-card-modal {
     width: 100%;
