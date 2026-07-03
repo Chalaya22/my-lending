@@ -639,6 +639,7 @@ section h2 {
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--accent);
+  margin-top: 20px;
 
   position: relative;
   padding-left: 18px;
@@ -2138,7 +2139,7 @@ main {
 .reviews-intro {
   max-width: 900px;
   margin: 30px auto;
-  padding: 0 16px;
+  padding-inline: 20px;
   text-align: center;
 }
 
@@ -2549,6 +2550,7 @@ main {
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 20px;
   margin-top: 25px;
+  padding-inline: 20px;
 }
 
 /* Карточка навигации */
@@ -2815,8 +2817,8 @@ html {
   background: #fff7fb;
   border: 1px solid #f1d6e6;
   border-radius: 12px;
-  padding: 35px 25px;
-  margin: 40px 0;
+  padding: 0 20px;
+  margin: 20px auto;
 }
 
 .highlighted-title {

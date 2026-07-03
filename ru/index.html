@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ru">
+<html lang="ru-MD">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,7 +8,8 @@
       name="description"
       content="Бьюти-блог Estetica Lens: уход за кожей, ингредиенты косметики, советы эксперта, обзоры средств и профессиональный подход к красоте."
     />
-    <meta http-equiv="content-language" content="ru-MD" />
+    <!-- <meta name="robots" content="index, follow" /> -->
+    <meta name="author" content="Estetica Lens" />
 
     <!-- Hreflang -->
     <link
@@ -291,33 +292,373 @@
       </div>
     </header>
     <main>
-      <section class="hero">
-        <div class="hero-overlay"></div>
+      <!-- Hero -->
+      <section class="reviews-intro">
+        <h1>
+          <strong>Estetica Lens — Beauty Blog & Expert Care</strong>
+        </h1>
 
-        <img
-          src="../images/hero/hero-home-1200.webp"
-          srcset="
-            ../images/hero/hero-home-2000.webp 2000w,
-            ../images/hero/hero-home-1200.webp 1200w,
-            ../images/hero/hero-home-600.webp   600w
-          "
-          sizes="100vw"
-          alt="Beauty, skincare and makeup"
-          class="hero-bg-img"
-          loading="eager"
-          fetchpriority="high"
-        />
+        <p>
+          Экспертные статьи об уходе за кожей, ингредиентах косметики, макияже,
+          маникюре, честные обзоры средств и каталог специалистов индустрии
+          красоты.
+        </p>
 
-        <div class="hero-content">
-          <h1 class="hero-title">Your personal lens on beauty</h1>
-          <p class="hero-subtitle">Beauty blog & Expert care</p>
-          <p class="hero-subtitle">Brow & Makeup</p>
-        </div>
-        <a href="../ru/mediakit.htm" class="hero-mediakit-btn">
-          <span>Media Kit</span>
-          <span class="arrow">→</span>
+        <a class="section-btn-primary" href="index.html#main-catigories">
+          Перейти к категориям
         </a>
       </section>
+      <div class="grid-2">
+        <div>
+          <!-- Основные разделы -->
+          <section
+            class="reviews-intro highlighted-section"
+            id="main-catigories"
+          >
+            <h2 class="section-title">
+              <strong>Популярные разделы Estetica Lens</strong>
+            </h2>
+
+            <p class="highlighted-text">
+              Изучайте экспертные материалы о красоте и уходе за собой,
+              разбирайтесь в составах косметики, выбирайте эффективные средства
+              и находите специалистов в Молдове.
+            </p>
+          </section>
+          <!-- Категории -->
+          <section class="popular-reviews-grid">
+            <!-- Ингредиенты -->
+            <a href="ingrediente.html" class="popular-review-card">
+              <div class="card-image">
+                <img
+                  src="../images/hero/ingridients-categoria.webp"
+                  alt="Ингредиенты косметики"
+                  loading="lazy"
+                />
+              </div>
+
+              <h3>Ингредиенты</h3>
+
+              <p>
+                Подробные статьи об активных компонентах косметики, их
+                свойствах, совместимости и эффективности.
+              </p>
+            </a>
+
+            <!-- Проблемы кожи -->
+            <a href="probleme.html" class="popular-review-card">
+              <div class="card-image">
+                <img
+                  src="../images/hero/skin-problems.webp"
+                  alt="Проблемы кожи"
+                  loading="lazy"
+                />
+              </div>
+
+              <h3>Проблемы кожи</h3>
+
+              <p>
+                Акне, пигментация, чувствительность, купероз, сухость, жирность
+                и другие распространённые проблемы кожи.
+              </p>
+            </a>
+
+            <!-- Макияж -->
+            <a href="makeup.html" class="popular-review-card">
+              <div class="card-image">
+                <img
+                  src="../images/hero/makeup.webp"
+                  alt="Макияж"
+                  loading="lazy"
+                />
+              </div>
+
+              <h3>Макияж</h3>
+
+              <p>
+                Советы визажистов, техники нанесения макияжа, подбор косметики и
+                создание образов для любого случая.
+              </p>
+            </a>
+
+            <!-- Обзоры -->
+            <a href="recenzii.html" class="popular-review-card">
+              <div class="card-image">
+                <img
+                  src="../images/hero/reviews.webp"
+                  alt="Обзоры косметики"
+                  loading="lazy"
+                />
+              </div>
+
+              <h3>Обзоры косметики</h3>
+
+              <p>
+                Честные обзоры уходовой и декоративной косметики, анализ
+                составов, преимуществ и особенностей применения.
+              </p>
+            </a>
+
+            <!-- Маникюр -->
+            <a href="manicure.html" class="popular-review-card">
+              <div class="card-image">
+                <img
+                  src="../images/hero/manicure.webp"
+                  alt="Маникюр"
+                  loading="lazy"
+                />
+              </div>
+
+              <h3>Маникюр</h3>
+
+              <p>
+                Идеи дизайна, уход за ногтями, современные техники и
+                рекомендации по выбору материалов.
+              </p>
+            </a>
+
+            <!-- Услуги -->
+            <a href="servicii.html" class="popular-review-card">
+              <div class="card-image">
+                <img
+                  src="../images/hero/services.webp"
+                  alt="Beauty-услуги"
+                  loading="lazy"
+                />
+              </div>
+
+              <h3>Beauty-услуги и сотрудничество</h3>
+
+              <p>
+                Визажисты, косметологи, салоны красоты, а также публикация и
+                продвижение нативных обзоров косметики и beauty-брендов.
+              </p>
+            </a>
+          </section>
+          <!-- Что вы найдете в «Estetica Lens» -->
+          <section class="reviews-intro highlighted-section">
+            <h2 class="section-title">
+              <strong>Что вы найдете в «Estetica Lens»</strong>
+            </h2>
+
+            <p class="highlighted-text">
+              <strong>«Estetica Lens»</strong> — информационный beauty-портал,
+              посвященный уходу за кожей, декоративной косметике, ингредиентам
+              косметических средств и современным beauty-услугам. Мы собираем
+              экспертные материалы, обзоры и практические рекомендации, которые
+              помогают принимать осознанные решения при выборе косметики и
+              специалистов.
+            </p>
+
+            <p class="highlighted-text">
+              На сайте вы найдете статьи об активных компонентах косметики,
+              решении распространенных проблем кожи, техниках макияжа, уходе за
+              ногтями, обзоры уходовой и декоративной косметики, а также каталог
+              beauty-специалистов и информацию о возможностях сотрудничества с
+              косметическими брендами.
+            </p>
+          </section>
+          <!-- FAQ -->
+          <!-- FAQ -->
+          <section class="faq">
+            <h2 class="section-title">Часто задаваемые вопросы</h2>
+
+            <div class="faq-item">
+              <h3>Что такое «Estetica Lens»?</h3>
+              <p>
+                «Estetica Lens» — информационный beauty-портал, посвященный
+                уходу за кожей, ингредиентам косметики, макияжу, маникюру,
+                обзорам косметических средств и современным beauty-услугам.
+              </p>
+            </div>
+
+            <div class="faq-item">
+              <h3>Для кого создан сайт?</h3>
+              <p>
+                Материалы будут полезны всем, кто хочет лучше разбираться в
+                косметике, уходе за кожей, декоративной косметике, составах
+                средств и выборе специалистов в сфере красоты.
+              </p>
+            </div>
+
+            <div class="faq-item">
+              <h3>Какие темы рассматриваются на сайте?</h3>
+              <p>
+                Мы публикуем статьи об ингредиентах косметики, проблемах кожи,
+                уходовой и декоративной косметике, макияже, маникюре,
+                косметологических процедурах, а также обзоры beauty-продуктов и
+                рекомендации по уходу.
+              </p>
+            </div>
+
+            <div class="faq-item">
+              <h3>Можно ли найти специалиста через «Estetica Lens»?</h3>
+              <p>
+                Да. В разделе «Beauty-услуги» представлены визажисты, бровисты,
+                косметологи, косметологические клиники и салоны красоты. Каталог
+                постепенно пополняется новыми специалистами.
+              </p>
+            </div>
+
+            <div class="faq-item">
+              <h3>Размещаются ли на сайте обзоры косметики?</h3>
+              <p>
+                Да. На сайте публикуются обзоры уходовой и декоративной
+                косметики с описанием особенностей средств, их назначения,
+                состава и рекомендаций по применению.
+              </p>
+            </div>
+
+            <div class="faq-item">
+              <h3>Можно ли разместить информацию о своих beauty-услугах?</h3>
+              <p>
+                Да. «Estetica Lens» предлагает размещение информации о
+                визажистах, косметологах, салонах красоты, клиниках и других
+                представителях beauty-индустрии.
+              </p>
+            </div>
+
+            <div class="faq-item">
+              <h3>
+                Предусмотрено ли сотрудничество с косметическими брендами?
+              </h3>
+              <p>
+                Да. Мы открыты к сотрудничеству с косметическими брендами и
+                дистрибьюторами. Возможны нативные обзоры продукции,
+                информационные публикации и другие форматы партнерских
+                материалов с обязательным указанием рекламного характера, если
+                это требуется законодательством.
+              </p>
+            </div>
+
+            <div class="faq-item">
+              <h3>Как часто обновляется сайт?</h3>
+              <p>
+                Проект регулярно развивается: публикуются новые статьи, обзоры,
+                тематические материалы и расширяется каталог специалистов и
+                beauty-услуг.
+              </p>
+            </div>
+          </section>
+        </div>
+        <aside>
+          <!-- Популярные темы -->
+          <div
+            class="card"
+            style="
+              margin-top: 18px;
+              background-color: hsla(120, 2%, 88%, 0.996);
+            "
+          >
+            <h3 class="section-title-sidebar">Популярные темы</h3>
+
+            <div class="related-list-sidebar">
+              <a href="recenzii.html#care-collapsible">
+                <div class="card-image">
+                  <img
+                    src="../images/hero/skincare-400.webp"
+                    alt="Уходовая косметика"
+                    loading="lazy"
+                  />
+                </div>
+                <span>Уходовая косметика</span>
+              </a>
+
+              <a href="recenzii.html#makeup-collapsible">
+                <div class="card-image">
+                  <img
+                    src="../images/hero/decorative-400.webp"
+                    alt="Декоративная косметика"
+                    loading="lazy"
+                  />
+                </div>
+                <span>Декоративная косметика</span>
+              </a>
+
+              <a href="ingrediente.html">
+                <div class="card-image">
+                  <img
+                    src="../images/hero/ingredients-400.webp"
+                    alt="Разобраться в составе косметики"
+                    loading="lazy"
+                  />
+                </div>
+                <span>Разобраться в составе</span>
+              </a>
+
+              <a href="makeup.html#type-makeup">
+                <div class="card-image">
+                  <img
+                    src="../images/hero/makeup-types-400.webp"
+                    alt="Типы макияжа"
+                    loading="lazy"
+                  />
+                </div>
+                <span>Типы макияжа</span>
+              </a>
+
+              <a href="makeup.html#cosmetic-procedure">
+                <div class="card-image">
+                  <img
+                    src="../images/hero/cosmetology-400.webp"
+                    alt="Косметологические процедуры"
+                    loading="lazy"
+                  />
+                </div>
+                <span>Косметологические процедуры</span>
+              </a>
+
+              <a href="manicure.html">
+                <div class="card-image">
+                  <img
+                    src="../images/hero/manicure-400.webp"
+                    alt="Маникюр и педикюр"
+                    loading="lazy"
+                  />
+                </div>
+                <span>Маникюр и педикюр</span>
+              </a>
+            </div>
+          </div>
+          <!-- Популярные ингредиенты -->
+          <div class="card" style="margin-top: 18px; background-color: #e1e2e1">
+            <h3 class="section-title-sidebar">Популярные ингредиенты</h3>
+
+            <p class="sidebar-text">
+              Узнайте, как работают самые востребованные компоненты современной
+              косметики и для каких типов кожи они подходят.
+            </p>
+
+            <div class="related-list-sidebar">
+              <a href="ingrediente/niacinamide.html">Ниацинамид</a>
+              <a href="ingrediente/retinoizi.html">Ретинол</a>
+              <a href="ingrediente/azelain.html">Азелаиновая кислота</a>
+              <a href="ingrediente/vitamina-c.html">Витамин C</a>
+              <a href="ingrediente/acid-hialuronic.html"
+                >Гиалуроновая кислота</a
+              >
+            </div>
+          </div>
+          <!-- Сотрудничество -->
+          <div class="card" style="margin-top: 20px">
+            <h3 class="section-title-sidebar">
+              <strong>Сотрудничество</strong>
+            </h3>
+            <div class="card-image">
+              <img
+                src="../images/servicii/servicii-sidebar-4-400.webp"
+                alt="Сотрудничество"
+                loading="lazy"
+              />
+            </div>
+            <div class="related-list-sidebar">
+              <a href="colaborari.html">Разместить продукт</a>
+              <a href="colaborari/demo-cards.html">Demo-карточки</a>
+              <a href="colaborari.html#form">Заполнить форму сотрудничества</a>
+            </div>
+          </div>
+        </aside>
+      </div>
     </main>
     <!-- HERO -->
 
@@ -620,5 +961,101 @@
     <button id="scrollTopBtn">▲</button>
 
     <script src="../script.js"></script>
+    <!--  -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Estetica Lens",
+        "url": "https://chalaya22.github.io/my-lending/",
+        "inLanguage": "ru-MD",
+        "description": "Beauty Blog & Expert Care"
+      }
+    </script>
+    <!-- Organization -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Estetica Lens",
+        "url": "https://chalaya22.github.io/my-lending/",
+        "logo": "https://chalaya22.github.io/my-lending/images/logo.png",
+        "description": "Beauty Blog & Expert Care",
+        "sameAs": []
+      }
+    </script>
+    <!-- FAQ -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Что такое «Estetica Lens»?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "«Estetica Lens» — информационный beauty-портал, посвященный уходу за кожей, ингредиентам косметики, макияжу, маникюру, обзорам косметических средств и современным beauty-услугам."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Для кого создан сайт?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Материалы будут полезны всем, кто хочет лучше разбираться в косметике, уходе за кожей, декоративной косметике, составах средств и выборе специалистов в сфере красоты."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Какие темы рассматриваются на сайте?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "На сайте публикуются статьи об ингредиентах косметики, проблемах кожи, уходовой и декоративной косметике, макияже, маникюре, косметологических процедурах, а также обзоры beauty-продуктов и рекомендации по уходу."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Можно ли найти специалиста через «Estetica Lens»?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Да. В разделе «Beauty-услуги» представлены визажисты, бровисты, косметологи, косметологические клиники и салоны красоты. Каталог постепенно пополняется новыми специалистами."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Размещаются ли на сайте обзоры косметики?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Да. На сайте публикуются обзоры уходовой и декоративной косметики с описанием особенностей средств, их назначения, состава и рекомендаций по применению."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Можно ли разместить информацию о своих beauty-услугах?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Да. «Estetica Lens» предлагает размещение информации о визажистах, косметологах, салонах красоты, клиниках и других представителях beauty-индустрии."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Предусмотрено ли сотрудничество с косметическими брендами?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Да. Мы открыты к сотрудничеству с косметическими брендами и дистрибьюторами. Возможны нативные обзоры продукции, информационные публикации и другие форматы партнерских материалов с обязательным указанием рекламного характера, если это требуется законодательством."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Как часто обновляется сайт?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Проект регулярно развивается: публикуются новые статьи, обзоры, тематические материалы и расширяется каталог специалистов и beauty-услуг."
+            }
+          }
+        ]
+      }
+    </script>
   </body>
 </html>
