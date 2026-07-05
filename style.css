@@ -622,7 +622,7 @@ p {
   color: var(--text-main);
 }
 
-section h2 {
+/* section h2 {
   font-family: "Quicksand", sans-serif;
   font-size: 24px;
   font-weight: 400;
@@ -631,7 +631,8 @@ section h2 {
   text-align: center;
   color: var(--accent);
   margin-bottom: 28px;
-}
+} */
+
 .section-title {
   font-family: "Quicksand", sans-serif;
   font-size: 18px;
@@ -742,7 +743,7 @@ section h2 {
 }
 
 /* ==================== SERVICES  Desctop =============== */
-.services {
+/* .services {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
@@ -762,10 +763,10 @@ section h2 {
 .service-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
+} */
 
 /* ==================== BLOG  Desctop ==================*/
-.blog {
+/* .blog {
   display: flex;
   flex-wrap: wrap;
   gap: 25px;
@@ -784,7 +785,7 @@ section h2 {
 .blog-card:hover {
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
   transform: translateY(-4px);
-}
+} */
 
 /* ================= FOOTER ================= */
 
@@ -1906,14 +1907,6 @@ body.menu-open .guides-wrapper {
   color: #f1c36d; /* Цвет звездочек */
 }
 
-.review-title {
-  font-family: "Quicksand", sans-serif;
-  font-size: 1.3rem;
-  color: #1a1a1a;
-  margin-bottom: 12px;
-  font-weight: 600;
-}
-
 .review-excerpt {
   font-size: 0.95rem;
   color: #555;
@@ -2135,7 +2128,7 @@ main {
   max-width: 220px;
   margin: 0 auto;
 }
-/* описание заголовка */
+/* ОПИСАНИЕ ЗАГОЛОВКА  */
 .reviews-intro {
   max-width: 900px;
   margin: 30px auto;
@@ -2144,7 +2137,7 @@ main {
 }
 
 .reviews-intro h1 {
-  font-size: 30px;
+  font-size: 28px;
   margin-bottom: 14px;
 }
 
@@ -2153,81 +2146,57 @@ main {
   line-height: 1.6;
   margin-bottom: 10px;
 }
+@media (max-width: 768px) {
+  .reviews-intro h1 {
+    font-size: 18px; /* Уменьшаем размер */
+  }
+}
 
 /* стили сетки - сайдбар+ основной контент */
-.content-wrapper {
-  display: flex;
-  gap: 32px; /* расстояние между сайдбаром и основным блоком */
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 16px;
-}
 
-.sidebar-categories {
-  width: 220px; /* фиксированная ширина для сайдбара */
-  flex-shrink: 0;
-}
-
-.main-block {
-  flex: 1; /* занимает всё оставшееся место */
-}
-
-/* Мобильная версия */
-@media (max-width: 768px) {
-  .content-wrapper {
-    flex-direction: column;
-  }
-  .sidebar-categories {
-    width: 100%;
-  }
-}
 /* стили сайдбара */
-.articles-overview {
+/* .articles-overview {
   display: flex;
   gap: 40px;
   max-width: 960px;
   margin: 32px auto;
   padding: 0 16px;
   flex-wrap: wrap;
-}
+} */
 
-.articles-column {
+/* .articles-column {
   flex: 1;
   min-width: 220px;
-}
+} */
 
-.articles-column h3 {
+/* .articles-column h3 {
   font-size: 20px;
   margin-bottom: 12px;
   color: #1c6884;
-}
+} */
 
-.articles-column ul {
+/* .articles-column ul {
   list-style: disc;
   padding-left: 20px;
-}
+} */
 
-.articles-column ul li {
-  /* margin-bottom: 8px; */
-}
-
-.articles-column ul li a {
+/* .articles-column ul li a {
   text-decoration: none;
   color: #555;
   transition: color 0.2s ease;
-}
+} */
 
-.articles-column ul li a:hover {
-  color: #1c6884; /* акцентный цвет */
-}
+/* .articles-column ul li a:hover {
+  color: #1c6884; 
+} */
 
 /* Мобильная версия */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .articles-overview {
     flex-direction: column;
     gap: 24px;
   }
-}
+} */
 /*================== популярные обзоры косметики =====================*/
 .popular-reviews {
   position: relative;
@@ -3259,11 +3228,6 @@ html {
     inset 0 1px 0 rgba(255, 255, 255, 0.8);
 }
 
-/* .section-btn-carousel.disabled {
-  pointer-events: none;
-  opacity: 0.6;
-  cursor: not-allowed;
-} */
 .effect-level {
   display: flex;
   gap: 6px;
@@ -3507,21 +3471,21 @@ body {
 }
 
 /* ===================CONTACT Page Desctop==========================*/
-.contact-hero-img {
+/* .contact-hero-img {
   position: relative;
   width: 100%;
-  height: 80vh; /* можно 60–80vh */
+  height: 80vh;
   min-height: 360px;
   overflow: hidden;
-}
-.contact-hero-bg-img {
+} */
+/* .contact-hero-bg-img {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center 40%;
-}
+} */
 
 /* ------ИНРИДИЕНТЫ  VITAMINA,HIALURONIC Desctop article-----------------------------*/
 .ingredient-article {
