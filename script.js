@@ -197,7 +197,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 });
-// /colaborare/
+
+/* =========================
+          COLABORARE FORMA 4
+  ========================== */
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.querySelector(".collaboration-form");
   const success = document.querySelector(".collaboration-success");
