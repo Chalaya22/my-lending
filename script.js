@@ -142,7 +142,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   /* =========================
-          SUBSCRIBE MODAL
+          SUBSCRIBE MODAL FORMA 3
   ========================== */
 
   const modal = document.getElementById("subscribe-modal");
@@ -174,12 +174,23 @@ document.addEventListener("DOMContentLoaded", () => {
       form.addEventListener("submit", (e) => {
         e.preventDefault();
 
-        form.innerHTML = `
-          <div class="subscribe-success">
-            <h3>Mulțumesc 💛</h3>
-            <p>Te-ai abonat cu succes.</p>
-          </div>
-        `;
+        const isRomanian = window.location.pathname.includes("/ro/");
+
+        if (isRomanian) {
+          form.innerHTML = `
+        <div class="subscribe-success">
+          <h3>Mulțumim! 💙</h3>
+          <p>Abonarea va fi disponibilă după lansarea oficială a site-ului.</p>
+        </div>
+      `;
+        } else {
+          form.innerHTML = `
+        <div class="subscribe-success">
+          <h3>Спасибо! 💙</h3>
+          <p>Подписка станет доступна сразу после официального запуска сайта.</p>
+        </div>
+      `;
+        }
 
         setTimeout(closeModal, 2500);
       });
