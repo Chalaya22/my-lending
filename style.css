@@ -48,6 +48,10 @@ body {
   font-family: "Poppins", sans-serif;
   line-height: 1.6;
 }
+.no-language-switch .lang-toggle,
+.no-language-switch .mobile-lang {
+  display: none !important;
+}
 
 .container {
   max-width: 100%;

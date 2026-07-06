@@ -101,14 +101,45 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   /* =========================
-          SEND REVIEW
+          SEND REVIEW <<IMPARTESTE EXPIRIENTA TA>> FORMA 1
   ========================== */
 
   window.sendReview = function () {
-    alert(
-      "Спасибо за отзыв 💙\n\nФункция отправки будет доступна после запуска сайта.",
-    );
+    const isRomanian = window.location.pathname.includes("/ro/");
+
+    if (isRomanian) {
+      alert(
+        "Mulțumim pentru recenzie! 💙\n\nFuncția de trimitere va fi disponibilă imediat după lansarea site-ului.",
+      );
+    } else {
+      alert(
+        "Спасибо за отзыв! 💙\n\nФункция отправки будет доступна сразу после запуска сайта.",
+      );
+    }
   };
+
+  /* =========================
+          SEND REVIEW <<ABONEAZA TE LA ARTICOLELE NOSTRE>> FORMA 2
+  ========================== */
+  document.querySelectorAll(".newsletter-form").forEach((form) => {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const isRomanian = window.location.pathname.includes("/ro/");
+
+      if (isRomanian) {
+        alert(
+          "Mulțumim pentru abonare! 💙\n\nNewsletterul va fi disponibil după lansarea oficială a site-ului.",
+        );
+      } else {
+        alert(
+          "Спасибо за подписку! 💙\n\nРассылка станет доступна сразу после официального запуска сайта.",
+        );
+      }
+
+      form.reset();
+    });
+  });
 
   /* =========================
           SUBSCRIBE MODAL
