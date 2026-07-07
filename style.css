@@ -103,11 +103,11 @@ header::before {
 
   background: linear-gradient(
     90deg,
-    rgba(110, 100, 96, 0.99) 0%,
-    rgba(125, 115, 110, 0.96) 30%,
-    rgba(150, 141, 135, 0.92) 55%,
-    rgba(185, 178, 171, 0.88) 78%,
-    rgba(220, 214, 207, 0.84) 100%
+    rgba(90, 79, 74, 0.99) 0%,
+    rgba(108, 99, 95, 0.96) 30%,
+    rgba(131, 123, 117, 0.92) 55%,
+    rgba(155, 149, 143, 0.88) 78%,
+    rgba(182, 176, 170, 0.84) 100%
   );
 
   backdrop-filter: blur(6px);
@@ -178,7 +178,7 @@ header .container {
 .nav-menu {
   display: flex;
   flex-wrap: wrap; /* перенос ссылок */
-  gap: 10px;
+  gap: 14px;
   list-style: none;
 }
 
@@ -738,7 +738,7 @@ p {
 /* ================= FOOTER ================= */
 
 .footer {
-  background: var(--text-muted);
+  background: rgba(90, 79, 74, 0.99) 0%;
   padding: 40px 0 24px;
 }
 
@@ -775,7 +775,7 @@ p {
 }
 
 .footer-tagline {
-  font-size: 10px;
+  font-size: 12px;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: var(--line);
@@ -902,9 +902,8 @@ p {
 
 .footer-bottom {
   text-align: center;
-  font-size: 12px;
+  font-size: 14px;
   color: #fff;
-  opacity: 0.6;
 }
 
 /* ======================ИНРИДИЕНТЫ  Page Desctop=========================-*/
