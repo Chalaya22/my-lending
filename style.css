@@ -738,13 +738,17 @@ p {
 /* ================= FOOTER ================= */
 
 .footer {
-  background: rgba(90, 79, 74, 0.99) 0%;
+  background: rgba(90, 79, 74, 0.99);
   padding: 40px 0 24px;
 }
 
 .footer-container {
   max-width: 1200px;
   margin: 0 auto;
+
+  padding-inline: 16px;
+  box-sizing: border-box;
+
   display: grid;
   grid-template-columns: 1.3fr 1fr 1fr 1fr;
   gap: 20px;
