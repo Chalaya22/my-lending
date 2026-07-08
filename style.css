@@ -909,7 +909,63 @@ p {
   font-size: 14px;
   color: #fff;
 }
+/* ===== LEGAL LINKS ===== */
 
+.footer-legal {
+  max-width: 1200px;
+  margin: 30px auto 0;
+  padding: 20px 16px;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px 24px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.footer-legal a {
+  color: rgba(255, 255, 255, 0.82);
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 1.5;
+  transition: color 0.25s ease;
+}
+
+.footer-legal a:hover {
+  color: #f1c36d;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 18px 16px 26px;
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+/* ---------- Планшет ---------- */
+
+@media (max-width: 992px) {
+  .footer-legal {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ---------- Телефон ---------- */
+
+@media (max-width: 576px) {
+  .footer-legal {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px 18px;
+  }
+
+  .footer-legal a {
+    font-size: 13px;
+  }
+}
 /* ======================ИНРИДИЕНТЫ  Page Desctop=========================-*/
 
 .page-intro {
