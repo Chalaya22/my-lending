@@ -3840,28 +3840,6 @@ dl.definition dt {
 .ingredient-table th {
   font-weight: 500;
 }
-/* надпись поверх изображения */
-
-/* .image-accent-text {
-  position: absolute;
-  bottom: 50%;
-  left: 50%;
-  transform: translate(-50%, 50%);
-  max-width: 95%;
-  padding: 10px 24px;
-
-  font-family: "Quicksand", sans-serif;
-  font-size: 15px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-
-  color: #fff;
-  background: rgba(0, 0, 0, 0.35);
-  backdrop-filter: blur(6px);
-  border-radius: 999px;
-
-  pointer-events: none;
-} */
 
 /* появление надписи при скроле */
 .image-accent-text {
@@ -4400,6 +4378,15 @@ dl.definition dt {
   }
 }
 /* ================= COLLABORATION PAGE ================= */
+
+.colaborari-hero-img {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  min-height: 380px;
+  overflow: hidden;
+}
+
 .colaborari-hero-bg-img {
   position: absolute;
   inset: 0;
@@ -4408,167 +4395,253 @@ dl.definition dt {
   object-fit: cover;
   object-position: center 40%;
 }
-.colaborari-hero-img {
-  position: relative;
-  width: 100%;
-  height: 80vh; /* можно 60–80vh */
-  min-height: 360px;
-  overflow: hidden;
-}
 
 .collaboration-intro {
-  max-width: 720px;
-  margin: 0 auto 60px;
-  padding: 0 16px;
-  text-align: left;
+  max-width: 820px;
+  margin: 0 auto 80px;
+  padding: 0 20px;
 }
 
 .collaboration-title {
-  font-size: 26px;
-  font-weight: 500;
-  letter-spacing: 2px;
-  margin-bottom: 24px;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: 1px;
+  margin-bottom: 28px;
   color: var(--text-main);
-  position: relative;
 }
 
 .collaboration-title::after {
   content: "";
   display: block;
-  width: 60px;
-  height: 1px;
-  margin-top: 10px;
+  width: 70px;
+  height: 2px;
+  margin-top: 14px;
+  border-radius: 10px;
   background: linear-gradient(90deg, #f9e7b4, #cfa24a, #fff1c1);
 }
 
 .collaboration-text {
-  font-size: 18px;
-  line-height: 1.7;
+  font-size: 17px;
+  line-height: 1.85;
   color: var(--text-main);
-  margin-bottom: 16px;
+  margin-bottom: 18px;
 }
 
 .collaboration-text strong {
-  color: var(--text-main);
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .collaboration-list {
-  margin: 20px 0 24px;
+  margin: 24px 0;
   padding-left: 0;
   list-style: none;
 }
 
 .collaboration-list li {
-  font-size: 15px;
-  line-height: 1.6;
-  color: var(--text-main);
-  margin-bottom: 10px;
-  padding-left: 22px;
   position: relative;
+  padding-left: 24px;
+  margin-bottom: 14px;
+  font-size: 16px;
+  line-height: 1.8;
 }
 
 .collaboration-list li::before {
   content: "✦";
   position: absolute;
   left: 0;
+  top: 3px;
   color: var(--accent);
-  font-size: 12px;
-  top: 4px;
+  font-size: 13px;
 }
 
 .collaboration-note {
-  font-size: 14px;
-  line-height: 1.6;
+  margin: 28px 0;
+  font-size: 15px;
+  line-height: 1.7;
   color: var(--text-muted);
-  opacity: 0.85;
-  margin-bottom: 20px;
   font-style: italic;
 }
 
 .collaboration-cta {
-  font-size: 15px;
-  line-height: 1.6;
-  color: var(--text-main);
-  font-weight: 500;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.8;
 }
+
 .collaboration-form {
-  max-width: 420px;
+  max-width: 480px;
 }
-/* блок нативный обзор */
+
 .native-review {
-  max-width: 900px;
-  margin: 60px auto;
-  padding: 40px;
-  background: #ffffff;
-  border-radius: 20px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-  line-height: 1.7;
+  max-width: 920px;
+  margin: 72px auto;
+  padding: 48px;
+  background: var(--bg-card);
+  border: 1px solid rgba(207, 162, 74, 0.12);
+  border-radius: 24px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.05);
 }
 
 .nr-title {
-  font-size: 18px;
-  margin-bottom: 20px;
-  font-weight: 700;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--text-main);
+  margin-bottom: 28px;
 }
 
 .nr-subtitle {
-  margin-top: 30px;
-  margin-bottom: 15px;
-  font-size: 20px;
+  margin: 36px 0 18px;
+  font-size: 24px;
   font-weight: 600;
+  color: var(--text-main);
 }
 
 .nr-text {
-  color: #444;
-  margin-bottom: 15px;
+  font-size: 17px;
+  line-height: 1.85;
+  color: var(--text-main);
+  margin-bottom: 18px;
 }
 
 .nr-text.final {
-  margin-top: 30px;
+  margin-top: 36px;
   font-weight: 500;
 }
 
 .nr-list {
-  padding-left: 20px;
-  margin-bottom: 20px;
+  margin: 24px 0;
+  padding-left: 24px;
 }
 
 .nr-list li {
-  margin-bottom: 10px;
+  margin-bottom: 14px;
+  line-height: 1.8;
 }
 
 .nr-list li::marker {
-  color: #ff5a3c;
+  color: var(--accent);
 }
 
 .nr-cta {
   margin-top: 40px;
-  padding: 25px;
-  border-radius: 16px;
-  background: linear-gradient(135deg, #fff4f1, #fff);
-  border: 1px solid #ffe0d9;
+  padding: 32px;
+  border-radius: 20px;
+  background: rgba(207, 162, 74, 0.06);
+  border: 1px solid rgba(207, 162, 74, 0.18);
 }
 
 .nr-cta h3 {
-  margin-bottom: 10px;
+  margin-bottom: 14px;
 }
 
 .nr-cta-note {
+  margin-top: 14px;
   font-size: 14px;
-  color: #777;
-  margin-top: 10px;
+  color: var(--text-muted);
+}
+.documents-section a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.25s ease;
 }
 
-/* mobile */
+.documents-section a:hover {
+  color: var(--text-main);
+}
+
+.documents-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 28px 0;
+}
+
+.documents-section li {
+  position: relative;
+  padding: 14px 0 14px 28px;
+  border-bottom: 1px solid rgba(207, 162, 74, 0.12);
+  line-height: 1.7;
+}
+
+.documents-section li:last-child {
+  border-bottom: none;
+}
+
+.documents-section li::before {
+  content: "📄";
+  position: absolute;
+  left: 0;
+  top: 14px;
+  font-size: 15px;
+}
+.documents-section small {
+  display: block;
+  margin-top: 4px;
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Заголовки секций */
+
+.nr-title,
+.faq-title,
+.cta-title,
+.collaboration-title {
+  text-align: center;
+}
+
+.collaboration-title::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 2px;
+  margin: 16px auto 0;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #f9e7b4, #cfa24a, #fff1c1);
+}
+.collaboration-page {
+  padding-top: 72px;
+}
+/* ===========================
+   MOBILE
+=========================== */
+
 @media (max-width: 768px) {
-  .native-review {
-    padding: 20px;
+  .colaborari-hero-img {
+    min-height: 320px;
   }
 
+  .collaboration-intro {
+    margin-bottom: 56px;
+    padding: 0 16px;
+  }
+
+  .collaboration-title,
   .nr-title {
-    font-size: 22px;
+    font-size: 28px;
+  }
+
+  .nr-subtitle {
+    font-size: 21px;
+  }
+
+  .native-review {
+    margin: 40px 16px;
+    padding: 28px 22px;
+    border-radius: 18px;
+  }
+
+  .collaboration-text,
+  .nr-text {
+    font-size: 16px;
+  }
+}
+@media (max-width: 768px) {
+  .collaboration-page {
+    padding-top: 48px;
   }
 }
 
