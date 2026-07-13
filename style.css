@@ -200,12 +200,12 @@ header .container {
   list-style: none;
 }
 
-.nav-actions {
+/* .nav-actions {
   display: flex;
-  flex-wrap: wrap; /* кнопки могут переноситься */
+  flex-wrap: wrap; 
   gap: 10px;
   align-items: center;
-}
+} */
 
 .nav-menu li a {
   color: var(--text-main);
@@ -986,7 +986,7 @@ p {
 }
 /* ======================ИНРИДИЕНТЫ  Page Desctop=========================-*/
 
-.page-intro {
+/* .page-intro {
   text-align: center;
   margin: 0 auto 40px;
   max-width: 640px;
@@ -998,7 +998,7 @@ p {
   text-transform: uppercase;
 
   color: var(--text-main);
-}
+} */
 
 .page-grid {
   display: grid;
@@ -1006,7 +1006,7 @@ p {
   gap: 20px;
 }
 
-.ingredient-card {
+/* .ingredient-card {
   display: block;
   padding: 32px 30px;
   border-radius: 8px;
@@ -1025,7 +1025,7 @@ p {
   transition: all 0.35s ease;
   position: relative;
   overflow: hidden;
-}
+} */
 
 /* =======Подпишитесь на экспертные разборы ФОРМА  статьи  Ингридиенты================= */
 .newsletter-section {
@@ -1387,13 +1387,13 @@ body.menu-open .guides-wrapper {
   display: none !important;
 }
 /* ====================SERVICII  Page Desctop=======================-*/
-.servicii-hero-img {
+/* .servicii-hero-img {
   position: relative;
   width: 100%;
-  height: 80vh; /* можно 60–80vh */
+  height: 80vh; 
   min-height: 360px;
   overflow: hidden;
-}
+} */
 .servicii-hero-bg-img {
   position: absolute;
   inset: 0;
@@ -1531,7 +1531,7 @@ body.menu-open .guides-wrapper {
 }
 
 /* копирование номера */
-.contact-copy {
+/* .contact-copy {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1543,16 +1543,16 @@ body.menu-open .guides-wrapper {
   border: 1px dashed #ddd;
 
   font-size: 13px;
-}
+} */
 
-.copy-btn {
+/* .copy-btn {
   border: none;
   background: transparent;
   cursor: pointer;
 
   font-size: 12px;
   color: #b76e79;
-}
+} */
 /* стиль бока с СTA кнопками */
 .hero-buttons {
   display: flex;
@@ -1718,13 +1718,13 @@ body.menu-open .guides-wrapper {
 }
 
 /*=======================RECENZII PRODUCE- Page Desctop==============*/
-.recenzii-hero-img {
+/* .recenzii-hero-img {
   position: relative;
   width: 100%;
-  height: 80vh; /* можно 60–80vh */
+  height: 80vh;
   min-height: 360px;
   overflow: hidden;
-}
+} */
 .recenzii-hero-bg-img {
   position: absolute;
   inset: 0;
@@ -1824,11 +1824,11 @@ body.menu-open .guides-wrapper {
   line-height: 1.4;
 }
 
-.review-link {
+/* .review-link {
   font-weight: 600;
   color: #d4a041;
   font-size: 0.9rem;
-}
+} */
 
 /* Заглушка */
 .review-card.placeholder {
@@ -1965,25 +1965,25 @@ body.menu-open .guides-wrapper {
   opacity: 0.7;
 }
 /* карточки обзора */
-.review-main-image {
-  max-width: 500px; /* Ширина фото не больше 500px */
-  height: 450px; /* Высота не больше 450px */
-  margin: 30px auto; /* Центрируем фото */
+/* .review-main-image {
+  max-width: 500px;
+  height: 450px;
+  margin: 30px auto; 
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} */
 
-.review-main-image img {
+/* .review-main-image img {
   max-width: 100%;
   max-height: 100%;
-  object-fit: contain; /* Фото продукта будет видно ЦЕЛИКОМ, без обрезки */
-}
-.review-back-nav {
-  margin: 20px 0 30px 0; /* Отступы вокруг навигации */
+  object-fit: contain; 
+} */
+/* .review-back-nav {
+  margin: 20px 0 30px 0; 
   display: block;
-}
+} */
 /* стили для блока Уходовая косметика */
 .section-wrap.collapsible {
   max-width: 1200px;
@@ -2107,7 +2107,7 @@ main {
   align-items: stretch;
 }
 
-.makeup-card {
+/* .makeup-card {
   text-align: center;
   padding: 34px 30px;
   border-radius: 16px;
@@ -2117,41 +2117,41 @@ main {
   flex-direction: column;
   justify-content: flex-start;
   transition: all 0.25s ease;
-}
+} */
 
-.makeup-card:hover {
+/* .makeup-card:hover {
   transform: translateY(-4px);
-}
+} */
 
-.makeup-icon {
+/* .makeup-icon {
   display: block;
   margin-bottom: 14px;
-}
+} */
 
-.makeup-icon svg {
+/* .makeup-icon svg {
   display: block;
   margin: 0 auto;
   width: 40px;
   height: 40px;
-}
+} */
 
-.makeup-icon circle {
+/* .makeup-icon circle {
   filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.15));
-}
+} */
 
-.makeup-card h3 {
+/* .makeup-card h3 {
   margin-bottom: 10px;
   padding: 0 6px;
-}
+} */
 
-.makeup-card p {
+/* .makeup-card p {
   font-size: 14px;
   opacity: 0.75;
   line-height: 1.5;
   padding: 0 10px;
   max-width: 220px;
   margin: 0 auto;
-}
+} */
 /* ОПИСАНИЕ ЗАГОЛОВКА  */
 .reviews-intro {
   max-width: 900px;
@@ -2615,27 +2615,27 @@ main {
   color: #444;
 }
 
-.foundation-table {
+/* .foundation-table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 10px;
-}
+} */
 
-.foundation-table th {
+/* .foundation-table th {
   text-align: left;
   padding: 12px;
   background: #f5f5f5;
   font-weight: 600;
-}
+} */
 
-.foundation-table td {
+/* .foundation-table td {
   padding: 12px;
   border-bottom: 1px solid #eee;
-}
+} */
 
-.foundation-table tr:hover {
+/* .foundation-table tr:hover {
   background: #fafafa;
-}
+} */
 .foundation-note {
   font-size: 13px;
   color: #666;
@@ -2651,7 +2651,7 @@ html {
   margin: 40px 0;
 }
 
-.foundation-gallery .gallery-grid {
+.foundation-gallery {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -2817,11 +2817,11 @@ html {
   border-radius: 6px;
 }
 
-.image-caption {
+/* .image-caption {
   font-size: 14px;
   margin-top: 6px;
   color: #555;
-}
+} */
 
 @media (max-width: 768px) {
   .double-image-gallery {
@@ -3027,12 +3027,12 @@ html {
   display: block;
 }
 /*  */
-.premium-section {
+/* .premium-section {
   background: linear-gradient(135deg, #fdfaf6, #f7f2ea);
   padding: 40px 20px;
   border-radius: 14px;
   margin: 40px 0;
-}
+} */
 
 /* золотой акцент */
 .review-card-modal.premium {
@@ -3045,9 +3045,9 @@ html {
 }
 
 /* заголовок */
-.premium-section .section-title {
+/* .premium-section .section-title {
   color: #3a2f2f;
-}
+} */
 
 /* интро */
 .premium-section .section-intro {
@@ -3412,13 +3412,13 @@ a:focus {
   }
 }
 /* -------------------------Probleme 2 */
-.probleme-hero-img {
+/* .probleme-hero-img {
   position: relative;
   width: 100%;
-  height: 80vh; /* можно 60–80vh */
+  height: 80vh; 
   min-height: 360px;
   overflow: hidden;
-}
+} */
 .probleme-hero-bg-img {
   position: absolute;
   inset: 0;
@@ -3427,35 +3427,34 @@ a:focus {
   object-fit: cover;
   object-position: center 45%;
 }
-.probleme-ingredient-image {
+/* .probleme-ingredient-image {
   position: relative;
   width: 100%;
   height: 80vh;
   overflow: hidden;
   margin: 1px 0 48px;
   text-align: center;
-}
-.probleme-ingredient-image img {
+} */
+/* .probleme-ingredient-image img {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
-  /* max-width: 820px; */
   border-radius: 2px;
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
   object-position: center 25%;
   object-fit: cover;
   display: block;
-}
-.probleme-ingredient-image::before {
+} */
+/* .probleme-ingredient-image::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.45); /* меняй 0.3–0.6 */
+  background: rgba(0, 0, 0, 0.45); 
   z-index: 1;
-}
+} */
 .probleme-hero-subtitle {
   position: absolute;
   inset: 0;
@@ -3490,24 +3489,24 @@ a:focus {
   padding: 0 20px;
 }
 
-.ingredient-hero {
+/* .ingredient-hero {
   position: relative;
   width: 100%;
-  height: 80vh; /* можно 60–80vh */
+  height: 80vh;
   min-height: 360px;
   overflow: hidden;
-}
+} */
 
-.ingredient-hero-bg {
+/* .ingredient-hero-bg {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center 90%;
-}
+} */
 
-.ingredient-hero-content {
+/* .ingredient-hero-content {
   position: relative;
   z-index: 2;
   height: 100%;
@@ -3516,9 +3515,9 @@ a:focus {
   padding-bottom: 12vh;
   justify-content: center;
   text-align: center;
-}
+} */
 
-.ingredient-hero-title {
+/* .ingredient-hero-title {
   font-size: clamp(34px, 6vw, 64px);
   font-weight: 600;
   letter-spacing: 0.05em;
@@ -3528,7 +3527,7 @@ a:focus {
     0 2px 6px rgba(0, 0, 0, 0.35),
     0 0 18px rgba(255, 255, 255, 0.22);
   margin-bottom: 14px;
-}
+} */
 
 .ingredient-sub {
   font-family: "Quicksand", sans-serif;
@@ -3581,10 +3580,10 @@ a:focus {
   opacity: 0.7;
 }
 
-.ingredient-meta {
+/* .ingredient-meta {
   font-size: 14px;
   margin-bottom: 18px;
-}
+} */
 .grid-2 {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 320px;
@@ -3757,10 +3756,10 @@ dl.definition dt {
   line-height: 1;
   opacity: 0.85;
 }
-.ingredient-hero {
+/* .ingredient-hero {
   position: relative;
   overflow: hidden;
-}
+} */
 /* изображения мнгридиентов */
 .ingredient-image {
   position: relative;
@@ -3798,29 +3797,19 @@ dl.definition dt {
 .ingredient-inline-image img,
 .ingredient-image img,
 .card-image img,
-.sidebar-img {
-  transition:
-    transform 0.6s ease,
-    box-shadow 0.6s ease;
-}
-
 .ingredient-inline-image img:hover,
 .ingredient-image img:hover,
 .card-image img:hover,
-.sidebar-img:hover {
-  transform: scale(1.03);
-  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.08);
-}
 .card-image img {
   width: 100%;
   border-radius: 2px;
   margin-bottom: 12px;
 }
 
-.card-caption {
+/* .card-caption {
   font-size: 13px;
   color: var(--text-muted);
-}
+} */
 /* изображения таблица */
 .ingredient-table-wrapper {
   overflow-x: auto;
@@ -3880,7 +3869,7 @@ dl.definition dt {
   transform: translate(-50%, 50%);
 }
 /* деекоративный разделитель секций */
-.section-divider {
+/* .section-divider {
   height: 1px;
   margin: 60px auto;
   width: 60%;
@@ -3890,7 +3879,7 @@ dl.definition dt {
     rgba(0, 0, 0, 0.15),
     transparent
   );
-}
+} */
 /* =====================боковое изображение в grid-2 */
 .foundation-row {
   display: flex;
@@ -4274,12 +4263,12 @@ dl.definition dt {
 
 /* ---------- FOOTER ---------- */
 
-.site-footer {
+/* .site-footer {
   text-align: center;
   padding: 20px 0 60px;
-}
+} */
 
-.back-home {
+/* .back-home {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -4291,13 +4280,13 @@ dl.definition dt {
   color: #5a4f4a;
   text-decoration: none;
   transition: 0.3s ease;
-}
+} */
 
-.back-home:hover {
+/* .back-home:hover {
   background: #d4a041;
   color: #fff;
   border-color: #d4a041;
-}
+} */
 /* ===== Legal Intro ===== */
 
 .legal-intro {
@@ -4381,13 +4370,13 @@ dl.definition dt {
 }
 /* ================= COLLABORATION PAGE ================= */
 
-.colaborari-hero-img {
+/* .colaborari-hero-img {
   position: relative;
   width: 100%;
   height: 80vh;
   min-height: 380px;
   overflow: hidden;
-}
+} */
 
 .colaborari-hero-bg-img {
   position: absolute;
@@ -4789,9 +4778,9 @@ dl.definition dt {
 =========================== */
 
 @media (max-width: 768px) {
-  .colaborari-hero-img {
+  /* .colaborari-hero-img {
     min-height: 320px;
-  }
+  } */
 
   .collaboration-intro {
     margin-bottom: 56px;
@@ -5083,7 +5072,7 @@ dl.definition dt {
   margin-top: 60px;
 }
 
-.media-kit-page .page-intro {
+.media-kit-page {
   max-width: 720px;
   margin: 0 auto 60px;
   text-align: center;
@@ -5099,16 +5088,16 @@ dl.definition dt {
   margin-bottom: 20px;
 }
 
-.media-list {
+/* .media-list {
   list-style: none;
   padding: 0;
   margin: 0;
 
   display: grid;
   gap: 20px;
-}
+} */
 
-.media-list li {
+/* .media-list li {
   background: var(--bg-main);
   padding: 22px 26px;
 
@@ -5125,13 +5114,13 @@ dl.definition dt {
   font-size: 16px;
   line-height: 1.6;
   color: black;
-}
+} */
 
-.media-list strong {
+/* .media-list strong {
   display: inline-block;
   margin-bottom: 6px;
   font-weight: 600;
-}
+} */
 
 .media-section p {
   max-width: 720px;
@@ -5681,9 +5670,7 @@ body.modal-open {
 }
 
 @media (max-width: 900px) {
-  .nav-menu,
-  .lang-switch,
-  .socials-header {
+  .nav-menu {
     display: none;
   }
 }
