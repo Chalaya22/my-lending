@@ -984,55 +984,136 @@
           </div>
         </section>
 
+        <!-- Solicitați o ofertă personalizată -->
+        <section class="native-review">
+          <div class="cta-box highlight">
+            <h3 class="cta-title">Solicitați o ofertă personalizată</h3>
+
+            <p>
+              Fiecare colaborare este unică. În funcție de obiectivele
+              brandului, produselor sau serviciilor pe care doriți să le
+              promovați, vom propune cea mai potrivită strategie și format de
+              colaborare.
+            </p>
+
+            <p>Colaborăm cu:</p>
+
+            <ul class="nr-list">
+              <li>Branduri și producători de produse cosmetice</li>
+              <li>Magazine online și distribuitori</li>
+              <li>Makeup artiști și brow artiști</li>
+              <li>Cosmetologi și specialiști în îngrijirea pielii</li>
+              <li>Saloane de înfrumusețare și clinici estetice</li>
+              <li>Academii și școli din domeniul beauty</li>
+              <li>Companii și proiecte din industria wellness</li>
+            </ul>
+
+            <p>
+              Oferim recenzii SEO, articole educaționale, prezentări de produse,
+              promovarea specialiștilor și afacerilor din domeniul beauty,
+              precum și proiecte editoriale personalizate, adaptate obiectivelor
+              fiecărui partener.
+            </p>
+
+            <p style="margin-top: 20px; font-weight: 600">
+              Completați formularul de mai jos, iar vom pregăti o propunere
+              personalizată și vom reveni către dumneavoastră în cel mai scurt
+              timp.
+            </p>
+          </div>
+        </section>
         <!-- FORMA -->
-        <form class="subscribe-form collaboration-form" id="form">
-          <h2 class="newsletter-title">Forme de colaborare</h2>
+        <form class="subscribe-form collaboration-form">
           <label>
-            Nume / Brand
-            <input type="text" placeholder="Numele dvs. sau brandul" required />
+            Nume / Brand / Companie
+            <input
+              type="text"
+              placeholder="Cum vă putem identifica?"
+              required
+            />
           </label>
 
           <label>
             Email
-            <input type="email" placeholder="Email de contact" required />
+            <input type="email" placeholder="example@email.com" required />
           </label>
 
           <label>
-            Tip colaborare
+            Reprezentați
             <select required>
-              <option value="">Alegeți</option>
-              <option>Recenzie produs</option>
-              <option>Menționare în articol</option>
-              <option>Parteneriat pe termen lung</option>
-              <option>Alt tip de colaborare</option>
+              <option value="">Selectați o categorie</option>
+
+              <optgroup label="Branduri">
+                <option>Brand de cosmetice</option>
+                <option>Magazin online</option>
+                <option>Distribuitor</option>
+              </optgroup>
+
+              <optgroup label="Specialiști Beauty">
+                <option>Make-up Artist</option>
+                <option>Brow Artist</option>
+                <option>Lash Artist</option>
+                <option>Cosmetolog</option>
+                <option>Specialist Skincare</option>
+              </optgroup>
+
+              <optgroup label="Business Beauty">
+                <option>Salon de înfrumusețare</option>
+                <option>Clinică estetică</option>
+                <option>Academie / Școală Beauty</option>
+              </optgroup>
+
+              <optgroup label="Altele">
+                <option>Blog / Media</option>
+                <option>Alt proiect</option>
+              </optgroup>
             </select>
           </label>
 
           <label>
-            Mesaj
+            Tipul colaborării
+            <select required>
+              <option value="">Alegeți formatul dorit</option>
+              <option>Recenzie SEO</option>
+              <option>Articol educațional</option>
+              <option>Integrare nativă</option>
+              <option>Promovarea unui produs</option>
+              <option>Promovarea unui specialist Beauty</option>
+              <option>Promovarea unui salon</option>
+              <option>Promovarea unei clinici</option>
+              <option>Parteneriat pe termen lung</option>
+              <option>Alt format</option>
+            </select>
+          </label>
+
+          <label>
+            Descrierea proiectului
             <textarea
               name="message"
-              placeholder="Descrieți propunerea dvs."
+              placeholder="Povestiți pe scurt despre produs, serviciu sau tipul colaborării dorite."
               required
             ></textarea>
           </label>
 
           <label>
-            Link (site / Instagram)
+            Website / Instagram / Facebook
             <input type="text" placeholder="https://" />
           </label>
 
-          <button type="submit">Propune colaborare ✨</button>
+          <button type="submit">✨ Trimite solicitarea</button>
+
           <p class="collaboration-note">
-            Toate cererile sunt analizate individual. Vă voi contacta în scurt
-            timp.💬
+            Analizăm fiecare solicitare individual și revenim cu un răspuns în
+            cel mai scurt timp. 💛
           </p>
         </form>
+
         <div class="collaboration-success" hidden>
-          <p class="success-title">Mulțumim pentru interesul acordat! 💙</p>
+          <p class="success-title">Mulțumim! ✨</p>
+
           <p class="success-text">
-            Formularul va începe să primească solicitări imediat după lansarea
-            oficială a site-ului.
+            Solicitarea dumneavoastră a fost trimisă cu succes.<br />
+            Vom reveni cu un răspuns cât mai curând. 💛
           </p>
         </div>
         <!-- FAQ -->

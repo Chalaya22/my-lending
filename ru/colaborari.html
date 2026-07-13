@@ -923,12 +923,52 @@
           </div>
         </section>
 
-        <!-- Форма сотрудничества -->
-        <form id="form" class="subscribe-form collaboration-form">
-          <h2 class="newsletter-title">Форма сотрудничества</h2>
+        <!-- Индивидуальное предложение -->
+        <section class="native-review">
+          <div class="cta-box highlight">
+            <h3 class="cta-title">Запросить индивидуальное предложение</h3>
+
+            <p>
+              Каждое сотрудничество уникально. В зависимости от целей вашего
+              бренда, продукта или услуги мы подберём наиболее подходящий формат
+              продвижения и предложим оптимальную стратегию сотрудничества.
+            </p>
+
+            <p>Мы сотрудничаем с:</p>
+
+            <ul class="nr-list">
+              <li>Брендами и производителями косметики</li>
+              <li>Интернет-магазинами и дистрибьюторами</li>
+              <li>Визажистами и бровистами</li>
+              <li>Косметологами и специалистами по уходу за кожей</li>
+              <li>Салонами красоты и эстетическими клиниками</li>
+              <li>Beauty-академиями и образовательными проектами</li>
+              <li>Компаниями и проектами в сфере wellness</li>
+            </ul>
+
+            <p>
+              Мы предлагаем SEO-обзоры, экспертные статьи, презентацию
+              продуктов, размещение beauty-специалистов и компаний, а также
+              индивидуальные редакционные проекты, адаптированные под задачи
+              каждого партнёра.
+            </p>
+
+            <p style="margin-top: 20px; font-weight: 600">
+              Заполните форму ниже — мы подготовим индивидуальное предложение и
+              свяжемся с вами в ближайшее время.
+            </p>
+          </div>
+        </section>
+
+        <!-- ФОРМА СОТРУДНИЧЕСТВА -->
+        <form class="subscribe-form collaboration-form">
           <label>
-            Ваше имя/Бренд
-            <input type="text" placeholder="Как к вам обращаться" required />
+            Имя / Бренд / Компания
+            <input
+              type="text"
+              placeholder="Как мы можем к вам обращаться?"
+              required
+            />
           </label>
 
           <label>
@@ -939,32 +979,71 @@
           <label>
             Вы представляете
             <select required>
-              <option value="">Выберите вариант</option>
-              <option>Косметический бренд</option>
-              <option>Салон красоты</option>
-              <option>Бьюти-мастер</option>
-              <option>Онлайн-проект / блог</option>
-              <option>Другое</option>
+              <option value="">Выберите категорию</option>
+
+              <optgroup label="Бренды">
+                <option>Косметический бренд</option>
+                <option>Интернет-магазин</option>
+                <option>Дистрибьютор</option>
+              </optgroup>
+
+              <optgroup label="Beauty-специалисты">
+                <option>Визажист</option>
+                <option>Бровист</option>
+                <option>Lash-мастер</option>
+                <option>Косметолог</option>
+                <option>Специалист по уходу за кожей</option>
+              </optgroup>
+
+              <optgroup label="Beauty-бизнес">
+                <option>Салон красоты</option>
+                <option>Эстетическая клиника</option>
+                <option>Beauty-академия / школа</option>
+              </optgroup>
+
+              <optgroup label="Другое">
+                <option>Блог / Media проект</option>
+                <option>Другой проект</option>
+              </optgroup>
             </select>
           </label>
 
           <label>
-            Кратко о предложении
+            Формат сотрудничества
+            <select required>
+              <option value="">Выберите желаемый формат</option>
+
+              <option>SEO-обзор продукта</option>
+              <option>Экспертная статья</option>
+              <option>Нативная интеграция</option>
+              <option>Продвижение косметического продукта</option>
+              <option>Размещение beauty-специалиста</option>
+              <option>Размещение салона красоты</option>
+              <option>Размещение эстетической клиники</option>
+              <option>Долгосрочное партнёрство</option>
+              <option>Другой формат</option>
+            </select>
+          </label>
+
+          <label>
+            Описание проекта
             <textarea
               name="message"
-              placeholder="Расскажите, какой формат сотрудничества вы рассматриваете"
+              placeholder="Расскажите кратко о продукте, услуге или формате сотрудничества."
               required
             ></textarea>
           </label>
+
           <label>
-            Link (site / Instagram)
+            Website / Instagram / Facebook
             <input type="text" placeholder="https://" />
           </label>
 
           <button type="submit">✨ Отправить заявку</button>
+
           <p class="collaboration-note">
-            Все заявки рассматриваются индивидуально. Я свяжусь с вами в
-            ближайшее время 💬
+            Каждая заявка рассматривается индивидуально. Мы свяжемся с вами в
+            ближайшее время. 💛
           </p>
         </form>
         <div class="collaboration-success" hidden>
