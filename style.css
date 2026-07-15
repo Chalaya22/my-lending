@@ -3147,17 +3147,19 @@ html {
 ========================= */
 
 .more-info {
-  max-height: 0;
+  /* max-height: 0;
   overflow: hidden;
   opacity: 0;
 
-  transition: all 0.3s ease;
+  transition: all 0.3s ease; */
+  display: none;
 }
 
 .review-carousel-card.is-open .more-info {
-  max-height: 500px;
+  /* max-height: 500px;
   opacity: 1;
-  margin-top: 8px;
+  margin-top: 8px; */
+  display: block;
 }
 
 /* =========================
