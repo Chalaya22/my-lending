@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://chalaya22.github.io/my-lending/sitemap.xml
+Sitemap: https://esteticalens.com/sitemap.xml

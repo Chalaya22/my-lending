@@ -5,9 +5,9 @@ from datetime import date
 # Настройки
 # -----------------------------
 
-BASE_URL = "https://chalaya22.github.io/my-lending"
+BASE_URL = "https://esteticalens.com"
 
-ROOT = Path(__file__).parent
+ROOT = Path(__file__).parent.parent
 
 EXCLUDED_FILES = {
     "404.html",
