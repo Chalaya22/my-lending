@@ -375,6 +375,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const message = form.querySelector('[name="message"]').value;
     const website = form.querySelector('[name="website"]').value;
 
+    const isRussian = window.location.pathname.includes("/ru/");
+
     try {
       const response = await fetch(
         "https://estetica-collaboration.chalayaolga22.workers.dev",
@@ -398,26 +400,48 @@ document.addEventListener("DOMContentLoaded", () => {
         throw new Error("Worker error");
       }
 
-      form.innerHTML = `
-        <div class="subscribe-success">
-          <h3>Mulțumim! 💙</h3>
-          <p>Solicitarea dvs. a fost trimisă cu succes.</p>
-        </div>
-      `;
+      if (isRussian) {
+        form.innerHTML = `
+          <div class="subscribe-success">
+            <h3>Спасибо! 💙</h3>
+            <p>Ваша заявка успешно отправлена.</p>
+          </div>
+        `;
+      } else {
+        form.innerHTML = `
+          <div class="subscribe-success">
+            <h3>Mulțumim! 💙</h3>
+            <p>Solicitarea dvs. a fost trimisă cu succes.</p>
+          </div>
+        `;
+      }
 
     } catch (error) {
       console.error(error);
 
-      form.innerHTML = `
-        <div class="subscribe-error">
-          <h3>Eroare</h3>
-          <p>Vă rugăm să încercați din nou.</p>
-        </div>
-      `;
+      if (isRussian) {
+        form.innerHTML = `
+          <div class="subscribe-error">
+            <h3>Ошибка</h3>
+            <p>Попробуйте ещё раз.</p>
+          </div>
+        `;
+      } else {
+        form.innerHTML = `
+          <div class="subscribe-error">
+            <h3>Eroare</h3>
+            <p>Vă rugăm să încercați din nou.</p>
+          </div>
+        `;
+      }
     }
   });
 });
-/* появление надписи на картинке при скроле */
+
+
+/* =========================
+   ПОЯВЛЕНИЕ ТЕКСТА НА КАРТИНКЕ
+========================= */
 
 document.addEventListener("DOMContentLoaded", () => {
   const accentTexts = document.querySelectorAll(".image-accent-text");
@@ -427,13 +451,13 @@ document.addEventListener("DOMContentLoaded", () => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add("is-visible");
-          observer.unobserve(entry.target); // один раз
+          observer.unobserve(entry.target);
         }
       });
     },
     {
       threshold: 0.4,
-    },
+    }
   );
 
   accentTexts.forEach((text) => observer.observe(text));
