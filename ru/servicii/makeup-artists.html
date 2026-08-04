@@ -618,8 +618,17 @@
             спама — только практичная информация.
           </p>
 
-          <form class="newsletter-form">
-            <input type="email" placeholder="Ваш e-mail" required />
+          <form
+            class="newsletter-form"
+            action="https://formspree.io/f/xjgndklk"
+            method="POST"
+          >
+            <input
+              type="email"
+              name="email"
+              placeholder="Ваш e-mail"
+              required
+            />
             <button type="submit">Подписаться</button>
           </form>
 
@@ -861,6 +870,7 @@
         <button class="subscribe-close" data-close-subscribe>✕</button>
 
         <h2>Подписка</h2>
+
         <p class="subscribe-subtitle">
           Полезные советы по уходу за кожей — без спама 💛
         </p>
@@ -868,17 +878,18 @@
         <form class="subscribe-form">
           <label>
             Имя
-            <input type="text" placeholder="Ваше имя" />
+            <input type="text" name="name" placeholder="Ваше имя" />
           </label>
 
           <label>
             Email
-            <input type="email" placeholder="Email" required />
+            <input type="email" name="email" placeholder="Email" required />
           </label>
 
           <label class="checkbox">
             <input type="checkbox" required />
-            <span>Я согласен(на) на обработку персональных данных</span>
+
+            <span> Я согласен(на) на обработку персональных данных </span>
           </label>
 
           <button type="submit">Подписаться ✨</button>

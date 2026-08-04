@@ -851,11 +851,19 @@
               informații utile pentru o îngrijire corectă.
             </p>
 
-            <form class="newsletter-form">
-              <input type="email" placeholder="Adresa ta de email" required />
+            <form
+              class="newsletter-form"
+              action="https://formspree.io/f/xjgndklk"
+              method="POST"
+            >
+              <input
+                type="email"
+                name="email"
+                placeholder="Adresa ta de email"
+                required
+              />
               <button type="submit">Abonare</button>
             </form>
-
             <p class="newsletter-note">Te poți dezabona oricând.</p>
           </div>
         </section>
@@ -1187,7 +1195,7 @@
         <p>© 2026 Estetica Lens. Toate drepturile rezervate.</p>
       </div>
     </footer>
-    <!-- ---------------------Moodalka Subscribe------------------------>
+    <!-- modal windows sibscribe -->
     <div class="subscribe-modal" id="subscribe-modal" aria-hidden="true">
       <div class="subscribe-overlay" data-close-subscribe></div>
 
@@ -1195,23 +1203,25 @@
         <button class="subscribe-close" data-close-subscribe>✕</button>
 
         <h2>Abonează-te</h2>
+
         <p class="subscribe-subtitle">
           Primește sfaturi reale de beauty, fără spam 💛
         </p>
 
         <form class="subscribe-form">
           <label>
-            Nume
-            <input type="text" required placeholder="Numele tău" />
+            Имя
+            <input type="text" name="name" placeholder="Numele tău" />
           </label>
 
           <label>
             Email
-            <input type="email" required placeholder="email@email.com" />
+            <input type="email" name="email" placeholder="Email" required />
           </label>
 
           <label class="checkbox">
             <input type="checkbox" required />
+
             <span> Sunt de acord cu prelucrarea datelor personale </span>
           </label>
 

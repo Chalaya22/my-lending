@@ -100,102 +100,263 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  /* =========================
-          SEND REVIEW <<IMPARTESTE EXPIRIENTA TA>> FORMA 1
-  ========================== */
+ 
 
-  window.sendReview = function () {
+/* =========================
+   SEND REVIEW <<IMPARTESTE EXPIRIENTA TA>> FORMA 1
+========================== */
+
+window.sendReview = async function () {
+  const isRomanian = window.location.pathname.includes("/ro/");
+
+  const skinType = document.getElementById("skinType").value;
+  const effect = document.getElementById("effect").value;
+  const reaction = document.getElementById("reaction").value;
+  const time = document.getElementById("time").value;
+  const extra = document.getElementById("extra").value.trim();
+
+  const rating =
+    document.querySelector(".stars").getAttribute("data-rating") || "0";
+
+  const page = window.location.href;
+
+  const review = `
+Страница: ${page}
+
+Тип кожи: ${skinType || "Не указано"}
+
+Эффект: ${effect || "Не указано"}
+
+Реакция: ${reaction || "Не указано"}
+
+Когда появился результат: ${time || "Не указано"}
+
+Оценка: ${rating}/5
+
+Комментарий:
+${extra || "Нет комментария"}
+`;
+
+  try {
+    const response = await fetch("https://formspree.io/f/mlgqkgwd", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({
+        _subject: "Новый отзыв об ингредиенте",
+        message: review,
+      }),
+    });
+
+    const data = await response.json();
+
+    console.log("Status:", response.status);
+    console.log("Response:", data);
+
+    if (response.ok) {
+      alert(
+        isRomanian
+          ? "Mulțumim! 💙\n\nRecenzia a fost trimisă."
+          : "Спасибо! 💙\n\nВаш отзыв отправлен."
+      );
+
+      document.getElementById("reviewForm").reset();
+
+      document.querySelector(".stars").setAttribute("data-rating", "0");
+
+      document.querySelectorAll(".stars span").forEach((star) => {
+        star.classList.remove("active");
+      });
+    } else {
+      alert(JSON.stringify(data));
+    }
+  } catch (error) {
+    console.error(error);
+
+    alert(
+      isRomanian
+        ? "A apărut o eroare. Încearcă din nou."
+        : "Произошла ошибка. Попробуйте еще раз."
+    );
+  }
+};
+
+  
+  /* =========================
+      SEND REVIEW <<ABONEAZA TE LA ARTICOLELE NOSTRE>> FORMA 2
+========================== */
+
+document.querySelectorAll(".newsletter-form").forEach((form) => {
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault();
+
     const isRomanian = window.location.pathname.includes("/ro/");
 
-    if (isRomanian) {
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json",
+        },
+      });
+
+      if (response.ok) {
+        alert(
+          isRomanian
+            ? "Mulțumim! 💙\n\nTe-ai abonat cu succes."
+            : "Спасибо! 💙\n\nВы успешно подписались."
+        );
+
+        form.reset();
+      } else {
+        throw new Error();
+      }
+    } catch (error) {
       alert(
-        "Mulțumim pentru recenzie! 💙\n\nFuncția de trimitere va fi disponibilă imediat după lansarea site-ului.",
-      );
-    } else {
-      alert(
-        "Спасибо за отзыв! 💙\n\nФункция отправки будет доступна сразу после запуска сайта.",
+        isRomanian
+          ? "A apărut o eroare. Încearcă din nou."
+          : "Произошла ошибка. Попробуйте еще раз."
       );
     }
-  };
-
-  /* =========================
-          SEND REVIEW <<ABONEAZA TE LA ARTICOLELE NOSTRE>> FORMA 2
-  ========================== */
-  document.querySelectorAll(".newsletter-form").forEach((form) => {
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-
-      const isRomanian = window.location.pathname.includes("/ro/");
-
-      if (isRomanian) {
-        alert(
-          "Mulțumim pentru abonare! 💙\n\nNewsletterul va fi disponibil după lansarea oficială a site-ului.",
-        );
-      } else {
-        alert(
-          "Спасибо за подписку! 💙\n\nРассылка станет доступна сразу после официального запуска сайта.",
-        );
-      }
-
-      form.reset();
-    });
   });
+});
 
   /* =========================
           SUBSCRIBE MODAL FORMA 3
   ========================== */
 
-  const modal = document.getElementById("subscribe-modal");
+ /* =========================
+   SUBSCRIBE MODAL
+========================= */
 
-  if (modal) {
-    const openBtns = document.querySelectorAll("[data-open-subscribe]");
-    const closeBtns = modal.querySelectorAll("[data-close-subscribe]");
-    const form = modal.querySelector(".subscribe-form");
+const modal = document.getElementById("subscribe-modal");
 
-    const closeModal = () => {
-      modal.classList.remove("active");
-      document.body.style.overflow = "";
-      location.reload();
-    };
+if (modal) {
 
-    openBtns.forEach((btn) => {
-      btn.addEventListener("click", (e) => {
-        e.preventDefault();
-        modal.classList.add("active");
-        document.body.style.overflow = "hidden";
-      });
-    });
+  const openBtns = document.querySelectorAll("[data-open-subscribe]");
+  const closeBtns = modal.querySelectorAll("[data-close-subscribe]");
+  const form = modal.querySelector(".subscribe-form");
 
-    closeBtns.forEach((btn) => {
-      btn.addEventListener("click", closeModal);
-    });
 
-    if (form) {
-      form.addEventListener("submit", (e) => {
-        e.preventDefault();
+  const openModal = (e) => {
+    e.preventDefault();
 
-        const isRomanian = window.location.pathname.includes("/ro/");
+    modal.classList.add("active");
+    document.body.style.overflow = "hidden";
+  };
 
-        if (isRomanian) {
-          form.innerHTML = `
-        <div class="subscribe-success">
-          <h3>Mulțumim! 💙</h3>
-          <p>Abonarea va fi disponibilă după lansarea oficială a site-ului.</p>
-        </div>
-      `;
-        } else {
-          form.innerHTML = `
-        <div class="subscribe-success">
-          <h3>Спасибо! 💙</h3>
-          <p>Подписка станет доступна сразу после официального запуска сайта.</p>
-        </div>
-      `;
+
+  const closeModal = () => {
+    modal.classList.remove("active");
+    document.body.style.overflow = "";
+  };
+
+
+  openBtns.forEach((btn) => {
+    btn.addEventListener("click", openModal);
+  });
+
+
+  closeBtns.forEach((btn) => {
+    btn.addEventListener("click", closeModal);
+  });
+
+
+
+  if (form) {
+
+    form.addEventListener("submit", async (e) => {
+
+      e.preventDefault();
+
+
+      const name = form.querySelector('[name="name"]').value;
+      const email = form.querySelector('[name="email"]').value;
+
+
+      try {
+
+        const response = await fetch(
+          "https://estetica-newsletter.chalayaolga22.workers.dev",
+          {
+            method: "POST",
+
+            headers: {
+              "Content-Type": "application/json"
+            },
+
+            body: JSON.stringify({
+              name: name,
+              email: email
+            })
+          }
+        );
+
+
+        if (!response.ok) {
+          throw new Error("Worker error");
         }
 
-        setTimeout(closeModal, 2500);
-      });
-    }
+
+
+        const isRomanian =
+          window.location.pathname.includes("/ro/");
+
+
+
+        if (isRomanian) {
+
+          form.innerHTML = `
+            <div class="subscribe-success">
+              <h3>Mulțumim! 💙</h3>
+              <p>Te-ai abonat cu succes.</p>
+            </div>
+          `;
+
+        } else {
+
+          form.innerHTML = `
+            <div class="subscribe-success">
+              <h3>Спасибо! 💙</h3>
+              <p>Вы успешно подписались.</p>
+            </div>
+          `;
+
+        }
+
+
+        setTimeout(() => {
+          closeModal();
+        }, 2500);
+
+
+
+      } catch (error) {
+
+        console.error(error);
+
+
+        form.innerHTML = `
+          <div class="subscribe-error">
+            <h3>Ошибка</h3>
+            <p>Попробуйте ещё раз.</p>
+          </div>
+        `;
+
+      }
+
+    });
+
   }
+
+}
+
+ 
 });
 
 /* =========================
