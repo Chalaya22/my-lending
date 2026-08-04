@@ -963,6 +963,7 @@
             Имя / Бренд / Компания
             <input
               type="text"
+              name="company"
               placeholder="Как мы можем к вам обращаться?"
               required
             />
@@ -970,55 +971,76 @@
 
           <label>
             Email
-            <input type="email" placeholder="example@email.com" required />
+            <input
+              type="email"
+              name="email"
+              placeholder="example@email.com"
+              required
+            />
           </label>
 
           <label>
             Вы представляете
-            <select required>
+            <select name="category" required>
               <option value="">Выберите категорию</option>
 
               <optgroup label="Бренды">
-                <option>Косметический бренд</option>
-                <option>Интернет-магазин</option>
-                <option>Дистрибьютор</option>
+                <option value="Косметический бренд">Косметический бренд</option>
+                <option value="Интернет-магазин">Интернет-магазин</option>
+                <option value="Дистрибьютор">Дистрибьютор</option>
               </optgroup>
 
               <optgroup label="Beauty-специалисты">
-                <option>Визажист</option>
-                <option>Бровист</option>
-                <option>Lash-мастер</option>
-                <option>Косметолог</option>
-                <option>Специалист по уходу за кожей</option>
+                <option value="Визажист">Визажист</option>
+                <option value="Бровист">Бровист</option>
+                <option value="Lash-мастер">Lash-мастер</option>
+                <option value="Косметолог">Косметолог</option>
+                <option value="Специалист по уходу за кожей">
+                  Специалист по уходу за кожей
+                </option>
               </optgroup>
 
               <optgroup label="Beauty-бизнес">
-                <option>Салон красоты</option>
-                <option>Эстетическая клиника</option>
-                <option>Beauty-академия / школа</option>
+                <option value="Салон красоты">Салон красоты</option>
+                <option value="Эстетическая клиника">
+                  Эстетическая клиника
+                </option>
+                <option value="Beauty-академия / школа">
+                  Beauty-академия / школа
+                </option>
               </optgroup>
 
               <optgroup label="Другое">
-                <option>Блог / Media проект</option>
-                <option>Другой проект</option>
+                <option value="Блог / Media проект">Блог / Media проект</option>
+                <option value="Другой проект">Другой проект</option>
               </optgroup>
             </select>
           </label>
 
           <label>
             Формат сотрудничества
-            <select required>
+            <select name="collaboration" required>
               <option value="">Выберите желаемый формат</option>
 
-              <option>SEO-обзор продукта</option>
-              <option>Экспертная статья</option>
-              <option>Нативная интеграция</option>
-              <option>Продвижение косметического продукта</option>
-              <option>Размещение beauty-специалиста</option>
-              <option>Размещение салона красоты</option>
-              <option>Размещение эстетической клиники</option>
-              <option>Долгосрочное партнёрство</option>
-              <option>Другой формат</option>
+              <option value="SEO-обзор продукта">SEO-обзор продукта</option>
+              <option value="Экспертная статья">Экспертная статья</option>
+              <option value="Нативная интеграция">Нативная интеграция</option>
+              <option value="Продвижение косметического продукта">
+                Продвижение косметического продукта
+              </option>
+              <option value="Продвижение beauty-специалиста">
+                Продвижение beauty-специалиста
+              </option>
+              <option value="Продвижение салона красоты">
+                Продвижение салона красоты
+              </option>
+              <option value="Продвижение эстетической клиники">
+                Продвижение эстетической клиники
+              </option>
+              <option value="Долгосрочное партнёрство">
+                Долгосрочное партнёрство
+              </option>
+              <option value="Другой формат">Другой формат</option>
             </select>
           </label>
 
@@ -1033,7 +1055,7 @@
 
           <label>
             Website / Instagram / Facebook
-            <input type="text" placeholder="https://" />
+            <input type="text" name="website" placeholder="https://" />
           </label>
 
           <button type="submit">✨ Отправить заявку</button>

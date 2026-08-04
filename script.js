@@ -226,12 +226,10 @@ document.querySelectorAll(".newsletter-form").forEach((form) => {
   });
 });
 
-  /* =========================
-          SUBSCRIBE MODAL FORMA 3
-  ========================== */
+
 
  /* =========================
-   SUBSCRIBE MODAL
+   SUBSCRIBE MODAL FORMA 3
 ========================= */
 
 const modal = document.getElementById("subscribe-modal");
@@ -364,16 +362,59 @@ if (modal) {
   ========================== */
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.querySelector(".collaboration-form");
-  const success = document.querySelector(".collaboration-success");
 
-  if (!form || !success) return;
+  if (!form) return;
 
-  form.addEventListener("submit", (e) => {
+  form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    // здесь позже подключишь реальную отправку
-    form.style.display = "none";
-    success.hidden = false;
+    const company = form.querySelector('[name="company"]').value;
+    const email = form.querySelector('[name="email"]').value;
+    const category = form.querySelector('[name="category"]').value;
+    const collaboration = form.querySelector('[name="collaboration"]').value;
+    const message = form.querySelector('[name="message"]').value;
+    const website = form.querySelector('[name="website"]').value;
+
+    try {
+      const response = await fetch(
+        "https://estetica-collaboration.chalayaolga22.workers.dev",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            company,
+            email,
+            category,
+            collaboration,
+            message,
+            website,
+          }),
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error("Worker error");
+      }
+
+      form.innerHTML = `
+        <div class="subscribe-success">
+          <h3>Mulțumim! 💙</h3>
+          <p>Solicitarea dvs. a fost trimisă cu succes.</p>
+        </div>
+      `;
+
+    } catch (error) {
+      console.error(error);
+
+      form.innerHTML = `
+        <div class="subscribe-error">
+          <h3>Eroare</h3>
+          <p>Vă rugăm să încercați din nou.</p>
+        </div>
+      `;
+    }
   });
 });
 /* появление надписи на картинке при скроле */

@@ -1025,6 +1025,7 @@
             Nume / Brand / Companie
             <input
               type="text"
+              name="company"
               placeholder="Cum vă putem identifica?"
               required
             />
@@ -1032,54 +1033,74 @@
 
           <label>
             Email
-            <input type="email" placeholder="example@email.com" required />
+            <input
+              type="email"
+              name="email"
+              placeholder="example@email.com"
+              required
+            />
           </label>
 
           <label>
             Reprezentați
-            <select required>
+            <select name="category" required>
               <option value="">Selectați o categorie</option>
 
               <optgroup label="Branduri">
-                <option>Brand de cosmetice</option>
-                <option>Magazin online</option>
-                <option>Distribuitor</option>
+                <option value="Brand de cosmetice">Brand de cosmetice</option>
+                <option value="Magazin online">Magazin online</option>
+                <option value="Distribuitor">Distribuitor</option>
               </optgroup>
 
               <optgroup label="Specialiști Beauty">
-                <option>Make-up Artist</option>
-                <option>Brow Artist</option>
-                <option>Lash Artist</option>
-                <option>Cosmetolog</option>
-                <option>Specialist Skincare</option>
+                <option value="Make-up Artist">Make-up Artist</option>
+                <option value="Brow Artist">Brow Artist</option>
+                <option value="Lash Artist">Lash Artist</option>
+                <option value="Cosmetolog">Cosmetolog</option>
+                <option value="Specialist Skincare">Specialist Skincare</option>
               </optgroup>
 
               <optgroup label="Business Beauty">
-                <option>Salon de înfrumusețare</option>
-                <option>Clinică estetică</option>
-                <option>Academie / Școală Beauty</option>
+                <option value="Salon de înfrumusețare">
+                  Salon de înfrumusețare
+                </option>
+                <option value="Clinică estetică">Clinică estetică</option>
+                <option value="Academie / Școală Beauty">
+                  Academie / Școală Beauty
+                </option>
               </optgroup>
 
               <optgroup label="Altele">
-                <option>Blog / Media</option>
-                <option>Alt proiect</option>
+                <option value="Blog / Media">Blog / Media</option>
+                <option value="Alt proiect">Alt proiect</option>
               </optgroup>
             </select>
           </label>
 
           <label>
             Tipul colaborării
-            <select required>
+            <select name="collaboration" required>
               <option value="">Alegeți formatul dorit</option>
-              <option>Recenzie SEO</option>
-              <option>Articol educațional</option>
-              <option>Integrare nativă</option>
-              <option>Promovarea unui produs</option>
-              <option>Promovarea unui specialist Beauty</option>
-              <option>Promovarea unui salon</option>
-              <option>Promovarea unei clinici</option>
-              <option>Parteneriat pe termen lung</option>
-              <option>Alt format</option>
+
+              <option value="Recenzie SEO">Recenzie SEO</option>
+              <option value="Articol educațional">Articol educațional</option>
+              <option value="Integrare nativă">Integrare nativă</option>
+              <option value="Promovarea unui produs">
+                Promovarea unui produs
+              </option>
+              <option value="Promovarea unui specialist Beauty">
+                Promovarea unui specialist Beauty
+              </option>
+              <option value="Promovarea unui salon">
+                Promovarea unui salon
+              </option>
+              <option value="Promovarea unei clinici">
+                Promovarea unei clinici
+              </option>
+              <option value="Parteneriat pe termen lung">
+                Parteneriat pe termen lung
+              </option>
+              <option value="Alt format">Alt format</option>
             </select>
           </label>
 
@@ -1094,7 +1115,7 @@
 
           <label>
             Website / Instagram / Facebook
-            <input type="text" placeholder="https://" />
+            <input type="text" name="website" placeholder="https://" />
           </label>
 
           <button type="submit">✨ Trimite solicitarea</button>
