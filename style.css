@@ -505,16 +505,19 @@ body.menu-open .hamburger {
 .checkbox {
   display: flex;
   align-items: flex-start;
-  gap: 10px;
+  gap: 8px;
 }
 
 .checkbox input {
-  flex-shrink: 0;
+  flex: 0 0 auto;
   margin-top: 3px;
 }
 
 .checkbox span {
   flex: 1;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  word-break: break-word;
   line-height: 1.4;
 }
 .subscribe-modal {
