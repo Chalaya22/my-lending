@@ -955,5 +955,8 @@ document.addEventListener("DOMContentLoaded", () => {
       banner.classList.remove("show");
       banner.classList.remove("hide");
     }, 350);
+          /*
+      Здесь позже подключим Google Analytics
+      */
   });
 });
