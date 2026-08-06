@@ -5895,6 +5895,156 @@ dl.definition dt {
 body.modal-open {
   overflow: hidden;
 }
+
+/*================ COOKIE BANNER =================*/
+
+.cookie-banner {
+  position: fixed;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.18);
+
+  padding: 18px 22px;
+
+  z-index: 99999;
+
+  display: none;
+}
+
+.cookie-banner.show {
+  display: block;
+  animation: cookieFadeUp 0.4s ease forwards;
+}
+
+.cookie-banner.hide {
+  animation: cookieFadeDown 0.35s ease forwards;
+}
+
+@keyframes cookieFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes cookieFadeDown {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+}
+
+.cookie-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 28px;
+}
+
+.cookie-text {
+  flex: 1;
+
+  margin: 0;
+
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.cookie-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.cookie-btn {
+  border: none;
+  cursor: pointer;
+
+  padding: 12px 24px;
+
+  border-radius: 30px;
+
+  background: linear-gradient(135deg, #e6c97f, #c89a3c);
+
+  color: #000;
+
+  font-weight: 600;
+
+  transition: all 0.25s ease;
+}
+
+.cookie-btn:hover {
+  transform: translateY(-2px);
+}
+
+.cookie-link {
+  color: #8c6d1f;
+
+  font-size: 14px;
+
+  text-decoration: none;
+
+  font-weight: 600;
+}
+
+.cookie-link:hover {
+  text-decoration: underline;
+}
+
+/* языки */
+
+.cookie-ro,
+.cookie-ru {
+  display: none;
+}
+
+/*================ MOBILE =================*/
+
+@media (max-width: 768px) {
+  .cookie-banner {
+    left: 14px;
+    right: 14px;
+    bottom: 14px;
+
+    padding: 18px;
+  }
+
+  .cookie-content {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .cookie-text {
+    text-align: left;
+  }
+
+  .cookie-actions {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .cookie-btn {
+    width: 100%;
+  }
+
+  .cookie-link {
+    text-align: center;
+  }
+}
 /* ================= ========MOBILE ================================ */
 /* ======================== SECTION MOB=======================*/
 

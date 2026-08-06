@@ -920,3 +920,40 @@ function handlePhone(btn) {
 function copyToClipboard(text) {
   navigator.clipboard.writeText(text);
 }
+
+/*================ COOKIE =================*/
+
+document.addEventListener("DOMContentLoaded", () => {
+  const banner = document.getElementById("cookieBanner");
+
+  if (!banner) return;
+
+  const button = document.getElementById("acceptCookies");
+
+  const isRussian = window.location.pathname.startsWith("/ru/");
+
+  banner.querySelectorAll(".cookie-ro").forEach((el) => {
+    el.style.display = isRussian ? "none" : "inline";
+  });
+
+  banner.querySelectorAll(".cookie-ru").forEach((el) => {
+    el.style.display = isRussian ? "inline" : "none";
+  });
+
+  const consent = localStorage.getItem("cookieConsent");
+
+  if (consent !== "accepted") {
+    banner.classList.add("show");
+  }
+
+  button.addEventListener("click", () => {
+    localStorage.setItem("cookieConsent", "accepted");
+
+    banner.classList.add("hide");
+
+    setTimeout(() => {
+      banner.classList.remove("show");
+      banner.classList.remove("hide");
+    }, 350);
+  });
+});
