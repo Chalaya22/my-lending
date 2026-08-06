@@ -1,3 +1,30 @@
+/*================ GOOGLE ANALYTICS =================*/
+
+function loadAnalytics() {
+  if (window.gaLoaded) return;
+
+  window.gaLoaded = true;
+
+  const script = document.createElement("script");
+  script.async = true;
+  script.src = "https://www.googletagmanager.com/gtag/js?id=G-P2K17Z6B4E";
+  document.head.appendChild(script);
+
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+
+  window.gtag = gtag;
+
+  gtag("js", new Date());
+
+  gtag("config", "G-P2K17Z6B4E", {
+    anonymize_ip: true,
+  });
+}
+
 // ================= SCROLL LOCK FIX =================
 
 window.addEventListener("load", () => {
@@ -932,6 +959,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const isRussian = window.location.pathname.startsWith("/ru/");
 
+  // Переключение языка
   banner.querySelectorAll(".cookie-ro").forEach((el) => {
     el.style.display = isRussian ? "none" : "inline";
   });
@@ -940,23 +968,28 @@ document.addEventListener("DOMContentLoaded", () => {
     el.style.display = isRussian ? "inline" : "none";
   });
 
+  // Проверяем согласие
   const consent = localStorage.getItem("cookieConsent");
 
-  if (consent !== "accepted") {
+  if (consent === "accepted") {
+    loadAnalytics();
+  } else {
     banner.classList.add("show");
   }
 
+  // Нажатие кнопки "Принять"
   button.addEventListener("click", () => {
     localStorage.setItem("cookieConsent", "accepted");
 
+    // Загружаем Google Analytics
+    loadAnalytics();
+
+    // Красиво скрываем баннер
     banner.classList.add("hide");
 
     setTimeout(() => {
       banner.classList.remove("show");
       banner.classList.remove("hide");
     }, 350);
-          /*
-      Здесь позже подключим Google Analytics
-      */
   });
 });
