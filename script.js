@@ -1,4 +1,4 @@
-/*================ GOOGLE ANALYTICS =================*/
+/*================ GOOGLE ANALYTICS =================++++++++++++++++*/
 
 function loadAnalytics() {
   if (window.gaLoaded) return;
