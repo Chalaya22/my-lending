@@ -6690,3 +6690,31 @@ body.modal-open {
     height: auto;
   }
 }
+/* Подборка Beauty Panda */
+.panda-products-section {
+  background: linear-gradient(
+    135deg,
+    #fbf5ef 0%,
+    #f8efe7 55%,
+    #f5eadb 100%
+  );
+
+  border: 1px solid #d8b98a;
+  border-radius: 18px;
+  padding: 28px 24px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 8px 24px rgba(180, 145, 100, 0.08);
+}
+
+.panda-products-section .section-title {
+  color: #9a743d;
+}
+
+.panda-products-section .ad-label {
+  color: #6f6255;
+}
+
+.panda-products-section .review-card-modal {
+  background: #fffdfb;
+}

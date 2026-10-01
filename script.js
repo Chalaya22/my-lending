@@ -615,7 +615,7 @@ function toggleDetails(button) {
 
   const lang = document.documentElement.lang;
 
-  let openText = "Подробнее";
+  let openText = "Открыть обзор";
   let closeText = "Скрыть";
 
   if (lang.startsWith("ro")) {
