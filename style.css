@@ -6718,3 +6718,49 @@ body.modal-open {
 .panda-products-section .review-card-modal {
   background: #fffdfb;
 }
+.beauty-panda-btn {
+  background: #d9a3ad;
+  border-color: #d9a3ad;
+  color: #ffffff;
+}
+
+.beauty-panda-btn:hover {
+  background: #c98d99;
+  border-color: #c98d99;
+  color: #ffffff;
+}
+.beauty-text {
+  color: #d79aa5;
+  margin-left: 4px;
+}
+
+
+.panda-text {
+  color:black;
+  margin-left: 2px;
+}
+
+.beauty-panda-sidebar-card {
+  background: linear-gradient(
+    135deg,
+    #fffaf7 0%,
+    #f8eee8 55%,
+    #f4eadb 100%
+  );
+
+  border: 1px solid #d4a041;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(180, 145, 100, 0.10);
+}
+
+.beauty-panda-sidebar-card .section-title-sidebar {
+  color: #9a743d;
+}
+
+.beauty-panda-sidebar-card .beauty-text {
+  color: #d79aa5;
+}
+
+.beauty-panda-sidebar-card .review-link-btn {
+  border-color: #d4a041;
+}
