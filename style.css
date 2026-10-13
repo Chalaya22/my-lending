@@ -6729,14 +6729,18 @@ body.modal-open {
   color: #ffffff;
 }
 .beauty-text {
-  color: #d79aa5;
-  margin-left: 4px;
+  color: #ff66c4;
+  font-weight: 600;
+    
+  
 }
 
 
 .panda-text {
   color:black;
   margin-left: 2px;
+   
+ 
 }
 
 .beauty-panda-sidebar-card {
