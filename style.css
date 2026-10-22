@@ -789,76 +789,96 @@ p {
 /* ===========================
    Consultation Box
 =========================== */
+/* Compact consultation box */
 
 .consultation-box {
-  background: #f7f1ec;
-  border: 1px solid #d4b27a;
-  border-radius: 18px;
-  padding: 32px;
-  margin: 48px auto;
-  max-width: 900px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  box-sizing: border-box;
+  width: calc(100% - 32px);
+  max-width: 760px;
+  margin: 32px auto;
+  padding: 26px 30px;
+   background:
+     linear-gradient(
+
+      135deg,
+
+      rgba(255, 253, 250, 0.78),
+
+      rgba(250, 246, 240, 0.86)
+
+    ),
+    url("/images/hero/consultation-b.webp") center / cover no-repeat;
+  border: 1px solid #e5d3c3;
+  border-radius: 14px;
+  box-shadow: 0 5px 18px rgba(75, 52, 40, 0.04);
+  text-align: center;
 }
 
 .consultation-box h2 {
-  font-size: 1.5rem;
-  color: #4b3428;
-  margin-bottom: 18px;
+  font-family: inherit;
+  font-size: clamp(1.05rem, 2vw, 1.35rem);
+  font-weight: 300;
+  line-height: 1.7;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #a88755;
   text-align: center;
+  margin-bottom: 16px;
 }
 
 .consultation-box p {
-  font-size: 1.1rem;
-  line-height: 1.7;
+  max-width: 620px;
+  margin: 0 auto 18px;
   color: #5a463b;
-  text-align: center;
-  margin-bottom: 24px;
+  font-size: 0.96rem;
+  line-height: 1.65;
 }
 
 .consultation-box ul {
-  list-style: none;
+  max-width: 460px;
+  margin: 0 auto 20px;
   padding: 0;
-  margin: 0 0 28px 0;
+  list-style: none;
+  text-align: left;
 }
 
 .consultation-box li {
-  font-size: 1.05rem;
+  margin: 0;
+  padding: 8px 0 8px 18px;
   color: #4b3428;
-  margin-bottom: 12px;
-  padding-left: 8px;
+  font-size: 0.94rem;
+  line-height: 1.5;
+  border-bottom: 1px solid rgba(120, 91, 72, 0.12);
 }
 
-.consultation-box .section-btn-primary {
-  display: block;
-  width: fit-content;
-  margin: 0 auto;
-}
-.consultation-icon {
-  font-size: 2rem;
-  text-align: center;
-  margin-bottom: 12px;
+.consultation-box li:last-child {
+  border-bottom: none;
 }
 
-/* ===========================
-   Mobile
-=========================== */
+/* Keep the existing button design unchanged */
 
 @media (max-width: 768px) {
-
   .consultation-box {
-    padding: 24px;
-    margin: 36px 16px;
+    width: calc(100% - 28px);
+    margin: 26px auto;
+    padding: 22px 18px;
+    border-radius: 12px;
   }
 
-  .consultation-box h2 {
-    font-size: 1.6rem;
-  }
 
-  .consultation-box p,
-  .consultation-box li {
+   .consultation-box h2 {
     font-size: 1rem;
+    letter-spacing: 0.08em;
+    line-height: 1.6;
   }
 
+  .consultation-box p {
+    font-size: 0.93rem;
+  }
+
+  .consultation-box li {
+    font-size: 0.92rem;
+  }
 }
 /* ==========================
    Consultation Services
