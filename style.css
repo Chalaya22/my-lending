@@ -3727,130 +3727,126 @@ html {
 }
 
 /* =========================
-   CARD
-========================= */
+ /* ==========================================
+   КАРУСЕЛЬ ПРОДУКТОВ — ОСНОВНАЯ СЕТКА
+   ========================================== */
 
 .carousel-card {
-  flex: 0 0 80%;
+  flex: 0 0 300px;
+  width: 300px;
   max-width: 300px;
-  scroll-snap-align: start;
+  min-width: 0;
 
+  height: 570px;
   display: flex;
+
+  scroll-snap-align: start;
+  box-sizing: border-box;
 }
 
+/* ==========================================
+   ВНУТРЕННЯЯ КАРТОЧКА
+   ========================================== */
+
 .review-carousel-card {
+  position: relative;
+
   display: flex;
   flex-direction: column;
+
   width: 100%;
-  min-height: 520px;
+  height: 100%;
+  min-height: 0;
+  box-sizing: border-box;
 
   background: #fff;
   border-radius: 16px;
+
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+
+  overflow: hidden;
 }
 
-/* =========================
-   IMAGE
-========================= */
+/* ==========================================
+   ИЗОБРАЖЕНИЕ — ФИКСИРОВАННАЯ ОБЛАСТЬ
+   ========================================== */
 
 .review-carousel-image {
+  width: 100%;
+  height: 220px;
+  min-height: 220px;
+  flex: 0 0 220px;
+
   padding: 15px;
+  box-sizing: border-box;
+
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .review-carousel-image img {
+  display: block;
+
   width: 100%;
-  max-height: 300px;
+  height: 190px;
+
+  max-width: 100%;
+  max-height: 100%;
+
   object-fit: contain;
 }
 
-/* =========================
-   CONTENT
-========================= */
+/* ==========================================
+   СОДЕРЖИМОЕ КАРТОЧКИ
+   ========================================== */
 
 .review-carousel-content {
   display: flex;
   flex-direction: column;
-  flex: 1;
+
+  flex: 1 1 auto;
+  min-height: 0;
+  min-width: 0;
 
   padding: 12px 16px 16px;
+  box-sizing: border-box;
+
   gap: 10px;
 }
 
-.card-buttons {
-  margin-top: auto;
+/* Название продукта — одинаковая высота */
+.review-carousel-content h3 {
+  font-size: 1rem;
+  line-height: 1.4;
+
+  margin: 0;
+
+  min-height: 4.2em;
+  max-height: 4.2em;
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+
+  overflow: hidden;
+  overflow-wrap: anywhere;
+}
+
+/* ==========================================
+   ИНДИКАТОР ЭФФЕКТА
+   ========================================== */
+
+.effect-block {
+  min-height: 55px;
+  flex-shrink: 0;
+
   display: flex;
   flex-direction: column;
+  justify-content: center;
+
   gap: 6px;
-}
-
-/* =========================
-   MORE INFO (РАСКРЫТИЕ ВНИЗ)
-========================= */
-
-.more-info {
-  /* max-height: 0;
-  overflow: hidden;
-  opacity: 0;
-
-  transition: all 0.3s ease; */
-  display: none;
-}
-
-.review-carousel-card.is-open .more-info {
-  /* max-height: 500px;
-  opacity: 1;
-  margin-top: 8px; */
-  display: block;
-}
-
-/* =========================
-   BUTTONS
-========================= */
-
-.more-info-btn {
-  padding: 10px 14px;
-  border: none;
-  background: #000;
-  color: #fff;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-.section-btn-carousel {
-  display: inline-flex; /* или flex, если кнопка на всю ширину */
-  justify-content: center; /* Центрирует по горизонтали */
-  align-items: center; /* Центрирует по вертикали */
-  padding: 10px 20px;
-
-  text-decoration: none;
-  background: #eee;
-
-  gap: 10px;
-
-  margin-bottom: 14px;
-  border-radius: 9px;
-
-  font-family: "Poppins", sans-serif;
-  font-size: 13px;
-  font-weight: 500;
-  letter-spacing: 0.18em;
-
-  color: var(--text-main);
-  background: linear-gradient(135deg, #f6f1e6, #e9dcc1, #fdf8ec);
-
-  border: 1px solid rgba(207, 162, 74, 0.35);
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.section-btn-carousel:hover {
-  transform: translateY(-2px);
-  box-shadow:
-    0 18px 42px rgba(0, 0, 0, 0.18),
-    inset 0 1px 0 rgba(255, 255, 255, 0.8);
 }
 
 .effect-level {
@@ -3859,13 +3855,24 @@ html {
   align-items: center;
 }
 
+.effect-text {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+/* Золотистые индикаторы */
 .dot {
   width: 10px;
   height: 10px;
-  border: 1px solid rgba(212, 175, 55, 0.8); /* золотистый */
+
+  border: 1px solid rgba(212, 175, 55, 0.8);
   border-radius: 50%;
+
   background: transparent;
   opacity: 0.4;
+
+  flex-shrink: 0;
 }
 
 .dot.active {
@@ -3873,20 +3880,167 @@ html {
   opacity: 1;
 }
 
+/* ==========================================
+   ОПИСАНИЕ — ОДИНАКОВАЯ ВЫСОТА
+   ========================================== */
+
+.review-carousel-content > p {
+  font-size: 14px;
+  line-height: 1.5;
+
+  margin: 0;
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+
+  overflow: hidden;
+}
+
+/* ==========================================
+   КНОПКИ — ВСЕГДА ВНИЗУ
+   ========================================== */
+
+.review-carousel-content .buttons-row {
+  margin-top: auto;
+  padding-top: 10px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ==========================================
+   ДОПОЛНИТЕЛЬНАЯ ИНФОРМАЦИЯ
+   ========================================== */
+
+.more-info {
+  display: none;
+}
+
+.review-carousel-card.is-open .more-info {
+  display: block;
+}
+
+.more-info-btn {
+  padding: 10px 14px;
+
+  border: none;
+  background: #000;
+  color: #fff;
+
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* ==========================================
+   ДОПОЛНИТЕЛЬНАЯ КНОПКА КАРУСЕЛИ
+   ========================================== */
+
+.section-btn-carousel {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 10px 20px;
+  gap: 10px;
+
+  margin-bottom: 14px;
+
+  border-radius: 9px;
+  border: 1px solid rgba(207, 162, 74, 0.35);
+
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+
+  text-decoration: none;
+  cursor: pointer;
+
+  color: var(--text-main);
+
+  background: linear-gradient(
+    135deg,
+    #f6f1e6,
+    #e9dcc1,
+    #fdf8ec
+  );
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.section-btn-carousel:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 18px 42px rgba(0, 0, 0, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
 a:focus {
   outline: none;
 }
-/* =========================
-   MOBILE
-========================= */
 
-@media (min-width: 768px) {
+/* ==========================================
+   DESKTOP
+   ========================================== */
+
+@media (min-width: 769px) {
   .carousel-card {
     flex: 0 0 320px;
+    width: 320px;
+    max-width: 320px;
+    height: 570px;
   }
 }
 
+/* ==========================================
+   MOBILE
+   ========================================== */
+
 @media (max-width: 768px) {
+
+  .carousel-card {
+    flex: 0 0 82%;
+    width: 82%;
+    max-width: 320px;
+    height: 550px;
+  }
+
+  .review-carousel-card {
+    height: 100%;
+  }
+
+  .review-carousel-image {
+    height: 210px;
+    min-height: 210px;
+    flex-basis: 210px;
+  }
+
+  .review-carousel-image img {
+    height: 180px;
+  }
+
+  .review-carousel-content {
+    padding: 12px 15px 16px;
+    gap: 9px;
+  }
+
+  .review-carousel-content h3 {
+    font-size: 0.98rem;
+  }
+
+  .review-carousel-content > p {
+    font-size: 13px;
+    line-height: 1.55;
+  }
+
   .zoom-container * {
     display: none !important;
   }
@@ -3895,6 +4049,7 @@ a:focus {
     display: block !important;
   }
 }
+
 /* ================= SHARE BAR ================= */
 
 .eva-share-bar {
