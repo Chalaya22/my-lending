@@ -3662,6 +3662,42 @@ html {
   margin-bottom: 6px;
   line-height: 1.5;
 }
+/* ==========================================
+   ОТСТУПЫ РАСКРЫВАЮЩИХСЯ КАРТОЧЕК — МОБИЛЬНЫЕ
+   ========================================== */
+
+@media (max-width: 768px) {
+
+  .review-card-modal-details.show {
+    padding: 14px 16px 20px;
+    box-sizing: border-box;
+  }
+
+  .review-details-inner {
+    padding: 0;
+  }
+
+  .review-details-inner h4 {
+    margin: 18px 0 9px;
+    line-height: 1.4;
+  }
+
+  .review-details-inner p {
+    margin-bottom: 14px;
+    line-height: 1.6;
+  }
+
+  .review-details-inner ul {
+    padding-left: 20px;
+    margin-bottom: 14px;
+  }
+
+  .review-details-inner li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+  }
+
+}
 
 /* ==================================КАРУСЕЛЬ */
 /* =========================
