@@ -3631,6 +3631,37 @@ html {
     overflow: visible;
   }
 }
+/* Отступы для раскрывающихся характеристик */
+.review-card-modal-details.show {
+  padding: 15px 18px 20px;
+  box-sizing: border-box;
+}
+
+/* Внутреннее содержимое */
+.review-details-inner {
+  padding: 0;
+  text-align: left;
+}
+
+/* Заголовки характеристик */
+.review-details-inner h4 {
+  margin: 15px 0 8px;
+}
+
+/* Текст и списки */
+.review-details-inner p,
+.review-details-inner ul {
+  margin-bottom: 12px;
+}
+
+.review-details-inner ul {
+  padding-left: 22px;
+}
+
+.review-details-inner li {
+  margin-bottom: 6px;
+  line-height: 1.5;
+}
 
 /* ==================================КАРУСЕЛЬ */
 /* =========================
