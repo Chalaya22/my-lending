@@ -3226,11 +3226,17 @@ html {
    ========================================== */
 
 .products-container {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 20px;
-  align-items: stretch;
   margin-top: 20px;
+  align-items: flex-start;
+}
+
+.products-container > .review-card-modal {
+  flex: 0 0 calc(50% - 10px);
+  min-width: 0;
 }
 
 /* Основная карточка */
@@ -3726,8 +3732,7 @@ html {
   align-items: flex-start;
 }
 
-/* =========================
- /* ==========================================
+/* ==========================================
    КАРУСЕЛЬ ПРОДУКТОВ — ОСНОВНАЯ СЕТКА
    ========================================== */
 
