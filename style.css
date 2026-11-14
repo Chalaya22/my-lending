@@ -3791,6 +3791,37 @@ html {
   margin-bottom: 6px;
   line-height: 1.5;
 }
+@media (max-width: 600px) {
+  .review-card-modal .buttons-row .review-card-modal-btn {
+    width: 100%;
+    max-width: 280px;
+    min-width: 0;
+    padding: 9px 12px;
+    font-size: 14px;
+    white-space: normal;
+    overflow-wrap: normal;
+    text-align: center;
+  }
+}
+@media (max-width: 600px) {
+  .review-card-modal .buttons-row .review-card-modal-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    white-space: nowrap;
+    overflow-wrap: normal;
+    word-break: normal;
+    width: 100%;
+    max-width: 280px;
+    padding: 9px 8px;
+    font-size: 13px;
+  }
+
+  .review-card-modal .beauty-panda-btn {
+    gap: 4px;
+  }
+}
 /* ==========================================
    ОТСТУПЫ РАСКРЫВАЮЩИХСЯ КАРТОЧЕК — МОБИЛЬНЫЕ
    ========================================== */
