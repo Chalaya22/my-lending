@@ -2368,8 +2368,8 @@ body.menu-open .guides-wrapper {
 /*текст в заголовке */
 
 .collapsible-toggle strong {
-  font-size: 22px;
-  font-weight: 600;
+  font-size: 24px;
+  font-weight: 700;
 }
 
 .collapsible-toggle small {
@@ -2609,7 +2609,7 @@ main {
   border-radius: 10px;
 
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 400;
 
   text-decoration: none;
   color: #333;
@@ -2674,8 +2674,8 @@ main {
   display: inline-block;
   margin-top: 6px;
 
-  font-size: 13px;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 700;
   color: #b08d2f;
   text-decoration: none;
 
